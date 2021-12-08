@@ -8,7 +8,7 @@
 
 ### Anul II
 - [x] [*  🦉 Programare logică și funcțională](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20II/Programare%20logica%20si%20functionala)
-- [x] [*  🗃️ Baze de date]()
+- [x] [*  🗃️ Baze de date](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20II/Baze%20de%20date)
 - [ ] *  ☕ Metode avansate de programare
 - [ ] *  📡 Rețele de calculatoare
 - [ ] *  📊 Probabilități și statistică
