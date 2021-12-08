@@ -1,0 +1,191 @@
+     1                                  bits 32 
+     2                                  global  start 
+     3                                  
+     4                                  extern  exit
+     5                                  import  exit msvcrt.dll
+     6                                  extern 	printf
+     7                                  import	printf msvcrt.dll
+     8                                  	; 3.
+     9                                  	; Se dau doua numere naturale a si b
+    10                                  	; (a, b: dword, definite in segmentul de date).
+    11                                  	; Sa se calculeze suma lor si sa se afiseze in urmatorul format:
+    12                                  	; "<a> + <b> = <result>"
+    13                                  	; Exemplu: "1 + 2 = 3"
+    14                                  	; Valorile vor fi afisate in format decimal (baza 10) cu semn.
+    15                                  
+    16                                  	; EXEMPLE:
+    17                                  	; 1. a dw 0FFFEh b dw 60h
+    18                                  	;	 => -2 + 96 = 94
+    19                                  	;
+    20                                  	; 2. a dw 30h b dw 60h
+    21                                  	;	 => 48 + 96 = 144
+    22                                  	;
+    23                                  	; 3. a dw 0FFF2h b dw 0h
+    24                                  	;	 => -14 + 0 = -14
+    25                                  
+    26                                  segment  data use32 class=data
+    27                                  	; datele problemei si un loc unde se va stoca rezultatul sumei
+    28 00000000 FEFF                    	a dw 0FFFEh
+    29 00000002 6000                    	b dw 60h
+    30 00000004 <res 00000004>          	rez resd 1
+    31                                  
+    32                                  	; date auxiliare necesare la convertire si afisare
+    33 00000008 202B2000                	plus db " + ", 0
+    34 0000000C 203D2000                	egal db " = ", 0
+    35 00000010 <res 00000004>          	nr resd 1
+    36 00000014 <res 00000004>          	rev resd 1
+    37 00000018 <res 00000001>          	sign resb 1
+    38 00000019 00<rept>                	aux times 8 db 0
+    39                                  
+    40                                  	; siruri in care se vor converti cele trei numere la string
+    41 00000021 00<rept>                	a_str times 10 db 0
+    42 0000002B 00<rept>                	b_str times 10 db 0
+    43 00000035 00<rept>                	r_str times 10 db 0
+    44                                  
+    45                                  segment  code use32 class=code
+    46                                  	; STRATEGIE
+    47                                  	; 1. Calculul sumei
+    48                                  	; 2. Convertim a, b si rezultatul la string-uri (siruri de caractere)
+    49                                  	;		etapele conversiei:
+    50                                  	;		i)	impartim succesiv numarul la 10 si convertim resturile la caracterele corespunzatoare
+    51                                  	;		ii)	pe acest sir de caractere, il inversam si il prefixam cu semnul corespunzator
+    52                                  	; 3. Afisam a, b, rezultatul si delimitatori intre ei (+, =)
+    53                                  
+    54                                  	; Procedura: numar_to_str(revenire, destination, number)
+    55                                  	;
+    56                                  	; * parametri si locatia lor pe stiva:
+    57                                  	;		ESP		- revenire: adresa de revenire
+    58                                  	;		ESP + 4 - destination: adresa inceputului sirului de destinatie
+    59                                  	;		ESP + 8 - number: numarul de convertit
+    60                                  	;
+    61                                  	; * rezultat: transpune number intr-un sir de caractere la adresa destination
+    62                                  	numar_to_str:
+    63                                  		; luam parametrii de pe stiva
+    64 00000000 8B0424                  		mov eax, [ESP]
+    65 00000003 A3[14000000]            		mov [rev], eax ; rev = adresa de revenire in program
+    66                                  
+    67 00000008 BF[19000000]            		mov edi, aux ; convertirea initiala in ordine inversa a cifrelor se va face intr-un sir auxiliar,
+    68                                  					 ; pe care il vom inversa ulterior in cel de destinatie
+    69 0000000D 8B442408                		mov eax, [ESP + 8]
+    70 00000011 A3[10000000]            		mov [nr], eax ; nr = numarul de convertit
+    71                                  
+    72 00000016 833D[10000000]00        		cmp [nr], dword 0
+    73 0000001D 7C09                    		jl semn_negativ
+    74                                  
+    75                                  		semn_pozitiv:
+    76 0000001F C605[18000000]20        			mov [sign], byte ' ' ; in cazul unui numar pozitiv, nu este necesar sa afisam semnul +
+    77 00000026 EB1A                    			jmp convertire
+    78                                  		semn_negativ:
+    79 00000028 C605[18000000]2D        			mov [sign], byte '-'
+    80 0000002F A1[10000000]            			mov eax, [nr] ; in cazul unui numar negativ, salvam semnul - si calculam modulul numarului
+    81                                  						  ; metoda utilizata aici pentru calcularea modulului implica operatii pe biti si
+    82                                  						  ; este cea utilizata de catre procedura abs( ) din C:
+    83                                  						  ; 	abs(x) = (x XOR y) - y, unde y = x >>> 31 (pe 31 biti) (>>> = shiftare la dreapta pe biti)
+    84 00000034 89C3                    			mov ebx, eax
+    85 00000036 C1FB1F                  			sar ebx, 1Fh
+    86 00000039 31D8                    			xor eax, ebx
+    87 0000003B 29D8                    			sub eax, ebx
+    88 0000003D A3[10000000]            			mov [nr], eax ; salvam modulul calculat
+    89                                  
+    90                                  		convertire:
+    91 00000042 A1[10000000]            			mov eax, [nr]
+    92 00000047 50                      			push eax
+    93 00000048 6658                    			pop ax
+    94 0000004A 665A                    			pop dx ; punem deimpartitul in DX:AX
+    95 0000004C 66B90A00                			mov cx, 0Ah
+    96 00000050 66F7F9                  			idiv cx ; impartim la 10
+    97 00000053 88D1                    			mov cl, dl ; DL = nr%10, AL = nr/10
+    98 00000055 98                      			cwde
+    99 00000056 A3[10000000]            			mov [nr], eax ; salvam catul pentru urmatorul pas
+   100 0000005B 88C8                    			mov al, cl
+   101 0000005D 0430                    			add al, '0' ; traducem cifra in caracter si il punem in sirul auxiliar
+   102 0000005F AA                      			stosb
+   103 00000060 833D[10000000]00        			cmp [nr], dword 0 ; pana cand am epuizat cifrele
+   104 00000067 75D9                    		jne convertire
+   105                                  
+   106 00000069 89F9                    		mov ecx, edi
+   107 0000006B 81E9[19000000]          		sub ecx, aux ; calculam cate cifre are numarul
+   108                                  
+   109 00000071 8B7C2404                		mov edi, [ESP + 4] ; pregatim inversarea sirului auxiliar in cel de destinatie
+   110 00000075 BE[19000000]            		mov esi, aux
+   111 0000007A 4E                      		dec esi ; ECX va juca rol dublu ca numar de cifre ramase si ca pozitie ulterioara cifrei curente in auxiliar
+   112 0000007B FC                      		cld ; vom parcurge sirul destinatie de la stanga la dreapta, iar pe cel auxiliar in ordine inversa
+   113                                  
+   114 0000007C 803D[18000000]2D        		cmp [sign], byte '-'
+   115 00000083 7506                    		jne finalizare ; dorim sa afisam semnul unui numar doar daca acesta este negativ
+   116 00000085 A0[18000000]            		mov al, [sign]
+   117 0000008A AA                      		stosb
+   118                                  		finalizare:
+   119 0000008B 8A040E                  			mov al, [esi + ecx]
+   120 0000008E AA                      			stosb
+   121 0000008F E2FA                    		loop finalizare
+   122 00000091 FF25[14000000]          	jmp [rev]
+   123                                  
+   124                                  start: 
+   125                                  	; Calculam suma
+   126 00000097 66A1[02000000]          	mov ax, [b]
+   127 0000009D 98                      	cwde
+   128 0000009E 89C3                    	mov ebx, eax
+   129 000000A0 66A1[00000000]          	mov ax, [a]
+   130 000000A6 98                      	cwde
+   131 000000A7 01D8                    	add eax, ebx
+   132 000000A9 A3[04000000]            	mov [rez], eax ; calculam la nivel de dword pentru a evita o eventuala depasire
+   133                                  
+   134                                  	; Convertim a la string
+   135 000000AE 66A1[00000000]          	mov ax, [a]
+   136 000000B4 98                      	cwde
+   137 000000B5 50                      	push eax ; punem, conform conventiei CDECL, parametrii procedurii numar_to_str pe stiva
+   138 000000B6 BF[21000000]            	mov edi, a_str
+   139 000000BB 57                      	push edi
+   140 000000BC 68[C6000000]            	push revenire_a_str
+   141 000000C1 E93AFFFFFF              	jmp numar_to_str
+   142                                  
+   143                                  	revenire_a_str:
+   144 000000C6 83C40C                  	add esp, 4*3 ; resetam stiva
+   145                                  
+   146                                  	; Convertim b la string
+   147 000000C9 66A1[02000000]          	mov ax, [b]
+   148 000000CF 98                      	cwde
+   149 000000D0 50                      	push eax
+   150 000000D1 BF[2B000000]            	mov edi, b_str
+   151 000000D6 57                      	push edi
+   152 000000D7 68[E1000000]            	push revenire_b_str
+   153 000000DC E91FFFFFFF              	jmp numar_to_str
+   154                                  
+   155                                  	revenire_b_str:
+   156 000000E1 83C40C                  	add esp, 4*3
+   157                                  
+   158                                  	; Convertim rezultatul la string
+   159 000000E4 A1[04000000]            	mov eax, [rez]
+   160 000000E9 50                      	push eax
+   161 000000EA BF[35000000]            	mov edi, r_str
+   162 000000EF 57                      	push edi
+   163 000000F0 68[FA000000]            	push final_conv
+   164 000000F5 E906FFFFFF              	jmp numar_to_str
+   165                                  
+   166                                  	final_conv:
+   167 000000FA 83C40C                  	add esp, 4*3
+   168                                  
+   169                                  	; Afisam
+   170 000000FD 68[21000000]            	push a_str ; punem pe stiva parametrul procedurii printf, adresa sirului de afisat
+   171 00000102 FF15[00000000]          	call [printf]
+   172 00000108 83C404                  	add esp, 4 ; resetam stiva
+   173                                  
+   174 0000010B 68[08000000]            	push plus ; afisam "+" intre numere
+   175 00000110 FF15[00000000]          	call [printf]
+   176 00000116 83C404                  	add esp, 4
+   177                                  
+   178 00000119 68[2B000000]            	push b_str
+   179 0000011E FF15[00000000]          	call [printf]
+   180 00000124 83C404                  	add esp, 4
+   181                                  
+   182 00000127 68[0C000000]            	push egal ; afisam "=" inaintea rezultatului
+   183 0000012C FF15[00000000]          	call [printf]
+   184 00000132 83C404                  	add esp, 4
+   185                                  
+   186 00000135 68[35000000]            	push r_str
+   187 0000013A FF15[00000000]          	call [printf]
+   188 00000140 83C404                  	add esp, 4
+   189                                  
+   190 00000143 6A00                    	push   dword 0
+   191 00000145 FF15[00000000]          	call   [exit]

@@ -1,0 +1,77 @@
+     1                                  bits 32 
+     2                                  global  start 
+     3                                  
+     4                                  extern  exit
+     5                                  import  exit msvcrt.dll
+     6                                  
+     7                                  segment  data use32 class=data
+     8 00000000 38                      	a db 38h ; = 56d
+     9 00000001 D007                    	b dw 7D0h ; = 2000d
+    10 00000003 B8050100                	c dd 105B8h ; = 67 000d
+    11 00000007 00093D0000000000        	d dq 3D0900h ; = 4 000 000d
+    12 0000000F <res 00000008>          	z resq 1
+    13                                  segment  code use32 class=code
+    14                                  start: 
+    15                                  	; adunari/scaderi I.26 - a - byte, b - word, c - double word, d - qword - Interpretare fara semn
+    16                                  	; ( c - b + a ) - ( d + a )
+    17 00000000 8B1D[03000000]          	mov ebx, [c]
+    18 00000006 B800000000              	mov eax, 0
+    19 0000000B 66A1[01000000]          	mov ax, [b]
+    20 00000011 29C3                    	sub ebx, eax ; EBX = c - b = 0000FDE8h = 65000d
+    21 00000013 B800000000              	mov eax, 0
+    22 00000018 A0[00000000]            	mov al, [a]
+    23 0000001D 01C3                    	add ebx, eax ; EBX = c - b + a  = 0000FE20h = 65056d
+    24 0000001F 89D8                    	mov eax, ebx
+    25 00000021 BA00000000              	mov edx, 0 ; EDX:EAX = c-b+a = 00000000:0000FE20h
+    26                                  
+    27 00000026 8B1D[07000000]          	mov ebx, dword [d+0] ; EBX = 003D0900
+    28 0000002C 8B0D[0B000000]          	mov ecx, dword [d+4] ; ECX:EBX = d
+    29 00000032 F8                      	clc
+    30 00000033 021D[00000000]          	add bl,[a]
+    31 00000039 80D700                  	adc bh, 0 ; ECX:EBX = 00000000:003D0938
+    32                                  
+    33 0000003C F8                      	clc
+    34 0000003D 29D8                    	sub eax, ebx
+    35 0000003F 19CA                    	sbb edx, ecx ; rezultatul este in EDX:EAX = FFFFFFFF:FFC3F4E8
+    36                                  
+    37                                  	; adunar/scaderi II.25 - a - byte, b - word, c - double word, d - qword - Interpretare cu semn
+    38                                  	; (a + b - c) + (a + b + d) - (a + b) = 3C0B50h
+    39 00000041 A0[00000000]            	mov al, [a]
+    40 00000046 6698                    	cbw ; convertim a la word
+    41 00000048 F8                      	clc
+    42 00000049 660305[01000000]        	add ax, [b]
+    43 00000050 98                      	cwde ; convertim rezultatul la dword, EAX = a+b
+    44                                  	
+    45 00000051 F8                      	clc
+    46 00000052 2B05[03000000]          	sub eax, [c]
+    47 00000058 89C3                    	mov ebx, eax ; EBX = a+b-c = FFFF0250h (mutam in EBX pentru a converti a la dword)
+    48 0000005A A0[00000000]            	mov al, [a]
+    49 0000005F 6698                    	cbw
+    50 00000061 98                      	cwde ; EAX = a
+    51 00000062 01C3                    	add ebx, eax ; EBX = (a+b-c) + a = FFFF0288h
+    52 00000064 66A1[01000000]          	mov ax, [b]
+    53 0000006A 98                      	cwde
+    54 0000006B 01C3                    	add ebx, eax
+    55 0000006D 89D8                    	mov eax, ebx
+    56 0000006F 99                      	cdq ; EDX:EAX = (a+b-c) + a + b
+    57 00000070 8B1D[07000000]          	mov ebx, dword [d+0]
+    58 00000076 8B0D[0B000000]          	mov ecx, dword [d+4] ; ECX:EBX = d
+    59 0000007C F8                      	clc
+    60 0000007D 01D8                    	add eax, ebx
+    61 0000007F 11CA                    	adc edx, ecx ; EDX:EAX = (a + b - c) + (a + b + d)
+    62 00000081 F8                      	clc
+    63 00000082 2A05[00000000]          	sub al, [a]
+    64 00000088 80DC00                  	sbb ah, 0 ; EDX:EAX = (a + b - c) + (a + b + d) - a
+    65 0000008B F8                      	clc
+    66 0000008C 89C3                    	mov ebx, eax
+    67 0000008E 89D1                    	mov ecx, edx ; transferam rezultatul in ECX:EBX pentru a pregati operandul b qword
+    68 00000090 66A1[01000000]          	mov ax, [b]
+    69 00000096 98                      	cwde ; EAX = b
+    70 00000097 99                          cdq ; EDX:EAX = b
+    71 00000098 F8                      	clc
+    72 00000099 29C3                    	sub ebx, eax ; EBX = EBX - EAX
+    73 0000009B 19D1                    	sbb ecx, edx ; ECX = ECX - EDX - CF
+    74                                  				 ; rezultatul este in ECX:EBX = 00000000:003C0B50
+    75                                  
+    76 0000009D 6A00                    	push   dword 0
+    77 0000009F FF15[00000000]          	call   [exit]

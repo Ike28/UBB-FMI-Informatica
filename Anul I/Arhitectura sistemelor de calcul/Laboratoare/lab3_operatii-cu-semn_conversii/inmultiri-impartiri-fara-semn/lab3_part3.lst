@@ -1,0 +1,56 @@
+     1                                  bits 32
+     2                                  global  start 
+     3                                  
+     4                                  extern  exit
+     5                                  import  exit msvcrt.dll
+     6                                  segment  data use32 class=data
+     7 00000000 07                      	a db 7h ; = 7d
+     8 00000001 3C                      	b db 3Ch ; = 60d
+     9 00000002 0D                      	c db 0Dh ; = 13d
+    10 00000003 02                      	d db 2h ; = 2d
+    11 00000004 BE02                    	e dw 2BEh ; = 702d
+    12 00000006 0000010000000000        	x dq 10000h ; = 65536d
+    13 0000000E <res 00000004>          	y resd 1
+    14                                  segment  code use32 class=code
+    15                                  start: 
+    16                                  	; inmultiri/impartiri 23 - ( a * b - 2 * c * d) / ( c - e) + x / a = 9362d = 2492h
+    17                                  	; a,b,c,d - byte; e - word; x - qword
+    18 00000000 B800000000              	mov eax, 0
+    19 00000005 A0[00000000]            	mov al, [a]
+    20 0000000A F625[01000000]          	mul byte [b] ; AX = a*b = 1A4h
+    21                                  	; EAX = a*b prin conversia de mai sus
+    22 00000010 89C3                    	mov ebx, eax
+    23 00000012 B002                    	mov al, 2h
+    24 00000014 F625[02000000]          	mul byte [c] ; AX = 2*c = 1Ah
+    25 0000001A 6689C2                  	mov dx, ax
+    26 0000001D A0[03000000]            	mov al, [d]
+    27 00000022 B400                    	mov ah, 0 ; AX = d
+    28 00000024 66F7E2                  	mul dx ; DX:AX = 2*c*d = 34h
+    29 00000027 6652                    	push dx
+    30 00000029 6650                    	push ax
+    31 0000002B 5A                      	pop edx ; EDX = 2*c*d
+    32 0000002C 29D3                    	sub ebx, edx ; EBX = a*b - 2*c*d = 170h
+    33 0000002E 53                      	push ebx
+    34 0000002F 6658                    	pop ax
+    35 00000031 665A                    	pop dx ; DX:AX = a*b - 2*c*d = 0000:0170h
+    36 00000033 6689C3                  	mov bx, ax
+    37 00000036 A0[02000000]            	mov al, [c]
+    38 0000003B B400                    	mov ah, 0 ; AX = c
+    39 0000003D 662B05[04000000]        	sub ax, [e]
+    40 00000044 6689C1                  	mov cx, ax ; CX = c-e = FD4Fh
+    41 00000047 6689D8                  	mov ax, bx
+    42 0000004A 66F7F1                  	div cx ; AX = DX:AX/CX = ( a * b - 2 * c * d) / ( c - e) = 0h, DX = DX:AX%CX
+    43 0000004D 6689C1                  	mov cx, ax
+    44 00000050 A1[06000000]            	mov eax, dword [x+0]
+    45 00000055 8B15[0A000000]          	mov edx, dword [x+4] ; EDX:EAX = x = 00000000:00010000h
+    46 0000005B 89C3                    	mov ebx, eax
+    47 0000005D B800000000              	mov eax, 0
+    48 00000062 A0[00000000]            	mov al, [a] ; EAX = a
+    49 00000067 A3[0E000000]            	mov [y], eax
+    50 0000006C 89D8                    	mov eax, ebx
+    51 0000006E 8B1D[0E000000]          	mov ebx, [y]
+    52 00000074 F7F3                    	div ebx ; AX = EDX:EAX/EBX = x / a
+    53 00000076 6601C8                  	add ax, cx ;  rezultatul este in AX = 2492h
+    54                                  	
+    55 00000079 6A00                    	push   dword 0
+    56 0000007B FF15[00000000]          	call   [exit]

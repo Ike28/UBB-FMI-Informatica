@@ -1,0 +1,72 @@
+     1                                  bits 32 ;asamblare si compilare pentru arhitectura de 32 biti
+     2                                  ; definim punctul de intrare in programul principal
+     3                                  global  start 
+     4                                  
+     5                                  extern  exit ; indicam asamblorului ca exit exista, chiar daca noi nu o vom defini
+     6                                  import  exit msvcrt.dll; exit este o functie care incheie procesul, este definita in msvcrt.dll
+     7                                          ; msvcrt.dll contine exit, printf si toate celelalte functii C-runtime importante
+     8                                  segment  data use32 class=data ; segmentul de date in care se vor defini variabilele 
+     9 00000000 05                      	a db 5
+    10 00000001 09                      	b db 9
+    11 00000002 06                      	c db 6
+    12 00000003 50                      	d db 80
+    13                                  
+    14 00000004 0500                    	A dw 5
+    15 00000006 0900                    	B dw 9
+    16 00000008 0600                    	C dw 6
+    17 0000000A 5000                    	D dw 80
+    18                                  
+    19 0000000C 2C01                    	e dw 300
+    20 0000000E 3201                    	g dw 306
+    21 00000010 0600                    	h dw 6
+    22                                  
+    23                                  segment  code use32 class=code ; segmentul de cod
+    24                                  start: 
+    25                                  	; ex simple 23: 256*1
+    26 00000000 66B80001                	mov AX,100h ; 2^16 > 256 > 255 => ne trebuie word
+    27 00000004 66BB0100                	mov BX,1h
+    28 00000008 66F7E3                  	mul BX ; rezultatul este in DX:AX = 0000:0100h
+    29                                  
+    30                                  	; adunari/scaderi 1: c-(a+d)+(b+d)
+    31                                  	; a,b,c,d byte
+    32 0000000B A0[02000000]            	mov AL,[c]
+    33 00000010 8A25[00000000]          	mov AH,[a]
+    34 00000016 0225[03000000]          	add AH,[d]
+    35 0000001C 28E0                    	sub AL,AH
+    36 0000001E 0205[01000000]          	add AL,[b]
+    37 00000024 0205[03000000]          	add AL,[d] ; rezultatul este in AL = 10d = 0Ah
+    38                                  
+    39                                  	; adunari/scaderi 24: (a-c)+(b-d)
+    40                                  	; A,B,C,D word
+    41 0000002A 66A1[04000000]          	mov AX,[A]
+    42 00000030 662B05[08000000]        	sub AX,[C]
+    43 00000037 668B1D[06000000]        	mov BX,[B]
+    44 0000003E 662B1D[0A000000]        	sub BX,[D]
+    45 00000045 6601D8                  	add AX,BX ; rezultatul este in AX = -72 = 1111 1111 1011 1000b = FFB8h
+    46                                  
+    47                                  	; inmultiri/impartiri 28 part 1: d+10*a-b*c
+    48                                  	; a,b,c - byte, d - word
+    49 00000048 B00A                    	mov AL,10
+    50 0000004A F625[00000000]          	mul byte [a]
+    51 00000050 660305[0A000000]        	add AX,[D]
+    52 00000057 6689C3                  	mov BX,AX
+    53 0000005A A0[01000000]            	mov AL,[b]
+    54 0000005F F625[02000000]          	mul byte [c]
+    55 00000065 6629C3                  	sub BX,AX
+    56 00000068 6689D8                  	mov AX,BX ; rezultatul este in AX = 004Ch
+    57                                  
+    58                                  	; inmultiri/impartiri 28 part 2: (e+g-h)/3+b*c
+    59                                  	; a,b,c,d-byte, e,f,g,h-word
+    60 0000006B 66A1[0C000000]          	mov AX,[e]
+    61 00000071 660305[0E000000]        	add AX,[g]
+    62 00000078 662B05[10000000]        	sub AX,[h]
+    63 0000007F B303                    	mov BL,3
+    64 00000081 F6F3                        div BL
+    65 00000083 B400                    	mov AH,0
+    66 00000085 6689C3                  	mov BX,AX
+    67 00000088 A0[01000000]            	mov AL,[b]
+    68 0000008D F625[02000000]          	mul byte [c]
+    69 00000093 6601D8                  	add AX,BX ; rezultatul este in AX = 254d = 00FEh
+    70                                  
+    71 00000096 6A00                    	push   dword 0 ;se pune pe stiva codul de retur al functiei exit
+    72 00000098 FF15[00000000]          	call   [exit] ;apelul functiei sistem exit pentru terminarea executiei programului

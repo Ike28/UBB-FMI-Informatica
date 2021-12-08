@@ -1,0 +1,43 @@
+     1                                  bits 32 
+     2                                  global  start 
+     3                                  
+     4                                  extern  exit
+     5                                  import  exit msvcrt.dll
+     6                                  
+     7                                  segment  data use32 class=data
+     8 00000000 0102050A0F1428          	S db 1,2,5,10,15,20,40 ; DS:01|02|05|0A|0F|14|32 (hex)
+     9                                  	lenS equ $-S
+    10                                  	lenD equ lenS-1
+    11 00000007 00<rept>                	D times lenD db 0 ; DS:01|02|05|0A|0F|14|32|00|00|00|00|00|00 (hex)
+    12                                  					;	|<---------S-------->|<-------D------->|
+    13                                  segment  code use32 class=code
+    14                                  start:
+    15                                  	; Se da un sir de octeti S de lungime l.
+    16                                  	; Sa se construiasca sirul D de lungime l-1 astfel incat
+    17                                  	; elementele din D sa reprezinte diferenta dintre fiecare 2 elemente consecutive din S
+    18                                  
+    19                                  	; Strategie:
+    20                                  	;
+    21                                  	; 	pentru esi = 0,l-1
+    22                                  	;	|	elementul curent din S este la adresa s+esi
+    23                                  	;	|	elementul urmator din S este la adresa s+esi+1
+    24                                  	;	|	elementul curent din D este la adresa d+esi
+    25                                  	;	|	fie dif = elementul urmator din S - elementul curent din S
+    26                                  	;	|	elementul curent din D devine dif
+    27                                  	;	|_[]
+    28                                  	;
+    29 00000000 BE00000000              	mov esi, 0 ; initializam esi cu offsetul primului element din S fata de adresa lui S
+    30                                  	repeta:
+    31 00000005 8A86[00000000]          		mov al, [S + esi] ; AL <- elementul curent din S
+    32 0000000B 8A9E[01000000]          		mov bl, [S + esi + 1] ; BL <- elementul urmator din S
+    33 00000011 28C3                    		sub bl, al
+    34 00000013 889E[07000000]          		mov [D + esi], bl ; adaugam la D rezultatul diferentei
+    35 00000019 46                      		inc esi ; trecem la offsetul urmatorului element din S
+    36 0000001A 83FE06                  		cmp esi, lenD ; setam flagurile pentru utilizarea instructiunilor de salt conditionat,
+    37                                  					; prin efectuarea fictiva esi - (l-1)
+    38 0000001D 72E6                    	jb repeta ; daca rezultatul lui CMP a fost negativ (esi < l-1), repetam pasii
+    39                                  	;	rezultatul este in segmentul de date (in hex dump in debugger):
+    40                                  	;	[DS:D]: 01|03|05|05|05|14 (hex)
+    41                                  	
+    42 0000001F 6A00                    	push   dword 0
+    43 00000021 FF15[00000000]          	call   [exit]

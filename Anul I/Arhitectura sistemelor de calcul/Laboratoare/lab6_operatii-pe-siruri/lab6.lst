@@ -1,0 +1,91 @@
+     1                                  bits 32 
+     2                                  global  start 
+     3                                  
+     4                                  extern  exit
+     5                                  import  exit msvcrt.dll
+     6                                  	; 15.
+     7                                  	; Se da un sir S de dublucuvinte.
+     8                                  	; Sa se obtina sirul D format din octetii dublucuvintelor din sirul D, 
+     9                                  	; sortati in ordine descrescatoare in interpretarea fara semn.
+    10                                  	;
+    11                                  	; EXEMPLE:
+    12                                  	; 1. S dd 12345607h, 1A2B3C15h
+    13                                  	; 07 56 34 12 15 3C 2B 1A => 56 3C 34 2B 1A 15 12 07
+    14                                  	;
+    15                                  	; 2. S dd 0D5F3E077h, 3FFAF7F2h
+    16                                  	; 77 E0 F3 D5 F2 F7 FA 3F => FA F7 F3 F2 E0 D5 77 3F
+    17                                  	;
+    18                                  	; 3. S dd C8081101h, 0FE45h, 6DAF4EE2h
+    19                                  	; 01 11 08 C8 45 FE E2 4E AF 6D => FE E2 C8 AF 6D 4E 45 11 08 01
+    20                                  segment  data use32 class=data
+    21 00000000 011108C845FE0000E2-     	S dd 0C8081101h, 0FE45h, 6DAF4EE2h
+    21 00000009 4EAF6D             
+    22                                  	lenSoct equ $-S
+    23 0000000C 00<rept>                	D times lenSoct db 0
+    24 00000018 <res 00000004>          	st resd 1
+    25                                  segment  code use32 class=code
+    26                                  start: 
+    27                                  	; STRATEGIE:
+    28                                  	; Implementam algoritmul BubbleSort
+    29                                  	;
+    30                                  	;	i=0
+    31                                  	;	executa
+    32                                  	;	|	sortat = true
+    33                                  	;	|	pentru j = 0,lenSoct - i - 1
+    34                                  	;	|	|	elementul curent este la adresa S+j
+    35                                  	;	|	|	elementul urmator este la adresa S+j+1
+    36                                  	;	|	|	daca elemCurent <= elemUrmator
+    37                                  	;	|	|	|	interschimba elemCurent cu elemUrmator
+    38                                  	;	|	|	|	sortat = false
+    39                                  	;	|	|	|_[]
+    40                                  	;	|	|_[]
+    41                                  	;	|	i=i+1
+    42                                  	;	|__cat timp i < lenSoct-1 si sortat = false
+    43                                  	;
+    44 00000000 BF[0C000000]            	mov edi, D ; setam offsetul sirului destinatie pentru instructiunile de transfer
+    45 00000005 BE[00000000]            	mov esi, S ; setam offsetul sirului sursa
+    46 0000000A B90C000000              	mov ecx, lenSoct ; setam numarul de pasi pentru ciclare
+    47                                  	copiere:
+    48 0000000F A4                      		movsb ; mutam octetul de la DS:ESI la ES:EDI
+    49 00000010 E2FD                    	loop copiere ; copiem sirul S in D pentru a lucra pe el
+    50                                  
+    51 00000012 B90C000000              	mov ecx, lenSoct
+    52 00000017 49                      	dec ecx ; setam numarul de pasi pentru ciclare (lenS -1 deoarece vom compara mereu cu elementul urmator)
+    53 00000018 F8                      	clc ; setam directia de parcurgere a sirurilor
+    54                                  
+    55 00000019 E33E                    	jecxz sfSortare ; nu avem nimic de sortat la un sir gol
+    56                                  	executaSortare:
+    57 0000001B C605[18000000]01        		mov [st], byte 1 ; st va juca rol de marker boolean:
+    58                                  						 ; daca sirul a fost sortat sau a fost nevoie de interschimbari
+    59 00000022 BB00000000              		mov ebx, 0 ; in ebx vom tine numarul de elemente parcurse
+    60 00000027 BE[0C000000]            		mov esi, D     ; --/
+    61 0000002C BF[0D000000]            		mov edi, D + 1 ; -/ setam pozitiile consecutive in sirul D pentru a folosi la fiecare pas
+    62                                  					   ; instructiunile de comparare a datelor pe elementul curent si cel urmator, 
+    63                                  					   ; si de transfer a datelor in cazul interschimbarii
+    64                                  		cicluSortare:
+    65 00000031 A6                      			cmpsb ; comparam elementul curent cu cel urmator
+    66 00000032 7602                    			jbe interschimbare ; interschimbam in caz de nerespectare a ordinii descrescatoare
+    67 00000034 EB15                    			jmp sfInterschimbare ; altfel trecem la urmatorul pas
+    68                                  			interschimbare:
+    69 00000036 4E                      				dec esi ;--/recuperam pozitiile elementelor de interschimbat modificate anterior automat de CMPSB
+    70 00000037 4F                      				dec edi ;-/ 
+    71 00000038 AC                      				lodsb ; AL <- elemCurent
+    72 00000039 4E                      				dec esi ; LODSB incrementeaza automat ESI, ceea ce ar perturba interschimbarea
+    73 0000003A 268A27                  				mov ah, [es:edi] ; AH <- elemUrmator
+    74 0000003D AA                      				stosb ; elemUrmator <- elemCurent
+    75 0000003E 4F                      				dec edi ; STOSB incrementeaza automat EDI, ceea ce ar perturba interschimbarea
+    76 0000003F 3E8826                  				mov [ds:esi], ah ; elemCurent <- elemUrmator
+    77 00000042 C605[18000000]00        				mov [st], byte 0 ; marcam efectuarea a cel putin unei interschimbari
+    78 00000049 46                      				inc esi ;--/ trecem la urmatoarea pereche de elemente
+    79 0000004A 47                      				inc edi ;-/
+    80                                  			sfInterschimbare:
+    81 0000004B 43                      			inc ebx ; actualizam numarul de elemente parcurse
+    82 0000004C 39CB                    			cmp ebx, ecx ; parcurgem elementele de la primul pana la pozitia lenS - pas - 1 din D 
+    83                                  						 ; (restul elementelor pana la capatul lui D sunt sortate)
+    84 0000004E 72E1                    		jb cicluSortare
+    85 00000050 803D[18000000]01        		cmp byte [st], 1  ;--/
+    86 00000057 E0C2                    	loopne executaSortare ;-/ executam parcurgeri pana cand sirul e sortat sau avem lenS parcurgeri
+    87                                  	sfSortare:
+    88                                  
+    89 00000059 6A00                    	push   dword 0
+    90 0000005B FF15[00000000]          	call   [exit]
