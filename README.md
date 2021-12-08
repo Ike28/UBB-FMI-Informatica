@@ -4,7 +4,7 @@
 ### Anul I
 - [x] [*  🧮 Logică computațională](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20I/Logica%20computationala)
 - [ ] *  🐍 Fundamentele programării
-- [ ] *  🎛️ Arhitectura sistemelor de calcul
+- [x] [*  🎛️ Arhitectura sistemelor de calcul](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20I/Arhitectura%20sistemelor%20de%20calcul)
 
 ### Anul II
 - [x] [*  🦉 Programare logică și funcțională](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20II/Programare%20logica%20si%20functionala)
