@@ -11,4 +11,4 @@
 - [x] [*  🗃️ Baze de date](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20II/Baze%20de%20date)
 - [ ] *  ☕ Metode avansate de programare
 - [x] [*  📡 Rețele de calculatoare](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20II/Retele%20de%20calculatoare/)
-- [ ] *  📊 Probabilități și statistică
+- [x] [*  📊 Probabilități și statistică](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20II/Probabilitati%20si%20statistica)
