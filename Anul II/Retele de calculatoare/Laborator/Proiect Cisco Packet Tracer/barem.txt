@@ -1,0 +1,14 @@
+Adrese IP (5p)
+Netmasks (15p)
+Gateways (5p)
+DHCP server (5p)
+DHCP pe un router (5p)
+DNS (15p)
+HTTP (5p)
+Comenzi DOS intre calculatoare (5p)
+Rutare statica sau dinamica (5p/10p)
+Wireless : Access Point + router (10p)
+NAT (10p)
+VLAN (10p)
+______________________________________
+TOTAL: 100p maxim
