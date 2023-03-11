@@ -1,0 +1,165 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ro">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Formular</title>
+    <link rel="shortcut icon" href="resources/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <table align="center" border="1" style="width:40%">
+        <thead>
+            <tr>
+                <th colspan="7" style="background-color:#ffe600;">
+                    Fișă de internare
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Nume</th>
+                <td colspan="2">
+                    <input type="text" title="Nume și prenume">
+                </td>
+                <th>Data</th>
+                <td colspan="3">
+                    <input type="text" style="width:100%"
+                    title="Data internării">
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2">Adresa</th>
+                <td colspan="5">
+                    <input type="text" style="width:100%"
+                    title="Adresa completă">
+                </td>
+            </tr>
+            <tr>
+                <th>Oraș</th>
+                <td colspan="2">
+                    <input type="text" style="width:100%" title="Orașul din C.I.">
+                </td>
+                <th>Județ</th>
+                <td>
+                    <input type="text" title="Județul din C.I.">
+                </td>
+                <th>Cod poștal</th>
+                <td>
+                    <input type="text" title="Codul poștal al adresei">
+                </td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td colspan="4">
+                    <input type="text" style="width:100%" title="Email-ul pacientului"> 
+                </td>
+                <th colspan="1">Sex</th>
+                <td colspan="1">
+                    <input type="radio" name="sex" checked>M
+                    <input type="radio" name="sex">F     
+                </td>
+            </tr>
+            <tr>
+                <th>Tel fix</th>
+                <td colspan="3">
+                    <input type="text" style="width:100%">
+                </td>
+                <th>Tel mobil</th>
+                <td colspan="2">
+                    <input type="text" style="width:100%">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table align="center" border="1" style="width:40%">
+        <thead>
+            <tr>
+                <th colspan="7" style="background-color:#ff0000;">Medicamente prescrise</th>
+            </tr>    
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <table align="center" border="1" style="width:40%">
+                        <thead>
+                            <tr>
+                                <th style="width:10%">Nr.</th>
+                                <th style="width:30%">Cod</th>
+                                <th style="width:40">Medicament</th>
+                                <th style="width:20%">Cantitate</th>    
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <th>1</th>
+                            <td>SDKAD34</td>
+                            <td title="Aspirină">acid acetilsalicilic</td>
+                            <td>3</td>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <td>L424LJN</td>
+                                <td title="Paracetamol">derivate de para-aminofenol</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <td>24213AD</td>
+                                <td>Ampicilină</td>
+                                <td>1</td>
+                            </tr>
+                            <tr style="height:100px">
+                                <th colspan="1">Simptome</th>
+                                <td colspan="3">
+                                    <select name="simptome" style="width:100%" multiple>
+                                        <option value="raceala">Răceală</option>
+                                        <option value="gripa">Gripă</option>
+                                        <option value="dureri">Dureri de cap</option>
+                                        <option value="acnee">Acnee polimorfă</option>
+                                        <option value="myoclonus">Mioclonie</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr style="height:100px">
+                                <th colspan="1">Afecțiuni</th>
+                                <td colspan="3">
+                                    <ol type="I" start="50">
+                                        <li>Hiperalgezia ulnei</li>
+                                        <li>Sindromul Munchausen</li>
+                                        <li>Leziuni ale inimii</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="1">Tip internare</th>
+                                <td colspan="3">
+                                    <select name="tip" style="width:100%">
+                                        <option selected>Deloc</option>
+                                        <option>Oleacă</option>
+                                        <option>E grav</option>
+                                        <option>E degeaba</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="1">Observații</th>
+                                <td colspan="3">
+                                    <input type="text" style="width:100%">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3"></td>
+                                <td>
+                                    <a href="index.html">
+                                        <input type="button" value="Salveaza si tipareste">
+                                    </a>
+                                </td>
+                            </tr>   
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

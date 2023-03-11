@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Formular</title>
+    <link rel="shortcut icon" href="resources/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <table style="width:40%; border: 1px solid;">
+        <caption style="background-color:#ffe600; border: 1px solid;">
+            <b>Fișă de internare</b>
+        </caption>
+        <thead>
+        </thead>
+        <tbody>
+            <tr>
+                <th style="border: 1px solid;">Nume</th>
+                <td colspan="2" style="border: 1px solid;">
+                    <input type="text" placeholder="Numele dvs..."
+                    title="Nume și prenume">
+                </td>
+                <th style="border: 1px solid;">Data</th>
+                <td colspan="3" style="border: 1px solid;">
+                    <input type="date" style="width:100%"
+                    title="Data internării">
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2" style="border: 1px solid;">Adresa</th>
+                <td colspan="5" style="border: 1px solid;">
+                    <input type="text" placeholder="ex. Bulevardul 21 Decembrie nr. 89, Bloc M3, Sc. XII, Ap. 36"
+                    style="width:100%"
+                    title="Adresa completă">
+                </td>
+            </tr>
+            <tr>
+                <th style="border: 1px solid;">Oraș</th>
+                <td colspan="2" style="border: 1px solid;">
+                    <input type="text" placeholder="ex. Cluj-Napoca"
+                    style="width:100%" title="Orașul din C.I.">
+                </td>
+                <th style="border: 1px solid;">Județ</th>
+                <td style="border: 1px solid;">
+                    <input type="text" placeholder="ex. CJ" title="Județul din C.I.">
+                </td>
+                <th style="border: 1px solid;">Cod poștal</th>
+                <td style="border: 1px solid;">
+                    <input type="text" placeholder="ex. 40000" title="Codul poștal al adresei">
+                </td>
+            </tr>
+            <tr>
+                <th style="border: 1px solid;">Email</th>
+                <td colspan="4" style="border: 1px solid;">
+                    <input type="email" placeholder="example@gmail.com"
+                    style="width:100%" title="Email-ul pacientului"> 
+                </td>
+                <th colspan="1" style="border: 1px solid;">Sex</th>
+                <td colspan="1" style="border: 1px solid;">
+                    <input type="radio" name="sex" checked>M
+                    <input type="radio" name="sex">F     
+                </td>
+            </tr>
+            <tr>
+                <th style="border: 1px solid;">Tel fix</th>
+                <td colspan="3" style="border: 1px solid;">
+                    <input type="tel" placeholder="ex. 0230533332"
+                    style="width:100%">
+                </td>
+                <th style="border: 1px solid;">Tel mobil</th>
+                <td colspan="2" style="border: 1px solid;">
+                    <input type="tel" placeholder="ex. 0757239941"
+                    style="width:100%">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table style="width:40%; border: 1px solid;">
+        <caption style="background-color:#ff0000; border: 1px solid;">
+            <b>Medicamente prescrise</b>
+        </caption>
+        <thead>   
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <table style="width:100%;">
+                        <thead>
+                            <tr>
+                                <th style="width:10%; border: 1px solid;">Nr.</th>
+                                <th style="width:30%; border: 1px solid;">Cod</th>
+                                <th style="width:40%; border: 1px solid;">Medicament</th>
+                                <th style="width:20%; border: 1px solid;">Cantitate</th>    
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th style="border: 1px solid;">1</th>
+                                <td style="border: 1px solid;">SDKAD34</td>
+                                <td title="Aspirină" style="border: 1px solid;">
+                                    acid acetilsalicilic
+                                </td>
+                                <td style="border: 1px solid;">3</td>
+                            </tr>
+                            <tr>
+                                <th style="border: 1px solid;">2</th>
+                                <td style="border: 1px solid;">L424LJN</td>
+                                <td title="Paracetamol" style="border: 1px solid;">
+                                    derivate de para-aminofenol
+                                </td>
+                                <td style="border: 1px solid;">2</td>
+                            </tr>
+                            <tr>
+                                <th style="border: 1px solid;">3</th>
+                                <td style="border: 1px solid;">24213AD</td>
+                                <td style="border: 1px solid;">Ampicilină</td>
+                                <td style="border: 1px solid;">1</td>
+                            </tr>
+                            <tr style="height:100px">
+                                <th colspan="1" style="border: 1px solid;">Simptome</th>
+                                <td colspan="3" style="border: 1px solid;">
+                                    <select name="simptome" style="width:100%" multiple>
+                                        <option value="raceala">Răceală</option>
+                                        <option value="gripa">Gripă</option>
+                                        <option value="dureri">Dureri de cap</option>
+                                        <option value="acnee">Acnee polimorfă</option>
+                                        <option value="myoclonus">Mioclonie</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr style="height:100px">
+                                <th colspan="1" style="border: 1px solid;">Afecțiuni</th>
+                                <td colspan="3" style="border: 1px solid;">
+                                    <ol type="I" start="50">
+                                        <li>Hiperalgezia ulnei</li>
+                                        <li>Sindromul Munchausen</li>
+                                        <li>Leziuni ale inimii</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="1" style="border: 1px solid;">Tip internare</th>
+                                <td colspan="3" style="border: 1px solid;">
+                                    <select name="tip" style="width:100%">
+                                        <option selected>Deloc</option>
+                                        <option>Oleacă</option>
+                                        <option>E grav</option>
+                                        <option>E degeaba</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="1" style="border: 1px solid;">Observații</th>
+                                <td colspan="3" style="border: 1px solid;">
+                                    <input type="text" placeholder=
+                                    "a se completa cu eventualele observatii"
+                                    style="width:100%">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" style="border: 1px solid;"></td>
+                                <td style="border: 1px solid;">
+                                    <input type="button" value="Salveaza si tipareste">
+                                </td>
+                            </tr>   
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
