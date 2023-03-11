@@ -17,3 +17,4 @@
 - [x] [*  🎰 Probabilități și statistică](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20II/Probabilitati%20si%20statistica)
 - [x] [*  🖥 Programare web](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20II/Programare%20web)
 - [x] [*  🤖 Inteligență artificială](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20II/Inteligenta%20artificiala)
+- [x] [*  🧰 Medii de proiectare si programare](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20II/Medii%20de%20proiectare%20si%20programare)
