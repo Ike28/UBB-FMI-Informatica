@@ -1,6 +1,7 @@
-from CommunityFinder import *
-from DataHandler import *
-from UserInterface import *
+import unittest
+from sample.CommunityFinder import *
+from sample.DataHandler import *
+from sample.UserInterface import *
 
 
 def main():
@@ -14,6 +15,9 @@ def main():
 
     graph = DataHandler.read_data(target_file)
     communities = CommunityFinder.find_communities(graph, input_number_of_communities, input_method)
+    print("{} communities found:".format(len(communities)))
+    for c in communities:
+        print(c)
     graph = DataHandler.read_data(target_file, log_progress=False)
     DataHandler.plot_network(graph, communities)
 

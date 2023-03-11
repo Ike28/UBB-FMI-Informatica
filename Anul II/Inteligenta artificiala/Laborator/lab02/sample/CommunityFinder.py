@@ -58,7 +58,7 @@ class CommunityFinder:
         return result
 
     @staticmethod
-    def find_communities(graph, input_number_of_communities: int, input_method: str, log_progress=True):
+    def find_communities(graph, input_number_of_communities: int, input_method="own", log_progress=True):
         """
         Finds a given number of communities in a graph
         :param graph: NetworkX graph
@@ -81,12 +81,12 @@ class CommunityFinder:
             processed = girvan_newman(graph)
             if log_progress:
                 print(u'Done \u2713')
-            limited_result = itertools.takewhile(lambda c: len(c) <= 2, processed)
+            limited_result = itertools.takewhile(lambda c: len(c) <= input_number_of_communities, processed)
             communities = []
             if log_progress:
                 print("Processing communities...", end="")
             for instance in limited_result:
-                communities = list(c for c in instance)
+                communities = list(list(c) for c in instance)
             if log_progress:
                 print(u'Done \u2713')
 
