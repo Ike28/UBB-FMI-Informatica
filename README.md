@@ -15,3 +15,5 @@
 - [ ] *  ☕ Metode avansate de programare
 - [x] [*  📡 Rețele de calculatoare](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20II/Retele%20de%20calculatoare/)
 - [x] [*  🎰 Probabilități și statistică](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20II/Probabilitati%20si%20statistica)
+- [x] [*  🖥 Programare web](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20II/Programare%20web)
+- [x] [*  🤖 Inteligență artificială](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20II/Inteligenta%20artificiala)
