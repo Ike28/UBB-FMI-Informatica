@@ -18,3 +18,5 @@
 - [x] [*  🖥 Programare web](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20II/Programare%20web)
 - [x] [*  🤖 Inteligență artificială](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20II/Inteligenta%20artificiala)
 - [x] [*  🧰 Medii de proiectare și programare](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20II/Medii%20de%20proiectare%20si%20programare)
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Ike28&layout=compact&langs_count=16&exclude_repo=ProgramareWeb,object_measurement,diebmannImobWebsite,map-222-SFMC&custom_title=Languages)](https://github.com/anuraghazra/github-readme-stats)
