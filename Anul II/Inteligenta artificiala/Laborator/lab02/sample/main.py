@@ -12,13 +12,14 @@ def main():
     target_file = settings[0]
     input_method = settings[1]
     input_number_of_communities = settings[2]
+    file_type = settings[3]
 
-    graph = DataHandler.read_data(target_file)
+    graph = DataHandler.read_data(target_file, file_type=file_type)
     communities = CommunityFinder.find_communities(graph, input_number_of_communities, input_method)
     print("{} communities found:".format(len(communities)))
     for c in communities:
         print(c)
-    graph = DataHandler.read_data(target_file, log_progress=False)
+    graph = DataHandler.read_data(target_file, log_progress=False, file_type=file_type)
     DataHandler.plot_network(graph, communities)
 
 

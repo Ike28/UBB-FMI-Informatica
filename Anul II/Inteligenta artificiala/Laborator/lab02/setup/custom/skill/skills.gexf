@@ -1,0 +1,1876 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf version="1.2" xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance">
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <attributes class="node" mode="static">
+      <attribute id="0" title="attr" type="string" />
+    </attributes>
+    <meta>
+      <creator>NetworkX 2.2</creator>
+      <lastmodified>14/02/2019</lastmodified>
+    </meta>
+    <nodes>
+      <node id="Test management" label="Test management">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 292, 'supply': 0.0, 'skills': [], 'colour': 'rgb(238,50,50)', 'value': 'Test management', 'cluster': 'Unknown', 'r': 17.173206, 'my': 639.7925, 'mx': -135.321}" />
+        </attvalues>
+      </node>
+      <node id="Automation" label="Automation">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 108, 'supply': 0.0, 'skills': [], 'colour': 'rgb(238,50,50)', 'value': 'Automation', 'cluster': 'Unknown', 'r': 32.728146, 'my': 296.51636, 'mx': -11.859729}" />
+        </attvalues>
+      </node>
+      <node id="SUSE Linux" label="SUSE Linux">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 265, 'supply': 0.0, 'skills': [], 'colour': 'rgb(189,238,50)', 'value': 'SUSE Linux', 'cluster': 'Unknown', 'r': 25.332893, 'my': -733.79694, 'mx': -373.15805}" />
+        </attvalues>
+      </node>
+      <node id="Test scenarios" label="Test scenarios">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 329, 'supply': 0.0, 'skills': [], 'colour': 'rgb(238,50,50)', 'value': 'Test scenarios', 'cluster': 'Unknown', 'r': 15.923644, 'my': 623.9837, 'mx': -244.89491}" />
+        </attvalues>
+      </node>
+      <node id="Performance tuning" label="Performance tuning">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 190, 'supply': 0.0, 'skills': [], 'colour': 'rgb(129,50,238)', 'value': 'Performance tuning', 'cluster': 'Unknown', 'r': 33.126007, 'my': -741.5273, 'mx': -7.19493}" />
+        </attvalues>
+      </node>
+      <node id="Apache Tomcat" label="Apache Tomcat">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 86, 'supply': 0.0, 'skills': [], 'colour': 'rgb(189,238,50)', 'value': 'Apache Tomcat', 'cluster': 'Unknown', 'r': 22.77477, 'my': -528.75385, 'mx': 501.60696}" />
+        </attvalues>
+      </node>
+      <node id="Database" label="Database">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 1, 'supply': 0.0, 'skills': [], 'colour': 'rgb(50,238,90)', 'value': 'Database', 'cluster': 'Unknown', 'r': 24.877943, 'my': -454.03177, 'mx': -28.294075}" />
+        </attvalues>
+      </node>
+      <node id="Ubuntu" label="Ubuntu">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 237, 'supply': 0.0, 'skills': [], 'colour': 'rgb(189,238,50)', 'value': 'Ubuntu', 'cluster': 'Unknown', 'r': 22.66435, 'my': -475.24817, 'mx': -83.88466}" />
+        </attvalues>
+      </node>
+      <node id="Planning" label="Planning">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 134, 'supply': 0.0, 'skills': [], 'colour': 'rgb(70,50,238)', 'value': 'Planning', 'cluster': 'Unknown', 'r': 25.614805, 'my': 281.2815, 'mx': -816.6676}" />
+        </attvalues>
+      </node>
+      <node id="Microsoft Project" label="Microsoft Project">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 202, 'supply': 0.0, 'skills': [], 'colour': 'rgb(70,50,238)', 'value': 'Microsoft Project', 'cluster': 'Unknown', 'r': 22.113579, 'my': 453.2325, 'mx': -1043.1013}" />
+        </attvalues>
+      </node>
+      <node id="Oracle WebLogic" label="Oracle WebLogic">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 97, 'supply': 0.0, 'skills': [], 'colour': 'rgb(189,238,50)', 'value': 'Oracle WebLogic', 'cluster': 'Unknown', 'r': 21.18751, 'my': -589.95905, 'mx': 510.88693}" />
+        </attvalues>
+      </node>
+      <node id="Red Hat Enterprise Linux" label="Red Hat Enterprise Linux">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 173, 'supply': 0.0, 'skills': [], 'colour': 'rgb(189,238,50)', 'value': 'Red Hat Enterprise Linux', 'cluster': 'Unknown', 'r': 26.263199, 'my': -683.9993, 'mx': -133.12537}" />
+        </attvalues>
+      </node>
+      <node id="Web QA" label="Web QA">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 123, 'supply': 0.0, 'skills': [], 'colour': 'rgb(238,50,50)', 'value': 'Web QA', 'cluster': 'Unknown', 'r': 24.990881, 'my': 548.4226, 'mx': 0.4033158}" />
+        </attvalues>
+      </node>
+      <node id="Senior management" label="Senior management">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 141, 'supply': 0.0, 'skills': [], 'colour': 'rgb(70,50,238)', 'value': 'Senior management', 'cluster': 'Unknown', 'r': 24.192936, 'my': 375.69876, 'mx': -793.3506}" />
+        </attvalues>
+      </node>
+      <node id="Database design" label="Database design">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 226, 'supply': 0.0, 'skills': [], 'colour': 'rgb(50,238,90)', 'value': 'Database design', 'cluster': 'Unknown', 'r': 31.158474, 'my': -605.84644, 'mx': 153.14796}" />
+        </attvalues>
+      </node>
+      <node id="QA" label="QA">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 8, 'supply': 0.0, 'skills': [], 'colour': 'rgb(238,50,50)', 'value': 'QA', 'cluster': 'Unknown', 'r': 15.0, 'my': 152.83879, 'mx': -213.15654}" />
+        </attvalues>
+      </node>
+      <node id="PMBOK" label="PMBOK">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 207, 'supply': 0.0, 'skills': [], 'colour': 'rgb(70,50,238)', 'value': 'PMBOK', 'cluster': 'Unknown', 'r': 17.546482, 'my': 358.78015, 'mx': -1009.78357}" />
+        </attvalues>
+      </node>
+      <node id="Unix" label="Unix">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 91, 'supply': 0.0, 'skills': [], 'colour': 'rgb(189,238,50)', 'value': 'Unix', 'cluster': 'Unknown', 'r': 36.30273, 'my': -430.30045, 'mx': -135.36172}" />
+        </attvalues>
+      </node>
+      <node id="Spring" label="Spring">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 98, 'supply': 0.0, 'skills': [], 'colour': 'rgb(50,238,90)', 'value': 'Spring', 'cluster': 'Unknown', 'r': 30.088236, 'my': -336.31815, 'mx': 579.8987}" />
+        </attvalues>
+      </node>
+      <node id="HTML5" label="HTML5">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 54, 'supply': 0.0, 'skills': [], 'colour': 'rgb(50,238,90)', 'value': 'HTML5', 'cluster': 'Unknown', 'r': 32.382538, 'my': -60.0348, 'mx': 659.04266}" />
+        </attvalues>
+      </node>
+      <node id="Test execution" label="Test execution">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 285, 'supply': 0.0, 'skills': [], 'colour': 'rgb(238,50,50)', 'value': 'Test execution', 'cluster': 'Unknown', 'r': 18.505365, 'my': 572.7444, 'mx': -316.11978}" />
+        </attvalues>
+      </node>
+      <node id="Linux" label="Linux">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 87, 'supply': 0.0, 'skills': [], 'colour': 'rgb(189,238,50)', 'value': 'Linux', 'cluster': 'Unknown', 'r': 35.006798, 'my': -346.77133, 'mx': -83.11102}" />
+        </attvalues>
+      </node>
+      <node id="Shell scripting" label="Shell scripting">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 154, 'supply': 0.0, 'skills': [], 'colour': 'rgb(189,238,50)', 'value': 'Shell scripting', 'cluster': 'Unknown', 'r': 29.479645, 'my': -497.8099, 'mx': -161.89645}" />
+        </attvalues>
+      </node>
+      <node id="IT project management" label="IT project management">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 206, 'supply': 0.0, 'skills': [], 'colour': 'rgb(70,50,238)', 'value': 'IT project management', 'cluster': 'Unknown', 'r': 29.795338, 'my': 436.20453, 'mx': -758.4851}" />
+        </attvalues>
+      </node>
+      <node id="HTML" label="HTML">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 25, 'supply': 0.0, 'skills': [], 'colour': 'rgb(50,238,90)', 'value': 'HTML', 'cluster': 'Unknown', 'r': 23.328678, 'my': -104.54833, 'mx': 554.6746}" />
+        </attvalues>
+      </node>
+      <node id="Solaris administration" label="Solaris administration">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 326, 'supply': 0.0, 'skills': [], 'colour': 'rgb(189,238,50)', 'value': 'Solaris administration', 'cluster': 'Unknown', 'r': 15.0, 'my': -596.9126, 'mx': -278.0207}" />
+        </attvalues>
+      </node>
+      <node id="Test cases" label="Test cases">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 111, 'supply': 0.0, 'skills': [], 'colour': 'rgb(238,50,50)', 'value': 'Test cases', 'cluster': 'Unknown', 'r': 24.148617, 'my': 448.12427, 'mx': -216.26427}" />
+        </attvalues>
+      </node>
+      <node id="IBM AIX" label="IBM AIX">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 256, 'supply': 0.0, 'skills': [], 'colour': 'rgb(189,238,50)', 'value': 'IBM AIX', 'cluster': 'Unknown', 'r': 31.307524, 'my': -648.69196, 'mx': -356.7313}" />
+        </attvalues>
+      </node>
+      <node id="Web services" label="Web services">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 20, 'supply': 0.0, 'skills': [], 'colour': 'rgb(50,238,90)', 'value': 'Web services', 'cluster': 'Unknown', 'r': 27.23469, 'my': -300.39435, 'mx': 528.05176}" />
+        </attvalues>
+      </node>
+      <node id="PMP" label="PMP">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 208, 'supply': 0.0, 'skills': [], 'colour': 'rgb(70,50,238)', 'value': 'PMP', 'cluster': 'Unknown', 'r': 30.988617, 'my': 352.2759, 'mx': -948.86426}" />
+        </attvalues>
+      </node>
+      <node id="Tcl" label="Tcl">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 328, 'supply': 0.0, 'skills': [], 'colour': 'rgb(189,238,50)', 'value': 'Tcl', 'cluster': 'Unknown', 'r': 15.0, 'my': 88.69707, 'mx': -83.23855}" />
+        </attvalues>
+      </node>
+      <node id="Apache Hadoop" label="Apache Hadoop">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 71, 'supply': 0.0, 'skills': [], 'colour': 'rgb(238,228,50)', 'value': 'Apache Hadoop', 'cluster': 'Unknown', 'r': 28.58638, 'my': 683.07153, 'mx': 691.27893}" />
+        </attvalues>
+      </node>
+      <node id="Selenium" label="Selenium">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 119, 'supply': 0.0, 'skills': [], 'colour': 'rgb(238,50,50)', 'value': 'Selenium', 'cluster': 'Unknown', 'r': 27.442526, 'my': 404.1159, 'mx': 42.411602}" />
+        </attvalues>
+      </node>
+      <node id="Scripting language" label="Scripting language">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 272, 'supply': 0.0, 'skills': [], 'colour': 'rgb(189,238,50)', 'value': 'Scripting language', 'cluster': 'Unknown', 'r': 25.221891, 'my': -157.61226, 'mx': -67.6205}" />
+        </attvalues>
+      </node>
+      <node id="Big data" label="Big data">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 72, 'supply': 0.0, 'skills': [], 'colour': 'rgb(238,228,50)', 'value': 'Big data', 'cluster': 'Unknown', 'r': 30.24641, 'my': 639.59644, 'mx': 624.9551}" />
+        </attvalues>
+      </node>
+      <node id="SOAP" label="SOAP">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 90, 'supply': 0.0, 'skills': [], 'colour': 'rgb(50,238,90)', 'value': 'SOAP', 'cluster': 'Unknown', 'r': 30.180447, 'my': -343.23212, 'mx': 686.03174}" />
+        </attvalues>
+      </node>
+      <node id="CSS" label="CSS">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 24, 'supply': 0.0, 'skills': [], 'colour': 'rgb(50,238,90)', 'value': 'CSS', 'cluster': 'Unknown', 'r': 23.794655, 'my': -80.857765, 'mx': 600.79834}" />
+        </attvalues>
+      </node>
+      <node id="Functional testing" label="Functional testing">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 228, 'supply': 0.0, 'skills': [], 'colour': 'rgb(238,50,50)', 'value': 'Functional testing', 'cluster': 'Unknown', 'r': 20.065912, 'my': 609.782, 'mx': -104.02422}" />
+        </attvalues>
+      </node>
+      <node id="Web development" label="Web development">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 32, 'supply': 0.0, 'skills': [], 'colour': 'rgb(50,238,90)', 'value': 'Web development', 'cluster': 'Unknown', 'r': 32.523033, 'my': -163.16144, 'mx': 490.3773}" />
+        </attvalues>
+      </node>
+      <node id="Project planning" label="Project planning">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 139, 'supply': 0.0, 'skills': [], 'colour': 'rgb(70,50,238)', 'value': 'Project planning', 'cluster': 'Unknown', 'r': 31.273407, 'my': 409.35184, 'mx': -1093.1678}" />
+        </attvalues>
+      </node>
+      <node id="Scripting" label="Scripting">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 109, 'supply': 0.0, 'skills': [], 'colour': 'rgb(238,50,50)', 'value': 'Scripting', 'cluster': 'Unknown', 'r': 33.443344, 'my': -63.159466, 'mx': -134.03453}" />
+        </attvalues>
+      </node>
+      <node id="SDET" label="SDET">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 253, 'supply': 0.0, 'skills': [], 'colour': 'rgb(238,50,50)', 'value': 'SDET', 'cluster': 'Unknown', 'r': 20.060041, 'my': 348.0678, 'mx': 70.98001}" />
+        </attvalues>
+      </node>
+      <node id="Apache HBase" label="Apache HBase">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 77, 'supply': 0.0, 'skills': [], 'colour': 'rgb(238,228,50)', 'value': 'Apache HBase', 'cluster': 'Unknown', 'r': 29.259544, 'my': 759.5085, 'mx': 621.67804}" />
+        </attvalues>
+      </node>
+      <node id="Ajax" label="Ajax">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 14, 'supply': 0.0, 'skills': [], 'colour': 'rgb(50,238,90)', 'value': 'Ajax', 'cluster': 'Unknown', 'r': 31.751238, 'my': -235.93082, 'mx': 615.7587}" />
+        </attvalues>
+      </node>
+      <node id="OOP" label="OOP">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 26, 'supply': 0.0, 'skills': [], 'colour': 'rgb(50,238,90)', 'value': 'OOP', 'cluster': 'Unknown', 'r': 36.969162, 'my': -107.91301, 'mx': 323.32193}" />
+        </attvalues>
+      </node>
+      <node id="Project management" label="Project management">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 135, 'supply': 0.0, 'skills': [], 'colour': 'rgb(70,50,238)', 'value': 'Project management', 'cluster': 'Unknown', 'r': 22.82671, 'my': 330.50745, 'mx': -837.0957}" />
+        </attvalues>
+      </node>
+      <node id="Test scripts" label="Test scripts">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 232, 'supply': 0.0, 'skills': [], 'colour': 'rgb(238,50,50)', 'value': 'Test scripts', 'cluster': 'Unknown', 'r': 21.015709, 'my': 501.44263, 'mx': -295.93127}" />
+        </attvalues>
+      </node>
+      <node id="Project implementation" label="Project implementation">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 209, 'supply': 0.0, 'skills': [], 'colour': 'rgb(70,50,238)', 'value': 'Project implementation', 'cluster': 'Unknown', 'r': 17.211258, 'my': 375.24252, 'mx': -1163.7225}" />
+        </attvalues>
+      </node>
+      <node id="Estimating" label="Estimating">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 244, 'supply': 0.0, 'skills': [], 'colour': 'rgb(70,50,238)', 'value': 'Estimating', 'cluster': 'Unknown', 'r': 29.805256, 'my': 256.05774, 'mx': -908.6095}" />
+        </attvalues>
+      </node>
+      <node id="Leadership" label="Leadership">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 4, 'supply': 0.0, 'skills': [], 'colour': 'rgb(70,50,238)', 'value': 'Leadership', 'cluster': 'Unknown', 'r': 15.0, 'my': 113.58748, 'mx': -385.7741}" />
+        </attvalues>
+      </node>
+      <node id="Enterprise software" label="Enterprise software">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 243, 'supply': 0.0, 'skills': [], 'colour': 'rgb(50,238,90)', 'value': 'Enterprise software', 'cluster': 'Unknown', 'r': 22.307365, 'my': 156.81589, 'mx': 261.67188}" />
+        </attvalues>
+      </node>
+      <node id="JavaScript" label="JavaScript">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 3, 'supply': 0.0, 'skills': [], 'colour': 'rgb(50,238,90)', 'value': 'JavaScript', 'cluster': 'Unknown', 'r': 21.73079, 'my': -136.36003, 'mx': 597.0881}" />
+        </attvalues>
+      </node>
+      <node id="Open source" label="Open source">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 88, 'supply': 0.0, 'skills': [], 'colour': 'rgb(189,238,50)', 'value': 'Open source', 'cluster': 'Unknown', 'r': 37.645508, 'my': 100.21958, 'mx': 389.41913}" />
+        </attvalues>
+      </node>
+      <node id="Program management" label="Program management">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 138, 'supply': 0.0, 'skills': [], 'colour': 'rgb(70,50,238)', 'value': 'Program management', 'cluster': 'Unknown', 'r': 21.709896, 'my': 330.901, 'mx': -1066.6775}" />
+        </attvalues>
+      </node>
+      <node id="Debugging" label="Debugging">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 62, 'supply': 0.0, 'skills': [], 'colour': 'rgb(50,238,90)', 'value': 'Debugging', 'cluster': 'Unknown', 'r': 40.0, 'my': -99.91098, 'mx': -24.902721}" />
+        </attvalues>
+      </node>
+      <node id="Veritas" label="Veritas">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 276, 'supply': 0.0, 'skills': [], 'colour': 'rgb(189,238,50)', 'value': 'Veritas', 'cluster': 'Unknown', 'r': 30.733625, 'my': -709.9448, 'mx': -203.28807}" />
+        </attvalues>
+      </node>
+      <node id="PMO" label="PMO">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 308, 'supply': 0.0, 'skills': [], 'colour': 'rgb(70,50,238)', 'value': 'PMO', 'cluster': 'Unknown', 'r': 20.301, 'my': 387.61243, 'mx': -1039.8639}" />
+        </attvalues>
+      </node>
+      <node id="MapReduce" label="MapReduce">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 82, 'supply': 0.0, 'skills': [], 'colour': 'rgb(238,228,50)', 'value': 'MapReduce', 'cluster': 'Unknown', 'r': 19.377003, 'my': 735.54004, 'mx': 697.36194}" />
+        </attvalues>
+      </node>
+      <node id="Solaris" label="Solaris">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 192, 'supply': 0.0, 'skills': [], 'colour': 'rgb(189,238,50)', 'value': 'Solaris', 'cluster': 'Unknown', 'r': 34.543488, 'my': -708.90765, 'mx': -310.49823}" />
+        </attvalues>
+      </node>
+      <node id="GWT" label="GWT">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 250, 'supply': 0.0, 'skills': [], 'colour': 'rgb(50,238,90)', 'value': 'GWT', 'cluster': 'Unknown', 'r': 15.0, 'my': -311.18692, 'mx': 724.1108}" />
+        </attvalues>
+      </node>
+      <node id="Middleware" label="Middleware">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 103, 'supply': 0.0, 'skills': [], 'colour': 'rgb(189,238,50)', 'value': 'Middleware', 'cluster': 'Unknown', 'r': 24.593897, 'my': -601.4588, 'mx': 338.64682}" />
+        </attvalues>
+      </node>
+      <node id="IT management" label="IT management">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 133, 'supply': 0.0, 'skills': [], 'colour': 'rgb(70,50,238)', 'value': 'IT management', 'cluster': 'Unknown', 'r': 35.082962, 'my': 239.94603, 'mx': -696.52234}" />
+        </attvalues>
+      </node>
+      <node id="Redis" label="Redis">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 196, 'supply': 0.0, 'skills': [], 'colour': 'rgb(50,90,238)', 'value': 'Redis', 'cluster': 'Unknown', 'r': 23.926172, 'my': 228.13943, 'mx': 646.22253}" />
+        </attvalues>
+      </node>
+      <node id="Project delivery" label="Project delivery">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 320, 'supply': 0.0, 'skills': [], 'colour': 'rgb(70,50,238)', 'value': 'Project delivery', 'cluster': 'Unknown', 'r': 15.0, 'my': 547.98315, 'mx': -1010.6262}" />
+        </attvalues>
+      </node>
+      <node id="Strategy" label="Strategy">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 131, 'supply': 0.0, 'skills': [], 'colour': 'rgb(70,50,238)', 'value': 'Strategy', 'cluster': 'Unknown', 'r': 26.463865, 'my': 399.6071, 'mx': -622.3442}" />
+        </attvalues>
+      </node>
+      <node id="System testing" label="System testing">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 110, 'supply': 0.0, 'skills': [], 'colour': 'rgb(238,50,50)', 'value': 'System testing', 'cluster': 'Unknown', 'r': 30.829073, 'my': 367.39188, 'mx': -304.74802}" />
+        </attvalues>
+      </node>
+      <node id="C" label="C">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 22, 'supply': 0.0, 'skills': [], 'colour': 'rgb(50,238,90)', 'value': 'C', 'cluster': 'Unknown', 'r': 32.169792, 'my': -134.99794, 'mx': 62.896366}" />
+        </attvalues>
+      </node>
+      <node id="NoSQL" label="NoSQL">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 75, 'supply': 0.0, 'skills': [], 'colour': 'rgb(238,228,50)', 'value': 'NoSQL', 'cluster': 'Unknown', 'r': 32.71945, 'my': 487.18896, 'mx': 652.0575}" />
+        </attvalues>
+      </node>
+      <node id="IBM DB2" label="IBM DB2">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 157, 'supply': 0.0, 'skills': [], 'colour': 'rgb(50,238,149)', 'value': 'IBM DB2', 'cluster': 'Unknown', 'r': 33.860184, 'my': -503.87997, 'mx': -334.76706}" />
+        </attvalues>
+      </node>
+      <node id="RDBMS" label="RDBMS">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 218, 'supply': 0.0, 'skills': [], 'colour': 'rgb(50,238,90)', 'value': 'RDBMS', 'cluster': 'Unknown', 'r': 35.319794, 'my': -445.82364, 'mx': 88.0726}" />
+        </attvalues>
+      </node>
+      <node id="jQuery" label="jQuery">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 33, 'supply': 0.0, 'skills': [], 'colour': 'rgb(50,238,90)', 'value': 'jQuery', 'cluster': 'Unknown', 'r': 23.59168, 'my': -189.1488, 'mx': 574.5554}" />
+        </attvalues>
+      </node>
+      <node id="C#" label="C#">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 15, 'supply': 0.0, 'skills': [], 'colour': 'rgb(50,238,90)', 'value': 'C#', 'cluster': 'Unknown', 'r': 33.578766, 'my': -269.51993, 'mx': 312.4475}" />
+        </attvalues>
+      </node>
+      <node id="Spring MVC" label="Spring MVC">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 251, 'supply': 0.0, 'skills': [], 'colour': 'rgb(50,238,90)', 'value': 'Spring MVC', 'cluster': 'Unknown', 'r': 20.791817, 'my': -398.4036, 'mx': 696.27094}" />
+        </attvalues>
+      </node>
+      <node id="MongoDB" label="MongoDB">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 74, 'supply': 0.0, 'skills': [], 'colour': 'rgb(50,90,238)', 'value': 'MongoDB', 'cluster': 'Unknown', 'r': 32.220047, 'my': 339.80518, 'mx': 643.4885}" />
+        </attvalues>
+      </node>
+      <node id="HP QuickTest Professional" label="HP QuickTest Professional">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 258, 'supply': 0.0, 'skills': [], 'colour': 'rgb(238,50,50)', 'value': 'HP QuickTest Professional', 'cluster': 'Unknown', 'r': 19.245039, 'my': 427.9228, 'mx': -65.85268}" />
+        </attvalues>
+      </node>
+      <node id="Mainframe QA" label="Mainframe QA">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 284, 'supply': 0.0, 'skills': [], 'colour': 'rgb(238,50,50)', 'value': 'Mainframe QA', 'cluster': 'Unknown', 'r': 15.0, 'my': 209.54572, 'mx': -323.90714}" />
+        </attvalues>
+      </node>
+      <node id="Apache Struts" label="Apache Struts">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 95, 'supply': 0.0, 'skills': [], 'colour': 'rgb(50,238,90)', 'value': 'Apache Struts', 'cluster': 'Unknown', 'r': 21.924013, 'my': -418.88486, 'mx': 612.64343}" />
+        </attvalues>
+      </node>
+      <node id="Korn shell" label="Korn shell">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 262, 'supply': 0.0, 'skills': [], 'colour': 'rgb(189,238,50)', 'value': 'Korn shell', 'cluster': 'Unknown', 'r': 21.304482, 'my': -358.02106, 'mx': -231.12923}" />
+        </attvalues>
+      </node>
+      <node id="Project lifecycle management" label="Project lifecycle management">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 267, 'supply': 0.0, 'skills': [], 'colour': 'rgb(70,50,238)', 'value': 'Project lifecycle management', 'cluster': 'Unknown', 'r': 29.637604, 'my': 527.51184, 'mx': -845.5094}" />
+        </attvalues>
+      </node>
+      <node id="Flask" label="Flask">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 247, 'supply': 0.0, 'skills': [], 'colour': 'rgb(50,90,238)', 'value': 'Flask', 'cluster': 'Unknown', 'r': 15.0, 'my': 189.61365, 'mx': 597.47003}" />
+        </attvalues>
+      </node>
+      <node id="Project scoping" label="Project scoping">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 140, 'supply': 0.0, 'skills': [], 'colour': 'rgb(70,50,238)', 'value': 'Project scoping', 'cluster': 'Unknown', 'r': 24.904697, 'my': 521.77985, 'mx': -1181.23}" />
+        </attvalues>
+      </node>
+      <node id="Status reports" label="Status reports">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 144, 'supply': 0.0, 'skills': [], 'colour': 'rgb(70,50,238)', 'value': 'Status reports', 'cluster': 'Unknown', 'r': 29.599041, 'my': 463.3232, 'mx': -856.8525}" />
+        </attvalues>
+      </node>
+      <node id="Mobile application QA" label="Mobile application QA">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 118, 'supply': 0.0, 'skills': [], 'colour': 'rgb(238,50,50)', 'value': 'Mobile application QA', 'cluster': 'Unknown', 'r': 17.93843, 'my': 592.25055, 'mx': 18.052654}" />
+        </attvalues>
+      </node>
+      <node id="Contingency plan" label="Contingency plan">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 205, 'supply': 0.0, 'skills': [], 'colour': 'rgb(70,50,238)', 'value': 'Contingency plan', 'cluster': 'Unknown', 'r': 15.0, 'my': 474.26727, 'mx': -1142.4742}" />
+        </attvalues>
+      </node>
+      <node id="Shell" label="Shell">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 273, 'supply': 0.0, 'skills': [], 'colour': 'rgb(189,238,50)', 'value': 'Shell', 'cluster': 'Unknown', 'r': 26.924055, 'my': -309.216, 'mx': -139.9703}" />
+        </attvalues>
+      </node>
+      <node id="Oracle" label="Oracle">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 6, 'supply': 0.0, 'skills': [], 'colour': 'rgb(129,50,238)', 'value': 'Oracle', 'cluster': 'Unknown', 'r': 26.50591, 'my': -646.4052, 'mx': -11.41439}" />
+        </attvalues>
+      </node>
+      <node id="Perl" label="Perl">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 89, 'supply': 0.0, 'skills': [], 'colour': 'rgb(189,238,50)', 'value': 'Perl', 'cluster': 'Unknown', 'r': 34.062622, 'my': -212.25674, 'mx': -31.914253}" />
+        </attvalues>
+      </node>
+      <node id="Specification" label="Specification">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 48, 'supply': 0.0, 'skills': [], 'colour': 'rgb(238,50,50)', 'value': 'Specification', 'cluster': 'Unknown', 'r': 35.871277, 'my': 38.859367, 'mx': -383.7134}" />
+        </attvalues>
+      </node>
+      <node id="Apache HTTP Server" label="Apache HTTP Server">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 85, 'supply': 0.0, 'skills': [], 'colour': 'rgb(189,238,50)', 'value': 'Apache HTTP Server', 'cluster': 'Unknown', 'r': 30.6917, 'my': -503.5448, 'mx': 327.17596}" />
+        </attvalues>
+      </node>
+      <node id="Linux administration" label="Linux administration">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 172, 'supply': 0.0, 'skills': [], 'colour': 'rgb(189,238,50)', 'value': 'Linux administration', 'cluster': 'Unknown', 'r': 34.172726, 'my': -542.48065, 'mx': -270.58743}" />
+        </attvalues>
+      </node>
+      <node id="Test plans" label="Test plans">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 112, 'supply': 0.0, 'skills': [], 'colour': 'rgb(238,50,50)', 'value': 'Test plans', 'cluster': 'Unknown', 'r': 28.828503, 'my': 474.9947, 'mx': -345.34418}" />
+        </attvalues>
+      </node>
+      <node id="RESTful" label="RESTful">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 28, 'supply': 0.0, 'skills': [], 'colour': 'rgb(50,238,90)', 'value': 'RESTful', 'cluster': 'Unknown', 'r': 33.519947, 'my': -191.34209, 'mx': 672.0422}" />
+        </attvalues>
+      </node>
+      <node id="Django" label="Django">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 194, 'supply': 0.0, 'skills': [], 'colour': 'rgb(50,90,238)', 'value': 'Django', 'cluster': 'Unknown', 'r': 30.228832, 'my': 68.29079, 'mx': 501.708}" />
+        </attvalues>
+      </node>
+      <node id="Defect tracking" label="Defect tracking">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 227, 'supply': 0.0, 'skills': [], 'colour': 'rgb(238,50,50)', 'value': 'Defect tracking', 'cluster': 'Unknown', 'r': 16.996462, 'my': 586.91406, 'mx': -188.41179}" />
+        </attvalues>
+      </node>
+      <node id="CentOS" label="CentOS">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 171, 'supply': 0.0, 'skills': [], 'colour': 'rgb(189,238,50)', 'value': 'CentOS', 'cluster': 'Unknown', 'r': 26.795631, 'my': -568.2928, 'mx': -111.3228}" />
+        </attvalues>
+      </node>
+      <node id="Data science" label="Data science">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 80, 'supply': 0.0, 'skills': [], 'colour': 'rgb(238,228,50)', 'value': 'Data science', 'cluster': 'Unknown', 'r': 28.048517, 'my': 732.44586, 'mx': 560.97}" />
+        </attvalues>
+      </node>
+      <node id="GUI" label="GUI">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 249, 'supply': 0.0, 'skills': [], 'colour': 'rgb(50,238,90)', 'value': 'GUI', 'cluster': 'Unknown', 'r': 21.020926, 'my': 20.43451, 'mx': 583.56305}" />
+        </attvalues>
+      </node>
+      <node id="Risk management" label="Risk management">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 176, 'supply': 0.0, 'skills': [], 'colour': 'rgb(70,50,238)', 'value': 'Risk management', 'cluster': 'Unknown', 'r': 21.826246, 'my': 433.40817, 'mx': -1168.0326}" />
+        </attvalues>
+      </node>
+      <node id="Java" label="Java">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 2, 'supply': 0.0, 'skills': [], 'colour': 'rgb(50,238,90)', 'value': 'Java', 'cluster': 'Unknown', 'r': 25.848436, 'my': -188.577, 'mx': 371.66837}" />
+        </attvalues>
+      </node>
+      <node id="API" label="API">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 21, 'supply': 0.0, 'skills': [], 'colour': 'rgb(50,238,90)', 'value': 'API', 'cluster': 'Unknown', 'r': 34.971508, 'my': -230.88802, 'mx': 736.2426}" />
+        </attvalues>
+      </node>
+      <node id="Red Hat Linux" label="Red Hat Linux">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 174, 'supply': 0.0, 'skills': [], 'colour': 'rgb(189,238,50)', 'value': 'Red Hat Linux', 'cluster': 'Unknown', 'r': 35.42782, 'my': -620.2466, 'mx': -163.1213}" />
+        </attvalues>
+      </node>
+      <node id="Nginx" label="Nginx">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 297, 'supply': 0.0, 'skills': [], 'colour': 'rgb(189,238,50)', 'value': 'Nginx', 'cluster': 'Unknown', 'r': 15.0, 'my': -183.28001, 'mx': 323.6329}" />
+        </attvalues>
+      </node>
+      <node id="PL/SQL" label="PL/SQL">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 153, 'supply': 0.0, 'skills': [], 'colour': 'rgb(129,50,238)', 'value': 'PL/SQL', 'cluster': 'Unknown', 'r': 36.95481, 'my': -576.46954, 'mx': -1.6325119}" />
+        </attvalues>
+      </node>
+      <node id="Machine learning" label="Machine learning">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 94, 'supply': 0.0, 'skills': [], 'colour': 'rgb(238,228,50)', 'value': 'Machine learning', 'cluster': 'Unknown', 'r': 34.47064, 'my': 574.7427, 'mx': 538.7266}" />
+        </attvalues>
+      </node>
+      <node id="HP Quality Center" label="HP Quality Center">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 229, 'supply': 0.0, 'skills': [], 'colour': 'rgb(238,50,50)', 'value': 'HP Quality Center', 'cluster': 'Unknown', 'r': 20.480309, 'my': 480.6578, 'mx': -179.4852}" />
+        </attvalues>
+      </node>
+      <node id="Project coordination" label="Project coordination">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 310, 'supply': 0.0, 'skills': [], 'colour': 'rgb(70,50,238)', 'value': 'Project coordination', 'cluster': 'Unknown', 'r': 20.15673, 'my': 501.33035, 'mx': -1049.912}" />
+        </attvalues>
+      </node>
+      <node id="SQL" label="SQL">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 9, 'supply': 0.0, 'skills': [], 'colour': 'rgb(50,238,90)', 'value': 'SQL', 'cluster': 'Unknown', 'r': 21.0336, 'my': -329.64914, 'mx': 114.92618}" />
+        </attvalues>
+      </node>
+      <node id="Unix administration" label="Unix administration">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 257, 'supply': 0.0, 'skills': [], 'colour': 'rgb(189,238,50)', 'value': 'Unix administration', 'cluster': 'Unknown', 'r': 30.666836, 'my': -575.47626, 'mx': -337.11487}" />
+        </attvalues>
+      </node>
+      <node id="Test methods" label="Test methods">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 122, 'supply': 0.0, 'skills': [], 'colour': 'rgb(238,50,50)', 'value': 'Test methods', 'cluster': 'Unknown', 'r': 21.772818, 'my': 546.0592, 'mx': -280.68124}" />
+        </attvalues>
+      </node>
+      <node id="C++" label="C++">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 23, 'supply': 0.0, 'skills': [], 'colour': 'rgb(238,50,228)', 'value': 'C++', 'cluster': 'Unknown', 'r': 34.630707, 'my': -4.186808, 'mx': 100.735245}" />
+        </attvalues>
+      </node>
+      <node id="HP-UX" label="HP-UX">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 255, 'supply': 0.0, 'skills': [], 'colour': 'rgb(189,238,50)', 'value': 'HP-UX', 'cluster': 'Unknown', 'r': 25.189411, 'my': -748.71906, 'mx': -251.14912}" />
+        </attvalues>
+      </node>
+      <node id="WildFly" label="WildFly">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 99, 'supply': 0.0, 'skills': [], 'colour': 'rgb(189,238,50)', 'value': 'WildFly', 'cluster': 'Unknown', 'r': 36.59028, 'my': -556.3686, 'mx': 388.64584}" />
+        </attvalues>
+      </node>
+      <node id="Apache Hive" label="Apache Hive">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 78, 'supply': 0.0, 'skills': [], 'colour': 'rgb(238,228,50)', 'value': 'Apache Hive', 'cluster': 'Unknown', 'r': 18.471592, 'my': 753.0496, 'mx': 788.7291}" />
+        </attvalues>
+      </node>
+      <node id="Cross-functional" label="Cross-functional">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 143, 'supply': 0.0, 'skills': [], 'colour': 'rgb(70,50,238)', 'value': 'Cross-functional', 'cluster': 'Unknown', 'r': 27.72189, 'my': 460.6979, 'mx': -638.7565}" />
+        </attvalues>
+      </node>
+      <node id="Automated testing" label="Automated testing">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 107, 'supply': 0.0, 'skills': [], 'colour': 'rgb(238,50,50)', 'value': 'Automated testing', 'cluster': 'Unknown', 'r': 38.925934, 'my': 374.4004, 'mx': -24.368216}" />
+        </attvalues>
+      </node>
+      <node id="Software development" label="Software development">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 10, 'supply': 0.0, 'skills': [], 'colour': 'rgb(50,238,90)', 'value': 'Software development', 'cluster': 'Unknown', 'r': 17.283792, 'my': -72.83093, 'mx': 95.60937}" />
+        </attvalues>
+      </node>
+      <node id="Python" label="Python">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 27, 'supply': 0.0, 'skills': [], 'colour': 'rgb(189,238,50)', 'value': 'Python', 'cluster': 'Unknown', 'r': 38.69374, 'my': 32.39362, 'mx': 246.10448}" />
+        </attvalues>
+      </node>
+      <node id="JSON" label="JSON">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 69, 'supply': 0.0, 'skills': [], 'colour': 'rgb(50,238,90)', 'value': 'JSON', 'cluster': 'Unknown', 'r': 26.866432, 'my': -156.30971, 'mx': 728.73914}" />
+        </attvalues>
+      </node>
+      <node id="Application server" label="Application server">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 102, 'supply': 0.0, 'skills': [], 'colour': 'rgb(189,238,50)', 'value': 'Application server', 'cluster': 'Unknown', 'r': 25.100822, 'my': -626.6817, 'mx': 458.29382}" />
+        </attvalues>
+      </node>
+      <node id="Test-driven development" label="Test-driven development">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 121, 'supply': 0.0, 'skills': [], 'colour': 'rgb(238,50,50)', 'value': 'Test-driven development', 'cluster': 'Unknown', 'r': 25.864624, 'my': 271.16156, 'mx': 302.47824}" />
+        </attvalues>
+      </node>
+      <node id="Manual testing" label="Manual testing">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 286, 'supply': 0.0, 'skills': [], 'colour': 'rgb(238,50,50)', 'value': 'Manual testing', 'cluster': 'Unknown', 'r': 21.557766, 'my': 499.6924, 'mx': -15.410071}" />
+        </attvalues>
+      </node>
+      <node id="J2EE" label="J2EE">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 68, 'supply': 0.0, 'skills': [], 'colour': 'rgb(50,238,90)', 'value': 'J2EE', 'cluster': 'Unknown', 'r': 30.659714, 'my': -363.3303, 'mx': 502.24353}" />
+        </attvalues>
+      </node>
+      <node id="Budget" label="Budget">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 132, 'supply': 0.0, 'skills': [], 'colour': 'rgb(70,50,238)', 'value': 'Budget', 'cluster': 'Unknown', 'r': 24.199448, 'my': 411.6767, 'mx': -935.25116}" />
+        </attvalues>
+      </node>
+      <node id=".NET" label=".NET">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 0, 'supply': 0.0, 'skills': [], 'colour': 'rgb(50,238,90)', 'value': '.NET', 'cluster': 'Unknown', 'r': 31.429245, 'my': -335.76996, 'mx': 285.46194}" />
+        </attvalues>
+      </node>
+      <node id="Apache Cassandra" label="Apache Cassandra">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 70, 'supply': 0.0, 'skills': [], 'colour': 'rgb(238,228,50)', 'value': 'Apache Cassandra', 'cluster': 'Unknown', 'r': 34.31437, 'my': 606.5757, 'mx': 689.8212}" />
+        </attvalues>
+      </node>
+      <node id="Hibernate" label="Hibernate">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 96, 'supply': 0.0, 'skills': [], 'colour': 'rgb(50,238,90)', 'value': 'Hibernate', 'cluster': 'Unknown', 'r': 24.480846, 'my': -370.57074, 'mx': 629.2013}" />
+        </attvalues>
+      </node>
+      <node id="UI" label="UI">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 30, 'supply': 0.0, 'skills': [], 'colour': 'rgb(50,238,90)', 'value': 'UI', 'cluster': 'Unknown', 'r': 29.122322, 'my': -49.04817, 'mx': 536.4876}" />
+        </attvalues>
+      </node>
+      <node id="Scalability" label="Scalability">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 293, 'supply': 0.0, 'skills': [], 'colour': 'rgb(238,50,50)', 'value': 'Scalability', 'cluster': 'Unknown', 'r': 25.844831, 'my': 210.73224, 'mx': 409.4083}" />
+        </attvalues>
+      </node>
+      <node id="Regression analysis" label="Regression analysis">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 230, 'supply': 0.0, 'skills': [], 'colour': 'rgb(238,50,50)', 'value': 'Regression analysis', 'cluster': 'Unknown', 'r': 20.485716, 'my': 569.4594, 'mx': -123.535736}" />
+        </attvalues>
+      </node>
+      <node id="Natural language processing" label="Natural language processing">
+        <attvalues>
+          <attvalue for="0" value="{'salary': 0, 'index': 296, 'supply': 0.0, 'skills': [], 'colour': 'rgb(238,228,50)', 'value': 'Natural language processing', 'cluster': 'Unknown', 'r': 15.0, 'my': 663.2682, 'mx': 552.46686}" />
+        </attvalues>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="579" source="Test management" target="QA" />
+      <edge id="1330" source="Test management" target="Automated testing" />
+      <edge id="1604" source="Test management" target="Automation" />
+      <edge id="2284" source="Test management" target="Test cases" />
+      <edge id="2301" source="Test management" target="Test plans" />
+      <edge id="2338" source="Test management" target="Mobile application QA" />
+      <edge id="2389" source="Test management" target="HP Quality Center" />
+      <edge id="2396" source="Test management" target="HP QuickTest Professional" />
+      <edge id="2403" source="Test management" target="Manual testing" />
+      <edge id="2405" source="Test management" target="Defect tracking" />
+      <edge id="2406" source="Test management" target="Regression analysis" />
+      <edge id="2407" source="Test management" target="Test execution" />
+      <edge id="164" source="Automation" target="Java" />
+      <edge id="264" source="Automation" target="Leadership" />
+      <edge id="517" source="Automation" target="QA" />
+      <edge id="622" source="Automation" target="SQL" />
+      <edge id="697" source="Automation" target="Software development" />
+      <edge id="923" source="Automation" target="C#" />
+      <edge id="1100" source="Automation" target="OOP" />
+      <edge id="1305" source="Automation" target="Automated testing" />
+      <edge id="1409" source="Automation" target="Debugging" />
+      <edge id="1442" source="Automation" target="Python" />
+      <edge id="1482" source="Automation" target="Linux" />
+      <edge id="1541" source="Automation" target="Scripting" />
+      <edge id="1582" source="Automation" target="Open source" />
+      <edge id="1583" source="Automation" target="Perl" />
+      <edge id="1585" source="Automation" target="Test cases" />
+      <edge id="1586" source="Automation" target="Test plans" />
+      <edge id="1590" source="Automation" target="Mobile application QA" />
+      <edge id="1591" source="Automation" target="Selenium" />
+      <edge id="1593" source="Automation" target="Web QA" />
+      <edge id="1596" source="Automation" target="Functional testing" />
+      <edge id="1597" source="Automation" target="HP Quality Center" />
+      <edge id="1598" source="Automation" target="Regression analysis" />
+      <edge id="1600" source="Automation" target="Test scripts" />
+      <edge id="1601" source="Automation" target="SDET" />
+      <edge id="1602" source="Automation" target="HP QuickTest Professional" />
+      <edge id="1603" source="Automation" target="Manual testing" />
+      <edge id="1605" source="Automation" target="Tcl" />
+      <edge id="1504" source="SUSE Linux" target="Linux" />
+      <edge id="2625" source="SUSE Linux" target="Shell scripting" />
+      <edge id="2694" source="SUSE Linux" target="CentOS" />
+      <edge id="2701" source="SUSE Linux" target="Linux administration" />
+      <edge id="2707" source="SUSE Linux" target="Red Hat Enterprise Linux" />
+      <edge id="2713" source="SUSE Linux" target="Red Hat Linux" />
+      <edge id="2720" source="SUSE Linux" target="Solaris" />
+      <edge id="2733" source="SUSE Linux" target="IBM AIX" />
+      <edge id="2778" source="SUSE Linux" target="Ubuntu" />
+      <edge id="2831" source="SUSE Linux" target="Unix administration" />
+      <edge id="585" source="Test scenarios" target="QA" />
+      <edge id="1332" source="Test scenarios" target="Automated testing" />
+      <edge id="2285" source="Test scenarios" target="Test cases" />
+      <edge id="2302" source="Test scenarios" target="Test plans" />
+      <edge id="2364" source="Test scenarios" target="Test methods" />
+      <edge id="2372" source="Test scenarios" target="Web QA" />
+      <edge id="2390" source="Test scenarios" target="HP Quality Center" />
+      <edge id="2404" source="Test scenarios" target="Manual testing" />
+      <edge id="2413" source="Test scenarios" target="Test scripts" />
+      <edge id="2418" source="Test scenarios" target="Defect tracking" />
+      <edge id="2422" source="Test scenarios" target="Functional testing" />
+      <edge id="2425" source="Test scenarios" target="Regression analysis" />
+      <edge id="2428" source="Test scenarios" target="Test execution" />
+      <edge id="92" source="Performance tuning" target="Database" />
+      <edge id="173" source="Performance tuning" target="Java" />
+      <edge id="393" source="Performance tuning" target="Oracle" />
+      <edge id="638" source="Performance tuning" target="SQL" />
+      <edge id="1413" source="Performance tuning" target="Debugging" />
+      <edge id="1419" source="Performance tuning" target="Database design" />
+      <edge id="1526" source="Performance tuning" target="Unix" />
+      <edge id="1552" source="Performance tuning" target="Scripting" />
+      <edge id="1750" source="Performance tuning" target="PL/SQL" />
+      <edge id="1780" source="Performance tuning" target="Shell scripting" />
+      <edge id="1783" source="Performance tuning" target="RDBMS" />
+      <edge id="150" source="Apache Tomcat" target="Java" />
+      <edge id="377" source="Apache Tomcat" target="Oracle" />
+      <edge id="1010" source="Apache Tomcat" target="Web services" />
+      <edge id="1248" source="Apache Tomcat" target="RESTful" />
+      <edge id="1270" source="Apache Tomcat" target="J2EE" />
+      <edge id="1472" source="Apache Tomcat" target="Linux" />
+      <edge id="1509" source="Apache Tomcat" target="Unix" />
+      <edge id="2004" source="Apache Tomcat" target="SOAP" />
+      <edge id="2094" source="Apache Tomcat" target="Spring" />
+      <edge id="2169" source="Apache Tomcat" target="Apache HTTP Server" />
+      <edge id="2178" source="Apache Tomcat" target="Hibernate" />
+      <edge id="2179" source="Apache Tomcat" target="Oracle WebLogic" />
+      <edge id="2180" source="Apache Tomcat" target="WildFly" />
+      <edge id="2181" source="Apache Tomcat" target="Application server" />
+      <edge id="2182" source="Apache Tomcat" target="Middleware" />
+      <edge id="2183" source="Apache Tomcat" target="Spring MVC" />
+      <edge id="0" source="Database" target=".NET" />
+      <edge id="48" source="Database" target="Leadership" />
+      <edge id="50" source="Database" target="QA" />
+      <edge id="51" source="Database" target="SQL" />
+      <edge id="52" source="Database" target="Software development" />
+      <edge id="54" source="Database" target="Java" />
+      <edge id="55" source="Database" target="JavaScript" />
+      <edge id="57" source="Database" target="Oracle" />
+      <edge id="59" source="Database" target="C#" />
+      <edge id="62" source="Database" target="Web services" />
+      <edge id="63" source="Database" target="HTML" />
+      <edge id="64" source="Database" target="OOP" />
+      <edge id="65" source="Database" target="Python" />
+      <edge id="67" source="Database" target="UI" />
+      <edge id="69" source="Database" target="Web development" />
+      <edge id="73" source="Database" target="Specification" />
+      <edge id="74" source="Database" target="Debugging" />
+      <edge id="76" source="Database" target="MongoDB" />
+      <edge id="77" source="Database" target="NoSQL" />
+      <edge id="78" source="Database" target="Linux" />
+      <edge id="79" source="Database" target="Unix" />
+      <edge id="80" source="Database" target="Scripting" />
+      <edge id="82" source="Database" target="Strategy" />
+      <edge id="83" source="Database" target="Planning" />
+      <edge id="86" source="Database" target="PL/SQL" />
+      <edge id="87" source="Database" target="IBM DB2" />
+      <edge id="94" source="Database" target="RDBMS" />
+      <edge id="100" source="Database" target="Database design" />
+      <edge id="1461" source="Ubuntu" target="Python" />
+      <edge id="1497" source="Ubuntu" target="Linux" />
+      <edge id="2693" source="Ubuntu" target="CentOS" />
+      <edge id="2698" source="Ubuntu" target="Linux administration" />
+      <edge id="2709" source="Ubuntu" target="Red Hat Linux" />
+      <edge id="2767" source="Ubuntu" target="Django" />
+      <edge id="275" source="Planning" target="Leadership" />
+      <edge id="534" source="Planning" target="QA" />
+      <edge id="705" source="Planning" target="Software development" />
+      <edge id="807" source="Planning" target="Project management" />
+      <edge id="1221" source="Planning" target="Specification" />
+      <edge id="1812" source="Planning" target="Budget" />
+      <edge id="1813" source="Planning" target="IT management" />
+      <edge id="1814" source="Planning" target="Strategy" />
+      <edge id="1816" source="Planning" target="Program management" />
+      <edge id="1817" source="Planning" target="Project planning" />
+      <edge id="1818" source="Planning" target="Project scoping" />
+      <edge id="1819" source="Planning" target="Senior management" />
+      <edge id="1820" source="Planning" target="Cross-functional" />
+      <edge id="1821" source="Planning" target="Status reports" />
+      <edge id="1824" source="Planning" target="Risk management" />
+      <edge id="1826" source="Planning" target="Microsoft Project" />
+      <edge id="1827" source="Planning" target="Contingency plan" />
+      <edge id="1828" source="Planning" target="IT project management" />
+      <edge id="1829" source="Planning" target="PMBOK" />
+      <edge id="1830" source="Planning" target="PMP" />
+      <edge id="1831" source="Planning" target="Project implementation" />
+      <edge id="1832" source="Planning" target="Estimating" />
+      <edge id="1833" source="Planning" target="Project lifecycle management" />
+      <edge id="1834" source="Planning" target="Project coordination" />
+      <edge id="297" source="Microsoft Project" target="Leadership" />
+      <edge id="557" source="Microsoft Project" target="QA" />
+      <edge id="716" source="Microsoft Project" target="Software development" />
+      <edge id="824" source="Microsoft Project" target="Project management" />
+      <edge id="2460" source="Microsoft Project" target="Budget" />
+      <edge id="2506" source="Microsoft Project" target="Project planning" />
+      <edge id="2524" source="Microsoft Project" target="Project scoping" />
+      <edge id="2537" source="Microsoft Project" target="Senior management" />
+      <edge id="2544" source="Microsoft Project" target="Cross-functional" />
+      <edge id="2552" source="Microsoft Project" target="Status reports" />
+      <edge id="2563" source="Microsoft Project" target="Risk management" />
+      <edge id="2569" source="Microsoft Project" target="PMP" />
+      <edge id="2584" source="Microsoft Project" target="Contingency plan" />
+      <edge id="2585" source="Microsoft Project" target="IT project management" />
+      <edge id="2586" source="Microsoft Project" target="PMBOK" />
+      <edge id="2587" source="Microsoft Project" target="Project lifecycle management" />
+      <edge id="2588" source="Microsoft Project" target="PMO" />
+      <edge id="2590" source="Microsoft Project" target="Project coordination" />
+      <edge id="2591" source="Microsoft Project" target="Project delivery" />
+      <edge id="158" source="Oracle WebLogic" target="Java" />
+      <edge id="382" source="Oracle WebLogic" target="Oracle" />
+      <edge id="1014" source="Oracle WebLogic" target="Web services" />
+      <edge id="1274" source="Oracle WebLogic" target="J2EE" />
+      <edge id="1478" source="Oracle WebLogic" target="Linux" />
+      <edge id="1515" source="Oracle WebLogic" target="Unix" />
+      <edge id="2097" source="Oracle WebLogic" target="Spring" />
+      <edge id="2171" source="Oracle WebLogic" target="Apache HTTP Server" />
+      <edge id="2193" source="Oracle WebLogic" target="Hibernate" />
+      <edge id="2217" source="Oracle WebLogic" target="Apache Struts" />
+      <edge id="2220" source="Oracle WebLogic" target="WildFly" />
+      <edge id="2221" source="Oracle WebLogic" target="Application server" />
+      <edge id="2222" source="Oracle WebLogic" target="Middleware" />
+      <edge id="1491" source="Red Hat Enterprise Linux" target="Linux" />
+      <edge id="2226" source="Red Hat Enterprise Linux" target="WildFly" />
+      <edge id="2690" source="Red Hat Enterprise Linux" target="CentOS" />
+      <edge id="2695" source="Red Hat Enterprise Linux" target="Linux administration" />
+      <edge id="2704" source="Red Hat Enterprise Linux" target="Red Hat Linux" />
+      <edge id="2705" source="Red Hat Enterprise Linux" target="Solaris" />
+      <edge id="2706" source="Red Hat Enterprise Linux" target="IBM AIX" />
+      <edge id="529" source="Web QA" target="QA" />
+      <edge id="1317" source="Web QA" target="Automated testing" />
+      <edge id="2272" source="Web QA" target="Test cases" />
+      <edge id="2289" source="Web QA" target="Test plans" />
+      <edge id="2334" source="Web QA" target="Mobile application QA" />
+      <edge id="2341" source="Web QA" target="Selenium" />
+      <edge id="2365" source="Web QA" target="Defect tracking" />
+      <edge id="2366" source="Web QA" target="Functional testing" />
+      <edge id="2367" source="Web QA" target="Regression analysis" />
+      <edge id="2369" source="Web QA" target="Test scripts" />
+      <edge id="2370" source="Web QA" target="HP QuickTest Professional" />
+      <edge id="2371" source="Web QA" target="Manual testing" />
+      <edge id="2373" source="Web QA" target="Mainframe QA" />
+      <edge id="282" source="Senior management" target="Leadership" />
+      <edge id="540" source="Senior management" target="QA" />
+      <edge id="708" source="Senior management" target="Software development" />
+      <edge id="813" source="Senior management" target="Project management" />
+      <edge id="1925" source="Senior management" target="Strategy" />
+      <edge id="2307" source="Senior management" target="IT management" />
+      <edge id="2455" source="Senior management" target="Budget" />
+      <edge id="2488" source="Senior management" target="Program management" />
+      <edge id="2498" source="Senior management" target="Project planning" />
+      <edge id="2520" source="Senior management" target="Project scoping" />
+      <edge id="2534" source="Senior management" target="Cross-functional" />
+      <edge id="2535" source="Senior management" target="Status reports" />
+      <edge id="2536" source="Senior management" target="Risk management" />
+      <edge id="2538" source="Senior management" target="IT project management" />
+      <edge id="2539" source="Senior management" target="PMP" />
+      <edge id="2540" source="Senior management" target="Project lifecycle management" />
+      <edge id="2541" source="Senior management" target="PMO" />
+      <edge id="42" source="Database design" target=".NET" />
+      <edge id="176" source="Database design" target="Java" />
+      <edge id="396" source="Database design" target="Oracle" />
+      <edge id="563" source="Database design" target="QA" />
+      <edge id="646" source="Database design" target="SQL" />
+      <edge id="721" source="Database design" target="Software development" />
+      <edge id="926" source="Database design" target="C#" />
+      <edge id="1113" source="Database design" target="OOP" />
+      <edge id="1202" source="Database design" target="Web development" />
+      <edge id="1418" source="Database design" target="IBM DB2" />
+      <edge id="1422" source="Database design" target="PL/SQL" />
+      <edge id="1424" source="Database design" target="RDBMS" />
+      <edge id="7" source="QA" target=".NET" />
+      <edge id="114" source="QA" target="Java" />
+      <edge id="184" source="QA" target="JavaScript" />
+      <edge id="367" source="QA" target="Oracle" />
+      <edge id="484" source="QA" target="SQL" />
+      <edge id="485" source="QA" target="Software development" />
+      <edge id="488" source="QA" target="C#" />
+      <edge id="492" source="QA" target="Web services" />
+      <edge id="493" source="QA" target="API" />
+      <edge id="494" source="QA" target="C" />
+      <edge id="495" source="QA" target="C++" />
+      <edge id="496" source="QA" target="CSS" />
+      <edge id="497" source="QA" target="HTML" />
+      <edge id="498" source="QA" target="OOP" />
+      <edge id="499" source="QA" target="Python" />
+      <edge id="501" source="QA" target="UI" />
+      <edge id="503" source="QA" target="Web development" />
+      <edge id="506" source="QA" target="Specification" />
+      <edge id="510" source="QA" target="Debugging" />
+      <edge id="512" source="QA" target="J2EE" />
+      <edge id="513" source="QA" target="Linux" />
+      <edge id="514" source="QA" target="Perl" />
+      <edge id="515" source="QA" target="Unix" />
+      <edge id="516" source="QA" target="Automated testing" />
+      <edge id="518" source="QA" target="Scripting" />
+      <edge id="519" source="QA" target="System testing" />
+      <edge id="520" source="QA" target="Test cases" />
+      <edge id="521" source="QA" target="Test plans" />
+      <edge id="525" source="QA" target="Mobile application QA" />
+      <edge id="526" source="QA" target="Selenium" />
+      <edge id="527" source="QA" target="Test-driven development" />
+      <edge id="528" source="QA" target="Test methods" />
+      <edge id="531" source="QA" target="Strategy" />
+      <edge id="532" source="QA" target="Budget" />
+      <edge id="533" source="QA" target="IT management" />
+      <edge id="535" source="QA" target="Project management" />
+      <edge id="537" source="QA" target="Program management" />
+      <edge id="538" source="QA" target="Project planning" />
+      <edge id="539" source="QA" target="Project scoping" />
+      <edge id="541" source="QA" target="Cross-functional" />
+      <edge id="542" source="QA" target="Status reports" />
+      <edge id="547" source="QA" target="PL/SQL" />
+      <edge id="553" source="QA" target="Risk management" />
+      <edge id="559" source="QA" target="IT project management" />
+      <edge id="560" source="QA" target="PMP" />
+      <edge id="562" source="QA" target="RDBMS" />
+      <edge id="564" source="QA" target="Defect tracking" />
+      <edge id="565" source="QA" target="Functional testing" />
+      <edge id="566" source="QA" target="HP Quality Center" />
+      <edge id="567" source="QA" target="Regression analysis" />
+      <edge id="569" source="QA" target="Test scripts" />
+      <edge id="571" source="QA" target="Estimating" />
+      <edge id="573" source="QA" target="SDET" />
+      <edge id="574" source="QA" target="HP QuickTest Professional" />
+      <edge id="575" source="QA" target="Project lifecycle management" />
+      <edge id="577" source="QA" target="Test execution" />
+      <edge id="578" source="QA" target="Manual testing" />
+      <edge id="580" source="QA" target="Scalability" />
+      <edge id="581" source="QA" target="Project coordination" />
+      <edge id="299" source="PMBOK" target="Leadership" />
+      <edge id="828" source="PMBOK" target="Project management" />
+      <edge id="2465" source="PMBOK" target="Budget" />
+      <edge id="2495" source="PMBOK" target="Program management" />
+      <edge id="2511" source="PMBOK" target="Project planning" />
+      <edge id="2530" source="PMBOK" target="Project scoping" />
+      <edge id="2566" source="PMBOK" target="Risk management" />
+      <edge id="2572" source="PMBOK" target="PMP" />
+      <edge id="2595" source="PMBOK" target="IT project management" />
+      <edge id="2600" source="PMBOK" target="Estimating" />
+      <edge id="2605" source="PMBOK" target="Project lifecycle management" />
+      <edge id="2784" source="PMBOK" target="Contingency plan" />
+      <edge id="2786" source="PMBOK" target="PMO" />
+      <edge id="155" source="Unix" target="Java" />
+      <edge id="260" source="Unix" target="Leadership" />
+      <edge id="379" source="Unix" target="Oracle" />
+      <edge id="618" source="Unix" target="SQL" />
+      <edge id="692" source="Unix" target="Software development" />
+      <edge id="1030" source="Unix" target="C" />
+      <edge id="1269" source="Unix" target="J2EE" />
+      <edge id="1372" source="Unix" target="C++" />
+      <edge id="1441" source="Unix" target="Python" />
+      <edge id="1477" source="Unix" target="Linux" />
+      <edge id="1508" source="Unix" target="Apache HTTP Server" />
+      <edge id="1510" source="Unix" target="Perl" />
+      <edge id="1512" source="Unix" target="Scripting" />
+      <edge id="1516" source="Unix" target="Application server" />
+      <edge id="1517" source="Unix" target="Middleware" />
+      <edge id="1520" source="Unix" target="PL/SQL" />
+      <edge id="1521" source="Unix" target="Shell scripting" />
+      <edge id="1522" source="Unix" target="IBM DB2" />
+      <edge id="1523" source="Unix" target="Linux administration" />
+      <edge id="1524" source="Unix" target="Red Hat Linux" />
+      <edge id="1527" source="Unix" target="Solaris" />
+      <edge id="1528" source="Unix" target="RDBMS" />
+      <edge id="1529" source="Unix" target="HP-UX" />
+      <edge id="1530" source="Unix" target="IBM AIX" />
+      <edge id="1531" source="Unix" target="Unix administration" />
+      <edge id="1533" source="Unix" target="Korn shell" />
+      <edge id="1534" source="Unix" target="Shell" />
+      <edge id="1538" source="Unix" target="Solaris administration" />
+      <edge id="159" source="Spring" target="Java" />
+      <edge id="220" source="Spring" target="JavaScript" />
+      <edge id="261" source="Spring" target="Leadership" />
+      <edge id="383" source="Spring" target="Oracle" />
+      <edge id="620" source="Spring" target="SQL" />
+      <edge id="694" source="Spring" target="Software development" />
+      <edge id="896" source="Spring" target="Ajax" />
+      <edge id="1015" source="Spring" target="Web services" />
+      <edge id="1105" source="Spring" target="OOP" />
+      <edge id="1157" source="Spring" target="UI" />
+      <edge id="1213" source="Spring" target="jQuery" />
+      <edge id="1252" source="Spring" target="RESTful" />
+      <edge id="1275" source="Spring" target="J2EE" />
+      <edge id="1797" source="Spring" target="RDBMS" />
+      <edge id="2005" source="Spring" target="SOAP" />
+      <edge id="2065" source="Spring" target="MongoDB" />
+      <edge id="2095" source="Spring" target="Apache Struts" />
+      <edge id="2096" source="Spring" target="Hibernate" />
+      <edge id="2098" source="Spring" target="WildFly" />
+      <edge id="2099" source="Spring" target="GWT" />
+      <edge id="2100" source="Spring" target="Spring MVC" />
+      <edge id="34" source="HTML5" target=".NET" />
+      <edge id="137" source="HTML5" target="Java" />
+      <edge id="207" source="HTML5" target="JavaScript" />
+      <edge id="248" source="HTML5" target="Leadership" />
+      <edge id="685" source="HTML5" target="Software development" />
+      <edge id="887" source="HTML5" target="Ajax" />
+      <edge id="919" source="HTML5" target="C#" />
+      <edge id="1006" source="HTML5" target="Web services" />
+      <edge id="1059" source="HTML5" target="CSS" />
+      <edge id="1081" source="HTML5" target="HTML" />
+      <edge id="1103" source="HTML5" target="OOP" />
+      <edge id="1149" source="HTML5" target="UI" />
+      <edge id="1192" source="HTML5" target="Web development" />
+      <edge id="1208" source="HTML5" target="jQuery" />
+      <edge id="1243" source="HTML5" target="RESTful" />
+      <edge id="1263" source="HTML5" target="JSON" />
+      <edge id="1328" source="Test execution" target="Automated testing" />
+      <edge id="1567" source="Test execution" target="Scripting" />
+      <edge id="2282" source="Test execution" target="Test cases" />
+      <edge id="2299" source="Test execution" target="Test plans" />
+      <edge id="2362" source="Test execution" target="Test methods" />
+      <edge id="2387" source="Test execution" target="HP Quality Center" />
+      <edge id="2397" source="Test execution" target="Manual testing" />
+      <edge id="2412" source="Test execution" target="Test scripts" />
+      <edge id="2417" source="Test execution" target="Defect tracking" />
+      <edge id="2424" source="Test execution" target="Regression analysis" />
+      <edge id="2872" source="Test execution" target="Mainframe QA" />
+      <edge id="151" source="Linux" target="Java" />
+      <edge id="215" source="Linux" target="JavaScript" />
+      <edge id="259" source="Linux" target="Leadership" />
+      <edge id="378" source="Linux" target="Oracle" />
+      <edge id="615" source="Linux" target="SQL" />
+      <edge id="688" source="Linux" target="Software development" />
+      <edge id="1029" source="Linux" target="C" />
+      <edge id="1099" source="Linux" target="OOP" />
+      <edge id="1371" source="Linux" target="C++" />
+      <edge id="1402" source="Linux" target="Debugging" />
+      <edge id="1440" source="Linux" target="Python" />
+      <edge id="1471" source="Linux" target="Apache HTTP Server" />
+      <edge id="1475" source="Linux" target="Open source" />
+      <edge id="1476" source="Linux" target="Perl" />
+      <edge id="1479" source="Linux" target="WildFly" />
+      <edge id="1480" source="Linux" target="Application server" />
+      <edge id="1481" source="Linux" target="Middleware" />
+      <edge id="1483" source="Linux" target="Scripting" />
+      <edge id="1487" source="Linux" target="Shell scripting" />
+      <edge id="1489" source="Linux" target="CentOS" />
+      <edge id="1490" source="Linux" target="Linux administration" />
+      <edge id="1492" source="Linux" target="Red Hat Linux" />
+      <edge id="1493" source="Linux" target="Solaris" />
+      <edge id="1494" source="Linux" target="Django" />
+      <edge id="1496" source="Linux" target="RDBMS" />
+      <edge id="1499" source="Linux" target="HP-UX" />
+      <edge id="1500" source="Linux" target="IBM AIX" />
+      <edge id="1501" source="Linux" target="Unix administration" />
+      <edge id="1502" source="Linux" target="Korn shell" />
+      <edge id="1505" source="Linux" target="Shell" />
+      <edge id="1506" source="Linux" target="Veritas" />
+      <edge id="1507" source="Linux" target="Solaris administration" />
+      <edge id="171" source="Shell scripting" target="Java" />
+      <edge id="390" source="Shell scripting" target="Oracle" />
+      <edge id="633" source="Shell scripting" target="SQL" />
+      <edge id="1454" source="Shell scripting" target="Python" />
+      <edge id="1549" source="Shell scripting" target="Scripting" />
+      <edge id="1748" source="Shell scripting" target="PL/SQL" />
+      <edge id="1798" source="Shell scripting" target="RDBMS" />
+      <edge id="2184" source="Shell scripting" target="Perl" />
+      <edge id="2619" source="Shell scripting" target="Red Hat Linux" />
+      <edge id="2620" source="Shell scripting" target="Solaris" />
+      <edge id="2621" source="Shell scripting" target="HP-UX" />
+      <edge id="2622" source="Shell scripting" target="IBM AIX" />
+      <edge id="2623" source="Shell scripting" target="Unix administration" />
+      <edge id="2624" source="Shell scripting" target="Korn shell" />
+      <edge id="2626" source="Shell scripting" target="Shell" />
+      <edge id="298" source="IT project management" target="Leadership" />
+      <edge id="717" source="IT project management" target="Software development" />
+      <edge id="827" source="IT project management" target="Project management" />
+      <edge id="2311" source="IT project management" target="IT management" />
+      <edge id="2464" source="IT project management" target="Budget" />
+      <edge id="2494" source="IT project management" target="Program management" />
+      <edge id="2510" source="IT project management" target="Project planning" />
+      <edge id="2525" source="IT project management" target="Project scoping" />
+      <edge id="2545" source="IT project management" target="Cross-functional" />
+      <edge id="2555" source="IT project management" target="Status reports" />
+      <edge id="2565" source="IT project management" target="Risk management" />
+      <edge id="2571" source="IT project management" target="PMP" />
+      <edge id="2593" source="IT project management" target="Contingency plan" />
+      <edge id="2594" source="IT project management" target="Project lifecycle management" />
+      <edge id="2596" source="IT project management" target="Project implementation" />
+      <edge id="2597" source="IT project management" target="PMO" />
+      <edge id="2598" source="IT project management" target="Project delivery" />
+      <edge id="23" source="HTML" target=".NET" />
+      <edge id="126" source="HTML" target="Java" />
+      <edge id="196" source="HTML" target="JavaScript" />
+      <edge id="239" source="HTML" target="Leadership" />
+      <edge id="599" source="HTML" target="SQL" />
+      <edge id="671" source="HTML" target="Software development" />
+      <edge id="880" source="HTML" target="Ajax" />
+      <edge id="997" source="HTML" target="Web services" />
+      <edge id="1050" source="HTML" target="CSS" />
+      <edge id="1071" source="HTML" target="API" />
+      <edge id="1072" source="HTML" target="OOP" />
+      <edge id="1073" source="HTML" target="RESTful" />
+      <edge id="1075" source="HTML" target="UI" />
+      <edge id="1077" source="HTML" target="Web development" />
+      <edge id="1078" source="HTML" target="jQuery" />
+      <edge id="1084" source="HTML" target="J2EE" />
+      <edge id="1085" source="HTML" target="JSON" />
+      <edge id="1086" source="HTML" target="Django" />
+      <edge id="2703" source="Solaris administration" target="Linux administration" />
+      <edge id="2715" source="Solaris administration" target="Red Hat Linux" />
+      <edge id="2727" source="Solaris administration" target="Solaris" />
+      <edge id="2801" source="Solaris administration" target="Veritas" />
+      <edge id="2833" source="Solaris administration" target="Unix administration" />
+      <edge id="267" source="Test cases" target="Leadership" />
+      <edge id="624" source="Test cases" target="SQL" />
+      <edge id="1225" source="Test cases" target="Specification" />
+      <edge id="1308" source="Test cases" target="Automated testing" />
+      <edge id="1543" source="Test cases" target="Scripting" />
+      <edge id="1916" source="Test cases" target="Strategy" />
+      <edge id="2261" source="Test cases" target="System testing" />
+      <edge id="2268" source="Test cases" target="Test plans" />
+      <edge id="2269" source="Test cases" target="Mobile application QA" />
+      <edge id="2270" source="Test cases" target="Selenium" />
+      <edge id="2271" source="Test cases" target="Test methods" />
+      <edge id="2273" source="Test cases" target="Defect tracking" />
+      <edge id="2274" source="Test cases" target="Functional testing" />
+      <edge id="2275" source="Test cases" target="HP Quality Center" />
+      <edge id="2276" source="Test cases" target="Regression analysis" />
+      <edge id="2278" source="Test cases" target="Test scripts" />
+      <edge id="2279" source="Test cases" target="SDET" />
+      <edge id="2280" source="Test cases" target="HP QuickTest Professional" />
+      <edge id="2281" source="Test cases" target="Mainframe QA" />
+      <edge id="2283" source="Test cases" target="Manual testing" />
+      <edge id="1561" source="IBM AIX" target="Scripting" />
+      <edge id="2186" source="IBM AIX" target="Perl" />
+      <edge id="2644" source="IBM AIX" target="IBM DB2" />
+      <edge id="2699" source="IBM AIX" target="Linux administration" />
+      <edge id="2711" source="IBM AIX" target="Red Hat Linux" />
+      <edge id="2717" source="IBM AIX" target="Solaris" />
+      <edge id="2728" source="IBM AIX" target="HP-UX" />
+      <edge id="2729" source="IBM AIX" target="Unix administration" />
+      <edge id="2731" source="IBM AIX" target="Korn shell" />
+      <edge id="2734" source="IBM AIX" target="Veritas" />
+      <edge id="19" source="Web services" target=".NET" />
+      <edge id="121" source="Web services" target="Java" />
+      <edge id="193" source="Web services" target="JavaScript" />
+      <edge id="235" source="Web services" target="Leadership" />
+      <edge id="373" source="Web services" target="Oracle" />
+      <edge id="595" source="Web services" target="SQL" />
+      <edge id="666" source="Web services" target="Software development" />
+      <edge id="878" source="Web services" target="Ajax" />
+      <edge id="900" source="Web services" target="C#" />
+      <edge id="995" source="Web services" target="API" />
+      <edge id="996" source="Web services" target="CSS" />
+      <edge id="998" source="Web services" target="OOP" />
+      <edge id="999" source="Web services" target="RESTful" />
+      <edge id="1001" source="Web services" target="UI" />
+      <edge id="1003" source="Web services" target="Web development" />
+      <edge id="1004" source="Web services" target="jQuery" />
+      <edge id="1007" source="Web services" target="Debugging" />
+      <edge id="1008" source="Web services" target="J2EE" />
+      <edge id="1009" source="Web services" target="JSON" />
+      <edge id="1011" source="Web services" target="SOAP" />
+      <edge id="1012" source="Web services" target="Apache Struts" />
+      <edge id="1013" source="Web services" target="Hibernate" />
+      <edge id="1016" source="Web services" target="WildFly" />
+      <edge id="1018" source="Web services" target="Middleware" />
+      <edge id="1019" source="Web services" target="Test-driven development" />
+      <edge id="1020" source="Web services" target="PL/SQL" />
+      <edge id="1022" source="Web services" target="RDBMS" />
+      <edge id="1024" source="Web services" target="Spring MVC" />
+      <edge id="300" source="PMP" target="Leadership" />
+      <edge id="718" source="PMP" target="Software development" />
+      <edge id="829" source="PMP" target="Project management" />
+      <edge id="2312" source="PMP" target="IT management" />
+      <edge id="2466" source="PMP" target="Budget" />
+      <edge id="2492" source="PMP" target="Program management" />
+      <edge id="2512" source="PMP" target="Project planning" />
+      <edge id="2526" source="PMP" target="Project scoping" />
+      <edge id="2546" source="PMP" target="Cross-functional" />
+      <edge id="2556" source="PMP" target="Status reports" />
+      <edge id="2561" source="PMP" target="Risk management" />
+      <edge id="2570" source="PMP" target="Contingency plan" />
+      <edge id="2573" source="PMP" target="Estimating" />
+      <edge id="2574" source="PMP" target="Project implementation" />
+      <edge id="2575" source="PMP" target="Project lifecycle management" />
+      <edge id="2576" source="PMP" target="PMO" />
+      <edge id="2577" source="PMP" target="Project coordination" />
+      <edge id="2578" source="PMP" target="Project delivery" />
+      <edge id="1331" source="Tcl" target="Automated testing" />
+      <edge id="1469" source="Tcl" target="Python" />
+      <edge id="1570" source="Tcl" target="Scripting" />
+      <edge id="2191" source="Tcl" target="Perl" />
+      <edge id="2849" source="Tcl" target="Scripting language" />
+      <edge id="2851" source="Tcl" target="Shell" />
+      <edge id="142" source="Apache Hadoop" target="Java" />
+      <edge id="613" source="Apache Hadoop" target="SQL" />
+      <edge id="1444" source="Apache Hadoop" target="Python" />
+      <edge id="2012" source="Apache Hadoop" target="Apache Cassandra" />
+      <edge id="2028" source="Apache Hadoop" target="Big data" />
+      <edge id="2029" source="Apache Hadoop" target="Open source" />
+      <edge id="2030" source="Apache Hadoop" target="MongoDB" />
+      <edge id="2031" source="Apache Hadoop" target="NoSQL" />
+      <edge id="2033" source="Apache Hadoop" target="Apache HBase" />
+      <edge id="2034" source="Apache Hadoop" target="Apache Hive" />
+      <edge id="2036" source="Apache Hadoop" target="Data science" />
+      <edge id="2038" source="Apache Hadoop" target="MapReduce" />
+      <edge id="2041" source="Apache Hadoop" target="Machine learning" />
+      <edge id="2042" source="Apache Hadoop" target="Natural language processing" />
+      <edge id="167" source="Selenium" target="Java" />
+      <edge id="1313" source="Selenium" target="Automated testing" />
+      <edge id="1546" source="Selenium" target="Scripting" />
+      <edge id="2089" source="Selenium" target="Open source" />
+      <edge id="2287" source="Selenium" target="Test plans" />
+      <edge id="2333" source="Selenium" target="Mobile application QA" />
+      <edge id="2339" source="Selenium" target="Test methods" />
+      <edge id="2340" source="Selenium" target="Test scripts" />
+      <edge id="2342" source="Selenium" target="Functional testing" />
+      <edge id="2343" source="Selenium" target="Regression analysis" />
+      <edge id="2345" source="Selenium" target="SDET" />
+      <edge id="2346" source="Selenium" target="HP QuickTest Professional" />
+      <edge id="2347" source="Selenium" target="Manual testing" />
+      <edge id="1114" source="Scripting language" target="OOP" />
+      <edge id="1464" source="Scripting language" target="Python" />
+      <edge id="1565" source="Scripting language" target="Scripting" />
+      <edge id="2189" source="Scripting language" target="Perl" />
+      <edge id="2838" source="Scripting language" target="Korn shell" />
+      <edge id="2848" source="Scripting language" target="Shell" />
+      <edge id="143" source="Big data" target="Java" />
+      <edge id="258" source="Big data" target="Leadership" />
+      <edge id="614" source="Big data" target="SQL" />
+      <edge id="1445" source="Big data" target="Python" />
+      <edge id="2013" source="Big data" target="Apache Cassandra" />
+      <edge id="2043" source="Big data" target="Open source" />
+      <edge id="2044" source="Big data" target="MongoDB" />
+      <edge id="2045" source="Big data" target="NoSQL" />
+      <edge id="2047" source="Big data" target="Apache HBase" />
+      <edge id="2048" source="Big data" target="Apache Hive" />
+      <edge id="2050" source="Big data" target="Data science" />
+      <edge id="2052" source="Big data" target="MapReduce" />
+      <edge id="2054" source="Big data" target="Machine learning" />
+      <edge id="154" source="SOAP" target="Java" />
+      <edge id="217" source="SOAP" target="JavaScript" />
+      <edge id="617" source="SOAP" target="SQL" />
+      <edge id="691" source="SOAP" target="Software development" />
+      <edge id="893" source="SOAP" target="Ajax" />
+      <edge id="1104" source="SOAP" target="OOP" />
+      <edge id="1249" source="SOAP" target="RESTful" />
+      <edge id="1271" source="SOAP" target="J2EE" />
+      <edge id="1432" source="SOAP" target="API" />
+      <edge id="1886" source="SOAP" target="JSON" />
+      <edge id="2003" source="SOAP" target="Apache HTTP Server" />
+      <edge id="2006" source="SOAP" target="Apache Struts" />
+      <edge id="2007" source="SOAP" target="Hibernate" />
+      <edge id="2008" source="SOAP" target="WildFly" />
+      <edge id="2011" source="SOAP" target="Spring MVC" />
+      <edge id="22" source="CSS" target=".NET" />
+      <edge id="125" source="CSS" target="Java" />
+      <edge id="195" source="CSS" target="JavaScript" />
+      <edge id="238" source="CSS" target="Leadership" />
+      <edge id="598" source="CSS" target="SQL" />
+      <edge id="670" source="CSS" target="Software development" />
+      <edge id="879" source="CSS" target="Ajax" />
+      <edge id="1049" source="CSS" target="API" />
+      <edge id="1051" source="CSS" target="OOP" />
+      <edge id="1052" source="CSS" target="RESTful" />
+      <edge id="1055" source="CSS" target="Web development" />
+      <edge id="1056" source="CSS" target="jQuery" />
+      <edge id="1063" source="CSS" target="JSON" />
+      <edge id="1064" source="CSS" target="Open source" />
+      <edge id="1066" source="CSS" target="Django" />
+      <edge id="1321" source="Functional testing" target="Automated testing" />
+      <edge id="2263" source="Functional testing" target="System testing" />
+      <edge id="2292" source="Functional testing" target="Test plans" />
+      <edge id="2357" source="Functional testing" target="Test methods" />
+      <edge id="2381" source="Functional testing" target="HP Quality Center" />
+      <edge id="2391" source="Functional testing" target="HP QuickTest Professional" />
+      <edge id="2399" source="Functional testing" target="Manual testing" />
+      <edge id="2409" source="Functional testing" target="Test scripts" />
+      <edge id="2414" source="Functional testing" target="Defect tracking" />
+      <edge id="2419" source="Functional testing" target="Regression analysis" />
+      <edge id="2421" source="Functional testing" target="Mainframe QA" />
+      <edge id="29" source="Web development" target=".NET" />
+      <edge id="133" source="Web development" target="Java" />
+      <edge id="203" source="Web development" target="JavaScript" />
+      <edge id="244" source="Web development" target="Leadership" />
+      <edge id="605" source="Web development" target="SQL" />
+      <edge id="678" source="Web development" target="Software development" />
+      <edge id="885" source="Web development" target="Ajax" />
+      <edge id="914" source="Web development" target="C#" />
+      <edge id="1096" source="Web development" target="OOP" />
+      <edge id="1146" source="Web development" target="UI" />
+      <edge id="1185" source="Web development" target="API" />
+      <edge id="1186" source="Web development" target="Python" />
+      <edge id="1187" source="Web development" target="RESTful" />
+      <edge id="1188" source="Web development" target="jQuery" />
+      <edge id="1189" source="Web development" target="Debugging" />
+      <edge id="1194" source="Web development" target="JSON" />
+      <edge id="1195" source="Web development" target="Open source" />
+      <edge id="1196" source="Web development" target="Perl" />
+      <edge id="1197" source="Web development" target="Django" />
+      <edge id="1201" source="Web development" target="RDBMS" />
+      <edge id="280" source="Project planning" target="Leadership" />
+      <edge id="811" source="Project planning" target="Project management" />
+      <edge id="1229" source="Project planning" target="Specification" />
+      <edge id="1923" source="Project planning" target="Strategy" />
+      <edge id="2306" source="Project planning" target="IT management" />
+      <edge id="2453" source="Project planning" target="Budget" />
+      <edge id="2487" source="Project planning" target="Program management" />
+      <edge id="2499" source="Project planning" target="Cross-functional" />
+      <edge id="2500" source="Project planning" target="Project scoping" />
+      <edge id="2502" source="Project planning" target="Status reports" />
+      <edge id="2504" source="Project planning" target="Risk management" />
+      <edge id="2509" source="Project planning" target="Contingency plan" />
+      <edge id="2513" source="Project planning" target="Project implementation" />
+      <edge id="2514" source="Project planning" target="Estimating" />
+      <edge id="2515" source="Project planning" target="Project lifecycle management" />
+      <edge id="2516" source="Project planning" target="PMO" />
+      <edge id="2518" source="Project planning" target="Project coordination" />
+      <edge id="2519" source="Project planning" target="Project delivery" />
+      <edge id="165" source="Scripting" target="Java" />
+      <edge id="265" source="Scripting" target="Leadership" />
+      <edge id="386" source="Scripting" target="Oracle" />
+      <edge id="623" source="Scripting" target="SQL" />
+      <edge id="1223" source="Scripting" target="Specification" />
+      <edge id="1306" source="Scripting" target="Automated testing" />
+      <edge id="1373" source="Scripting" target="C++" />
+      <edge id="1403" source="Scripting" target="Debugging" />
+      <edge id="1443" source="Scripting" target="Python" />
+      <edge id="1540" source="Scripting" target="Perl" />
+      <edge id="1544" source="Scripting" target="Test plans" />
+      <edge id="1548" source="Scripting" target="PL/SQL" />
+      <edge id="1550" source="Scripting" target="Linux administration" />
+      <edge id="1553" source="Scripting" target="Solaris" />
+      <edge id="1555" source="Scripting" target="RDBMS" />
+      <edge id="1556" source="Scripting" target="Defect tracking" />
+      <edge id="1557" source="Scripting" target="HP Quality Center" />
+      <edge id="1558" source="Scripting" target="Regression analysis" />
+      <edge id="1560" source="Scripting" target="Test scripts" />
+      <edge id="1562" source="Scripting" target="Unix administration" />
+      <edge id="1563" source="Scripting" target="HP QuickTest Professional" />
+      <edge id="1564" source="Scripting" target="Korn shell" />
+      <edge id="1566" source="Scripting" target="Shell" />
+      <edge id="1568" source="Scripting" target="Manual testing" />
+      <edge id="726" source="SDET" target="Software development" />
+      <edge id="928" source="SDET" target="C#" />
+      <edge id="1326" source="SDET" target="Automated testing" />
+      <edge id="146" source="Apache HBase" target="Java" />
+      <edge id="2018" source="Apache HBase" target="Apache Cassandra" />
+      <edge id="2068" source="Apache HBase" target="MongoDB" />
+      <edge id="2078" source="Apache HBase" target="NoSQL" />
+      <edge id="2122" source="Apache HBase" target="Apache Hive" />
+      <edge id="2123" source="Apache HBase" target="MapReduce" />
+      <edge id="2125" source="Apache HBase" target="Data science" />
+      <edge id="13" source="Ajax" target=".NET" />
+      <edge id="119" source="Ajax" target="Java" />
+      <edge id="189" source="Ajax" target="JavaScript" />
+      <edge id="589" source="Ajax" target="SQL" />
+      <edge id="661" source="Ajax" target="Software development" />
+      <edge id="877" source="Ajax" target="C#" />
+      <edge id="881" source="Ajax" target="OOP" />
+      <edge id="882" source="Ajax" target="RESTful" />
+      <edge id="883" source="Ajax" target="UI" />
+      <edge id="886" source="Ajax" target="jQuery" />
+      <edge id="888" source="Ajax" target="J2EE" />
+      <edge id="892" source="Ajax" target="JSON" />
+      <edge id="894" source="Ajax" target="Apache Struts" />
+      <edge id="895" source="Ajax" target="Hibernate" />
+      <edge id="24" source="OOP" target=".NET" />
+      <edge id="127" source="OOP" target="Java" />
+      <edge id="197" source="OOP" target="JavaScript" />
+      <edge id="240" source="OOP" target="Leadership" />
+      <edge id="600" source="OOP" target="SQL" />
+      <edge id="672" source="OOP" target="Software development" />
+      <edge id="909" source="OOP" target="C#" />
+      <edge id="1033" source="OOP" target="C" />
+      <edge id="1091" source="OOP" target="API" />
+      <edge id="1092" source="OOP" target="C++" />
+      <edge id="1094" source="OOP" target="UI" />
+      <edge id="1097" source="OOP" target="jQuery" />
+      <edge id="1098" source="OOP" target="Debugging" />
+      <edge id="1101" source="OOP" target="Python" />
+      <edge id="1102" source="OOP" target="RESTful" />
+      <edge id="1106" source="OOP" target="Automated testing" />
+      <edge id="1109" source="OOP" target="Test-driven development" />
+      <edge id="1111" source="OOP" target="RDBMS" />
+      <edge id="276" source="Project management" target="Leadership" />
+      <edge id="628" source="Project management" target="SQL" />
+      <edge id="706" source="Project management" target="Software development" />
+      <edge id="801" source="Project management" target="Specification" />
+      <edge id="802" source="Project management" target="Test plans" />
+      <edge id="804" source="Project management" target="Strategy" />
+      <edge id="805" source="Project management" target="Budget" />
+      <edge id="806" source="Project management" target="IT management" />
+      <edge id="810" source="Project management" target="Program management" />
+      <edge id="812" source="Project management" target="Project scoping" />
+      <edge id="815" source="Project management" target="Cross-functional" />
+      <edge id="816" source="Project management" target="Status reports" />
+      <edge id="821" source="Project management" target="Risk management" />
+      <edge id="826" source="Project management" target="Contingency plan" />
+      <edge id="830" source="Project management" target="Project implementation" />
+      <edge id="833" source="Project management" target="Estimating" />
+      <edge id="834" source="Project management" target="Project lifecycle management" />
+      <edge id="835" source="Project management" target="PMO" />
+      <edge id="837" source="Project management" target="Project coordination" />
+      <edge id="839" source="Project management" target="Project delivery" />
+      <edge id="305" source="Test scripts" target="Leadership" />
+      <edge id="1236" source="Test scripts" target="Specification" />
+      <edge id="1325" source="Test scripts" target="Automated testing" />
+      <edge id="1932" source="Test scripts" target="Strategy" />
+      <edge id="2267" source="Test scripts" target="System testing" />
+      <edge id="2296" source="Test scripts" target="Test plans" />
+      <edge id="2355" source="Test scripts" target="Test methods" />
+      <edge id="2382" source="Test scripts" target="HP Quality Center" />
+      <edge id="2393" source="Test scripts" target="HP QuickTest Professional" />
+      <edge id="2402" source="Test scripts" target="Manual testing" />
+      <edge id="2408" source="Test scripts" target="Defect tracking" />
+      <edge id="2410" source="Test scripts" target="Regression analysis" />
+      <edge id="301" source="Project implementation" target="Leadership" />
+      <edge id="2467" source="Project implementation" target="Budget" />
+      <edge id="2531" source="Project implementation" target="Project scoping" />
+      <edge id="2601" source="Project implementation" target="Estimating" />
+      <edge id="2606" source="Project implementation" target="Project lifecycle management" />
+      <edge id="2785" source="Project implementation" target="Contingency plan" />
+      <edge id="307" source="Estimating" target="Leadership" />
+      <edge id="1237" source="Estimating" target="Specification" />
+      <edge id="2468" source="Estimating" target="Budget" />
+      <edge id="2527" source="Estimating" target="Project scoping" />
+      <edge id="2549" source="Estimating" target="Status reports" />
+      <edge id="2602" source="Estimating" target="Project lifecycle management" />
+      <edge id="3" source="Leadership" target=".NET" />
+      <edge id="112" source="Leadership" target="Java" />
+      <edge id="182" source="Leadership" target="JavaScript" />
+      <edge id="229" source="Leadership" target="Oracle" />
+      <edge id="231" source="Leadership" target="SQL" />
+      <edge id="234" source="Leadership" target="C#" />
+      <edge id="236" source="Leadership" target="C" />
+      <edge id="237" source="Leadership" target="C++" />
+      <edge id="242" source="Leadership" target="UI" />
+      <edge id="245" source="Leadership" target="jQuery" />
+      <edge id="247" source="Leadership" target="Specification" />
+      <edge id="252" source="Leadership" target="Debugging" />
+      <edge id="257" source="Leadership" target="J2EE" />
+      <edge id="263" source="Leadership" target="Automated testing" />
+      <edge id="266" source="Leadership" target="System testing" />
+      <edge id="268" source="Leadership" target="Test plans" />
+      <edge id="271" source="Leadership" target="Test methods" />
+      <edge id="272" source="Leadership" target="Strategy" />
+      <edge id="273" source="Leadership" target="Budget" />
+      <edge id="274" source="Leadership" target="IT management" />
+      <edge id="279" source="Leadership" target="Program management" />
+      <edge id="281" source="Leadership" target="Project scoping" />
+      <edge id="283" source="Leadership" target="Cross-functional" />
+      <edge id="284" source="Leadership" target="Status reports" />
+      <edge id="287" source="Leadership" target="PL/SQL" />
+      <edge id="293" source="Leadership" target="Risk management" />
+      <edge id="303" source="Leadership" target="RDBMS" />
+      <edge id="304" source="Leadership" target="HP Quality Center" />
+      <edge id="306" source="Leadership" target="Enterprise software" />
+      <edge id="309" source="Leadership" target="Project lifecycle management" />
+      <edge id="311" source="Leadership" target="PMO" />
+      <edge id="312" source="Leadership" target="Project coordination" />
+      <edge id="315" source="Leadership" target="Project delivery" />
+      <edge id="177" source="Enterprise software" target="Java" />
+      <edge id="723" source="Enterprise software" target="Software development" />
+      <edge id="2230" source="Enterprise software" target="Middleware" />
+      <edge id="2" source="JavaScript" target=".NET" />
+      <edge id="117" source="JavaScript" target="Java" />
+      <edge id="185" source="JavaScript" target="SQL" />
+      <edge id="186" source="JavaScript" target="Software development" />
+      <edge id="190" source="JavaScript" target="C#" />
+      <edge id="194" source="JavaScript" target="API" />
+      <edge id="198" source="JavaScript" target="Python" />
+      <edge id="199" source="JavaScript" target="RESTful" />
+      <edge id="201" source="JavaScript" target="UI" />
+      <edge id="204" source="JavaScript" target="jQuery" />
+      <edge id="210" source="JavaScript" target="Debugging" />
+      <edge id="211" source="JavaScript" target="J2EE" />
+      <edge id="212" source="JavaScript" target="JSON" />
+      <edge id="213" source="JavaScript" target="MongoDB" />
+      <edge id="214" source="JavaScript" target="Apache HTTP Server" />
+      <edge id="216" source="JavaScript" target="Open source" />
+      <edge id="218" source="JavaScript" target="Apache Struts" />
+      <edge id="219" source="JavaScript" target="Hibernate" />
+      <edge id="222" source="JavaScript" target="Django" />
+      <edge id="226" source="JavaScript" target="Spring MVC" />
+      <edge id="152" source="Open source" target="Java" />
+      <edge id="689" source="Open source" target="Software development" />
+      <edge id="1156" source="Open source" target="UI" />
+      <edge id="1302" source="Open source" target="Automated testing" />
+      <edge id="1431" source="Open source" target="API" />
+      <edge id="1450" source="Open source" target="Python" />
+      <edge id="2087" source="Open source" target="Apache HTTP Server" />
+      <edge id="2088" source="Open source" target="Perl" />
+      <edge id="2090" source="Open source" target="Linux administration" />
+      <edge id="2091" source="Open source" target="Django" />
+      <edge id="1922" source="Program management" target="Strategy" />
+      <edge id="2305" source="Program management" target="IT management" />
+      <edge id="2452" source="Program management" target="Budget" />
+      <edge id="2489" source="Program management" target="Cross-functional" />
+      <edge id="2490" source="Program management" target="Status reports" />
+      <edge id="2491" source="Program management" target="Risk management" />
+      <edge id="2493" source="Program management" target="Project scoping" />
+      <edge id="2496" source="Program management" target="PMO" />
+      <edge id="2497" source="Program management" target="Project coordination" />
+      <edge id="35" source="Debugging" target=".NET" />
+      <edge id="138" source="Debugging" target="Java" />
+      <edge id="375" source="Debugging" target="Oracle" />
+      <edge id="611" source="Debugging" target="SQL" />
+      <edge id="686" source="Debugging" target="Software development" />
+      <edge id="920" source="Debugging" target="C#" />
+      <edge id="1037" source="Debugging" target="C" />
+      <edge id="1153" source="Debugging" target="UI" />
+      <edge id="1222" source="Debugging" target="Specification" />
+      <edge id="1304" source="Debugging" target="Automated testing" />
+      <edge id="1370" source="Debugging" target="C++" />
+      <edge id="1400" source="Debugging" target="Python" />
+      <edge id="1408" source="Debugging" target="Perl" />
+      <edge id="1412" source="Debugging" target="PL/SQL" />
+      <edge id="2702" source="Veritas" target="Linux administration" />
+      <edge id="2714" source="Veritas" target="Red Hat Linux" />
+      <edge id="2722" source="Veritas" target="Solaris" />
+      <edge id="2799" source="Veritas" target="Unix administration" />
+      <edge id="2470" source="PMO" target="Budget" />
+      <edge id="2558" source="PMO" target="Status reports" />
+      <edge id="2568" source="PMO" target="Risk management" />
+      <edge id="2608" source="PMO" target="Project lifecycle management" />
+      <edge id="2783" source="PMO" target="Project coordination" />
+      <edge id="148" source="MapReduce" target="Java" />
+      <edge id="2023" source="MapReduce" target="Apache Cassandra" />
+      <edge id="2082" source="MapReduce" target="NoSQL" />
+      <edge id="2130" source="MapReduce" target="Apache Hive" />
+      <edge id="2144" source="MapReduce" target="Data science" />
+      <edge id="2158" source="MapReduce" target="Machine learning" />
+      <edge id="2159" source="MapReduce" target="Natural language processing" />
+      <edge id="394" source="Solaris" target="Oracle" />
+      <edge id="2697" source="Solaris" target="Linux administration" />
+      <edge id="2708" source="Solaris" target="Red Hat Linux" />
+      <edge id="2716" source="Solaris" target="HP-UX" />
+      <edge id="2718" source="Solaris" target="Unix administration" />
+      <edge id="2721" source="Solaris" target="Shell" />
+      <edge id="180" source="GWT" target="Java" />
+      <edge id="1282" source="GWT" target="J2EE" />
+      <edge id="2195" source="GWT" target="Hibernate" />
+      <edge id="2822" source="GWT" target="GUI" />
+      <edge id="2825" source="GWT" target="Spring MVC" />
+      <edge id="162" source="Middleware" target="Java" />
+      <edge id="385" source="Middleware" target="Oracle" />
+      <edge id="1278" source="Middleware" target="J2EE" />
+      <edge id="2174" source="Middleware" target="Apache HTTP Server" />
+      <edge id="2224" source="Middleware" target="WildFly" />
+      <edge id="2228" source="Middleware" target="Application server" />
+      <edge id="36" source="IT management" target=".NET" />
+      <edge id="627" source="IT management" target="SQL" />
+      <edge id="704" source="IT management" target="Software development" />
+      <edge id="1919" source="IT management" target="Strategy" />
+      <edge id="2260" source="IT management" target="System testing" />
+      <edge id="2303" source="IT management" target="Budget" />
+      <edge id="2309" source="IT management" target="Cross-functional" />
+      <edge id="2310" source="IT management" target="Status reports" />
+      <edge id="1458" source="Redis" target="Python" />
+      <edge id="1800" source="Redis" target="RDBMS" />
+      <edge id="2026" source="Redis" target="Apache Cassandra" />
+      <edge id="2071" source="Redis" target="MongoDB" />
+      <edge id="2085" source="Redis" target="NoSQL" />
+      <edge id="2766" source="Redis" target="Django" />
+      <edge id="2775" source="Redis" target="Flask" />
+      <edge id="2776" source="Redis" target="Nginx" />
+      <edge id="2472" source="Project delivery" target="Budget" />
+      <edge id="2533" source="Project delivery" target="Project scoping" />
+      <edge id="2609" source="Project delivery" target="Project lifecycle management" />
+      <edge id="702" source="Strategy" target="Software development" />
+      <edge id="1917" source="Strategy" target="Test plans" />
+      <edge id="1918" source="Strategy" target="Budget" />
+      <edge id="1924" source="Strategy" target="Project scoping" />
+      <edge id="1926" source="Strategy" target="Cross-functional" />
+      <edge id="1927" source="Strategy" target="Status reports" />
+      <edge id="1929" source="Strategy" target="Risk management" />
+      <edge id="1931" source="Strategy" target="Contingency plan" />
+      <edge id="1043" source="System testing" target="C" />
+      <edge id="1224" source="System testing" target="Specification" />
+      <edge id="1307" source="System testing" target="Automated testing" />
+      <edge id="2259" source="System testing" target="Test plans" />
+      <edge id="2262" source="System testing" target="Test methods" />
+      <edge id="2264" source="System testing" target="HP Quality Center" />
+      <edge id="2265" source="System testing" target="Regression analysis" />
+      <edge id="20" source="C" target=".NET" />
+      <edge id="123" source="C" target="Java" />
+      <edge id="596" source="C" target="SQL" />
+      <edge id="668" source="C" target="Software development" />
+      <edge id="907" source="C" target="C#" />
+      <edge id="1027" source="C" target="API" />
+      <edge id="1032" source="C" target="C++" />
+      <edge id="1034" source="C" target="Python" />
+      <edge id="1042" source="C" target="Perl" />
+      <edge id="145" source="NoSQL" target="Java" />
+      <edge id="1247" source="NoSQL" target="RESTful" />
+      <edge id="1447" source="NoSQL" target="Python" />
+      <edge id="2016" source="NoSQL" target="Apache Cassandra" />
+      <edge id="2064" source="NoSQL" target="MongoDB" />
+      <edge id="2076" source="NoSQL" target="Scalability" />
+      <edge id="2079" source="NoSQL" target="Apache Hive" />
+      <edge id="2081" source="NoSQL" target="Data science" />
+      <edge id="172" source="IBM DB2" target="Java" />
+      <edge id="391" source="IBM DB2" target="Oracle" />
+      <edge id="634" source="IBM DB2" target="SQL" />
+      <edge id="1280" source="IBM DB2" target="J2EE" />
+      <edge id="1749" source="IBM DB2" target="PL/SQL" />
+      <edge id="1799" source="IBM DB2" target="RDBMS" />
+      <edge id="40" source="RDBMS" target=".NET" />
+      <edge id="175" source="RDBMS" target="Java" />
+      <edge id="395" source="RDBMS" target="Oracle" />
+      <edge id="640" source="RDBMS" target="SQL" />
+      <edge id="719" source="RDBMS" target="Software development" />
+      <edge id="924" source="RDBMS" target="C#" />
+      <edge id="1281" source="RDBMS" target="J2EE" />
+      <edge id="1747" source="RDBMS" target="PL/SQL" />
+      <edge id="1795" source="RDBMS" target="Perl" />
+      <edge id="1796" source="RDBMS" target="Hibernate" />
+      <edge id="30" source="jQuery" target=".NET" />
+      <edge id="134" source="jQuery" target="Java" />
+      <edge id="606" source="jQuery" target="SQL" />
+      <edge id="679" source="jQuery" target="Software development" />
+      <edge id="915" source="jQuery" target="C#" />
+      <edge id="1147" source="jQuery" target="UI" />
+      <edge id="1205" source="jQuery" target="API" />
+      <edge id="1206" source="jQuery" target="RESTful" />
+      <edge id="1209" source="jQuery" target="J2EE" />
+      <edge id="1210" source="jQuery" target="JSON" />
+      <edge id="1211" source="jQuery" target="Apache Struts" />
+      <edge id="1212" source="jQuery" target="Hibernate" />
+      <edge id="1217" source="jQuery" target="Spring MVC" />
+      <edge id="14" source="C#" target=".NET" />
+      <edge id="120" source="C#" target="Java" />
+      <edge id="372" source="C#" target="Oracle" />
+      <edge id="590" source="C#" target="SQL" />
+      <edge id="662" source="C#" target="Software development" />
+      <edge id="901" source="C#" target="Specification" />
+      <edge id="908" source="C#" target="C++" />
+      <edge id="910" source="C#" target="RESTful" />
+      <edge id="912" source="C#" target="UI" />
+      <edge id="921" source="C#" target="JSON" />
+      <edge id="922" source="C#" target="Automated testing" />
+      <edge id="927" source="C#" target="GUI" />
+      <edge id="181" source="Spring MVC" target="Java" />
+      <edge id="1256" source="Spring MVC" target="RESTful" />
+      <edge id="1283" source="Spring MVC" target="J2EE" />
+      <edge id="2196" source="Spring MVC" target="Hibernate" />
+      <edge id="2219" source="Spring MVC" target="Apache Struts" />
+      <edge id="144" source="MongoDB" target="Java" />
+      <edge id="1246" source="MongoDB" target="RESTful" />
+      <edge id="1446" source="MongoDB" target="Python" />
+      <edge id="2015" source="MongoDB" target="Apache Cassandra" />
+      <edge id="2067" source="MongoDB" target="Scalability" />
+      <edge id="2069" source="MongoDB" target="Django" />
+      <edge id="2073" source="MongoDB" target="Flask" />
+      <edge id="1327" source="HP QuickTest Professional" target="Automated testing" />
+      <edge id="2297" source="HP QuickTest Professional" target="Test plans" />
+      <edge id="2336" source="HP QuickTest Professional" target="Mobile application QA" />
+      <edge id="2361" source="HP QuickTest Professional" target="Test methods" />
+      <edge id="2385" source="HP QuickTest Professional" target="HP Quality Center" />
+      <edge id="2392" source="HP QuickTest Professional" target="Regression analysis" />
+      <edge id="2394" source="HP QuickTest Professional" target="Mainframe QA" />
+      <edge id="2395" source="HP QuickTest Professional" target="Manual testing" />
+      <edge id="2298" source="Mainframe QA" target="Test plans" />
+      <edge id="2386" source="Mainframe QA" target="HP Quality Center" />
+      <edge id="156" source="Apache Struts" target="Java" />
+      <edge id="380" source="Apache Struts" target="Oracle" />
+      <edge id="1250" source="Apache Struts" target="RESTful" />
+      <edge id="1272" source="Apache Struts" target="J2EE" />
+      <edge id="2192" source="Apache Struts" target="Hibernate" />
+      <edge id="2218" source="Apache Struts" target="WildFly" />
+      <edge id="1463" source="Korn shell" target="Python" />
+      <edge id="2188" source="Korn shell" target="Perl" />
+      <edge id="2830" source="Korn shell" target="Unix administration" />
+      <edge id="2839" source="Korn shell" target="Shell" />
+      <edge id="2469" source="Project lifecycle management" target="Budget" />
+      <edge id="2528" source="Project lifecycle management" target="Project scoping" />
+      <edge id="2548" source="Project lifecycle management" target="Cross-functional" />
+      <edge id="2557" source="Project lifecycle management" target="Status reports" />
+      <edge id="2567" source="Project lifecycle management" target="Risk management" />
+      <edge id="1462" source="Flask" target="Python" />
+      <edge id="2769" source="Flask" target="Django" />
+      <edge id="2454" source="Project scoping" target="Budget" />
+      <edge id="2521" source="Project scoping" target="Status reports" />
+      <edge id="2523" source="Project scoping" target="Risk management" />
+      <edge id="2529" source="Project scoping" target="Contingency plan" />
+      <edge id="2532" source="Project scoping" target="Project coordination" />
+      <edge id="2290" source="Status reports" target="Test plans" />
+      <edge id="2457" source="Status reports" target="Budget" />
+      <edge id="2543" source="Status reports" target="Cross-functional" />
+      <edge id="2550" source="Status reports" target="Risk management" />
+      <edge id="2554" source="Status reports" target="Contingency plan" />
+      <edge id="2559" source="Status reports" target="Project coordination" />
+      <edge id="1312" source="Mobile application QA" target="Automated testing" />
+      <edge id="2286" source="Mobile application QA" target="Test plans" />
+      <edge id="2335" source="Mobile application QA" target="HP Quality Center" />
+      <edge id="2337" source="Mobile application QA" target="Manual testing" />
+      <edge id="2463" source="Contingency plan" target="Budget" />
+      <edge id="2564" source="Contingency plan" target="Risk management" />
+      <edge id="402" source="Shell" target="Oracle" />
+      <edge id="648" source="Shell" target="SQL" />
+      <edge id="1465" source="Shell" target="Python" />
+      <edge id="1754" source="Shell" target="PL/SQL" />
+      <edge id="2190" source="Shell" target="Perl" />
+      <edge id="5" source="Oracle" target=".NET" />
+      <edge id="118" source="Oracle" target="Java" />
+      <edge id="368" source="Oracle" target="SQL" />
+      <edge id="369" source="Oracle" target="Software development" />
+      <edge id="376" source="Oracle" target="J2EE" />
+      <edge id="381" source="Oracle" target="Hibernate" />
+      <edge id="384" source="Oracle" target="WildFly" />
+      <edge id="389" source="Oracle" target="PL/SQL" />
+      <edge id="153" source="Perl" target="Java" />
+      <edge id="616" source="Perl" target="SQL" />
+      <edge id="690" source="Perl" target="Software development" />
+      <edge id="1376" source="Perl" target="C++" />
+      <edge id="1451" source="Perl" target="Python" />
+      <edge id="1745" source="Perl" target="PL/SQL" />
+      <edge id="2170" source="Perl" target="Apache HTTP Server" />
+      <edge id="2185" source="Perl" target="Linux administration" />
+      <edge id="2187" source="Perl" target="Unix administration" />
+      <edge id="135" source="Specification" target="Java" />
+      <edge id="610" source="Specification" target="SQL" />
+      <edge id="684" source="Specification" target="Software development" />
+      <edge id="1226" source="Specification" target="Test plans" />
+      <edge id="1227" source="Specification" target="Test methods" />
+      <edge id="1230" source="Specification" target="Cross-functional" />
+      <edge id="149" source="Apache HTTP Server" target="Java" />
+      <edge id="1449" source="Apache HTTP Server" target="Python" />
+      <edge id="2172" source="Apache HTTP Server" target="WildFly" />
+      <edge id="2173" source="Apache HTTP Server" target="Application server" />
+      <edge id="2175" source="Apache HTTP Server" target="Linux administration" />
+      <edge id="2176" source="Apache HTTP Server" target="Red Hat Linux" />
+      <edge id="2177" source="Apache HTTP Server" target="Nginx" />
+      <edge id="1456" source="Linux administration" target="Python" />
+      <edge id="2689" source="Linux administration" target="CentOS" />
+      <edge id="2696" source="Linux administration" target="Red Hat Linux" />
+      <edge id="2700" source="Linux administration" target="Unix administration" />
+      <edge id="625" source="Test plans" target="SQL" />
+      <edge id="1309" source="Test plans" target="Automated testing" />
+      <edge id="2288" source="Test plans" target="Test methods" />
+      <edge id="2291" source="Test plans" target="Defect tracking" />
+      <edge id="2293" source="Test plans" target="HP Quality Center" />
+      <edge id="2294" source="Test plans" target="Regression analysis" />
+      <edge id="2300" source="Test plans" target="Manual testing" />
+      <edge id="25" source="RESTful" target=".NET" />
+      <edge id="129" source="RESTful" target="Java" />
+      <edge id="674" source="RESTful" target="Software development" />
+      <edge id="1144" source="RESTful" target="UI" />
+      <edge id="1241" source="RESTful" target="API" />
+      <edge id="1242" source="RESTful" target="J2EE" />
+      <edge id="1244" source="RESTful" target="JSON" />
+      <edge id="1245" source="RESTful" target="Apache Cassandra" />
+      <edge id="1251" source="RESTful" target="Hibernate" />
+      <edge id="1457" source="Django" target="Python" />
+      <edge id="2692" source="Django" target="CentOS" />
+      <edge id="1320" source="Defect tracking" target="Automated testing" />
+      <edge id="2356" source="Defect tracking" target="Test methods" />
+      <edge id="2380" source="Defect tracking" target="HP Quality Center" />
+      <edge id="2398" source="Defect tracking" target="Manual testing" />
+      <edge id="2415" source="Defect tracking" target="Regression analysis" />
+      <edge id="1455" source="CentOS" target="Python" />
+      <edge id="2691" source="CentOS" target="Red Hat Linux" />
+      <edge id="1448" source="Data science" target="Python" />
+      <edge id="2021" source="Data science" target="Apache Cassandra" />
+      <edge id="2132" source="Data science" target="Apache Hive" />
+      <edge id="2146" source="Data science" target="Machine learning" />
+      <edge id="2151" source="Data science" target="Natural language processing" />
+      <edge id="179" source="GUI" target="Java" />
+      <edge id="725" source="GUI" target="Software development" />
+      <edge id="1162" source="GUI" target="UI" />
+      <edge id="2458" source="Risk management" target="Budget" />
+      <edge id="1" source="Java" target=".NET" />
+      <edge id="115" source="Java" target="SQL" />
+      <edge id="116" source="Java" target="Software development" />
+      <edge id="122" source="Java" target="API" />
+      <edge id="124" source="Java" target="C++" />
+      <edge id="128" source="Java" target="Python" />
+      <edge id="131" source="Java" target="UI" />
+      <edge id="139" source="Java" target="J2EE" />
+      <edge id="140" source="Java" target="JSON" />
+      <edge id="141" source="Java" target="Apache Cassandra" />
+      <edge id="147" source="Java" target="Apache Hive" />
+      <edge id="157" source="Java" target="Hibernate" />
+      <edge id="160" source="Java" target="WildFly" />
+      <edge id="161" source="Java" target="Application server" />
+      <edge id="163" source="Java" target="Automated testing" />
+      <edge id="169" source="Java" target="Test-driven development" />
+      <edge id="170" source="Java" target="PL/SQL" />
+      <edge id="667" source="API" target="Software development" />
+      <edge id="1142" source="API" target="UI" />
+      <edge id="1369" source="API" target="C++" />
+      <edge id="1429" source="API" target="Python" />
+      <edge id="1430" source="API" target="JSON" />
+      <edge id="2227" source="Red Hat Linux" target="WildFly" />
+      <edge id="2229" source="Red Hat Linux" target="Application server" />
+      <edge id="2710" source="Red Hat Linux" target="HP-UX" />
+      <edge id="2712" source="Red Hat Linux" target="Unix administration" />
+      <edge id="1468" source="Nginx" target="Python" />
+      <edge id="2832" source="Nginx" target="Unix administration" />
+      <edge id="39" source="PL/SQL" target=".NET" />
+      <edge id="632" source="PL/SQL" target="SQL" />
+      <edge id="712" source="PL/SQL" target="Software development" />
+      <edge id="1279" source="PL/SQL" target="J2EE" />
+      <edge id="1377" source="Machine learning" target="C++" />
+      <edge id="1452" source="Machine learning" target="Python" />
+      <edge id="2136" source="Machine learning" target="Apache Hive" />
+      <edge id="2167" source="Machine learning" target="Natural language processing" />
+      <edge id="647" source="HP Quality Center" target="SQL" />
+      <edge id="1322" source="HP Quality Center" target="Automated testing" />
+      <edge id="2358" source="HP Quality Center" target="Test methods" />
+      <edge id="2383" source="HP Quality Center" target="Regression analysis" />
+      <edge id="2388" source="HP Quality Center" target="Manual testing" />
+      <edge id="2471" source="Project coordination" target="Budget" />
+      <edge id="8" source="SQL" target=".NET" />
+      <edge id="586" source="SQL" target="Software development" />
+      <edge id="597" source="SQL" target="C++" />
+      <edge id="601" source="SQL" target="Python" />
+      <edge id="603" source="SQL" target="UI" />
+      <edge id="612" source="SQL" target="J2EE" />
+      <edge id="619" source="SQL" target="Hibernate" />
+      <edge id="621" source="SQL" target="Automated testing" />
+      <edge id="654" source="SQL" target="Manual testing" />
+      <edge id="2827" source="Unix administration" target="HP-UX" />
+      <edge id="700" source="Test methods" target="Software development" />
+      <edge id="1316" source="Test methods" target="Automated testing" />
+      <edge id="2359" source="Test methods" target="Regression analysis" />
+      <edge id="2363" source="Test methods" target="Manual testing" />
+      <edge id="21" source="C++" target=".NET" />
+      <edge id="669" source="C++" target="Software development" />
+      <edge id="695" source="WildFly" target="Software development" />
+      <edge id="1276" source="WildFly" target="J2EE" />
+      <edge id="2194" source="WildFly" target="Hibernate" />
+      <edge id="2223" source="WildFly" target="Application server" />
+      <edge id="2019" source="Apache Hive" target="Apache Cassandra" />
+      <edge id="2456" source="Cross-functional" target="Budget" />
+      <edge id="696" source="Automated testing" target="Software development" />
+      <edge id="1303" source="Automated testing" target="Python" />
+      <edge id="1315" source="Automated testing" target="Test-driven development" />
+      <edge id="1323" source="Automated testing" target="Regression analysis" />
+      <edge id="1329" source="Automated testing" target="Manual testing" />
+      <edge id="9" source="Software development" target=".NET" />
+      <edge id="673" source="Software development" target="Python" />
+      <edge id="676" source="Software development" target="UI" />
+      <edge id="687" source="Software development" target="J2EE" />
+      <edge id="693" source="Software development" target="Hibernate" />
+      <edge id="699" source="Software development" target="Test-driven development" />
+      <edge id="703" source="Software development" target="Budget" />
+      <edge id="1143" source="Python" target="UI" />
+      <edge id="1453" source="Python" target="Test-driven development" />
+      <edge id="1466" source="Python" target="Scalability" />
+      <edge id="1467" source="Python" target="Natural language processing" />
+      <edge id="1155" source="JSON" target="UI" />
+      <edge id="1277" source="Application server" target="J2EE" />
+      <edge id="2111" source="Test-driven development" target="Scalability" />
+      <edge id="2400" source="Manual testing" target="Regression analysis" />
+      <edge id="1154" source="J2EE" target="UI" />
+      <edge id="1273" source="J2EE" target="Hibernate" />
+      <edge id="27" source=".NET" target="UI" />
+    </edges>
+  </graph>
+</gexf>

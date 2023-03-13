@@ -1,0 +1,3 @@
+The file school.gexf describes contacts between students
+and teachers in a primary school, including contacts which
+lasted less than 120 seconds

@@ -1,0 +1,2 @@
+The file network.gml contains the graph of a sample network
+of friendships between users, created in PingChat social network app
