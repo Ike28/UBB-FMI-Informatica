@@ -14,7 +14,7 @@ public class BikeContest
         IDictionary<String, string> props = new SortedList<String, String>();
         props.Add("ConnectionString", GetConnectionStringByName("bikeContestDB"));
 
-        ParticipantDBRepository participantDbRepository = new ParticipantDBRepository(props);
+        ParticipantDbRepository participantDbRepository = new ParticipantDbRepository(props);
         participantDbRepository.Add(new Participant("Mihai", "Sora", 700));
         foreach (var participant in participantDbRepository.Read())
         {

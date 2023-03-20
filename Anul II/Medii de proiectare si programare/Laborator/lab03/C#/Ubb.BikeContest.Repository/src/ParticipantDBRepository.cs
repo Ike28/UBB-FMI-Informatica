@@ -6,21 +6,21 @@ using log4net;
 
 namespace Ubb.BikeContest.Repository;
 
-public class ParticipantDBRepository : IParticipantRepository
+public class ParticipantDbRepository : IParticipantRepository
 {
-    private static readonly ILog log = LogManager.GetLogger("ParticipantDBRepository");
-    private IDictionary<String, string> props;
+    private static readonly ILog Log = LogManager.GetLogger("ParticipantDbRepository");
+    private readonly IDictionary<String, string> _props;
 
-    public ParticipantDBRepository(IDictionary<String, string> props)
+    public ParticipantDbRepository(IDictionary<String, string> props)
     {
-        log.Info("Creating ParticipantDBRepository ");
-        this.props = props;
+        Log.Info("Creating ParticipantDbRepository ");
+        _props = props;
     }
     
     public Participant Get(long id)
     {
-        log.InfoFormat("Entering Get with value {0}", id);
-        IDbConnection connection = DBUtils.GetConnection(props);
+        Log.InfoFormat("Entering Get with value {0}", id);
+        IDbConnection connection = DBUtils.GetConnection(_props);
 
         using (var command = connection.CreateCommand())
         {
@@ -35,19 +35,19 @@ public class ParticipantDBRepository : IParticipantRepository
                 if (dataReader.Read())
                 {
                     Participant participant = Extract(dataReader);
-                    log.InfoFormat("Exiting Get with value {0}", participant);
+                    Log.InfoFormat("Exiting Get with value {0}", participant);
                     return participant;
                 }
             }
         }
-        log.InfoFormat("Exiting Get with value {0}", null);
+        Log.InfoFormat("Exiting Get with value {0}", null);
         return null;
     }
 
     public IEnumerable Read()
     {
-        log.InfoFormat("Entering Read");
-        IDbConnection connection = DBUtils.GetConnection(props);
+        Log.InfoFormat("Entering Read");
+        IDbConnection connection = DBUtils.GetConnection(_props);
         IList<Participant> participants = new List<Participant>();
 
         using (var command = connection.CreateCommand())
@@ -62,14 +62,14 @@ public class ParticipantDBRepository : IParticipantRepository
                 }
             }
         }
-        log.InfoFormat("Exiting Read with value {0}", participants);
+        Log.InfoFormat("Exiting Read with value {0}", participants);
         return participants;
     }
 
     public void Add(Participant newEntity)
     {
-        log.InfoFormat("Entering Add with value {0}", newEntity);
-        IDbConnection connection = DBUtils.GetConnection(props);
+        Log.InfoFormat("Entering Add with value {0}", newEntity);
+        IDbConnection connection = DBUtils.GetConnection(_props);
 
         using (var command = connection.CreateCommand())
         {
@@ -97,14 +97,14 @@ public class ParticipantDBRepository : IParticipantRepository
             command.Parameters.Add(teamId);
 
             var result = command.ExecuteNonQuery();
-            log.InfoFormat("Added {0} entities", result);
+            Log.InfoFormat("Added {0} entities", result);
         }
     }
 
     public void Delete(long id)
     {
-        log.InfoFormat("Entering Delete with value {0}", id);
-        IDbConnection connection = DBUtils.GetConnection(props);
+        Log.InfoFormat("Entering Delete with value {0}", id);
+        IDbConnection connection = DBUtils.GetConnection(_props);
         using (var command = connection.CreateCommand())
         {
             command.CommandText = "DELETE FROM participants WHERE id=@id";
@@ -113,14 +113,14 @@ public class ParticipantDBRepository : IParticipantRepository
             paramId.Value = id;
             command.Parameters.Add(paramId);
             var result = command.ExecuteNonQuery();
-            log.InfoFormat("Deleted {0} entities", result);
+            Log.InfoFormat("Deleted {0} entities", result);
         }
     }
 
     public void Update(Participant updatedEntity)
     {
-        log.InfoFormat("Entering Update with value {0}", updatedEntity);
-        IDbConnection connection = DBUtils.GetConnection(props);
+        Log.InfoFormat("Entering Update with value {0}", updatedEntity);
+        IDbConnection connection = DBUtils.GetConnection(_props);
 
         using (var command = connection.CreateCommand())
         {
@@ -153,14 +153,14 @@ public class ParticipantDBRepository : IParticipantRepository
             command.Parameters.Add(id);
 
             var result = command.ExecuteNonQuery();
-            log.InfoFormat("Updated {0} entities", result);
+            Log.InfoFormat("Updated {0} entities", result);
         }
     }
 
     public IEnumerable GetParticipantsByTeam(long teamId)
     {
-        log.InfoFormat("Entering GetParticipantsByTeam with value {0}", teamId);
-        IDbConnection connection = DBUtils.GetConnection(props);
+        Log.InfoFormat("Entering GetParticipantsByTeam with value {0}", teamId);
+        IDbConnection connection = DBUtils.GetConnection(_props);
         IList<Participant> participants = new List<Participant>();
 
         using (var command = connection.CreateCommand())
@@ -180,7 +180,7 @@ public class ParticipantDBRepository : IParticipantRepository
                 }
             }
         }
-        log.InfoFormat("Exiting GetParticipantsByTeam with value {0}", participants);
+        Log.InfoFormat("Exiting GetParticipantsByTeam with value {0}", participants);
         return participants;
     }
 
