@@ -9,6 +9,7 @@ public static class BikeContest
     public static void Main(string[] args)
     {
         XmlConfigurator.Configure(new FileInfo("app.config"));
+        XmlConfigurator.Configure(new FileInfo("log4net.config"));
         Console.WriteLine("Configuration Settings for DB {0}",GetConnectionStringByName("bikeContestDB"));
         IDictionary<string, string?> props = new SortedList<string, string?>();
         props.Add("ConnectionString", GetConnectionStringByName("bikeContestDB"));
