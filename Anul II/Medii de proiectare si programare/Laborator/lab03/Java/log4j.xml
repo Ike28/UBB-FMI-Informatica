@@ -2,7 +2,6 @@
 <Configuration status="info">
     <Appenders>
         <Console name="Console" target="SYSTEM_OUT">
-
             <PatternLayout pattern="%d{DATE} %-5level %class{36} %L %M - %msg%n"/>
         </Console>
         <File name="log" fileName="target/bikeContest.log" append="true">

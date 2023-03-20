@@ -46,7 +46,7 @@ public class RaceDBRepository implements IRaceRepository {
     }
 
     @Override
-    public Optional<Race> get(Long id) {
+    public Optional<Race> findById(Long id) {
         logger.traceEntry();
         Connection connection = jdbcUtils.getConnection();
         try (PreparedStatement preparedStatement = connection.prepareStatement(
@@ -68,7 +68,7 @@ public class RaceDBRepository implements IRaceRepository {
     }
 
     @Override
-    public Collection<Race> read() {
+    public Collection<Race> findAll() {
         logger.traceEntry();
         Connection connection = jdbcUtils.getConnection();
         Collection<Race> races = new ArrayList<>();
@@ -89,7 +89,7 @@ public class RaceDBRepository implements IRaceRepository {
     }
 
     @Override
-    public void add(Race newEntity) {
+    public void save(Race newEntity) {
         logger.traceEntry("saving task {} ", newEntity);
         Connection connection = jdbcUtils.getConnection();
         try (PreparedStatement preparedStatement = connection.prepareStatement(

@@ -43,7 +43,7 @@ public class ParticipantDBRepository implements IParticipantRepository {
     }
 
     @Override
-    public Optional<Participant> get(Long id) {
+    public Optional<Participant> findById(Long id) {
         logger.traceEntry();
         Connection connection = dbUtils.getConnection();
         try (PreparedStatement preparedStatement = connection.prepareStatement(
@@ -65,7 +65,7 @@ public class ParticipantDBRepository implements IParticipantRepository {
     }
 
     @Override
-    public Collection<Participant> read() {
+    public Collection<Participant> findAll() {
         logger.traceEntry();
         Connection connection = dbUtils.getConnection();
         Collection<Participant> participants = new ArrayList<>();
@@ -86,7 +86,7 @@ public class ParticipantDBRepository implements IParticipantRepository {
     }
 
     @Override
-    public void add(Participant newEntity) {
+    public void save(Participant newEntity) {
         logger.traceEntry("saving task {} ", newEntity);
         Connection connection = dbUtils.getConnection();
         try (PreparedStatement preparedStatement = connection.prepareStatement(

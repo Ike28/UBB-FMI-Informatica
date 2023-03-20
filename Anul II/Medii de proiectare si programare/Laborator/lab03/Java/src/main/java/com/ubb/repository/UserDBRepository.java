@@ -47,7 +47,7 @@ public class UserDBRepository implements IUserRepository {
 
 
     @Override
-    public Optional<User> get(Long id) {
+    public Optional<User> findById(Long id) {
         logger.traceEntry();
         Connection connection = jdbcUtils.getConnection();
         try (PreparedStatement preparedStatement = connection.prepareStatement(
@@ -69,7 +69,7 @@ public class UserDBRepository implements IUserRepository {
     }
 
     @Override
-    public Collection<User> read() {
+    public Collection<User> findAll() {
         logger.traceEntry();
         Connection connection = jdbcUtils.getConnection();
         Collection<User> users = new ArrayList<>();
@@ -90,7 +90,7 @@ public class UserDBRepository implements IUserRepository {
     }
 
     @Override
-    public void add(User newEntity) {
+    public void save(User newEntity) {
         logger.traceEntry("saving task {} ", newEntity);
         Connection connection = jdbcUtils.getConnection();
         try (PreparedStatement preparedStatement = connection.prepareStatement(

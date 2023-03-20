@@ -52,7 +52,7 @@ public class RaceEntryDBRepository implements IRaceEntryRepository {
     }
 
     @Override
-    public Optional<RaceEntry> get(Long id) {
+    public Optional<RaceEntry> findById(Long id) {
         logger.traceEntry();
         Connection connection = jdbcUtils.getConnection();
         try (PreparedStatement preparedStatement = connection.prepareStatement(
@@ -74,7 +74,7 @@ public class RaceEntryDBRepository implements IRaceEntryRepository {
     }
 
     @Override
-    public Collection<RaceEntry> read() {
+    public Collection<RaceEntry> findAll() {
         logger.traceEntry();
         Connection connection = jdbcUtils.getConnection();
         Collection<RaceEntry> raceEntries = new ArrayList<>();
@@ -95,7 +95,7 @@ public class RaceEntryDBRepository implements IRaceEntryRepository {
     }
 
     @Override
-    public void add(RaceEntry newEntity) {
+    public void save(RaceEntry newEntity) {
         logger.traceEntry("updating with task {} ", newEntity);
         Connection connection = jdbcUtils.getConnection();
         try (PreparedStatement preparedStatement = connection.prepareStatement(
@@ -134,8 +134,8 @@ public class RaceEntryDBRepository implements IRaceEntryRepository {
         Long participantID = resultSet.getLong("participantID");
         Long raceID = resultSet.getLong("raceID");
 
-        final Optional<Race> race = raceRepository.get(raceID);
-        final Optional<Participant> participant = participantRepository.get(participantID);
+        final Optional<Race> race = raceRepository.findById(raceID);
+        final Optional<Participant> participant = participantRepository.findById(participantID);
         if (participant.isPresent() && race.isPresent()) {
             RaceEntry raceEntry = new RaceEntry(participant.get(), race.get());
             raceEntry.setID(id);

@@ -8,18 +8,18 @@ namespace Ubb.BikeContest.Repository;
 public class TeamDbRepository : ITeamRepository
 {
     private static readonly ILog Log = LogManager.GetLogger("TeamDbRepository");
-    private IDictionary<String, string> _props;
+    private readonly IDictionary<string, string?> _props;
 
-    public TeamDbRepository(IDictionary<String, string> props)
+    public TeamDbRepository(IDictionary<string, string?> props)
     {
         Log.Info("Creating TeamDbRepository ");
         _props = props;
     }
 
-    public Team Get(long id)
+    public Team FindById(long id)
     {
         Log.InfoFormat("Entering Get with value {0}", id);
-        IDbConnection connection = DBUtils.GetConnection(_props);
+        IDbConnection connection = DbUtils.GetConnection(_props);
 
         using (var command = connection.CreateCommand())
         {
@@ -43,10 +43,10 @@ public class TeamDbRepository : ITeamRepository
         return null;
     }
 
-    public IEnumerable Read()
+    public IEnumerable FindAll()
     {
         Log.InfoFormat("Entering Read");
-        IDbConnection connection = DBUtils.GetConnection(_props);
+        IDbConnection connection = DbUtils.GetConnection(_props);
         IList<Team> teams = new List<Team>();
 
         using (var command = connection.CreateCommand())
@@ -65,10 +65,10 @@ public class TeamDbRepository : ITeamRepository
         return teams;
     }
 
-    public void Add(Team newEntity)
+    public void Save(Team newEntity)
     {
         Log.InfoFormat("Entering Add with value {0}", newEntity);
-        IDbConnection connection = DBUtils.GetConnection(_props);
+        IDbConnection connection = DbUtils.GetConnection(_props);
 
         using (var command = connection.CreateCommand())
         {
@@ -87,7 +87,7 @@ public class TeamDbRepository : ITeamRepository
     public void Delete(long id)
     {
         Log.InfoFormat("Entering Delete with value {0}", id);
-        IDbConnection connection = DBUtils.GetConnection(_props);
+        IDbConnection connection = DbUtils.GetConnection(_props);
         using (var command = connection.CreateCommand())
         {
             command.CommandText = "DELETE FROM teams WHERE id=@id";
@@ -108,7 +108,7 @@ public class TeamDbRepository : ITeamRepository
     public Team GetTeamByName(string teamName)
     {
         Log.InfoFormat("Entering GetTeamByName with value {0}", teamName);
-        IDbConnection connection = DBUtils.GetConnection(_props);
+        var connection = DbUtils.GetConnection(_props);
 
         using (var command = connection.CreateCommand())
         {
@@ -132,12 +132,15 @@ public class TeamDbRepository : ITeamRepository
         return null;
     }
     
-    private Team Extract(IDataReader dataReader)
+    private static Team Extract(IDataReader dataReader)
     {
-        long id = dataReader.GetInt64(0);
-        String name = dataReader.GetString(1);
+        var id = dataReader.GetInt64(0);
+        var name = dataReader.GetString(1);
 
-        Team team = new Team(name);
+        var team = new Team(name)
+        {
+            Id = 0
+        };
         team.Id = id;
         return team;
     }

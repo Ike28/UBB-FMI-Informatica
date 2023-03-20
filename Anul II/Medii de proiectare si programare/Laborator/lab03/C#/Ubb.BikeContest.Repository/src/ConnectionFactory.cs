@@ -10,25 +10,23 @@ public abstract class ConnectionFactory
         
     }
 
-    private static ConnectionFactory _connectionFactory;
+    private static ConnectionFactory? _connectionFactory;
 
-    public static ConnectionFactory GetInstance()
+    public static ConnectionFactory? GetInstance()
     {
-        if (_connectionFactory == null)
+        if (_connectionFactory != null) return _connectionFactory;
+        var assembly = Assembly.GetExecutingAssembly();
+        var types = assembly.GetTypes();
+        foreach (var type in types)
         {
-            Assembly assembly = Assembly.GetExecutingAssembly();
-            Type[] types = assembly.GetTypes();
-            foreach (var type in types)
+            if (type.IsSubclassOf(typeof(ConnectionFactory)))
             {
-                if (type.IsSubclassOf(typeof(ConnectionFactory)))
-                {
-                    _connectionFactory = (ConnectionFactory)Activator.CreateInstance(type);
-                }
+                _connectionFactory = (ConnectionFactory?)Activator.CreateInstance(type);
             }
         }
 
         return _connectionFactory;
     }
 
-    public abstract IDbConnection CreateConnection(IDictionary<string, string> props);
+    public abstract IDbConnection CreateConnection(IDictionary<string, string?> props);
 }

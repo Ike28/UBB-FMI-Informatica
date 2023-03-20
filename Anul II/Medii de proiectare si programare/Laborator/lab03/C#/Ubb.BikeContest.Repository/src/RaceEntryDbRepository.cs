@@ -8,11 +8,11 @@ namespace Ubb.BikeContest.Repository;
 public class RaceEntryDbRepository : IRaceEntryRepository
 {
     private static readonly ILog Log = LogManager.GetLogger("RaceEntryDbRepository");
-    private IDictionary<String, string> _props;
-    private IRaceRepository _raceRepository;
-    private IParticipantRepository _participantRepository;
+    private readonly IDictionary<string, string?> _props;
+    private readonly IRaceRepository _raceRepository;
+    private readonly IParticipantRepository _participantRepository;
 
-    public RaceEntryDbRepository(IDictionary<String, string> props, 
+    public RaceEntryDbRepository(IDictionary<string, string?> props, 
         IRaceRepository raceRepository, IParticipantRepository participantRepository)
     {
         Log.Info("Creating RaceEntryDbRepository ");
@@ -21,15 +21,15 @@ public class RaceEntryDbRepository : IRaceEntryRepository
         _participantRepository = participantRepository;
     }
 
-    public RaceEntry Get(long id)
+    public RaceEntry FindById(long id)
     {
         Log.InfoFormat("Entering Get with value {0}", id);
-        IDbConnection connection = DBUtils.GetConnection(_props);
+        var connection = DbUtils.GetConnection(_props);
 
         using (var command = connection.CreateCommand())
         {
             command.CommandText = "SELECT id,participantID,raceID FROM race_entries WHERE id=@id";
-            IDbDataParameter paramId = command.CreateParameter();
+            var paramId = command.CreateParameter();
             paramId.ParameterName = "@id";
             paramId.Value = id;
             command.Parameters.Add(paramId);
@@ -48,10 +48,10 @@ public class RaceEntryDbRepository : IRaceEntryRepository
         return null;
     }
 
-    public IEnumerable Read()
+    public IEnumerable FindAll()
     {
         Log.InfoFormat("Entering Read");
-        IDbConnection connection = DBUtils.GetConnection(_props);
+        var connection = DbUtils.GetConnection(_props);
         IList<RaceEntry> raceEntries = new List<RaceEntry>();
 
         using (var command = connection.CreateCommand())
@@ -70,45 +70,41 @@ public class RaceEntryDbRepository : IRaceEntryRepository
         return raceEntries;
     }
 
-    public void Add(RaceEntry newEntity)
+    public void Save(RaceEntry newEntity)
     {
         Log.InfoFormat("Entering Add with value {0}", newEntity);
-        IDbConnection connection = DBUtils.GetConnection(_props);
+        var connection = DbUtils.GetConnection(_props);
 
-        using (var command = connection.CreateCommand())
-        {
-            command.CommandText = 
-                "INSERT INTO race_entries(participantID, raceID) " +
-                "VALUES(@participantID, @raceID);";
-            var participantID = command.CreateParameter();
-            participantID.ParameterName = "@participantID";
-            participantID.Value = newEntity.Participant.Id;
-            command.Parameters.Add(participantID);
+        using var command = connection.CreateCommand();
+        command.CommandText = 
+            "INSERT INTO race_entries(participantID, raceID) " +
+            "VALUES(@participantID, @raceID);";
+        var participantId = command.CreateParameter();
+        participantId.ParameterName = "@participantID";
+        participantId.Value = newEntity.Participant.Id;
+        command.Parameters.Add(participantId);
 
-            var raceID = command.CreateParameter();
-            raceID.ParameterName = "@raceID";
-            raceID.Value = newEntity.Race.Id;
-            command.Parameters.Add(raceID);
+        var raceId = command.CreateParameter();
+        raceId.ParameterName = "@raceID";
+        raceId.Value = newEntity.Race.Id;
+        command.Parameters.Add(raceId);
 
-            var result = command.ExecuteNonQuery();
-            Log.InfoFormat("Added {0} entities", result);
-        }
+        var result = command.ExecuteNonQuery();
+        Log.InfoFormat("Added {0} entities", result);
     }
 
     public void Delete(long id)
     {
         Log.InfoFormat("Entering Delete with value {0}", id);
-        IDbConnection connection = DBUtils.GetConnection(_props);
-        using (var command = connection.CreateCommand())
-        {
-            command.CommandText = "DELETE FROM race_entries WHERE id=@id";
-            var paramId = command.CreateParameter();
-            paramId.ParameterName = "@id";
-            paramId.Value = id;
-            command.Parameters.Add(paramId);
-            var result = command.ExecuteNonQuery();
-            Log.InfoFormat("Deleted {0} entities", result);
-        }
+        var connection = DbUtils.GetConnection(_props);
+        using var command = connection.CreateCommand();
+        command.CommandText = "DELETE FROM race_entries WHERE id=@id";
+        var paramId = command.CreateParameter();
+        paramId.ParameterName = "@id";
+        paramId.Value = id;
+        command.Parameters.Add(paramId);
+        var result = command.ExecuteNonQuery();
+        Log.InfoFormat("Deleted {0} entities", result);
     }
 
     public void Update(RaceEntry updatedEntity)
@@ -119,7 +115,7 @@ public class RaceEntryDbRepository : IRaceEntryRepository
     public IEnumerable GetEntriesByRace(long raceId)
     {
         Log.InfoFormat("Entering GetEntriesByRace");
-        IDbConnection connection = DBUtils.GetConnection(_props);
+        var connection = DbUtils.GetConnection(_props);
         IList<RaceEntry> raceEntries = new List<RaceEntry>();
 
         using (var command = connection.CreateCommand())
@@ -145,13 +141,13 @@ public class RaceEntryDbRepository : IRaceEntryRepository
     
     private RaceEntry Extract(IDataReader dataReader)
     {
-        long id = dataReader.GetInt64(0);
-        long participantId = dataReader.GetInt64(1);
-        long raceId = dataReader.GetInt64(2);
+        var id = dataReader.GetInt64(0);
+        var participantId = dataReader.GetInt64(1);
+        var raceId = dataReader.GetInt64(2);
 
-        Participant participant = _participantRepository.Get(participantId);
-        Race race = _raceRepository.Get(raceId);
-        RaceEntry raceEntry = new RaceEntry(participant, race);
+        var participant = _participantRepository.FindById(participantId);
+        var race = _raceRepository.FindById(raceId);
+        var raceEntry = new RaceEntry(participant, race);
         return raceEntry;
     }
 }

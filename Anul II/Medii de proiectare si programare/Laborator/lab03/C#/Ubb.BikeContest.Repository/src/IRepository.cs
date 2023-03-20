@@ -1,15 +1,14 @@
 ﻿using System.Collections;
-using System.Collections.ObjectModel;
 
 namespace Ubb.BikeContest.Repository;
 
-public interface IRepository<TId, TEntity> where TEntity : Ubb.BikeContest.Model.Identifiable<TId>
+public interface IRepository<TId, TEntity> where TEntity : Model.Identifiable<TId>
 {
-    TEntity Get(TId id);
+    TEntity FindById(TId id);
 
-    IEnumerable Read();
+    IEnumerable FindAll();
 
-    void Add(TEntity newEntity);
+    void Save(TEntity newEntity);
 
     void Delete(TId id);
 

@@ -46,7 +46,7 @@ public class TeamDBRepository implements ITeamRepository {
     }
 
     @Override
-    public Optional<Team> get(Long id) {
+    public Optional<Team> findById(Long id) {
         logger.traceEntry();
         Connection connection = jdbcUtils.getConnection();
         try (PreparedStatement preparedStatement = connection.prepareStatement(
@@ -68,7 +68,7 @@ public class TeamDBRepository implements ITeamRepository {
     }
 
     @Override
-    public Collection<Team> read() {
+    public Collection<Team> findAll() {
         logger.traceEntry();
         Connection connection = jdbcUtils.getConnection();
         Collection<Team> teams = new ArrayList<>();
@@ -89,7 +89,7 @@ public class TeamDBRepository implements ITeamRepository {
     }
 
     @Override
-    public void add(Team newEntity) {
+    public void save(Team newEntity) {
         logger.traceEntry("saving task {} ", newEntity);
         Connection connection = jdbcUtils.getConnection();
         try (PreparedStatement preparedStatement = connection.prepareStatement(
