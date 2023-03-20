@@ -38,4 +38,9 @@ public class User extends Identifiable<Long> {
     public void setPasswordToken(String passwordToken) {
         this.passwordToken = passwordToken;
     }
+
+    @Override
+    public String toString() {
+        return "username=" + getUsername() + ": " + getFullName();
+    }
 }

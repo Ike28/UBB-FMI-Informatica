@@ -28,4 +28,9 @@ public class Race extends Identifiable<Long> {
     public void setEngineCapacity(Integer engineCapacity) {
         this.engineCapacity = engineCapacity;
     }
+
+    @Override
+    public String toString() {
+        return "Race '" + name + " " + engineCapacity + "cc'";
+    }
 }

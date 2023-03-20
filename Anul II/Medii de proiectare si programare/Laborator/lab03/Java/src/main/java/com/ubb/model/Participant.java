@@ -60,4 +60,10 @@ public class Participant extends Identifiable<Long> {
     public int hashCode() {
         return Objects.hash(getFirstName(), getLastName(), getEngineCapacity());
     }
+
+    @Override
+    public String toString() {
+        return "Participant '" + firstName + " " + lastName + "'" +
+                ", engine capacity: " + engineCapacity;
+    }
 }

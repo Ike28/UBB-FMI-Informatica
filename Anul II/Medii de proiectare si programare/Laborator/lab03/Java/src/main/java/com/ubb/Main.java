@@ -1,11 +1,10 @@
 package com.ubb;
 
 import com.ubb.model.Participant;
-import com.ubb.repository.ParticipantDBRepository;
+import com.ubb.repository.*;
 
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Collection;
 import java.util.Properties;
 
 public class Main {
@@ -13,10 +12,9 @@ public class Main {
         final Properties properties = new Properties();
         try {
             properties.load(new FileReader("bd.properties"));
-            ParticipantDBRepository participantDBRepository = new ParticipantDBRepository(properties);
-            participantDBRepository.save(new Participant("Emil", "Zola", 600));
-            Collection<Participant> participants = participantDBRepository.findAll();
-            for (Participant p : participants) {
+            IParticipantRepository participantDBRepository = new ParticipantDBRepository(properties);
+            participantDBRepository.save(new Participant("Tim", "Gajser", 1200));
+            for (Participant p : participantDBRepository.findAll()) {
                 System.out.println(p);
             }
         } catch (IOException ioException) {

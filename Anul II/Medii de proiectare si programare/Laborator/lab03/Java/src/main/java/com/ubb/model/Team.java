@@ -14,4 +14,9 @@ public class Team extends Identifiable<Long> {
     public String getName() {
         return name;
     }
+
+    @Override
+    public String toString() {
+        return "Team '" + getName() + "'";
+    }
 }

@@ -35,4 +35,10 @@ public class RaceEntry extends Identifiable<Long> {
     public int hashCode() {
         return Objects.hash(getParticipant(), getRace());
     }
+
+    @Override
+    public String toString() {
+        return participant.getFirstName() + " " + participant.getLastName() + " registered for '"
+                + race.getName() + " " + race.getEngineCapacity() + "cc'";
+    }
 }

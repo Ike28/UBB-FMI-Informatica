@@ -13,17 +13,5 @@
             <AppenderRef ref="log"/>
             <AppenderRef ref="Console"/>
         </Root>
-        <Root level="error">
-            <AppenderRef ref="log"/>
-            <AppenderRef ref="Console"/>
-        </Root>
-        <Root level="debug">
-            <AppenderRef ref="log"/>
-            <AppenderRef ref="Console"/>
-        </Root>
-        <Root level="info">
-            <AppenderRef ref="log"/>
-            <AppenderRef ref="Console"/>
-        </Root>
     </Loggers>
 </Configuration>
