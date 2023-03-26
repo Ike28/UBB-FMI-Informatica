@@ -19,7 +19,7 @@
 - [x] [*  🖥 Programare web](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20II/Programare%20web)
 - [x] [*  🤖 Inteligență artificială](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20II/Inteligenta%20artificiala)
 - [x] [*  🧰 Medii de proiectare și programare](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20II/Medii%20de%20proiectare%20si%20programare)
-- [ ] *  🏗 Ingineria sistemelor soft
+- [ ] [*  🏗 Ingineria sistemelor soft](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20II/Ingineria%20sistemelor%20soft)
 - [ ] *  📀 Sisteme de gestiune a bazelor de date
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Ike28&layout=compact&langs_count=16&exclude_repo=object_measurement,DImob_RealEstate,PingChat,BattleshipsGame&custom_title=Languages&card_width=400)](https://github.com/anuraghazra/github-readme-stats)
