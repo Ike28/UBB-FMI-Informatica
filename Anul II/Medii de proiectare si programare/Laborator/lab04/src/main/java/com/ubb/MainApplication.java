@@ -22,7 +22,6 @@ public class MainApplication extends Application {
             Scene scene = new Scene(fxmlLoader.load());
             MainController controller = fxmlLoader.getController();
             controller.init(properties, primaryStage);
-            primaryStage.setTitle("MXGP Admin Panel - Login");
             primaryStage.setScene(scene);
             primaryStage.getIcons().add(new Image(String.valueOf(getClass().getResource("/img/icon.png"))));
             primaryStage.show();

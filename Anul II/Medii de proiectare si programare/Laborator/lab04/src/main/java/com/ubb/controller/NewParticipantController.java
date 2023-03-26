@@ -71,7 +71,6 @@ public class NewParticipantController extends AnchorPane {
             Optional<Participant> currentParticipant = participantService.getParticipantByData(newParticipant);
             if (currentParticipant.isPresent()) {
                 controller.init(properties, currentStage, currentParticipant.get(), currentUser);
-                currentStage.setTitle("MXGP - Register to Races");
                 currentStage.setScene(scene);
                 currentStage.getIcons().add(new Image(String.valueOf(getClass().getResource("/img/icon.png"))));
                 currentStage.show();
@@ -84,13 +83,14 @@ public class NewParticipantController extends AnchorPane {
     }
 
     public void init(Properties properties, User currentUser, Stage currentStage) {
+        currentStage.setTitle("MXGP - New Participant");
         this.properties = properties;
         participantService = new ParticipantService(new ParticipantDBRepository(properties));
         teamService = new TeamService(new TeamDBRepository(properties));
         this.currentUser = currentUser;
         this.currentStage = currentStage;
 
-        addInputNumberFormatter();
+        ControllerUtils.addInputNumberFormatter(engineCapacityField);
         clearFields();
         fillTeamBox();
     }
@@ -102,38 +102,10 @@ public class NewParticipantController extends AnchorPane {
         teamBox.getSelectionModel().clearSelection();
     }
 
-    private void addInputNumberFormatter() {
-        NumberStringFilteredConverter converter = new NumberStringFilteredConverter();
-        final TextFormatter<Number> formatter = new TextFormatter<>(
-                converter,
-                0,
-                converter.getFilter()
-        );
-        engineCapacityField.setTextFormatter(formatter);
-    }
-
     private void fillTeamBox() {
         teamBox.getItems().clear();
         teamBox.getItems().add(new Team("None"));
         Collection<Team> teams = teamService.findAll();
         teamBox.getItems().addAll(teams);
-    }
-
-    private static class NumberStringFilteredConverter extends NumberStringConverter {
-        public UnaryOperator<TextFormatter.Change> getFilter() {
-            return change -> {
-                String newText = change.getControlNewText();
-                if (newText.isEmpty()) {
-                    return change;
-                }
-                ParsePosition parsePosition = new ParsePosition( 0 );
-                Object object = getNumberFormat().parse( newText, parsePosition );
-                if ( object == null || parsePosition.getIndex() < newText.length()) {
-                    return null;
-                } else {
-                    return change;
-                }
-            };
-        }
     }
 }

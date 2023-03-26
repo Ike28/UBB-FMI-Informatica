@@ -59,13 +59,42 @@ public class HomeController extends AnchorPane {
     private Button newEntryButton;
 
     @FXML
+    protected void onRaceClicked() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/new_race.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            NewRaceController controller = fxmlLoader.getController();
+            controller.init(properties, raceService, currentUser, currentStage);
+            currentStage.setScene(scene);
+            currentStage.getIcons().add(new Image(String.valueOf(getClass().getResource("/img/icon.png"))));
+            currentStage.show();
+        } catch (IOException ioException) {
+            System.out.println(ioException.getMessage());
+        }
+    }
+
+    @FXML
+    protected void onLogoutClicked() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/main-view.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            MainController controller = fxmlLoader.getController();
+            controller.init(properties, currentStage);
+            currentStage.setScene(scene);
+            currentStage.getIcons().add(new Image(String.valueOf(getClass().getResource("/img/icon.png"))));
+            currentStage.show();
+        } catch (IOException ioException) {
+            System.out.println(ioException.getMessage());
+        }
+    }
+
+    @FXML
     protected void onParticipantButtonClicked() {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/new_participant.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             NewParticipantController controller = fxmlLoader.getController();
             controller.init(properties, currentUser, currentStage);
-            currentStage.setTitle("MXGP - New Participant");
             currentStage.setScene(scene);
             currentStage.getIcons().add(new Image(String.valueOf(getClass().getResource("/img/icon.png"))));
             currentStage.show();
@@ -81,7 +110,6 @@ public class HomeController extends AnchorPane {
             Scene scene = new Scene(fxmlLoader.load());
             RaceEntriesController controller = fxmlLoader.getController();
             controller.init(properties, currentStage, currentUser);
-            currentStage.setTitle("MXGP - Register to Races");
             currentStage.setScene(scene);
             currentStage.getIcons().add(new Image(String.valueOf(getClass().getResource("/img/icon.png"))));
             currentStage.show();
@@ -99,6 +127,7 @@ public class HomeController extends AnchorPane {
     }
 
     public void init(Properties properties, User currentUser, Stage currentStage) {
+        currentStage.setTitle("MXGP Admin Panel - Home");
         this.currentUser = currentUser;
         IParticipantRepository participantRepository = new ParticipantDBRepository(properties);
         participantService = new ParticipantService(participantRepository);

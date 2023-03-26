@@ -46,19 +46,19 @@
             <Font name="Lato Semibold" size="16.0" />
          </font>
       </Label>
-      <Button fx:id="newParticipantButton" layoutX="387.0" layoutY="32.0" mnemonicParsing="false" onAction="#onParticipantButtonClicked" prefHeight="40.0" prefWidth="202.0" text="NEW PARTICIPANT">
+      <Button fx:id="newParticipantButton" layoutX="351.0" layoutY="32.0" mnemonicParsing="false" onAction="#onParticipantButtonClicked" prefHeight="40.0" prefWidth="139.0" text="NEW PARTICIPANT">
          <font>
-            <Font name="Lato Semibold" size="17.0" />
+            <Font name="Lato Semibold" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="newRaceButton" layoutX="613.0" layoutY="32.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="139.0" text="NEW RACE">
+      <Button fx:id="newRaceButton" layoutX="676.0" layoutY="32.0" mnemonicParsing="false" onAction="#onRaceClicked" prefHeight="40.0" prefWidth="139.0" text="NEW RACE">
          <font>
-            <Font name="Lato Semibold" size="17.0" />
+            <Font name="Lato Semibold" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="newEntryButton" layoutX="774.0" layoutY="32.0" mnemonicParsing="false" onAction="#onNewEntryClicked" prefHeight="40.0" prefWidth="139.0" text="NEW ENTRIES">
+      <Button fx:id="newEntryButton" layoutX="515.0" layoutY="32.0" mnemonicParsing="false" onAction="#onNewEntryClicked" prefHeight="40.0" prefWidth="139.0" text="REGISTER TO RACE">
          <font>
-            <Font name="Lato Semibold" size="17.0" />
+            <Font name="Lato Semibold" size="12.0" />
          </font>
       </Button>
       <Label layoutX="52.0" layoutY="115.0" prefHeight="33.0" prefWidth="109.0" text="Logged in as :">
@@ -71,5 +71,10 @@
             <Font name="Lato Black" size="17.0" />
          </font>
       </Label>
+      <Button fx:id="logoutButton" layoutX="835.0" layoutY="32.0" mnemonicParsing="false" onAction="#onLogoutClicked" prefHeight="40.0" prefWidth="78.0" text="LOG OUT">
+         <font>
+            <Font name="Lato Semibold" size="12.0" />
+         </font>
+      </Button>
     </children>
 </AnchorPane>

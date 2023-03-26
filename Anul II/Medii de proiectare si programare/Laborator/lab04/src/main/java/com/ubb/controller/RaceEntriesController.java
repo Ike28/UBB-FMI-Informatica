@@ -54,7 +54,6 @@ public class RaceEntriesController extends AnchorPane {
             Scene scene = new Scene(fxmlLoader.load());
             HomeController controller = fxmlLoader.getController();
             controller.init(properties, currentUser, currentStage);
-            currentStage.setTitle("MXGP Admin Panel - Home");
             currentStage.setScene(scene);
             currentStage.getIcons().add(new Image(String.valueOf(getClass().getResource("/img/icon.png"))));
             currentStage.show();
@@ -77,6 +76,7 @@ public class RaceEntriesController extends AnchorPane {
     }
 
     public void init(Properties properties, Stage currentStage, Participant currentParticipant, User currentUser) {
+        currentStage.setTitle("MXGP - Register to Races");
         initialise(properties, currentStage, currentUser);
         setNewlyCreatedParticipant(currentParticipant);
         racesView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);

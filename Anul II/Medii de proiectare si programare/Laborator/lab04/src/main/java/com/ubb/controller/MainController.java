@@ -49,7 +49,6 @@ public class MainController extends AnchorPane {
                 Scene scene = new Scene(fxmlLoader.load());
                 HomeController controller = fxmlLoader.getController();
                 controller.init(properties, user.get(), currentStage);
-                currentStage.setTitle("MXGP Admin Panel - Home");
                 currentStage.setScene(scene);
                 currentStage.getIcons().add(new Image(String.valueOf(getClass().getResource("/img/icon.png"))));
                 currentStage.show();
@@ -60,6 +59,7 @@ public class MainController extends AnchorPane {
     }
 
     public void init(Properties properties, Stage currentStage) {
+        currentStage.setTitle("MXGP Admin Panel - Login");
         IUserRepository userRepository = new UserDBRepository(properties);
         userService = new UserService(userRepository);
         this.properties = properties;
