@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 16px;
+}
+
+#nume, #prenume {
+    background: repeating-linear-gradient(90deg, white 0px, white 19px, black 20px);
+    height: 18px;
+    background-size: 20px;
+    padding-left: 0.25ch;
+    letter-spacing: 13px;
+    float: left;
+    font-size: 13px;
+    width: 435px;
+}
+
+#cnp {
+    background: repeating-linear-gradient(90deg, white 0px, white 19px, black 20px);
+    height: 18px;
+    background-size: 20px;
+    padding-left: 0.25ch;
+    letter-spacing: 13px;
+    float: left;
+    font-size: 13px;
+    width: 230px;
+}
+
+label {
+    float: left;
+    clear: left;
+    padding-right: 25px;
+    width: 250px;
+    text-align: right;
+}

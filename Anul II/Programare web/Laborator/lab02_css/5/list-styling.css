@@ -1,0 +1,16 @@
+.content-wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.personality-box {
+    background-color: #ffe600;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    align-items: center;
+}
+
+.name {
+    padding-left: 2rem;
+}
