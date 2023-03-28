@@ -1,0 +1,63 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    font-size: 62.5%;
+    --red: #ff0000;
+    --yellow: #e5ff00;
+    --green: #0e7a00;
+    --pink: #ffa9d4;
+}
+
+body {
+    font-size: 16px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.page-header, .page-footer{
+    height: 10vh;
+}
+
+.page-header {
+    background-color: var(--red);
+}
+
+.navbar {
+    background-color: var(--yellow);
+}
+
+.nav-menu {
+    background-color: #000;
+}
+
+.menu-item {
+    background-color: var(--yellow);
+}
+
+.main-view {
+    background-color: var(--green);
+    min-height: 80vh;
+}
+
+.item-content {
+    padding: 1rem;
+}
+
+.page-footer {
+    background-color: var(--pink);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

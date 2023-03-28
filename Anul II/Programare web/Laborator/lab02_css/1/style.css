@@ -1,0 +1,28 @@
+:root {
+    font-size: 10px;
+}
+
+body {
+    font-size: 16px;
+}
+
+#main-div {
+    width: 40rem;
+    border: 0.1rem solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.v-center {
+    max-width: 50%;
+    overflow: auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.details {
+    text-align: center;
+    height: 100%;
+}

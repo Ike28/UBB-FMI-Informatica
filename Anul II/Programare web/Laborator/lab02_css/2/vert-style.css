@@ -1,0 +1,17 @@
+.page-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item {
+    margin: 0 0 0.1rem 0;
+}
+
+.main-view {
+    flex: 8;
+}

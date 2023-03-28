@@ -1,0 +1,96 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    font-size: 62.5%;
+    --menu-inactive-y: 8.4rem;
+    --menu-active-y: 0;
+}
+
+body {
+    font-size: 16px;
+}
+
+.menu-item {
+    width: 8.4rem;
+    height: 8.4rem;
+}
+
+.facebook {
+    background: url("./res/social-media-menu.png") 0 var(--menu-inactive-y);
+}
+.facebook:hover {
+    background: url("./res/social-media-menu.png") 0 var(--menu-active-y);
+}
+
+.flickr {
+    background: url("./res/social-media-menu.png") -8.4rem var(--menu-inactive-y);
+}
+.flickr:hover {
+    background: url("./res/social-media-menu.png") -8.4rem var(--menu-active-y);
+}
+
+.dribbble {
+    background: url("./res/social-media-menu.png") -16.8rem var(--menu-inactive-y);
+}
+.dribbble:hover {
+    background: url("./res/social-media-menu.png") -16.8rem var(--menu-active-y);
+}
+
+.gplus {
+    background: url("./res/social-media-menu.png") -25.2rem var(--menu-inactive-y);
+}
+.gplus:hover {
+    background: url("./res/social-media-menu.png") -25.2rem var(--menu-active-y);
+}
+
+.linkedin {
+    background: url("./res/social-media-menu.png") -33.6rem var(--menu-inactive-y);
+}
+.linkedin:hover {
+    background: url("./res/social-media-menu.png") -33.6rem var(--menu-active-y);
+}
+
+.pinterest {
+    background: url("./res/social-media-menu.png") -42rem var(--menu-inactive-y);
+}
+.pinterest:hover {
+    background: url("./res/social-media-menu.png") -42rem var(--menu-active-y);
+}
+
+.rss {
+    background: url("./res/social-media-menu.png") -50.4rem var(--menu-inactive-y);
+}
+.rss:hover {
+    background: url("./res/social-media-menu.png") -50.4rem var(--menu-active-y);
+}
+
+.skype {
+    background: url("./res/social-media-menu.png") -58.8rem var(--menu-inactive-y);
+}
+.skype:hover {
+    background: url("./res/social-media-menu.png") -58.8rem var(--menu-active-y);
+}
+
+.twitter {
+    background: url("./res/social-media-menu.png") -67.2rem var(--menu-inactive-y);
+}
+.twitter:hover {
+    background: url("./res/social-media-menu.png") -67.2rem var(--menu-active-y);
+}
+
+.vimeo {
+    background: url("./res/social-media-menu.png") -75.6rem var(--menu-inactive-y);
+}
+.vimeo:hover {
+    background: url("./res/social-media-menu.png") -75.6rem var(--menu-active-y);
+}
+
+.youtube {
+    background: url("./res/social-media-menu.png") -84rem var(--menu-inactive-y);
+}
+.youtube:hover {
+    background: url("./res/social-media-menu.png") -84rem var(--menu-active-y);
+}
