@@ -14,54 +14,51 @@ body {
 
 ul {
     list-style-type: none;
-    padding: 20px;
+    padding: 2rem;
     margin: 0;
 }
 
 ul li {
     position: relative;
     display: block;
-    left: 111px;
-    margin: 1em 0 3.3em;
-    padding: 15px;
+    left: 11.1rem;
+    margin: 1rem 0 3.3rem;
+    padding: 1.5rem;
     max-width: 15%;
     min-height: 30%;
     text-align: center;
-    border: 1px solid black;
-    border-radius: 10px;
+    border: 0.1rem solid black;
+    border-radius: 1rem;
 }
 
 ul li::before {
     position: absolute;
-    top: -25px;
-    left: -130px;
-    width: 125px;
-    height: 125px;
-    content: "";
+    top: -1rem;
+    left: -12rem;
+    width: 20rem;
+    height: 20rem;
 }
 
 ul li::after {
     position: absolute;
-    top: 25px;
-    left: -13px;
-    width: 30px;
-    height: 18px;
+    top: 2.5rem;
+    left: -1.3rem;
+    width: 3rem;
+    height: 1.8rem;
     background-color: white;
-    box-shadow: -1px 1px 0 black;
+    box-shadow: -0.1rem 0.1rem 0 black;
     transform: skew(-15deg, -15deg) rotate(45deg);
     content: "";
 }
 
 .alice::before {
-    width: 110px;
-    height: 110px;
-    background: url('./res/alice.png') calc(-140px * 3) 0;
-    /*background: url('tes3.png') 0 0;*/
+    width: 11rem;
+    height: 11rem;
+    content: url('./res/alice.png');
 }
 
 .bob::before {
-    width: 110px;
-    height: 110px;
-    /*background: url('tes3.png') -138px -0px;*/
-    background: url('./res/bob.png') calc(-138px * 3) -575px;
+    width: 11rem;
+    height: 11rem;
+    content: url('./res/bob.png');
 }

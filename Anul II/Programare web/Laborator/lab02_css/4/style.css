@@ -13,6 +13,11 @@ body {
     font-size: 16px;
 }
 
+.menu {
+    display: flex;
+    flex-direction: column;
+}
+
 .menu-item {
     width: 8.4rem;
     height: 8.4rem;
