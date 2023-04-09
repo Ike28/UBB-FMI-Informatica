@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ubb.controller.NewRaceController">
+   <children>
+      <ImageView fitHeight="728.0" fitWidth="1281.0" layoutX="-8.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/newrace.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="68.0" layoutY="237.0" prefHeight="65.0" prefWidth="291.0" text="NEW RACE" textFill="WHITE">
+         <font>
+            <Font name="Lato Black" size="45.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameField" layoutX="68.0" layoutY="341.0" prefHeight="42.0" prefWidth="315.0" promptText="RACE NAME">
+         <font>
+            <Font name="Lato Semibold" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="engineCapacityField" layoutX="68.0" layoutY="417.0" prefHeight="42.0" prefWidth="315.0" promptText="ENGINE CLASS ">
+         <font>
+            <Font name="Lato Semibold" size="16.0" />
+         </font>
+      </TextField>
+      <Button fx:id="confirmButton" layoutX="68.0" layoutY="495.0" mnemonicParsing="false" onAction="#onConfirmClicked" prefHeight="42.0" prefWidth="315.0" text="CONFIRM" textFill="#bc340a">
+         <font>
+            <Font name="Lato Black" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

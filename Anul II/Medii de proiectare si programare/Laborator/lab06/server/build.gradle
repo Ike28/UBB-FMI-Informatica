@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'com.ubb'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project (':model')
+    implementation project (':services')
+    implementation project (':persistence')
+    implementation project (':networking')
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
