@@ -2,21 +2,18 @@ package com.ubb.protocol;
 
 import com.ubb.IMainObserver;
 import com.ubb.IContestServices;
-import com.ubb.exceptions.RacesException;
+import com.ubb.exceptions.ContestDataException;
 import com.ubb.model.Participant;
 import com.ubb.model.User;
 import com.ubb.model.data.RaceDTO;
-import com.ubb.protocol.request.LoginRequest;
-import com.ubb.protocol.request.LogoutRequest;
-import com.ubb.protocol.request.Request;
-import com.ubb.protocol.response.ErrorResponse;
-import com.ubb.protocol.response.OKResponse;
-import com.ubb.protocol.response.Response;
+import com.ubb.protocol.request.*;
+import com.ubb.protocol.response.*;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
+import java.util.List;
 
 public class ClientWorker implements Runnable, IMainObserver {
     private IContestServices server;
@@ -41,18 +38,30 @@ public class ClientWorker implements Runnable, IMainObserver {
     }
 
     @Override
-    public void raceAdded(RaceDTO race) {
-
+    public void raceAdded(RaceDTO race) throws ContestDataException {
+        try {
+            sendResponse(new NewRaceResponse(race));
+        } catch (IOException ioException) {
+            throw new ContestDataException("Sending error: " + ioException.getMessage());
+        }
     }
 
     @Override
-    public void participantAdded(Participant participant) {
-
+    public void participantAdded(Participant participant) throws ContestDataException {
+        try {
+            sendResponse(new NewParticipantResponse(participant));
+        } catch (IOException ioException) {
+            throw new ContestDataException("Sending error: " + ioException.getMessage());
+        }
     }
 
     @Override
-    public void raceEntriesAdded() {
-
+    public void raceEntriesAdded(List<RaceDTO> races) throws ContestDataException {
+        try {
+            sendResponse(new UpdatedRacesResponse(races));
+        } catch (IOException ioException) {
+            throw new ContestDataException("Sending error: " + ioException.getMessage());
+        }
     }
 
     @Override
@@ -92,7 +101,6 @@ public class ClientWorker implements Runnable, IMainObserver {
     }
 
     private Response handleRequest(Request request) {
-        Response response = null;
         if (request instanceof LoginRequest loginRequest) {
             System.out.println("Login request...");
             String username = loginRequest.getUsername();
@@ -100,12 +108,12 @@ public class ClientWorker implements Runnable, IMainObserver {
             try {
                 server.login(username, token, this);
                 return new OKResponse();
-            } catch (RacesException racesException) {
+            } catch (ContestDataException racesException) {
                 return new ErrorResponse(racesException.getMessage());
             }
         }
 
-        if (request instanceof LogoutRequest logoutRequest){
+        if (request instanceof LogoutRequest logoutRequest) {
             System.out.println("Logout request");
             User user = logoutRequest.getUser();
             try {
@@ -113,11 +121,119 @@ public class ClientWorker implements Runnable, IMainObserver {
                 connected=false;
                 return new OKResponse();
 
-            } catch (RacesException racesException) {
+            } catch (ContestDataException racesException) {
                 return new ErrorResponse(racesException.getMessage());
             }
         }
 
-        return response;
+        if (request instanceof CreateParticipantRequest createParticipantRequest) {
+            System.out.println("Create participant request");
+            Participant participant = createParticipantRequest.getParticipant();
+            try {
+                server.saveParticipant(participant);
+                return new NewParticipantResponse(participant);
+            } catch (ContestDataException racesException) {
+                return new ErrorResponse(racesException.getMessage());
+            }
+        }
+
+        if (request instanceof CreateRaceEntriesRequest raceEntriesRequest) {
+            System.out.println("Create race entries request");
+            try {
+                server.saveRaceEntries(raceEntriesRequest.getRaceEntries());
+                return new UpdatedRacesResponse(server.getRacesWithParticipantCount().stream().toList());
+            } catch (ContestDataException racesException) {
+                return new ErrorResponse(racesException.getMessage());
+            }
+        }
+
+        if (request instanceof CreateRaceRequest createRaceRequest) {
+            System.out.println("Create race request");
+            try {
+                server.saveRace(createRaceRequest.getRace());
+                return new NewRaceResponse(new RaceDTO(createRaceRequest.getRace().getName(),
+                        createRaceRequest.getRace().getEngineCapacity(),
+                        server.getEntriesByRace(createRaceRequest.getRace().getID()).size()));
+            } catch (ContestDataException racesException) {
+                return new ErrorResponse(racesException.getMessage());
+            }
+        }
+
+        if (request instanceof GetEntriesByRaceRequest getEntriesByRaceRequest) {
+            System.out.println("Get entries by race request");
+            try {
+                return new EntriesByRaceResponse(server.getEntriesByRace(getEntriesByRaceRequest.getRaceID()));
+            } catch (ContestDataException racesException) {
+                return new ErrorResponse(racesException.getMessage());
+            }
+        }
+
+        if (request instanceof GetParticipantByDataRequest participantByDataRequest) {
+            System.out.println("Get participant request");
+            try {
+                return new ParticipantResponse(server.getParticipantByData(participantByDataRequest.getParticipant()));
+            } catch (ContestDataException racesException) {
+                return new ErrorResponse(racesException.getMessage());
+            }
+        }
+
+        if (request instanceof GetParticipantsByTeamRequest participantsByTeamRequest) {
+            System.out.println("Get participants by team request");
+            try {
+                return new GetParticipantsByTeamResponse(server.getParticipantsByTeam(
+                        participantsByTeamRequest.getTeamID()));
+            } catch (ContestDataException racesException) {
+                return new ErrorResponse(racesException.getMessage());
+            }
+        }
+
+        if (request instanceof GetRaceByNameRequest raceByNameRequest) {
+            System.out.println("Get race request");
+            try {
+                return new RaceByNameResponse(server.getRaceByName(raceByNameRequest.getRaceName()));
+            } catch (ContestDataException racesException) {
+                return new ErrorResponse(racesException.getMessage());
+            }
+        }
+
+        if (request instanceof GetRacesByEngineCapacityRequest racesByEngineCapacityRequest) {
+            System.out.println("Get races by capacity request");
+            try {
+                return new RacesByCapacityResponse(server.getRacesByEngineCapacity(
+                        racesByEngineCapacityRequest.getEngineCapacity()));
+            } catch (ContestDataException racesException) {
+                return new ErrorResponse(racesException.getMessage());
+            }
+        }
+
+        if (request instanceof GetRacesWithParticipantCountRequest racesWithParticipantCountRequest){
+            System.out.println("Get races request");
+            try {
+                return new RacesWithParticipantsResponse(server.getRacesWithParticipantCount());
+            } catch (ContestDataException racesException) {
+                return new ErrorResponse(racesException.getMessage());
+            }
+        }
+
+        if (request instanceof GetTeamByNameRequest teamByNameRequest){
+            System.out.println("Get team request");
+            try {
+                return new TeamResponse(server.getTeamByName(teamByNameRequest.getName()));
+            } catch (ContestDataException racesException) {
+                return new ErrorResponse(racesException.getMessage());
+            }
+        }
+
+        if (request instanceof GetUnregisteredRacesRequest unregisteredRacesRequest){
+            System.out.println("Get unregistered races request");
+            try {
+                return new RacesByCapacityResponse(server.getRacesWhereNotRegisteredAndEngineCapacity(
+                        unregisteredRacesRequest.getParticipantID(), unregisteredRacesRequest.getEngineCapacity()));
+            } catch (ContestDataException racesException) {
+                return new ErrorResponse(racesException.getMessage());
+            }
+        }
+
+        return null;
     }
 }

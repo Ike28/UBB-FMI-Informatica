@@ -1,6 +1,7 @@
 package com.ubb.repository;
 
 import com.ubb.model.Race;
+import com.ubb.model.User;
 import com.ubb.utils.JDBCUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

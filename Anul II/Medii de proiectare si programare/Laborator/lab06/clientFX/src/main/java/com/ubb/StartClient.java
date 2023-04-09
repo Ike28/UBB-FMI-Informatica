@@ -1,7 +1,7 @@
 package com.ubb;
 
 import com.ubb.controller.MainController;
-import com.ubb.protocol.ServicesProxyI;
+import com.ubb.protocol.ServicesProxy;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -38,7 +38,7 @@ public class StartClient extends Application {
         }
 
         System.out.println("Using IP " + serverIP + ":" + serverPort);
-        IContestServices server = new ServicesProxyI(serverIP, serverPort);
+        IContestServices server = new ServicesProxy(serverIP, serverPort);
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/main-view.fxml"));
             Scene scene = new Scene(fxmlLoader.load());

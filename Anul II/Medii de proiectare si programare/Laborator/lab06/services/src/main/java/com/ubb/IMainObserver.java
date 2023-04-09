@@ -1,11 +1,13 @@
 package com.ubb;
 
-import com.ubb.exceptions.RacesException;
+import com.ubb.exceptions.ContestDataException;
 import com.ubb.model.Participant;
 import com.ubb.model.data.RaceDTO;
 
+import java.util.List;
+
 public interface IMainObserver {
-    void raceAdded(RaceDTO race) throws RacesException;
-    void participantAdded(Participant participant) throws RacesException;
-    void raceEntriesAdded() throws RacesException;
+    void raceAdded(RaceDTO race) throws ContestDataException;
+    void participantAdded(Participant participant) throws ContestDataException;
+    void raceEntriesAdded(List<RaceDTO> races) throws ContestDataException;
 }

@@ -1,9 +1,12 @@
 package com.ubb.controller;
 
 import com.ubb.IContestServices;
+import com.ubb.IMainObserver;
+import com.ubb.exceptions.ContestDataException;
 import com.ubb.model.Participant;
 import com.ubb.model.Team;
 import com.ubb.model.data.RaceDTO;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -14,8 +17,9 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.List;
 
-public class HomeController extends AnchorPane {
+public class HomeController extends AnchorPane implements IMainObserver {
     private IContestServices server;
     private Stage currentStage;
 
@@ -150,5 +154,23 @@ public class HomeController extends AnchorPane {
         raceParticipantCount.setCellValueFactory(new PropertyValueFactory<>("participants"));
         //Collection<RaceDTO> races = raceService.getRacesWithParticipantCount();
         //raceTable.getItems().addAll(races);
+    }
+
+    @Override
+    public void raceAdded(RaceDTO race) throws ContestDataException {
+        Platform.runLater(() -> raceTable.getItems().add(race));
+    }
+
+    @Override
+    public void participantAdded(Participant participant) throws ContestDataException {
+        Platform.runLater(this::onTeamBoxChanged);
+    }
+
+    @Override
+    public void raceEntriesAdded(List<RaceDTO> races) throws ContestDataException {
+        Platform.runLater(() -> {
+            raceTable.getItems().clear();
+            raceTable.getItems().addAll(races);
+        });
     }
 }

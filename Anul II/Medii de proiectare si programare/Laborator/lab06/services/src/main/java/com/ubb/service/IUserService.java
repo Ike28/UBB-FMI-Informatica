@@ -1,7 +1,5 @@
 package com.ubb.service;
 
-import com.ubb.IMainObserver;
-import com.ubb.exceptions.RacesException;
 import com.ubb.model.User;
 
 import java.util.Optional;

@@ -1,8 +1,8 @@
 package com.ubb.controller;
 
-import com.ubb.IMainObserver;
 import com.ubb.IContestServices;
-import com.ubb.exceptions.RacesException;
+import com.ubb.IMainObserver;
+import com.ubb.exceptions.ContestDataException;
 import com.ubb.model.Participant;
 import com.ubb.model.data.RaceDTO;
 import com.ubb.utils.Hasher;
@@ -17,6 +17,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.List;
 
 public class MainController extends AnchorPane implements IMainObserver {
     private IContestServices server;
@@ -32,7 +33,7 @@ public class MainController extends AnchorPane implements IMainObserver {
     private Button loginButton;
 
     @FXML
-    protected void onLoginButtonClicked() throws RacesException {
+    protected void onLoginButtonClicked() throws ContestDataException {
         String username = usernameField.getText();
         String password = Hasher.hash(passwordField.getText());
         server.login(username, password, this);
@@ -56,17 +57,17 @@ public class MainController extends AnchorPane implements IMainObserver {
     }
 
     @Override
-    public void raceAdded(RaceDTO race) throws RacesException {
+    public void raceAdded(RaceDTO race) throws ContestDataException {
 
     }
 
     @Override
-    public void participantAdded(Participant participant) throws RacesException {
+    public void participantAdded(Participant participant) throws ContestDataException {
 
     }
 
     @Override
-    public void raceEntriesAdded() throws RacesException {
+    public void raceEntriesAdded(List<RaceDTO> races) throws ContestDataException {
 
     }
 }

@@ -1,14 +1,11 @@
 package com.ubb.service;
 
-import com.ubb.IMainObserver;
-import com.ubb.exceptions.RacesException;
 import com.ubb.model.User;
 import com.ubb.repository.IUserRepository;
 import com.ubb.validation.IValidator;
 import com.ubb.validation.UserValidator;
 
 import java.util.Collection;
-import java.util.Map;
 import java.util.Optional;
 
 public class UserService implements IUserService {

@@ -1,10 +1,10 @@
 import com.ubb.IContestServices;
 import com.ubb.ContestServices;
 import com.ubb.exceptions.ServerException;
-import com.ubb.repository.UserDBRepository;
+import com.ubb.repository.*;
 import com.ubb.server.ContestConcurrentServer;
 import com.ubb.server.Server;
-import com.ubb.service.UserService;
+import com.ubb.service.*;
 
 import java.io.IOException;
 import java.util.Properties;
@@ -23,7 +23,7 @@ public class StartServer {
             return;
         }
 
-        IContestServices raceServices = new ContestServices(new UserService(new UserDBRepository(serverProperties)));
+        IContestServices raceServices = initializeServices(serverProperties);
         int serverPort = DEFAULT_PORT;
         try {
             serverPort = Integer.parseInt(serverProperties.getProperty("server.port"));
@@ -39,5 +39,20 @@ public class StartServer {
         } catch (ServerException serverException) {
             System.out.println("Error starting the server: " + serverException.getMessage());
         }
+    }
+
+    private static IContestServices initializeServices(Properties serverProperties) {
+        IParticipantRepository participantRepository = new ParticipantDBRepository(serverProperties);
+        IRaceRepository raceRepository = new RaceDBRepository(serverProperties);
+        IRaceEntryRepository raceEntryRepository = new RaceEntryDBRepository(serverProperties, raceRepository, participantRepository);
+        IUserRepository userRepository = new UserDBRepository(serverProperties);
+        ITeamRepository teamRepository = new TeamDBRepository(serverProperties);
+
+        IUserService userService = new UserService(userRepository);
+        IParticipantService participantService = new ParticipantService(participantRepository);
+        IRaceService raceService = new RaceService(raceRepository, raceEntryRepository);
+        ITeamService teamService = new TeamService(teamRepository);
+
+        return new ContestServices(userService, participantService, raceService, teamService);
     }
 }
