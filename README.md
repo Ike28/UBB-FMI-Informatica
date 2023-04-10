@@ -22,4 +22,4 @@
 - [ ] [*  🏗 Ingineria sistemelor soft](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20II/Ingineria%20sistemelor%20soft)
 - [ ] *  📀 Sisteme de gestiune a bazelor de date
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Ike28&layout=compact&langs_count=16&exclude_repo=object_measurement,DImob_RealEstate,PingChat,BattleshipsGame,GAD_Flutter&custom_title=Languages&card_width=400)](https://github.com/anuraghazra/github-readme-stats)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Ike28&layout=compact&langs_count=16&exclude_repo=object_measurement,DImob_RealEstate,PingChat,BattleshipsGame,GAD_Flutter_day1,GAD_Flutter_day2&custom_title=Languages&card_width=400)](https://github.com/anuraghazra/github-readme-stats)
