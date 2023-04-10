@@ -53,18 +53,13 @@ public class NewParticipantController extends AnchorPane {
         }
         try {
             server.saveParticipant(newParticipant);
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/add_entries.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/home.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
-            RaceEntriesController controller = fxmlLoader.getController();
-            Optional<Participant> currentParticipant = server.getParticipantByData(newParticipant);
-            if (currentParticipant.isPresent()) {
-                controller.init(server, currentStage, currentUser, currentParticipant.get());
-                currentStage.setScene(scene);
-                currentStage.getIcons().add(new Image(String.valueOf(getClass().getResource("/img/icon.png"))));
-                currentStage.show();
-            } else {
-                AlertController.showError(currentStage, "Could not retrieve created entity");
-            }
+            HomeController controller = fxmlLoader.getController();
+            controller.init(server, currentStage, currentUser);
+            currentStage.setScene(scene);
+            currentStage.getIcons().add(new Image(String.valueOf(getClass().getResource("/img/icon.png"))));
+            currentStage.show();
         } catch (IOException | ContestDataException exception) {
             AlertController.showError(currentStage, exception.getMessage());
         }

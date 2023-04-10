@@ -67,34 +67,15 @@ public class RaceEntriesController extends AnchorPane {
 
     public void init(IContestServices server, Stage currentStage, User currentUser) {
         try {
-            initialise(server, currentStage, currentUser);
+            this.server = server;
+            this.currentStage = currentStage;
+            this.currentUser = currentUser;
             setParticipants();
             racesView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
             loadRaces();
         } catch (ContestDataException contestDataException) {
             AlertController.showError(currentStage, contestDataException.getMessage());
         }
-    }
-
-    public void init(IContestServices server, Stage currentStage, User currentUser, Participant currentParticipant) {
-        currentStage.setTitle("MXGP - Register to Races");
-        initialise(server, currentStage, currentUser);
-        setNewlyCreatedParticipant(currentParticipant);
-        racesView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
-        loadRaces();
-    }
-
-    private void initialise(IContestServices server, Stage currentStage, User currentUser) {
-        this.server = server;
-        this.currentStage = currentStage;
-        this.currentUser = currentUser;
-    }
-
-    private void setNewlyCreatedParticipant(Participant participant) {
-        currentParticipant = participant;
-        participantBox.getItems().clear();
-        participantBox.getItems().add(currentParticipant);
-        participantBox.getSelectionModel().clearAndSelect(0);
     }
 
     private void setParticipants() throws ContestDataException {

@@ -131,10 +131,6 @@ public class ServicesProxy implements IContestServices {
     @Override
     public void saveRaceEntries(List<RaceEntry> newEntities) throws ContestDataException {
         sendRequest(new CreateRaceEntriesRequest(newEntities));
-        Response response = readResponse();
-        if (response instanceof ErrorResponse) {
-            throw new ContestDataException(((ErrorResponse) response).getMessage());
-        }
     }
 
     @Override
@@ -162,19 +158,11 @@ public class ServicesProxy implements IContestServices {
     @Override
     public void saveParticipant(Participant newEntity) throws ContestDataException {
         sendRequest(new CreateParticipantRequest(newEntity));
-        Response response = readResponse();
-        if (response instanceof ErrorResponse) {
-            throw new ContestDataException(((ErrorResponse) response).getMessage());
-        }
     }
 
     @Override
     public void saveRace(Race newEntity) throws ContestDataException {
         sendRequest(new CreateRaceRequest(newEntity));
-        Response response = readResponse();
-        if (response instanceof ErrorResponse) {
-            throw new ContestDataException(((ErrorResponse) response).getMessage());
-        }
     }
 
     @Override
@@ -257,32 +245,32 @@ public class ServicesProxy implements IContestServices {
     }
 
     private Response readResponse() throws ContestDataException {
-        Response response = null;
+        Response response;
         try {
             response = responseQueue.take();
         } catch (InterruptedException interruptedException) {
-            interruptedException.printStackTrace();
+            throw new ContestDataException("Error reading response: " + interruptedException);
         }
         return response;
     }
 
-    private class ReaderThread implements Runnable{
+    private class ReaderThread implements Runnable {
         public void run() {
             while (!finished) {
                 try {
                     Object response = input.readObject();
                     System.out.println("response received " + response);
-                    if (response instanceof UpdateResponse){
+                    if (response instanceof UpdateResponse) {
                         handleUpdate((UpdateResponse) response);
                     } else {
                         try {
-                            responseQueue.put((Response)response);
+                            responseQueue.put((Response) response);
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
                     }
-                } catch (IOException | ClassNotFoundException e) {
-                    System.out.println("Reading error "+e);
+                } catch (IOException | ClassNotFoundException exception) {
+                    System.out.println("reading error: " + exception);
                 }
             }
         }

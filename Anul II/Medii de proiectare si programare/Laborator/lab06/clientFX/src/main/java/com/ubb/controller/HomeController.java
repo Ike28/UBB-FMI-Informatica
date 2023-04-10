@@ -173,19 +173,17 @@ public class HomeController extends AnchorPane implements IMainObserver {
 
     @Override
     public void raceAdded(RaceDTO race) throws ContestDataException {
-        Platform.runLater(() -> raceTable.getItems().add(race));
+        raceTable.getItems().add(race);
     }
 
     @Override
     public void participantAdded(Participant participant) throws ContestDataException {
-        Platform.runLater(this::onTeamBoxChanged);
+        onTeamBoxChanged();
     }
 
     @Override
     public void raceEntriesAdded(List<RaceDTO> races) throws ContestDataException {
-        Platform.runLater(() -> {
-            raceTable.getItems().clear();
-            raceTable.getItems().addAll(races);
-        });
+        raceTable.getItems().clear();
+        raceTable.getItems().addAll(races);
     }
 }

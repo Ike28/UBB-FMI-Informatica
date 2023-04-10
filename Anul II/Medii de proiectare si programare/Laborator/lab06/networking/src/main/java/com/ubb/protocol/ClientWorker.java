@@ -171,7 +171,7 @@ public class ClientWorker implements Runnable, IMainObserver {
         if (request instanceof GetParticipantByDataRequest participantByDataRequest) {
             System.out.println("Get participant request");
             try {
-                return new ParticipantResponse(server.getParticipantByData(
+                return new NewParticipantResponse(server.getParticipantByData(
                         participantByDataRequest.getParticipant()).get());
             } catch (ContestDataException racesException) {
                 return new ErrorResponse(racesException.getMessage());
