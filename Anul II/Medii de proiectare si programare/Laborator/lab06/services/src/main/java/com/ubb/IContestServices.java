@@ -2,14 +2,14 @@ package com.ubb;
 
 import com.ubb.exceptions.ContestDataException;
 import com.ubb.model.*;
-import com.ubb.model.data.RaceDTO;
+import com.ubb.dto.RaceDTO;
 
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
 public interface IContestServices {
-    void login(String username, String passwordToken, IMainObserver client) throws ContestDataException;
+    User login(String username, String passwordToken, IMainObserver client) throws ContestDataException;
 
     void logout(User user, IMainObserver client) throws ContestDataException;
 
@@ -27,11 +27,16 @@ public interface IContestServices {
 
     void saveRaceEntries(List<RaceEntry> newEntities) throws ContestDataException;
 
-    Collection<Race> getRacesWhereNotRegisteredAndEngineCapacity(Long participantID, Integer engineCapacity) throws ContestDataException;
+    Collection<Race> getRacesWhereNotRegisteredAndEngineCapacity(Long participantID, Integer engineCapacity)
+            throws ContestDataException;
 
     Optional<Team> getTeamByName(String teamName) throws ContestDataException;
 
     void saveParticipant(final Participant newEntity) throws ContestDataException;
 
     void saveRace(final Race newEntity) throws ContestDataException;
+
+    Collection<Team> findAllTeams() throws ContestDataException;
+
+    Collection<Participant> findAllParticipants() throws ContestDataException;
 }

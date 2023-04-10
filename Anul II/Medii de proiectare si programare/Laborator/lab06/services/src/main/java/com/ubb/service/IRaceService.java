@@ -2,7 +2,7 @@ package com.ubb.service;
 
 import com.ubb.model.Race;
 import com.ubb.model.RaceEntry;
-import com.ubb.model.data.RaceDTO;
+import com.ubb.dto.RaceDTO;
 
 import java.util.Collection;
 import java.util.Optional;

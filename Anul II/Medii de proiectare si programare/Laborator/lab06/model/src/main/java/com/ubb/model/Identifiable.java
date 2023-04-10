@@ -1,6 +1,8 @@
 package com.ubb.model;
 
-public class Identifiable<ID> {
+import java.io.Serializable;
+
+public class Identifiable<ID> implements Serializable {
     private ID id;
 
     public ID getID() {

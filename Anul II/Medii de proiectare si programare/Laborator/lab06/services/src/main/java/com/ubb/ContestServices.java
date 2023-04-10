@@ -2,7 +2,7 @@ package com.ubb;
 
 import com.ubb.exceptions.ContestDataException;
 import com.ubb.model.*;
-import com.ubb.model.data.RaceDTO;
+import com.ubb.dto.RaceDTO;
 import com.ubb.service.IParticipantService;
 import com.ubb.service.IRaceService;
 import com.ubb.service.ITeamService;
@@ -35,7 +35,7 @@ public class ContestServices implements IContestServices {
     }
 
     @Override
-    public synchronized void login(String username, String passwordToken, IMainObserver client) throws ContestDataException {
+    public synchronized User login(String username, String passwordToken, IMainObserver client) throws ContestDataException {
         Optional<User> foundUser = userService.getLogin(username, passwordToken);
         if (foundUser.isPresent()) {
             if (loggedClients.get(username) != null) {
@@ -45,6 +45,7 @@ public class ContestServices implements IContestServices {
         } else {
             throw new ContestDataException("Authentication failed.");
         }
+        return foundUser.get();
     }
 
     @Override
@@ -150,5 +151,15 @@ public class ContestServices implements IContestServices {
             }
             executor.shutdown();
         }
+    }
+
+    @Override
+    public synchronized Collection<Team> findAllTeams() throws ContestDataException {
+        return teamService.findAll();
+    }
+
+    @Override
+    public synchronized Collection<Participant> findAllParticipants() {
+        return participantService.findAll();
     }
 }

@@ -1,6 +1,6 @@
 package com.ubb.protocol.response;
 
-import com.ubb.model.data.RaceDTO;
+import com.ubb.dto.RaceDTO;
 
 import java.util.List;
 

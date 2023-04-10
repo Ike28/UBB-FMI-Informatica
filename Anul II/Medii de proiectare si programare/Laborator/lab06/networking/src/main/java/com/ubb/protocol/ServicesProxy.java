@@ -4,7 +4,7 @@ import com.ubb.IMainObserver;
 import com.ubb.IContestServices;
 import com.ubb.exceptions.ContestDataException;
 import com.ubb.model.*;
-import com.ubb.model.data.RaceDTO;
+import com.ubb.dto.RaceDTO;
 import com.ubb.protocol.request.*;
 import com.ubb.protocol.response.*;
 
@@ -37,24 +37,25 @@ public class ServicesProxy implements IContestServices {
     }
 
     @Override
-    public void login(String username, String password, IMainObserver client) throws ContestDataException {
+    public User login(String username, String password, IMainObserver client) throws ContestDataException {
         initializeConnection();
         sendRequest(new LoginRequest(username, password));
         Response response = readResponse();
         if (response instanceof OKResponse) {
             this.client = client;
-            return;
+            return ((OKResponse) response).getUser();
         }
         if (response instanceof ErrorResponse) {
             closeConnection();
             throw new ContestDataException(((ErrorResponse) response).getMessage());
         }
+        return null;
     }
 
     @Override
     public void logout(User user, IMainObserver client) throws ContestDataException {
         sendRequest(new LogoutRequest(user));
-        Response response=readResponse();
+        Response response = readResponse();
         closeConnection();
         if (response instanceof ErrorResponse){
             throw new ContestDataException(((ErrorResponse) response).getMessage());
@@ -80,7 +81,7 @@ public class ServicesProxy implements IContestServices {
             throw new ContestDataException(((ErrorResponse) response).getMessage());
         }
         ParticipantResponse participantResponse = (ParticipantResponse) response;
-        return participantResponse.getParticipant();
+        return Optional.of(participantResponse.getParticipant());
     }
 
     @Override
@@ -91,7 +92,7 @@ public class ServicesProxy implements IContestServices {
             throw new ContestDataException(((ErrorResponse) response).getMessage());
         }
         RaceByNameResponse raceResponse = (RaceByNameResponse) response;
-        return raceResponse.getRace();
+        return Optional.of(raceResponse.getRace());
     }
 
     @Override
@@ -155,7 +156,7 @@ public class ServicesProxy implements IContestServices {
             throw new ContestDataException(((ErrorResponse) response).getMessage());
         }
         TeamResponse teamResponse = (TeamResponse) response;
-        return teamResponse.getTeam();
+        return Optional.of(teamResponse.getTeam());
     }
 
     @Override
@@ -174,6 +175,28 @@ public class ServicesProxy implements IContestServices {
         if (response instanceof ErrorResponse) {
             throw new ContestDataException(((ErrorResponse) response).getMessage());
         }
+    }
+
+    @Override
+    public Collection<Team> findAllTeams() throws ContestDataException {
+        sendRequest(new GetTeamsRequest());
+        Response response = readResponse();
+        if (response instanceof ErrorResponse) {
+            throw new ContestDataException(((ErrorResponse) response).getMessage());
+        }
+        AllTeamsResponse teamsResponse = (AllTeamsResponse) response;
+        return teamsResponse.getTeams();
+    }
+
+    @Override
+    public Collection<Participant> findAllParticipants() throws ContestDataException {
+        sendRequest(new GetParticipantsRequest());
+        Response response = readResponse();
+        if (response instanceof ErrorResponse) {
+            throw new ContestDataException(((ErrorResponse) response).getMessage());
+        }
+        AllParticipantsResponse participantsResponse = (AllParticipantsResponse) response;
+        return participantsResponse.getParticipants();
     }
 
     private void initializeConnection() throws ContestDataException {

@@ -2,16 +2,14 @@ package com.ubb.protocol.response;
 
 import com.ubb.model.Race;
 
-import java.util.Optional;
-
 public class RaceByNameResponse implements Response {
-    private final Optional<Race> race;
+    private final Race race;
 
-    public RaceByNameResponse(Optional<Race> race) {
+    public RaceByNameResponse(Race race) {
         this.race = race;
     }
 
-    public Optional<Race> getRace() {
+    public Race getRace() {
         return race;
     }
 }

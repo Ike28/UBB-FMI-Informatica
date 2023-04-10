@@ -2,7 +2,7 @@ package com.ubb;
 
 import com.ubb.exceptions.ContestDataException;
 import com.ubb.model.Participant;
-import com.ubb.model.data.RaceDTO;
+import com.ubb.dto.RaceDTO;
 
 import java.util.List;
 

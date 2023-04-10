@@ -5,7 +5,7 @@ import com.ubb.IContestServices;
 import com.ubb.exceptions.ContestDataException;
 import com.ubb.model.Participant;
 import com.ubb.model.User;
-import com.ubb.model.data.RaceDTO;
+import com.ubb.dto.RaceDTO;
 import com.ubb.protocol.request.*;
 import com.ubb.protocol.response.*;
 
@@ -106,8 +106,8 @@ public class ClientWorker implements Runnable, IMainObserver {
             String username = loginRequest.getUsername();
             String token = loginRequest.getToken();
             try {
-                server.login(username, token, this);
-                return new OKResponse();
+                User user = server.login(username, token, this);
+                return new OKResponse(user);
             } catch (ContestDataException racesException) {
                 return new ErrorResponse(racesException.getMessage());
             }
@@ -119,7 +119,7 @@ public class ClientWorker implements Runnable, IMainObserver {
             try {
                 server.logout(user, this);
                 connected=false;
-                return new OKResponse();
+                return new OKResponse(null);
 
             } catch (ContestDataException racesException) {
                 return new ErrorResponse(racesException.getMessage());
@@ -171,7 +171,8 @@ public class ClientWorker implements Runnable, IMainObserver {
         if (request instanceof GetParticipantByDataRequest participantByDataRequest) {
             System.out.println("Get participant request");
             try {
-                return new ParticipantResponse(server.getParticipantByData(participantByDataRequest.getParticipant()));
+                return new ParticipantResponse(server.getParticipantByData(
+                        participantByDataRequest.getParticipant()).get());
             } catch (ContestDataException racesException) {
                 return new ErrorResponse(racesException.getMessage());
             }
@@ -190,7 +191,7 @@ public class ClientWorker implements Runnable, IMainObserver {
         if (request instanceof GetRaceByNameRequest raceByNameRequest) {
             System.out.println("Get race request");
             try {
-                return new RaceByNameResponse(server.getRaceByName(raceByNameRequest.getRaceName()));
+                return new RaceByNameResponse(server.getRaceByName(raceByNameRequest.getRaceName()).get());
             } catch (ContestDataException racesException) {
                 return new ErrorResponse(racesException.getMessage());
             }
@@ -206,7 +207,7 @@ public class ClientWorker implements Runnable, IMainObserver {
             }
         }
 
-        if (request instanceof GetRacesWithParticipantCountRequest racesWithParticipantCountRequest){
+        if (request instanceof GetRacesWithParticipantCountRequest) {
             System.out.println("Get races request");
             try {
                 return new RacesWithParticipantsResponse(server.getRacesWithParticipantCount());
@@ -215,20 +216,38 @@ public class ClientWorker implements Runnable, IMainObserver {
             }
         }
 
-        if (request instanceof GetTeamByNameRequest teamByNameRequest){
+        if (request instanceof GetTeamByNameRequest teamByNameRequest) {
             System.out.println("Get team request");
             try {
-                return new TeamResponse(server.getTeamByName(teamByNameRequest.getName()));
+                return new TeamResponse(server.getTeamByName(teamByNameRequest.getName()).get());
             } catch (ContestDataException racesException) {
                 return new ErrorResponse(racesException.getMessage());
             }
         }
 
-        if (request instanceof GetUnregisteredRacesRequest unregisteredRacesRequest){
+        if (request instanceof GetUnregisteredRacesRequest unregisteredRacesRequest) {
             System.out.println("Get unregistered races request");
             try {
                 return new RacesByCapacityResponse(server.getRacesWhereNotRegisteredAndEngineCapacity(
                         unregisteredRacesRequest.getParticipantID(), unregisteredRacesRequest.getEngineCapacity()));
+            } catch (ContestDataException racesException) {
+                return new ErrorResponse(racesException.getMessage());
+            }
+        }
+
+        if (request instanceof GetTeamsRequest) {
+            System.out.println("Get teams request");
+            try {
+                return new AllTeamsResponse(server.findAllTeams());
+            } catch (ContestDataException racesException) {
+                return new ErrorResponse(racesException.getMessage());
+            }
+        }
+
+        if (request instanceof GetParticipantsRequest) {
+            System.out.println("Get participants request");
+            try {
+                return new AllParticipantsResponse(server.findAllParticipants());
             } catch (ContestDataException racesException) {
                 return new ErrorResponse(racesException.getMessage());
             }

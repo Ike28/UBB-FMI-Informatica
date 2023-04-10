@@ -5,7 +5,8 @@ import com.ubb.IMainObserver;
 import com.ubb.exceptions.ContestDataException;
 import com.ubb.model.Participant;
 import com.ubb.model.Team;
-import com.ubb.model.data.RaceDTO;
+import com.ubb.model.User;
+import com.ubb.dto.RaceDTO;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -17,11 +18,13 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Collection;
 import java.util.List;
 
 public class HomeController extends AnchorPane implements IMainObserver {
     private IContestServices server;
     private Stage currentStage;
+    private User currentUser;
 
     @FXML
     private Label usernameLabel;
@@ -60,7 +63,7 @@ public class HomeController extends AnchorPane implements IMainObserver {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/new_race.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             NewRaceController controller = fxmlLoader.getController();
-            controller.init(server, currentStage);
+            controller.init(server, currentStage, currentUser);
             currentStage.setScene(scene);
             currentStage.getIcons().add(new Image(String.valueOf(getClass().getResource("/img/icon.png"))));
             currentStage.show();
@@ -72,6 +75,7 @@ public class HomeController extends AnchorPane implements IMainObserver {
     @FXML
     protected void onLogoutClicked() {
         try {
+            server.logout(currentUser, this);
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/main-view.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             MainController controller = fxmlLoader.getController();
@@ -79,8 +83,8 @@ public class HomeController extends AnchorPane implements IMainObserver {
             currentStage.setScene(scene);
             currentStage.getIcons().add(new Image(String.valueOf(getClass().getResource("/img/icon.png"))));
             currentStage.show();
-        } catch (IOException ioException) {
-            System.out.println(ioException.getMessage());
+        } catch (IOException | ContestDataException exception) {
+            AlertController.showError(currentStage, exception.getMessage());
         }
     }
 
@@ -90,7 +94,7 @@ public class HomeController extends AnchorPane implements IMainObserver {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/new_participant.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             NewParticipantController controller = fxmlLoader.getController();
-            controller.init(server, currentStage);
+            controller.init(server, currentStage, currentUser);
             currentStage.setScene(scene);
             currentStage.getIcons().add(new Image(String.valueOf(getClass().getResource("/img/icon.png"))));
             currentStage.show();
@@ -105,7 +109,7 @@ public class HomeController extends AnchorPane implements IMainObserver {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/add_entries.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             RaceEntriesController controller = fxmlLoader.getController();
-            controller.init(server, currentStage);
+            controller.init(server, currentStage, currentUser);
             currentStage.setScene(scene);
             currentStage.getIcons().add(new Image(String.valueOf(getClass().getResource("/img/icon.png"))));
             currentStage.show();
@@ -116,44 +120,55 @@ public class HomeController extends AnchorPane implements IMainObserver {
 
     @FXML
     protected void onTeamBoxChanged() {
-        participantsTable.getItems().clear();
-        Team currentTeam = teamBox.getValue();
-        //Collection<Participant> participants = participantService.getParticipantsByTeam(currentTeam.getID());
-        //participantsTable.getItems().addAll(participants);
+        try {
+            participantsTable.getItems().clear();
+            Team currentTeam = teamBox.getValue();
+            Collection<Participant> participants = server.getParticipantsByTeam(currentTeam.getID());
+            participantsTable.getItems().addAll(participants);
+        } catch (ContestDataException contestDataException) {
+            AlertController.showError(currentStage, contestDataException.getMessage());
+        }
     }
 
-    public void init(IContestServices server, Stage currentStage) {
-        currentStage.setTitle("MXGP Admin Panel - Home");
-        this.currentStage = currentStage;
+    public void init(IContestServices server, Stage currentStage, User currentUser) {
+        try {
+            currentStage.setTitle("MXGP Admin Panel - Home");
+            this.server = server;
+            this.currentStage = currentStage;
+            this.currentUser = currentUser;
 
-        fillTeamBox();
-        initialiseParticipantsTable();
-        initialiseRaceTable();
+            usernameLabel.setText(currentUser.getUsername());
+            fillTeamBox();
+            initialiseParticipantsTable();
+            initialiseRaceTable();
+        } catch (ContestDataException contestDataException) {
+            AlertController.showError(currentStage, contestDataException.getMessage());
+        }
     }
 
-    private void fillTeamBox() {
+    private void fillTeamBox() throws ContestDataException {
         teamBox.getItems().clear();
-        //Collection<Team> teams = server.findAllTeams();
-        //teamBox.getItems().addAll(teams);
+        Collection<Team> teams = server.findAllTeams();
+        teamBox.getItems().addAll(teams);
     }
 
-    private void initialiseParticipantsTable() {
+    private void initialiseParticipantsTable() throws ContestDataException {
         participantsTable.getItems().clear();
         participantsTable.setPlaceholder(new Label("No participants found"));
         participantName.setCellValueFactory(new PropertyValueFactory<>("fullName"));
         participantEngine.setCellValueFactory(new PropertyValueFactory<>("engineCapacity"));
-        //Collection<Participant> participants = participantService.findAll();
-        //participantsTable.getItems().addAll(participants);
+        Collection<Participant> participants = server.findAllParticipants();
+        participantsTable.getItems().addAll(participants);
     }
 
-    private void initialiseRaceTable() {
+    private void initialiseRaceTable() throws ContestDataException {
         raceTable.getItems().clear();
         raceTable.setPlaceholder(new Label("No races found"));
         raceName.setCellValueFactory(new PropertyValueFactory<>("name"));
         raceEngine.setCellValueFactory(new PropertyValueFactory<>("engineCapacity"));
         raceParticipantCount.setCellValueFactory(new PropertyValueFactory<>("participants"));
-        //Collection<RaceDTO> races = raceService.getRacesWithParticipantCount();
-        //raceTable.getItems().addAll(races);
+        Collection<RaceDTO> races = server.getRacesWithParticipantCount();
+        raceTable.getItems().addAll(races);
     }
 
     @Override

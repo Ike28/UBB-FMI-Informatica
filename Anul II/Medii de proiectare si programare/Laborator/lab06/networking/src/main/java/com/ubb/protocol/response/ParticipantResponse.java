@@ -2,16 +2,14 @@ package com.ubb.protocol.response;
 
 import com.ubb.model.Participant;
 
-import java.util.Optional;
-
 public class ParticipantResponse implements Response {
-    private final Optional<Participant> participant;
+    private final Participant participant;
 
-    public ParticipantResponse(Optional<Participant> participant) {
+    public ParticipantResponse(Participant participant) {
         this.participant = participant;
     }
 
-    public Optional<Participant> getParticipant() {
+    public Participant getParticipant() {
         return participant;
     }
 }

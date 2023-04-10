@@ -2,6 +2,7 @@ package com.ubb;
 
 import com.ubb.controller.MainController;
 import com.ubb.protocol.ServicesProxy;
+import com.ubb.utils.Hasher;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;

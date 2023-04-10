@@ -2,7 +2,7 @@ package com.ubb.service;
 
 import com.ubb.model.Race;
 import com.ubb.model.RaceEntry;
-import com.ubb.model.data.RaceDTO;
+import com.ubb.dto.RaceDTO;
 import com.ubb.repository.IRaceEntryRepository;
 import com.ubb.repository.IRaceRepository;
 import com.ubb.validation.IValidator;

@@ -4,7 +4,8 @@ import com.ubb.IContestServices;
 import com.ubb.IMainObserver;
 import com.ubb.exceptions.ContestDataException;
 import com.ubb.model.Participant;
-import com.ubb.model.data.RaceDTO;
+import com.ubb.model.User;
+import com.ubb.dto.RaceDTO;
 import com.ubb.utils.Hasher;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -36,17 +37,17 @@ public class MainController extends AnchorPane implements IMainObserver {
     protected void onLoginButtonClicked() throws ContestDataException {
         String username = usernameField.getText();
         String password = Hasher.hash(passwordField.getText());
-        server.login(username, password, this);
         try {
+            User user = server.login(username, password, this);
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/home.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             HomeController controller = fxmlLoader.getController();
-            controller.init(server, currentStage);
+            controller.init(server, currentStage, user);
             currentStage.setScene(scene);
             currentStage.getIcons().add(new Image(String.valueOf(getClass().getResource("/img/icon.png"))));
             currentStage.show();
-        } catch (IOException ioException) {
-            System.out.println(ioException.getMessage());
+        } catch (IOException | ContestDataException exception) {
+            AlertController.showError(currentStage, exception.getMessage());
         }
     }
 

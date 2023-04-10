@@ -1,22 +1,29 @@
 package com.ubb.controller;
 
 import com.ubb.IContestServices;
+import com.ubb.exceptions.ContestDataException;
 import com.ubb.model.Participant;
 import com.ubb.model.Team;
+import com.ubb.model.User;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Collection;
+import java.util.Objects;
+import java.util.Optional;
 
 public class NewParticipantController extends AnchorPane {
     private IContestServices server;
     private Stage currentStage;
+    private User currentUser;
 
     @FXML
     private TextField firstnameField;
@@ -41,37 +48,41 @@ public class NewParticipantController extends AnchorPane {
         Team selected = teamBox.getValue();
 
         Participant newParticipant = new Participant(firstName, lastName, engineCapacity);
-//        if (!Objects.equals(selected.getName(), "None")) {
-//            newParticipant.setTeamID(selected.getID());
-//        }
-        //participantService.save(newParticipant);
-
+        if (!Objects.equals(selected.getName(), "None")) {
+            newParticipant.setTeamID(selected.getID());
+        }
         try {
+            server.saveParticipant(newParticipant);
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/add_entries.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             RaceEntriesController controller = fxmlLoader.getController();
-//            Optional<Participant> currentParticipant = participantService.getParticipantByData(newParticipant);
-//            if (currentParticipant.isPresent()) {
-//                controller.init(server, currentStage);
-//                currentStage.setScene(scene);
-//                currentStage.getIcons().add(new Image(String.valueOf(getClass().getResource("/img/icon.png"))));
-//                currentStage.show();
-//            } else {
-//                System.out.println("Error : could not retrieve created entity");
-//            }
-        } catch (IOException ioException) {
-            System.out.println(ioException.getMessage());
+            Optional<Participant> currentParticipant = server.getParticipantByData(newParticipant);
+            if (currentParticipant.isPresent()) {
+                controller.init(server, currentStage, currentUser, currentParticipant.get());
+                currentStage.setScene(scene);
+                currentStage.getIcons().add(new Image(String.valueOf(getClass().getResource("/img/icon.png"))));
+                currentStage.show();
+            } else {
+                AlertController.showError(currentStage, "Could not retrieve created entity");
+            }
+        } catch (IOException | ContestDataException exception) {
+            AlertController.showError(currentStage, exception.getMessage());
         }
     }
 
-    public void init(IContestServices server, Stage currentStage) {
-        currentStage.setTitle("MXGP - New Participant");
-        this.server = server;
-        this.currentStage = currentStage;
+    public void init(IContestServices server, Stage currentStage, User currentUser) {
+        try {
+            currentStage.setTitle("MXGP - New Participant");
+            this.server = server;
+            this.currentStage = currentStage;
+            this.currentUser = currentUser;
 
-        ControllerUtils.addInputNumberFormatter(engineCapacityField);
-        clearFields();
-        fillTeamBox();
+            ControllerUtils.addInputNumberFormatter(engineCapacityField);
+            clearFields();
+            fillTeamBox();
+        } catch (ContestDataException contestDataException) {
+            AlertController.showError(currentStage, contestDataException.getMessage());
+        }
     }
 
     private void clearFields() {
@@ -81,10 +92,10 @@ public class NewParticipantController extends AnchorPane {
         teamBox.getSelectionModel().clearSelection();
     }
 
-    private void fillTeamBox() {
+    private void fillTeamBox() throws ContestDataException {
         teamBox.getItems().clear();
         teamBox.getItems().add(new Team("None"));
-        //Collection<Team> teams = teamService.findAll();
-        //teamBox.getItems().addAll(teams);
+        Collection<Team> teams = server.findAllTeams();
+        teamBox.getItems().addAll(teams);
     }
 }
