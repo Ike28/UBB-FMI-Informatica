@@ -19,7 +19,7 @@
 - [x] [*  🖥 Programare web](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20II/Programare%20web)
 - [x] [*  🤖 Inteligență artificială](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20II/Inteligenta%20artificiala)
 - [x] [*  🧰 Medii de proiectare și programare](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20II/Medii%20de%20proiectare%20si%20programare)
-- [ ] [*  🏗 Ingineria sistemelor soft](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20II/Ingineria%20sistemelor%20soft)
-- [ ] [*  📀 Sisteme de gestiune a bazelor de date](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20II/Sisteme%20de%20gestiune%20a%20bazelor%20de%20date)
+- [x] [*  🏗 Ingineria sistemelor soft](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20II/Ingineria%20sistemelor%20soft)
+- [x] [*  📀 Sisteme de gestiune a bazelor de date](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20II/Sisteme%20de%20gestiune%20a%20bazelor%20de%20date)
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Ike28&layout=compact&langs_count=16&exclude_repo=object_measurement,DImob_RealEstate,PingChat,BattleshipsGame,GAD_Flutter_day1,GAD_Flutter_day2,tic_tac_toe,number_guesser&custom_title=Languages&card_width=400)](https://github.com/anuraghazra/github-readme-stats)
