@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BaseException" Collapsed="true">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAgACA=</HashCode>
+      <FileName>BaseException.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Book" Collapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEQAAAAAABAAAAAQQAAQARAABAAIAAzAEAMQAA=</HashCode>
+      <FileName>Book.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BookValidator" Collapsed="true">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BookValidator.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CastException" Collapsed="true">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAgACA=</HashCode>
+      <FileName>CastException.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InvalidIDException" Collapsed="true">
+    <Position X="6" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAgACA=</HashCode>
+      <FileName>InvalidIDException.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NameException" Collapsed="true">
+    <Position X="7.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAgACA=</HashCode>
+      <FileName>NameException.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PriceException" Collapsed="true">
+    <Position X="9.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAgACA=</HashCode>
+      <FileName>PriceException.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Repo&lt;T&gt;" Collapsed="true">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAIIAEAABAAAAAAAAAAAAABAAAAAAAAAAAiBCIAAAA=</HashCode>
+      <FileName>Repo.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FileRepo">
+    <Position X="3.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAIAABAABAAAAAABAAAAAEAIAAAAAAAAABwBAAAAAA=</HashCode>
+      <FileName>RepoFile.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Service&lt;T&gt;" Collapsed="true">
+    <Position X="11.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAABAwAAABAKEAAAAAAAAAQAAAAAAgJAACAAA=</HashCode>
+      <FileName>Service.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServiceFile" Collapsed="true">
+    <Position X="6" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAICAAAABAwAAABAKEAAAAAAAAAAAEAAAAgBIACAAA=</HashCode>
+      <FileName>ServiceFile.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StockException" Collapsed="true">
+    <Position X="7.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgACA=</HashCode>
+      <FileName>StockException.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestBook" Collapsed="true">
+    <Position X="9.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TestBook.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestBookValidator" Collapsed="true">
+    <Position X="11.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAEAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>TestBookValidator.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestRepo">
+    <Position X="0.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAIAAAAAgAAIAAAAAAAAACAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>TestRepo.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestRepoFile">
+    <Position X="1.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAIAAAAAgAAIAAAAAAAAACAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>TestRepoFile.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestService" Collapsed="true">
+    <Position X="6" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEABIAAABAIAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TestService.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserInterface" Collapsed="true">
+    <Position X="7.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAgIAAIAAAAgAAAAAAEEEAAAAQAAAAAgAA=</HashCode>
+      <FileName>UI.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

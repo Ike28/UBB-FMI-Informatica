@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Resource Files\NewFilter1">
+      <UniqueIdentifier>{0bdf2feb-daef-4710-9526-9ec576bceae3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\1_Domain">
+      <UniqueIdentifier>{2d50d581-ef96-4bf7-ad50-ae6e9a57c076}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\3_Service">
+      <UniqueIdentifier>{ff79a04e-726d-4ac9-977a-8643c290d6e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\4_UserInterface">
+      <UniqueIdentifier>{96092d64-7245-4b9c-b588-7921239a6c5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\2_Repository">
+      <UniqueIdentifier>{ce49819e-faba-4185-b7d6-8f1ee3d99ca5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utils">
+      <UniqueIdentifier>{0bd57427-56e0-4ca5-9a02-8f936f8b00ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\2_Repository">
+      <UniqueIdentifier>{d7f87afe-b4b7-4322-a411-20e8e4f3bac5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\1_Domain">
+      <UniqueIdentifier>{eb11f280-8e49-4a03-83ed-8423db3a373e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\3_Service">
+      <UniqueIdentifier>{084ac68b-055f-4496-bd28-a6811cd12a58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\4_UserInterface">
+      <UniqueIdentifier>{08f8ed83-5b4d-4ca1-afc9-a8d766cfe2d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Utils">
+      <UniqueIdentifier>{986e8d68-9a82-420b-a19a-3a34d169529a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\5_Tests">
+      <UniqueIdentifier>{974b5429-6f99-45d6-8a76-b9a2caa38270}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\5_Tests">
+      <UniqueIdentifier>{ce218a1a-29a9-457e-b5ae-d784b07774aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Exceptions">
+      <UniqueIdentifier>{6693c7de-97b4-478d-a0fd-c4c8bd0cda93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Validators">
+      <UniqueIdentifier>{7eb7e49d-5139-4dd3-9704-74b9839b0a09}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Component.h">
+      <Filter>Header Files\1_Domain</Filter>
+    </ClInclude>
+    <ClInclude Include="CPU.h">
+      <Filter>Header Files\1_Domain</Filter>
+    </ClInclude>
+    <ClInclude Include="GPU.h">
+      <Filter>Header Files\1_Domain</Filter>
+    </ClInclude>
+    <ClInclude Include="RAM.h">
+      <Filter>Header Files\1_Domain</Filter>
+    </ClInclude>
+    <ClInclude Include="Motherboard.h">
+      <Filter>Header Files\1_Domain</Filter>
+    </ClInclude>
+    <ClInclude Include="RepoCPU.h">
+      <Filter>Header Files\2_Repository</Filter>
+    </ClInclude>
+    <ClInclude Include="RepoFile.h">
+      <Filter>Header Files\2_Repository</Filter>
+    </ClInclude>
+    <ClInclude Include="RepoGPU.h">
+      <Filter>Header Files\2_Repository</Filter>
+    </ClInclude>
+    <ClInclude Include="RepoMotherboard.h">
+      <Filter>Header Files\2_Repository</Filter>
+    </ClInclude>
+    <ClInclude Include="RepoRAM.h">
+      <Filter>Header Files\2_Repository</Filter>
+    </ClInclude>
+    <ClInclude Include="utils.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="TestCPU.h">
+      <Filter>Header Files\5_Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="TestGPU.h">
+      <Filter>Header Files\5_Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="TestMotherboard.h">
+      <Filter>Header Files\5_Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="TestRAM.h">
+      <Filter>Header Files\5_Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="TestRepoCPU.h">
+      <Filter>Header Files\5_Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="TestRepoGPU.h">
+      <Filter>Header Files\5_Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="TestRepoMBD.h">
+      <Filter>Header Files\5_Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="TestRepoRAM.h">
+      <Filter>Header Files\5_Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="TestService.h">
+      <Filter>Header Files\5_Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="Service.h">
+      <Filter>Header Files\3_Service</Filter>
+    </ClInclude>
+    <ClInclude Include="UserInterface.h">
+      <Filter>Header Files\4_UserInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseException.h">
+      <Filter>Header Files\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="CPUDataException.h">
+      <Filter>Header Files\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="GPUDataException.h">
+      <Filter>Header Files\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="InvalidIDException.h">
+      <Filter>Header Files\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="MBDDataException.h">
+      <Filter>Header Files\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="RAMDataException.h">
+      <Filter>Header Files\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="CPUValidator.h">
+      <Filter>Header Files\Validators</Filter>
+    </ClInclude>
+    <ClInclude Include="GPUValidator.h">
+      <Filter>Header Files\Validators</Filter>
+    </ClInclude>
+    <ClInclude Include="MBDValidator.h">
+      <Filter>Header Files\Validators</Filter>
+    </ClInclude>
+    <ClInclude Include="RAMValidator.h">
+      <Filter>Header Files\Validators</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RepoGPU.cpp">
+      <Filter>Source Files\2_Repository</Filter>
+    </ClCompile>
+    <ClCompile Include="RepoCPU.cpp">
+      <Filter>Source Files\2_Repository</Filter>
+    </ClCompile>
+    <ClCompile Include="RepoRAM.cpp">
+      <Filter>Source Files\2_Repository</Filter>
+    </ClCompile>
+    <ClCompile Include="RepoMotherboard.cpp">
+      <Filter>Source Files\2_Repository</Filter>
+    </ClCompile>
+    <ClCompile Include="Component.cpp">
+      <Filter>Source Files\1_Domain</Filter>
+    </ClCompile>
+    <ClCompile Include="CPU.cpp">
+      <Filter>Source Files\1_Domain</Filter>
+    </ClCompile>
+    <ClCompile Include="GPU.cpp">
+      <Filter>Source Files\1_Domain</Filter>
+    </ClCompile>
+    <ClCompile Include="Motherboard.cpp">
+      <Filter>Source Files\1_Domain</Filter>
+    </ClCompile>
+    <ClCompile Include="RAM.cpp">
+      <Filter>Source Files\1_Domain</Filter>
+    </ClCompile>
+    <ClCompile Include="utils.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Service.cpp">
+      <Filter>Source Files\3_Service</Filter>
+    </ClCompile>
+    <ClCompile Include="UserInterface.cpp">
+      <Filter>Source Files\4_UserInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="TestCPU.cpp">
+      <Filter>Source Files\5_Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="TestGPU.cpp">
+      <Filter>Source Files\5_Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="TestMotherboard.cpp">
+      <Filter>Source Files\5_Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="TestRAM.cpp">
+      <Filter>Source Files\5_Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="TestRepoCPU.cpp">
+      <Filter>Source Files\5_Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="TestRepoGPU.cpp">
+      <Filter>Source Files\5_Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="TestRepoMBD.cpp">
+      <Filter>Source Files\5_Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="TestRepoRAM.cpp">
+      <Filter>Source Files\5_Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="TestService.cpp">
+      <Filter>Source Files\5_Tests</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

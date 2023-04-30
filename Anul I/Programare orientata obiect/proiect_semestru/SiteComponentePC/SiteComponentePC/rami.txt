@@ -1,0 +1,3 @@
+RAM | 040859430 | Corsair Vengeance | 1200 | 300 | 32 | DRAM | DDR4 | 3200
+RAM | 040900240 | HyperX Fury | 930 | 400 | 32 | DRAM | DDR4 | 3600
+RAM | 040900480 | HyperX Predator | 810 | 400 | 16 | DRAM | DDR4 | 4266
