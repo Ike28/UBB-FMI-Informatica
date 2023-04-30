@@ -5,7 +5,7 @@
 - [x] [*  🧮 Logică computațională](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20I/Logica%20computationala)
 - [ ] *  🐍 Fundamentele programării
 - [x] [*  🎛️ Arhitectura sistemelor de calcul](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20I/Arhitectura%20sistemelor%20de%20calcul)
-- [ ] *  🧩 Programare orientată obiect
+- [x] [*  🧩 Programare orientată obiect](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20I/Programare%20orientata%20obiect)
 - [ ] *  📊 Sisteme dinamice
 - [ ] *  🧱 Structuri de date și algoritmi
 - [ ] *  🐧 Sisteme de operare
