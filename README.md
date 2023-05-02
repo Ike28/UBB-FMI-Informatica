@@ -3,12 +3,12 @@
 
 ### Anul I
 - [x] [*  🧮 Logică computațională](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20I/Logica%20computationala)
-- [ ] *  🐍 Fundamentele programării
+- [x] [*  🐍 Fundamentele programării](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20I/Fundamentele%20programarii)
 - [x] [*  🎛️ Arhitectura sistemelor de calcul](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20I/Arhitectura%20sistemelor%20de%20calcul)
 - [x] [*  🧩 Programare orientată obiect](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20I/Programare%20orientata%20obiect)
 - [ ] *  📊 Sisteme dinamice
 - [ ] *  🧱 Structuri de date și algoritmi
-- [ ] *  🐧 Sisteme de operare
+- [x] [*  🐧 Sisteme de operare](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20I/Sisteme%20de%20operare)
 
 ### Anul II
 - [x] [*  🦉 Programare logică și funcțională](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20II/Programare%20logica%20si%20functionala)
@@ -22,4 +22,4 @@
 - [x] [*  🏗 Ingineria sistemelor soft](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20II/Ingineria%20sistemelor%20soft)
 - [x] [*  📀 Sisteme de gestiune a bazelor de date](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20II/Sisteme%20de%20gestiune%20a%20bazelor%20de%20date)
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Ike28&layout=compact&langs_count=15&exclude_repo=object_measurement,DImob_RealEstate,PingChat,BattleshipsGame,GAD_Flutter_day1,GAD_Flutter_day2,tic_tac_toe,number_guesser&custom_title=Languages&card_width=400)](https://github.com/anuraghazra/github-readme-stats)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Ike28&layout=compact&langs_count=16&exclude_repo=object_measurement,DImob_RealEstate,PingChat,BattleshipsGame,GAD_Flutter_day1,GAD_Flutter_day2,tic_tac_toe,number_guesser&custom_title=Languages&card_width=400)](https://github.com/anuraghazra/github-readme-stats)
