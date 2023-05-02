@@ -1,0 +1,1 @@
+[["adauga", 9, "XIAOMI", "TELEFON", 1000.0, "BECI"], ["adauga", 8, "TELEFON", "HUAWEI", 3100.0, "BECI"]]

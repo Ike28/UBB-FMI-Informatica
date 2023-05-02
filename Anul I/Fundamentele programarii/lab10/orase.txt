@@ -1,0 +1,1 @@
+[{"py/object": "Domain.city.City", "_Entity__id": "1", "_City__name": "Cluj", "_City__population": 300000}]

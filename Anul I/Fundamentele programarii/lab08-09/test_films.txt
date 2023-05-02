@@ -1,0 +1,1 @@
+{"1": {"py/object": "Domain.film.Film", "_Entity__id": 1, "_Film__title": "aaa", "_Film__year": 1980, "_Film__ticket_price": 20, "_Film__on_screen": true}}
