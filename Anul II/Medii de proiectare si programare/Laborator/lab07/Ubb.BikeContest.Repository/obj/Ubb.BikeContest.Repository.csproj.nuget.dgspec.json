@@ -1,0 +1,136 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Repository\\Ubb.BikeContest.Repository.csproj": {}
+  },
+  "projects": {
+    "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Model\\Ubb.BikeContest.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Model\\Ubb.BikeContest.Model.csproj",
+        "projectName": "Ubb.BikeContest.Model",
+        "projectPath": "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Model\\Ubb.BikeContest.Model.csproj",
+        "packagesPath": "C:\\Users\\AcerV17\\.nuget\\packages\\",
+        "outputPath": "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\AcerV17\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Repository\\Ubb.BikeContest.Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Repository\\Ubb.BikeContest.Repository.csproj",
+        "projectName": "Ubb.BikeContest.Repository",
+        "projectPath": "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Repository\\Ubb.BikeContest.Repository.csproj",
+        "packagesPath": "C:\\Users\\AcerV17\\.nuget\\packages\\",
+        "outputPath": "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Repository\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\AcerV17\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Model\\Ubb.BikeContest.Model.csproj": {
+                "projectPath": "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Model\\Ubb.BikeContest.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Mono.Data.Sqlite": {
+              "target": "Package",
+              "version": "[1.0.61, )"
+            },
+            "SQLite": {
+              "target": "Package",
+              "version": "[3.13.0, )"
+            },
+            "log4net": {
+              "target": "Package",
+              "version": "[2.0.15, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
