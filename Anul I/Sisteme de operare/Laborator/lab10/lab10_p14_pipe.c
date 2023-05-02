@@ -1,7 +1,8 @@
 //	* Clientul ii transmite serverului un nume de fisier si un numar octal.
 //	* Serverul va verifica daca fisierul respectiv are drepturi de acces diferite de numarul indicat.
 //		- daca drepturile coincid, va transmite mesajul "Totul e OK!"
-//		- altfel, va seta drepturile conform numarului indicat si va transmite mesajul "Drepturile au fost modificate."
+//		- altfel, va seta drepturile conform numarului indicat si va transmite 
+//		  mesajul "Drepturile au fost modificate."
 
 #include <stdio.h>
 #include <stdlib.h>

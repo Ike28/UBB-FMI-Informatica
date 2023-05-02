@@ -1,3 +1,10 @@
+//	Să se implementeze următorul sistem de procese, folosind fifo, în care muchiile
+//	indică modul de comunicare între procese:
+//
+//	1 2		1 - scrie în ieșire ceea ce citește de la intrarea standard
+//	|/		2 - înlocuiește toate vocalele (aeiou) cu cifre (12345)
+//	3		3 - afișează doar liniile alfanumerice
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
