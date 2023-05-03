@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<travellingSalesmanProblemInstance>
+    <name>Small 3</name>
+    <source>Mihai Corocaescu</source>
+    <description>A small test</description>
+    <doublePrecision>15</doublePrecision>
+    <ignoredDigits>5</ignoredDigits>
+    <graph>
+        <vertex>
+            <edge cost="2.000000000000000e+01">1</edge>
+            <edge cost="4.200000000000000e+01">2</edge>
+            <edge cost="3.500000000000000e+01">3</edge>
+        </vertex>
+        <vertex>
+            <edge cost="2.000000000000000e+01">0</edge>
+            <edge cost="3.000000000000000e+01">2</edge>
+            <edge cost="3.400000000000000e+01">3</edge>
+        </vertex>
+        <vertex>
+            <edge cost="4.200000000000000e+01">0</edge>
+            <edge cost="3.000000000000000e+01">1</edge>
+            <edge cost="1.200000000000000e+01">3</edge>
+        </vertex>
+        <vertex>
+            <edge cost="3.500000000000000e+01">0</edge>
+            <edge cost="3.400000000000000e+01">1</edge>
+            <edge cost="1.200000000000000e+01">2</edge>
+        </vertex>
+    </graph>
+</travellingSalesmanProblemInstance>

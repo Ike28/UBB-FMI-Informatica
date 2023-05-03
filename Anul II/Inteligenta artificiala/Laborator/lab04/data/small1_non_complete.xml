@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<travellingSalesmanProblemInstance>
+    <name>Small 1 - Asymmetrical</name>
+    <source>Mihai Corocaescu</source>
+    <description>A small asymmetrical example.</description>
+    <doublePrecision>15</doublePrecision>
+    <ignoredDigits>5</ignoredDigits>
+    <graph>
+        <vertex>
+            <edge cost="2.400000000000000e+01">1</edge>
+            <edge cost="2.800000000000000e+01">3</edge>
+            <edge cost="1.000000000000000e+01">4</edge>
+        </vertex>
+        <vertex>
+            <edge cost="2.400000000000000e+01">0</edge>
+            <edge cost="9.000000000000000e+00">2</edge>
+            <edge cost="1.100000000000000e+01">3</edge>
+            <edge cost="3.000000000000000e+01">4</edge>
+        </vertex>
+        <vertex>
+            <edge cost="9.000000000000000e+00">1</edge>
+            <edge cost="8.000000000000000e+00">3</edge>
+        </vertex>
+        <vertex>
+            <edge cost="2.500000000000000e+01">0</edge>
+            <edge cost="1.100000000000000e+01">1</edge>
+            <edge cost="8.000000000000000e+00">2</edge>
+            <edge cost="2.800000000000000e+01">4</edge>
+        </vertex>
+        <vertex>
+            <edge cost="1.000000000000000e+01">0</edge>
+            <edge cost="3.000000000000000e+01">1</edge>
+            <edge cost="2.800000000000000e+01">3</edge>
+        </vertex>
+    </graph>
+</travellingSalesmanProblemInstance>
