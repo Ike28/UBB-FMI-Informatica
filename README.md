@@ -8,6 +8,7 @@
 - [x] [*  🧩 Programare orientată obiect](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20I/Programare%20orientata%20obiect)
 - [ ] *  📊 Sisteme dinamice
 - [ ] *  🧱 Structuri de date și algoritmi
+- [ ] *  🧬 Algoritmica grafelor
 - [x] [*  🐧 Sisteme de operare](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20I/Sisteme%20de%20operare)
 
 ### Anul II
