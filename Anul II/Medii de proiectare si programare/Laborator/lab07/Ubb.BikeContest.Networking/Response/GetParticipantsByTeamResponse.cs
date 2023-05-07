@@ -10,13 +10,13 @@ namespace Ubb.BikeContest.Networking.Response
     [Serializable]
     public class GetParticipantsByTeamResponse : IResponse
     {
-        private readonly IEnumerable<Participant> teamParticipants;
+        private readonly List<Participant> teamParticipants;
 
-        public GetParticipantsByTeamResponse(IEnumerable<Participant> teamParticipants)
+        public GetParticipantsByTeamResponse(List<Participant> teamParticipants)
         {
             this.teamParticipants = teamParticipants;
         }
 
-        public IEnumerable<Participant> Participants { get { return teamParticipants; } }
+        public List<Participant> Participants { get { return teamParticipants; } }
     }
 }

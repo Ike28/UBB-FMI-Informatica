@@ -13,8 +13,8 @@ namespace Ubb.BikeContest.Client.Controller
     public class NewParticipantController
     {
         private readonly IContestServices server;
-        private User currentUser;
-        private MainController mainController;
+        private readonly User currentUser;
+        private readonly MainController mainController;
 
         public NewParticipantController(IContestServices server, User currentUser, MainController mainController)
         {
@@ -36,7 +36,7 @@ namespace Ubb.BikeContest.Client.Controller
 
         internal void OpenMainView()
         {
-            var mainPage = new MainPage(mainController);
+            var mainPage = new MainView(mainController);
             mainPage.Show();
         }
     }

@@ -17,6 +17,6 @@ static class StartClient
 
         IContestServices server = new ServicesProxy("127.0.0.1", 55556);
         LoginController loginController = new LoginController(server);
-        Application.Run(new LoginPage(loginController));
+        Application.Run(new LoginView(loginController));
     }
 }

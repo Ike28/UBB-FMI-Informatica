@@ -26,24 +26,24 @@ namespace Ubb.BikeContest.Services
             this.teamService = teamService;
         }
 
-        public IEnumerable<Participant> FindAllParticipants()
+        public List<Participant> FindAllParticipants()
         {
-            return participantService.FindAll();
+            return participantService.FindAll().ToList();
         }
 
-        public IEnumerable<Team> FindAllTeams()
+        public List<Team> FindAllTeams()
         {
-            return teamService.FindAll();
+            return teamService.FindAll().ToList();
         }
 
-        public IEnumerable<Participant> GetParticipantsByTeam(long id)
+        public List<Participant> GetParticipantsByTeam(long id)
         {
-            return participantService.GetParticipantsByTeam(id);
+            return participantService.GetParticipantsByTeam(id).ToList();
         }
 
-        public IEnumerable<RaceDto> GetRacesWithParticipantCount()
+        public List<RaceDto> GetRacesWithParticipantCount()
         {
-            return raceService.GetRacesWithParticipantCount();
+            return raceService.GetRacesWithParticipantCount().ToList();
         }
 
         public User Login(string username, string passwordToken, IMainObserver client)  {
@@ -72,7 +72,7 @@ namespace Ubb.BikeContest.Services
             loggedClients.Remove(user.Username);
         }
 
-        public void SaveRaceEntries(IEnumerable<RaceEntry> newEntities)
+        public void SaveRaceEntries(List<RaceEntry> newEntities)
         {
             foreach (RaceEntry entity in newEntities)
             {
@@ -84,9 +84,9 @@ namespace Ubb.BikeContest.Services
             }
         }
 
-        public IEnumerable<Race> GetRacesWhereNotRegisteredAndEngineCapacity(long participantId, int engineCapacity)
+        public List<Race> GetRacesWhereNotRegisteredAndEngineCapacity(long participantId, int engineCapacity)
         {
-            return raceService.GetRacesWhereNotRegisteredAndEngineCapacity(participantId, engineCapacity);
+            return raceService.GetRacesWhereNotRegisteredAndEngineCapacity(participantId, engineCapacity).ToList();
         }
 
         public void SaveParticipant(Participant newEntity)

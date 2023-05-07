@@ -24,7 +24,7 @@ namespace Ubb.BikeContest.Client.Controller
             MainController mainPageController = new MainController(server);
             User user = server.Login(username, passwordToken, mainPageController);
             mainPageController.CurrentUser = user;
-            var mainForm = new MainPage(mainPageController);
+            var mainForm = new MainView(mainPageController);
             mainForm.Show();
         }
     }

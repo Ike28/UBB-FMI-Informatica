@@ -33,7 +33,7 @@ namespace Ubb.BikeContest.Client.Controller
             OnUserEvent(userEvent);
         }
 
-        public void RaceEntriesAdded(IEnumerable<RaceDto> races)
+        public void RaceEntriesAdded(List<RaceDto> races)
         {
             UserEventArgs userEvent = new UserEventArgs(UserEvent.RACES_MODIFIED, races);
             Console.WriteLine("Race entries event");
@@ -62,20 +62,20 @@ namespace Ubb.BikeContest.Client.Controller
 
         internal void OpenNewParticipantView()
         {
-            var newParticipantView = new NewParticipant(new NewParticipantController(server, currentUser, this));
+            var newParticipantView = new NewParticipantView(new NewParticipantController(server, currentUser, this));
             newParticipantView.Show();
         }
 
         internal void Logout()
         {
             server.Logout(currentUser, this);
-            var loginForm = new LoginPage(new LoginController(server));
+            var loginForm = new LoginView(new LoginController(server));
             loginForm.Show();
         }
 
         internal void OpenRegisterView()
         {
-            var registerView = new RegisterToRace(new RegisterToRaceController(server, currentUser, this));
+            var registerView = new RegisterToRaceView(new RegisterToRaceController(server, currentUser, this));
             registerView.Show();
         }
 

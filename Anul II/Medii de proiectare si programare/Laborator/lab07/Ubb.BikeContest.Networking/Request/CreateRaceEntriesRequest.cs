@@ -10,14 +10,14 @@ namespace Ubb.BikeContest.Networking.Request
     [Serializable]
     public class CreateRaceEntriesRequest : IRequest
     {
-        private readonly IEnumerable<RaceEntry> raceEntries;
+        private readonly List<RaceEntry> raceEntries;
 
-        public CreateRaceEntriesRequest(IEnumerable<RaceEntry> raceEntries)
+        public CreateRaceEntriesRequest(List<RaceEntry> raceEntries)
         {
             this.raceEntries = raceEntries;
         }
 
-        public virtual IEnumerable<RaceEntry> RaceEntries
+        public virtual List<RaceEntry> RaceEntries
         {
             get { return raceEntries; }
         }

@@ -197,41 +197,55 @@ namespace Ubb.BikeContest.Networking
             }
         }
 
-        public IEnumerable<RaceDto> GetRacesWithParticipantCount()
+        public List<RaceDto> GetRacesWithParticipantCount()
         {
-            throw new NotImplementedException();
+            SendRequest(new GetRacesWithParticipantCountRequest());
+            IResponse response = ReadResponse();
+            if (response is ErrorResponse errorResponse)
+            {
+                throw new ContestDataException(errorResponse.Message);
+            }
+            RacesWithParticipantsResponse participantsResponse = (RacesWithParticipantsResponse)response;
+            return participantsResponse.Races;
         }
 
-        public IEnumerable<Team> FindAllTeams()
+        public List<Team> FindAllTeams()
         {
-            throw new NotImplementedException();
+            SendRequest(new GetAllTeamsRequest());
+            IResponse response = ReadResponse();
+            if (response is ErrorResponse errorResponse)
+            {
+                throw new ContestDataException(errorResponse.Message);
+            }
+            AllTeamsResponse participantsResponse = (AllTeamsResponse)response;
+            return participantsResponse.Teams;
         }
 
-        public IEnumerable<Participant> GetParticipantsByTeam(long id)
+        public List<Participant> GetParticipantsByTeam(long id)
         {
             SendRequest(new GetParticipantsByTeamRequest(id));
             IResponse response = ReadResponse();
-            if (response is ErrorResponse)
+            if (response is ErrorResponse errorResponse)
             {
-                throw new ContestDataException(((ErrorResponse)response).Message);
+                throw new ContestDataException(errorResponse.Message);
             }
             GetParticipantsByTeamResponse participantsResponse = (GetParticipantsByTeamResponse)response;
             return participantsResponse.Participants;
         }
 
-        public IEnumerable<Participant> FindAllParticipants()
+        public List<Participant> FindAllParticipants()
         {
-            SendRequest(new GetParticipantsRequest());
+            SendRequest(new GetAllParticipantsRequest());
             IResponse response = ReadResponse();
-            if (response is ErrorResponse)
+            if (response is ErrorResponse errorResponse)
             {
-                throw new ContestDataException(((ErrorResponse)response).Message);
+                throw new ContestDataException(errorResponse.Message);
             }
             AllParticipantsResponse participantsResponse = (AllParticipantsResponse)response;
             return participantsResponse.Participants;
         }
 
-        public void SaveRaceEntries(IEnumerable<RaceEntry> newEntities)
+        public void SaveRaceEntries(List<RaceEntry> newEntities)
         {
             SendRequest(new CreateRaceEntriesRequest(newEntities));
         }
@@ -241,15 +255,15 @@ namespace Ubb.BikeContest.Networking
             SendRequest(new CreateParticipantRequest(newEntity));
         }
 
-        public IEnumerable<Race> GetRacesWhereNotRegisteredAndEngineCapacity(long participantId, int engineCapacity)
+        public List<Race> GetRacesWhereNotRegisteredAndEngineCapacity(long participantId, int engineCapacity)
         {
             SendRequest(new GetUnregisteredRacesRequest(participantId, engineCapacity));
             IResponse response = ReadResponse();
-            if (response is ErrorResponse)
+            if (response is ErrorResponse errorResponse)
             {
-                throw new ContestDataException(((ErrorResponse)response).Message);
+                throw new ContestDataException(errorResponse.Message);
             }
-            RacesByCapacityResponse racesResponse = (RacesByCapacityResponse)response;
+            UnregisteredRacesResponse racesResponse = (UnregisteredRacesResponse)response;
             return racesResponse.Races;
         }
     }

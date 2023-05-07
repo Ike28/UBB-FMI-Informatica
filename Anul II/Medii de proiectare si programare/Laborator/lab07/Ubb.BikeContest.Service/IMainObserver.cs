@@ -10,6 +10,6 @@ namespace Ubb.BikeContest.Services
     public interface IMainObserver
     {
         void ParticipantAdded(Participant participant);
-        void RaceEntriesAdded(IEnumerable<RaceDto> races);
+        void RaceEntriesAdded(List<RaceDto> races);
     }
 }

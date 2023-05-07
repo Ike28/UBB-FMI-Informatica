@@ -92,7 +92,7 @@ namespace Ubb.BikeContest.Networking
             }
         }
 
-        public void RaceEntriesAdded(IEnumerable<RaceDto> races)
+        public void RaceEntriesAdded(List<RaceDto> races)
         {
             Console.WriteLine("Race entries added");
             try
@@ -145,6 +145,128 @@ namespace Ubb.BikeContest.Networking
                     return new ErrorResponse(exception.Message);
                 }
             }
+
+            if (request is CreateParticipantRequest)
+            {
+                Console.WriteLine("Create participant request");
+                CreateParticipantRequest createRequest = (CreateParticipantRequest)request;
+                try
+                {
+                    lock (server)
+                    {
+                        server.SaveParticipant(createRequest.Participant);
+                    }
+                }
+                catch (ContestDataException exception)
+                {
+                    return new ErrorResponse(exception.Message);
+                }
+            }
+
+            if (request is CreateRaceEntriesRequest)
+            {
+                Console.WriteLine("Create race entries request");
+                CreateRaceEntriesRequest registerToRacesRequest = (CreateRaceEntriesRequest)request;
+                try
+                {
+                    lock (server)
+                    {
+                        server.SaveRaceEntries(registerToRacesRequest.RaceEntries);
+                    }
+                }
+                catch (ContestDataException exception)
+                {
+                    return new ErrorResponse(exception.Message);
+                }
+            }
+
+            if (request is GetParticipantsByTeamRequest)
+            {
+                Console.WriteLine("Get participants by team request");
+                GetParticipantsByTeamRequest participantsByTeamRequest = (GetParticipantsByTeamRequest)request;
+                try
+                {
+                    lock (server)
+                    {
+                        var result = server.GetParticipantsByTeam(participantsByTeamRequest.TeamId);
+                        return new GetParticipantsByTeamResponse(result);
+                    }
+                }
+                catch (ContestDataException exception)
+                {
+                    return new ErrorResponse(exception.Message);
+                }
+            }
+
+            if (request is GetAllParticipantsRequest)
+            {
+                Console.WriteLine("Get participants request");
+                try
+                {
+                    lock (server)
+                    {
+                        var result = server.FindAllParticipants();
+                        return new AllParticipantsResponse(result);
+                    }
+                }
+                catch (ContestDataException exception)
+                {
+                    return new ErrorResponse(exception.Message);
+                }
+            }
+
+            if (request is GetRacesWithParticipantCountRequest)
+            {
+                Console.WriteLine("Get races with participants count request");
+                try
+                {
+                    lock (server)
+                    {
+                        var result = server.GetRacesWithParticipantCount();
+                        return new RacesWithParticipantsResponse(result);
+                    }
+                }
+                catch (ContestDataException exception)
+                {
+                    return new ErrorResponse(exception.Message);
+                }
+            }
+
+            if (request is GetAllTeamsRequest)
+            {
+                Console.WriteLine("Get teams request");
+                try
+                {
+                    lock (server)
+                    {
+                        var result = server.FindAllTeams();
+                        return new AllTeamsResponse(result);
+                    }
+                }
+                catch (ContestDataException exception)
+                {
+                    return new ErrorResponse(exception.Message);
+                }
+            }
+
+            if (request is GetUnregisteredRacesRequest)
+            {
+                Console.WriteLine("Get unregistered races request");
+                GetUnregisteredRacesRequest unregisteredRacesRequest = (GetUnregisteredRacesRequest)request;
+                try
+                {
+                    lock (server)
+                    {
+                        var result = server.GetRacesWhereNotRegisteredAndEngineCapacity(unregisteredRacesRequest.ParticipantId, unregisteredRacesRequest.EngineCapacity);
+                        return new UnregisteredRacesResponse(result);
+                    }
+                }
+                catch (ContestDataException exception)
+                {
+                    return new ErrorResponse(exception.Message);
+                }
+            }
+
             return response;
         }
 

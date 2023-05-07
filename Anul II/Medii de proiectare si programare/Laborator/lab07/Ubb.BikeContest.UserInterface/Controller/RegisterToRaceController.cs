@@ -13,8 +13,8 @@ namespace Ubb.BikeContest.Client.Controller
     public class RegisterToRaceController
     {
         private readonly IContestServices server;
-        private User currentUser;
-        private MainController mainController;
+        private readonly User currentUser;
+        private readonly MainController mainController;
 
         public RegisterToRaceController(IContestServices server, User currentUser, MainController mainController)
         {
@@ -28,9 +28,10 @@ namespace Ubb.BikeContest.Client.Controller
             return server.FindAllParticipants();
         }
 
-        internal void SaveRaceEntry(RaceEntry raceEntry)
+        internal void SaveRaceEntries(List<RaceEntry> raceEntries)
         {
-            server.SaveRaceEntry(raceEntry);
+            server.SaveRaceEntries(raceEntries);
+            OpenMainView();
         }
 
         internal IEnumerable<Race> GetRacesWhereNotRegisteredAndEngineCapacity(long id, int engineCapacity)
@@ -40,7 +41,7 @@ namespace Ubb.BikeContest.Client.Controller
 
         internal void OpenMainView()
         {
-            var mainPage = new MainPage(mainController);
+            var mainPage = new MainView(mainController);
             mainPage.Show();
         }
     }

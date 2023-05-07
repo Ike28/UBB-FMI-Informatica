@@ -10,13 +10,13 @@ namespace Ubb.BikeContest.Networking.Response
     [Serializable]
     public class UpdatedRacesResponse : UpdateResponse
     {
-        private readonly IEnumerable<RaceDto> races;
+        private readonly List<RaceDto> races;
 
-        public UpdatedRacesResponse(IEnumerable<RaceDto> races)
+        public UpdatedRacesResponse(List<RaceDto> races)
         {
             this.races = races;
         }
 
-        public IEnumerable<RaceDto> Races { get { return races; } }
+        public List<RaceDto> Races { get { return races; } }
     }
 }
