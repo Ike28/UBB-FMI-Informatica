@@ -18,7 +18,6 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Collection;
 import java.util.Objects;
-import java.util.Optional;
 
 public class NewParticipantController extends AnchorPane {
     private IContestServices server;
@@ -55,7 +54,7 @@ public class NewParticipantController extends AnchorPane {
             server.saveParticipant(newParticipant);
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/home.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
-            HomeController controller = fxmlLoader.getController();
+            MainController controller = fxmlLoader.getController();
             controller.init(server, currentStage, currentUser);
             currentStage.setScene(scene);
             currentStage.getIcons().add(new Image(String.valueOf(getClass().getResource("/img/icon.png"))));

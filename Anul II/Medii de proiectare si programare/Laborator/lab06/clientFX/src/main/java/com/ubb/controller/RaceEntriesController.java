@@ -49,7 +49,7 @@ public class RaceEntriesController extends AnchorPane {
             server.saveRaceEntries(raceEntries);
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/home.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
-            HomeController controller = fxmlLoader.getController();
+            MainController controller = fxmlLoader.getController();
             controller.init(server, currentStage, currentUser);
             currentStage.setScene(scene);
             currentStage.getIcons().add(new Image(String.valueOf(getClass().getResource("/img/icon.png"))));

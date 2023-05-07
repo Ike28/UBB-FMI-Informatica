@@ -2,42 +2,43 @@ package com.ubb.controller;
 
 import com.ubb.IContestServices;
 import com.ubb.exceptions.ContestDataException;
-import com.ubb.model.Race;
 import com.ubb.model.User;
+import com.ubb.utils.Hasher;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.Objects;
 
-public class NewRaceController extends AnchorPane {
+public class LoginController extends AnchorPane {
     private IContestServices server;
     private Stage currentStage;
-    private User currentUser;
 
     @FXML
-    private TextField nameField;
+    private TextField usernameField;
 
     @FXML
-    private TextField engineCapacityField;
+    private PasswordField passwordField;
 
     @FXML
-    protected void onConfirmClicked() {
+    private Button loginButton;
+
+    @FXML
+    protected void onLoginButtonClicked() {
+        String username = usernameField.getText();
+        String password = Hasher.hash(passwordField.getText());
         try {
-            if (!Objects.equals(nameField.getText(), "") && !Objects.equals(engineCapacityField.getText(), "")) {
-                String name = nameField.getText();
-                Integer engineCapacity = Integer.parseInt(engineCapacityField.getText().replace(",", ""));
-                server.saveRace(new Race(name, engineCapacity));
-            }
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/home.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             MainController controller = fxmlLoader.getController();
-            controller.init(server, currentStage, currentUser);
+            User user = server.login(username, password, controller);
+            controller.init(server, currentStage, user);
             currentStage.setScene(scene);
             currentStage.getIcons().add(new Image(String.valueOf(getClass().getResource("/img/icon.png"))));
             currentStage.show();
@@ -46,11 +47,9 @@ public class NewRaceController extends AnchorPane {
         }
     }
 
-    public void init(IContestServices server, Stage currentStage, User currentUser) {
-        currentStage.setTitle("MXGP - Register New Race");
+    public void init(IContestServices server, Stage currentStage) {
+        currentStage.setTitle("MXGP Admin Panel - Login");
         this.server = server;
         this.currentStage = currentStage;
-        this.currentUser = currentUser;
-        ControllerUtils.addInputNumberFormatter(engineCapacityField);
     }
 }

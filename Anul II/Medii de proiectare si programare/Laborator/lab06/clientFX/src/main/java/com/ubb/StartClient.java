@@ -1,8 +1,7 @@
 package com.ubb;
 
-import com.ubb.controller.MainController;
+import com.ubb.controller.LoginController;
 import com.ubb.protocol.ServicesProxy;
-import com.ubb.utils.Hasher;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -43,7 +42,7 @@ public class StartClient extends Application {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/main-view.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
-            MainController controller = fxmlLoader.getController();
+            LoginController controller = fxmlLoader.getController();
             controller.init(server, primaryStage);
             primaryStage.setScene(scene);
             primaryStage.getIcons().add(new Image(String.valueOf(getClass().getResource("/img/icon.png"))));
