@@ -10,29 +10,21 @@ using Ubb.BikeContest.UserInterface;
 
 namespace Ubb.BikeContest.Client.Controller
 {
-    public class LoginController : IMainObserver
+    public class LoginController
     {
-        public event EventHandler<UserEventArgs> updateEvent;
         private readonly IContestServices server;
 
         public LoginController(IContestServices server)
         {
             this.server = server;
         }
-        public void ParticipantAdded(Participant participant)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void RaceEntriesAdded(IEnumerable<RaceDto> races)
-        {
-            throw new NotImplementedException();
-        }
 
         public void Login(string username, string passwordToken)
         {
-            User user = server.Login(username, passwordToken, this);
-            var mainForm = new MainPage(new MainController(server, user));
+            MainController mainPageController = new MainController(server);
+            User user = server.Login(username, passwordToken, mainPageController);
+            mainPageController.CurrentUser = user;
+            var mainForm = new MainPage(mainPageController);
             mainForm.Show();
         }
     }

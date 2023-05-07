@@ -209,12 +209,48 @@ namespace Ubb.BikeContest.Networking
 
         public IEnumerable<Participant> GetParticipantsByTeam(long id)
         {
-            throw new NotImplementedException();
+            SendRequest(new GetParticipantsByTeamRequest(id));
+            IResponse response = ReadResponse();
+            if (response is ErrorResponse)
+            {
+                throw new ContestDataException(((ErrorResponse)response).Message);
+            }
+            GetParticipantsByTeamResponse participantsResponse = (GetParticipantsByTeamResponse)response;
+            return participantsResponse.Participants;
         }
 
         public IEnumerable<Participant> FindAllParticipants()
         {
-            throw new NotImplementedException();
+            SendRequest(new GetParticipantsRequest());
+            IResponse response = ReadResponse();
+            if (response is ErrorResponse)
+            {
+                throw new ContestDataException(((ErrorResponse)response).Message);
+            }
+            AllParticipantsResponse participantsResponse = (AllParticipantsResponse)response;
+            return participantsResponse.Participants;
+        }
+
+        public void SaveRaceEntries(IEnumerable<RaceEntry> newEntities)
+        {
+            SendRequest(new CreateRaceEntriesRequest(newEntities));
+        }
+
+        public void SaveParticipant(Participant newEntity)
+        {
+            SendRequest(new CreateParticipantRequest(newEntity));
+        }
+
+        public IEnumerable<Race> GetRacesWhereNotRegisteredAndEngineCapacity(long participantId, int engineCapacity)
+        {
+            SendRequest(new GetUnregisteredRacesRequest(participantId, engineCapacity));
+            IResponse response = ReadResponse();
+            if (response is ErrorResponse)
+            {
+                throw new ContestDataException(((ErrorResponse)response).Message);
+            }
+            RacesByCapacityResponse racesResponse = (RacesByCapacityResponse)response;
+            return racesResponse.Races;
         }
     }
 }

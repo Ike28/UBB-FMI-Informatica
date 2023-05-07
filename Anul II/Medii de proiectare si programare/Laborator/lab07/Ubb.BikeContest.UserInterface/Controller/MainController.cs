@@ -16,10 +16,14 @@ namespace Ubb.BikeContest.Client.Controller
         private readonly IContestServices server;
         private User currentUser;
 
-        public MainController(IContestServices server, User currentUser)
+        public MainController(IContestServices server)
         {
             this.server = server;
-            this.currentUser = currentUser;
+        }
+
+        public User CurrentUser
+        {
+            set { currentUser = value; }
         }
 
         public void ParticipantAdded(Participant participant)
@@ -48,17 +52,18 @@ namespace Ubb.BikeContest.Client.Controller
 
         internal IEnumerable<RaceDto> GetRacesWithParticipantCount()
         {
-            throw new NotImplementedException();
+            return server.GetRacesWithParticipantCount();
         }
 
         internal IEnumerable<Team> FindAllTeams()
         {
-            throw new NotImplementedException();
+            return server.FindAllTeams();
         }
 
-        internal void NewParticipant()
+        internal void OpenNewParticipantView()
         {
-            throw new NotImplementedException();
+            var newParticipantView = new NewParticipant(new NewParticipantController(server, currentUser, this));
+            newParticipantView.Show();
         }
 
         internal void Logout()
@@ -68,19 +73,20 @@ namespace Ubb.BikeContest.Client.Controller
             loginForm.Show();
         }
 
-        internal void RegisterToRace()
+        internal void OpenRegisterView()
         {
-            throw new NotImplementedException();
+            var registerView = new RegisterToRace(new RegisterToRaceController(server, currentUser, this));
+            registerView.Show();
         }
 
         internal IEnumerable<Participant> GetParticipantsByTeam(long id)
         {
-            throw new NotImplementedException();
+            return server.GetParticipantsByTeam(id);
         }
 
         internal IEnumerable<Participant> FindAllParticipants()
         {
-            throw new NotImplementedException();
+            return server.FindAllParticipants();
         }
     }
 }

@@ -28,22 +28,22 @@ namespace Ubb.BikeContest.Services
 
         public IEnumerable<Participant> FindAllParticipants()
         {
-            throw new NotImplementedException();
+            return participantService.FindAll();
         }
 
         public IEnumerable<Team> FindAllTeams()
         {
-            throw new NotImplementedException();
+            return teamService.FindAll();
         }
 
         public IEnumerable<Participant> GetParticipantsByTeam(long id)
         {
-            throw new NotImplementedException();
+            return participantService.GetParticipantsByTeam(id);
         }
 
         public IEnumerable<RaceDto> GetRacesWithParticipantCount()
         {
-            throw new NotImplementedException();
+            return raceService.GetRacesWithParticipantCount();
         }
 
         public User Login(string username, string passwordToken, IMainObserver client)  {
@@ -63,17 +63,6 @@ namespace Ubb.BikeContest.Services
             }
         }
 
-        /*public void sendMessage(Message message)  {
-            String id_receiver=message.Receiver.Id;
-        
-            if (loggedClients.ContainsKey(id_receiver))  {     //the receiver is logged in
-                IChatObserver receiverClient=loggedClients[id_receiver];
-                receiverClient.messageReceived(message);
-            }
-            else
-                throw new ChatException("User "+id_receiver+" not logged in.");
-        }*/
-
         public void Logout(User user, IMainObserver client) {
             IMainObserver localClient=loggedClients[user.Username];
             if (localClient == null)
@@ -81,6 +70,32 @@ namespace Ubb.BikeContest.Services
                 throw new ContestDataException("User " + user.Id + " is not logged in.");
             }
             loggedClients.Remove(user.Username);
+        }
+
+        public void SaveRaceEntries(IEnumerable<RaceEntry> newEntities)
+        {
+            foreach (RaceEntry entity in newEntities)
+            {
+                raceService.SaveRaceEntry(entity);
+            }
+            foreach (IMainObserver client in loggedClients.Values)
+            {
+                client.RaceEntriesAdded(GetRacesWithParticipantCount());
+            }
+        }
+
+        public IEnumerable<Race> GetRacesWhereNotRegisteredAndEngineCapacity(long participantId, int engineCapacity)
+        {
+            return raceService.GetRacesWhereNotRegisteredAndEngineCapacity(participantId, engineCapacity);
+        }
+
+        public void SaveParticipant(Participant newEntity)
+        {
+            participantService.Save(newEntity);
+            foreach (IMainObserver client in loggedClients.Values)
+            {
+                client.ParticipantAdded(newEntity);
+            }
         }
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Ubb.BikeContest.Client.Controller;
 using Ubb.BikeContest.Model;
 using Ubb.BikeContest.Repository;
 using Ubb.BikeContest.Services;
@@ -16,22 +17,19 @@ namespace Ubb.BikeContest.UserInterface
 {
     public partial class NewParticipant : Form
     {
-        private IDictionary<string, string> props;
-        private IParticipantService participantService;
-        private ITeamService teamService;
 
-        public NewParticipant(IDictionary<string, string> props)
+        private readonly NewParticipantController controller;
+
+        public NewParticipant(NewParticipantController controller)
         {
             InitializeComponent();
-            this.props = props;
-            this.participantService = new ParticipantService(new ParticipantDbRepository(props));
-            this.teamService = new TeamService(new TeamDbRepository(props));
+            this.controller = controller;
             AddTeams();
         }
 
         private void AddTeams()
         {
-            IEnumerable<Team> teams = teamService.FindAll();
+            IEnumerable<Team> teams = controller.FindAllTeams();
             teamBox.DataSource = teams;
         }
 
@@ -46,18 +44,13 @@ namespace Ubb.BikeContest.UserInterface
             {
                 Participant newParticipant = new Participant(firstname, lastname, engineCapacity);
                 newParticipant.TeamId = team.Id;
-                participantService.Save(newParticipant);
-
-                var register = new RegisterToRace(props);
-                this.Hide();
-                register.Show();
+                controller.SaveParticipant(newParticipant);
             }
             else
             {
-                //var mainForm = new MainPage(props);
-                this.Hide();
-                //mainForm.Show();
+                controller.OpenMainView();
             }
+            this.Hide();
         }
     }
 }
