@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'com.ubb'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    implementation 'org.hibernate:hibernate-core:5.6.1.Final'
+    implementation 'org.glassfish.jaxb:jaxb-runtime:2.3.2'
+    implementation 'jakarta.xml.bind:jakarta.xml.bind-api:2.3.2'
+    runtimeOnly group: 'org.xerial', name: 'sqlite-jdbc', version: '3.40.1.0'
+}
+
+test {
+    useJUnitPlatform()
+}
