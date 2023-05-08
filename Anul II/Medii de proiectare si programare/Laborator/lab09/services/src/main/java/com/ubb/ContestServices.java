@@ -134,10 +134,6 @@ public class ContestServices implements IContestServices {
         raceService.save(newEntity);
         Optional<Race> result = raceService.getRaceByName(newEntity.getName());
         if (result.isPresent()) {
-            for (IMainObserver client : loggedClients.values()) {
-                client.raceAdded(new RaceDTO(result.get().getName(), result.get().getEngineCapacity(),
-                        raceService.getEntriesByRace(result.get().getID()).size()));
-            }
             ExecutorService executor = Executors.newFixedThreadPool(DEFAULT_THREADS);
             for (IMainObserver client : loggedClients.values()) {
                 executor.execute(() -> {
