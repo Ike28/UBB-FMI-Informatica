@@ -5,7 +5,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.io.Serializable;
 import java.util.Objects;
-import java.util.Optional;
 
 @Entity
 public class Participant extends Identifiable<Long> implements Serializable {
@@ -31,10 +30,12 @@ public class Participant extends Identifiable<Long> implements Serializable {
         this.engineCapacity = engineCapacity;
     }
 
+    @Override
     public Long getId() {
-        return id;
+        return this.id;
     }
 
+    @Override
     public void setId(Long id) {
         this.id = id;
     }
@@ -67,11 +68,8 @@ public class Participant extends Identifiable<Long> implements Serializable {
         this.engineCapacity = engineCapacity;
     }
 
-    public Optional<Long> getTeamID() {
-        if (teamID != null) {
-            return Optional.of(teamID);
-        }
-        return Optional.empty();
+    public Long getTeamID() {
+        return teamID;
     }
 
     public void setTeamID(Long teamID) {

@@ -153,7 +153,7 @@ public class ClientWorker implements Runnable, IMainObserver {
                 server.saveRace(createRaceRequest.getRace());
                 return new NewRaceResponse(new RaceDTO(createRaceRequest.getRace().getName(),
                         createRaceRequest.getRace().getEngineCapacity(),
-                        server.getEntriesByRace(createRaceRequest.getRace().getID()).size()));
+                        server.getEntriesByRace(createRaceRequest.getRace().getId()).size()));
             } catch (ContestDataException racesException) {
                 return new ErrorResponse(racesException.getMessage());
             }

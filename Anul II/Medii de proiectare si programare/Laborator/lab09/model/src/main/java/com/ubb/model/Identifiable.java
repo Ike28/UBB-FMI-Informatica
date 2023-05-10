@@ -5,11 +5,11 @@ import java.io.Serializable;
 public class Identifiable<ID> implements Serializable {
     private ID id;
 
-    public ID getID() {
+    public ID getId() {
         return id;
     }
 
-    public void setID(ID newID) {
+    public void setId(ID newID) {
         id = newID;
     }
 }

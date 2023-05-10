@@ -91,7 +91,7 @@ public class RaceEntriesController extends AnchorPane {
             racesView.getItems().clear();
             Collection<Race> races = server
                     .getRacesWhereNotRegisteredAndEngineCapacity(
-                            currentParticipant.getID(), currentParticipant.getEngineCapacity());
+                            currentParticipant.getId(), currentParticipant.getEngineCapacity());
             racesView.getItems().addAll(races);
             if (races.size() > 0) {
                 racesFoundLabel.setText(races.size() + " races found, "

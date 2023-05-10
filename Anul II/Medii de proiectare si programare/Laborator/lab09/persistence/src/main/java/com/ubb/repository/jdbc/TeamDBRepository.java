@@ -128,7 +128,7 @@ public class TeamDBRepository implements ITeamRepository {
         String name = resultSet.getString("name");
 
         Team team = new Team(name);
-        team.setID(id);
+        team.setId(id);
         return team;
     }
 }

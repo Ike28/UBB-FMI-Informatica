@@ -48,7 +48,7 @@ public class NewParticipantController extends AnchorPane {
 
         Participant newParticipant = new Participant(firstName, lastName, engineCapacity);
         if (!Objects.equals(selected.getName(), "None")) {
-            newParticipant.setTeamID(selected.getID());
+            newParticipant.setTeamID(selected.getId());
         }
         try {
             server.saveParticipant(newParticipant);

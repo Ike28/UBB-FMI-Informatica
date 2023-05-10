@@ -145,8 +145,8 @@ public class RaceEntryDBRepository implements IRaceEntryRepository {
         Connection connection = jdbcUtils.getConnection();
         try (PreparedStatement preparedStatement = connection.prepareStatement(
                 "INSERT INTO race_entries (participantID, raceID) values (?,?)")) {
-            preparedStatement.setLong(1, newEntity.getParticipant().getID());
-            preparedStatement.setLong(2, newEntity.getRace().getID());
+            preparedStatement.setLong(1, newEntity.getParticipant().getId());
+            preparedStatement.setLong(2, newEntity.getRace().getId());
             int result = preparedStatement.executeUpdate();
             logger.traceExit("Updated {} instances", result);
         } catch (SQLException sqlException) {
@@ -183,7 +183,7 @@ public class RaceEntryDBRepository implements IRaceEntryRepository {
         final Optional<Participant> participant = participantRepository.findById(participantID);
         if (participant.isPresent() && race.isPresent()) {
             RaceEntry raceEntry = new RaceEntry(participant.get(), race.get());
-            raceEntry.setID(id);
+            raceEntry.setId(id);
             return raceEntry;
         } else {
             throw new SQLException("Database error: Unable to reference participant and/or race for Race Entry");
@@ -196,7 +196,7 @@ public class RaceEntryDBRepository implements IRaceEntryRepository {
         Integer engineCapacity = resultSet.getInt("engineCc");
 
         Race race = new Race(name, engineCapacity);
-        race.setID(id);
+        race.setId(id);
         return race;
     }
 }

@@ -1,7 +1,6 @@
 package com.ubb.repository.jdbc;
 
 import com.ubb.model.Race;
-import com.ubb.model.User;
 import com.ubb.repository.IRaceRepository;
 import com.ubb.utils.JDBCUtils;
 import org.apache.logging.log4j.LogManager;
@@ -152,7 +151,7 @@ public class RaceDBRepository implements IRaceRepository {
                 "UPDATE races SET name=?, engineCc=? where id=?")) {
             preparedStatement.setString(1, updatedEntity.getName());
             preparedStatement.setInt(2, updatedEntity.getEngineCapacity());
-            preparedStatement.setLong(3, updatedEntity.getID());
+            preparedStatement.setLong(3, updatedEntity.getId());
             int result = preparedStatement.executeUpdate();
             logger.traceExit("Updated {} instances");
         } catch (SQLException sqlException) {
@@ -167,7 +166,7 @@ public class RaceDBRepository implements IRaceRepository {
         Integer engineCapacity = resultSet.getInt("engineCc");
 
         Race race = new Race(name, engineCapacity);
-        race.setID(id);
+        race.setId(id);
         return race;
     }
 }

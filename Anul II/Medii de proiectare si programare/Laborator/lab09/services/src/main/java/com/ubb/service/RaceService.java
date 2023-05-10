@@ -29,7 +29,7 @@ public class RaceService implements IRaceService {
         Collection<Race> races = raceRepository.findAll();
         for (Race race : races) {
             result.add(new RaceDTO(race.getName(), race.getEngineCapacity(),
-                    raceEntryRepository.getEntriesByRace(race.getID()).size()));
+                    raceEntryRepository.getEntriesByRace(race.getId()).size()));
         }
         return result;
     }

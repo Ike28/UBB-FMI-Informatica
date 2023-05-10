@@ -8,7 +8,7 @@ public class User extends Identifiable<Long> implements Serializable {
     private String passwordToken;
 
     {
-        setID(0L);
+        setId(0L);
         passwordToken = null;
     }
 

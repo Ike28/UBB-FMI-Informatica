@@ -119,7 +119,7 @@ public class UserDBRepository implements IUserRepository {
         try (PreparedStatement preparedStatement = connection.prepareStatement(
                 "UPDATE users SET fullName=? WHERE id=?")) {
             preparedStatement.setString(1, updatedEntity.getFullName());
-            preparedStatement.setLong(2, updatedEntity.getID());
+            preparedStatement.setLong(2, updatedEntity.getId());
             int result = preparedStatement.executeUpdate();
             logger.traceExit("Updated {} instances", result);
         } catch (SQLException sqlException) {
@@ -135,7 +135,7 @@ public class UserDBRepository implements IUserRepository {
         String passwordToken = resultSet.getString("password");
 
         User user = new User(username, fullName);
-        user.setID(id);
+        user.setId(id);
         user.setPasswordToken(passwordToken);
         return user;
     }

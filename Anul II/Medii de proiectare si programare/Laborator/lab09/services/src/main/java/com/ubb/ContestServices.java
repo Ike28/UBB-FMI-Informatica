@@ -139,7 +139,7 @@ public class ContestServices implements IContestServices {
                 executor.execute(() -> {
                     try {
                         client.raceAdded(new RaceDTO(result.get().getName(), result.get().getEngineCapacity(),
-                                raceService.getEntriesByRace(result.get().getID()).size()));
+                                raceService.getEntriesByRace(result.get().getId()).size()));
                     } catch (ContestDataException e) {
                         e.printStackTrace();
                     }

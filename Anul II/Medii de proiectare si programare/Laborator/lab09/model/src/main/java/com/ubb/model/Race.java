@@ -5,7 +5,7 @@ public class Race extends Identifiable<Long> {
     private Integer engineCapacity;
 
     {
-        setID(0L);
+        setId(0L);
     }
 
     public Race(String name, Integer engineCapacity) {

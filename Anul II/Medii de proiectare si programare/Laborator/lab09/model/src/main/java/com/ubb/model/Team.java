@@ -4,7 +4,7 @@ public class Team extends Identifiable<Long> {
     private final String name;
 
     {
-        setID(0L);
+        setId(0L);
     }
 
     public Team(String name) {

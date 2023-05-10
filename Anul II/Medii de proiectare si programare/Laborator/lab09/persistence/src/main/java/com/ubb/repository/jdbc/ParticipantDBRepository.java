@@ -146,7 +146,7 @@ public class ParticipantDBRepository implements IParticipantRepository {
         try (PreparedStatement preparedStatement = connection.prepareStatement(
                 "UPDATE participants SET firstname=?, lastname=?, engineCc=?, teamID=? WHERE id=?")) {
             setParams(updatedEntity, preparedStatement);
-            preparedStatement.setLong(5, updatedEntity.getID());
+            preparedStatement.setLong(5, updatedEntity.getId());
             final int result = preparedStatement.executeUpdate();
             logger.trace("Updated {} instances", result);
         } catch (SQLException sqlException) {
@@ -159,8 +159,8 @@ public class ParticipantDBRepository implements IParticipantRepository {
         preparedStatement.setString(1, updatedEntity.getFirstName());
         preparedStatement.setString(2, updatedEntity.getLastName());
         preparedStatement.setInt(3, updatedEntity.getEngineCapacity());
-        if (updatedEntity.getTeamID().isPresent()) {
-            preparedStatement.setLong(4, updatedEntity.getTeamID().get());
+        if (updatedEntity.getTeamID() != null) {
+            preparedStatement.setLong(4, updatedEntity.getTeamID());
         } else {
             preparedStatement.setNull(4, Types.INTEGER);
         }
@@ -174,7 +174,7 @@ public class ParticipantDBRepository implements IParticipantRepository {
         Long teamID = resultSet.getLong("teamID");
 
         Participant participant = new Participant(firstName, lastName, engineCapacity);
-        participant.setID(id);
+        participant.setId(id);
         participant.setTeamID(teamID);
         return participant;
     }

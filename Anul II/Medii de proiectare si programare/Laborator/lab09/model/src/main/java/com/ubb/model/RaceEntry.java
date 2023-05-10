@@ -7,7 +7,7 @@ public class RaceEntry extends Identifiable<Long> {
     private final Race race;
 
     {
-        setID(0L);
+        setId(0L);
     }
 
     public RaceEntry(Participant participant, Race race) {
