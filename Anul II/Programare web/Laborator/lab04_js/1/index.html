@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mutare elemente între liste</title>
+    <style>
+        select {
+            width: 200px;
+            height: 150px;
+        }
+    </style>
+    <script>
+        function moveItem(sourceId, destinationId) {
+            var source = document.getElementById(sourceId);
+            var destination = document.getElementById(destinationId);
+            var selectedOption = source.options[source.selectedIndex];
+
+            if (selectedOption) {
+                destination.appendChild(selectedOption);
+            }
+        }
+
+        function handleDoubleClick(event) {
+            var sourceId = event.target.parentNode.id;
+            var destinationId = (sourceId === 'list1') ? 'list2' : 'list1';
+            moveItem(sourceId, destinationId);
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var list1 = document.getElementById('list1');
+            var list2 = document.getElementById('list2');
+
+            list1.addEventListener('dblclick', handleDoubleClick);
+            list2.addEventListener('dblclick', handleDoubleClick);
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Mutare elemente între liste</h1>
+    <div>
+        <select id="list1" multiple>
+            <option value="1">Element 1</option>
+            <option value="2">Element 2</option>
+            <option value="3">Element 3</option>
+            <option value="4">Element 4</option>
+            <option value="5">Element 5</option>
+        </select>
+
+        <select id="list2" multiple>
+            <option value="6">Element 6</option>
+            <option value="7">Element 7</option>
+            <option value="8">Element 8</option>
+            <option value="9">Element 9</option>
+            <option value="10">Element 10</option>
+        </select>
+    </div>
+</body>
+
+</html>

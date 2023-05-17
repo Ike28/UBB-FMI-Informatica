@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="pb2.css">
+    <script src="pb2.js"></script>
+</head>
+
+<body>
+    <form method="GET">
+        <div>
+            <label>
+                <strong> Name: </strong>
+                <input type="text" name="Name" id="nameTF">
+            </label>
+            <p></p>
+            <label>
+                <strong> Date of Birth: </strong>
+                <input type="date" name="bday" id="bdayTF">
+            </label>
+            <p></p>
+            <label>
+                <strong> Age: </strong>
+                <input type="text" name="age" id="ageTF">
+            </label>
+            <p></p>
+            <label>
+                <strong> Email: </strong>
+                <input type="email" name="email" id="emailTF">
+            </label>
+            <p></p>
+            <button type="button" onclick="validate()">Register</button>
+            <p id="demo1"></p>
+            <p id="demo2"></p>
+        </div>
+    </form>
+</body>
+
+</html>

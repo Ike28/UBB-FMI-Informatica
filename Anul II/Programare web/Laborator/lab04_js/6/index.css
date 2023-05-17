@@ -1,0 +1,23 @@
+#puzzle {
+    width: 600px;
+    height: 600px;
+    border: 1px solid black;
+    position: relative;
+}
+
+#puzzleItem {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: xx-large;
+    background-color: #1C7CCC;
+}
+
+body {
+    background-color: azure;
+}

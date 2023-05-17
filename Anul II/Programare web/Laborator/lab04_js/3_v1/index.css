@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkblue;
+    color: transparent;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.show {
+    animation: show 2s forwards;
+}
+
+@keyframes show {
+    0% {
+        background-color: darkblue;
+        color: transparent;
+    }
+
+    100% {
+        background-color: white;
+        color: black;
+    }
+}
+
+.hide {
+    animation: hide 2s forwards;
+}
+
+@keyframes hide {
+    0% {
+        background-color: white;
+        color: black;
+    }
+
+    100% {
+        background-color: darkblue;
+        color: transparent;
+    }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Formular de validare</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <h1>Formular de validare</h1>
+    <form id="myForm">
+        <label for="name">Nume:</label>
+        <input type="text" id="name" required>
+        <br>
+        <label for="birthdate">Data nașterii:</label>
+        <input type="date" id="birthdate" required>
+        <br>
+        <label for="age">Vârsta:</label>
+        <input type="number" id="age" required>
+        <br>
+        <label for="email">Adresă de e-mail:</label>
+        <input type="email" id="email" required>
+        <br>
+        <button type="button" onclick="validateForm()">Trimite</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 5px;
+    text-align: left;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+}
+
+.table__header {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
