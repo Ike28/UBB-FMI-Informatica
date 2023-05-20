@@ -1,0 +1,114 @@
+syntax = "proto3";
+package com.ubb.protocolbuffers;
+
+option java_package = "com.ubb.protocolbuffers";
+option java_outer_classname = "BikeContestProtocol";
+
+message Participant {
+  int64 id = 1;
+  string firstName = 2;
+  string lastName = 3;
+  int32 engineCapacity = 4;
+  int64 teamID = 5;
+}
+
+message Race {
+  int64 id = 1;
+  string name = 2;
+  int32 engineCapacity = 3;
+}
+
+message RaceEntry {
+  int64 id = 1;
+  Participant participant = 2;
+  Race race = 3;
+}
+
+message Team {
+  int64 id = 1;
+  string name = 2;
+}
+
+message User {
+  int64 id = 1;
+  string username = 2;
+  string fullName = 3;
+  string passwordToken = 4;
+}
+
+message RaceDTO {
+  string name = 1;
+  int32 engineCapacity = 2;
+  int32 participants = 3;
+}
+
+message BikeContestRequest {
+  enum Type {
+    Unknown = 0;
+    Login = 1;
+    Logout = 2;
+    CreateParticipant = 3;
+    CreateRaceEntries = 4;
+    CreateRace = 5;
+    CreateTeam = 6;
+    GetEntriesByRace = 7;
+    GetParticipantByData = 8;
+    GetParticipantsByTeam = 9;
+    GetParticipants = 10;
+    GetRaceByName = 11;
+    GetRacesByEngineCapacity = 12;
+    GetRacesWithParticipantCount = 13;
+    GetTeamByName = 14;
+    GetTeams = 15;
+    GetUnregisteredRaces = 16;
+  }
+  Type type = 1;
+
+  string username = 2;
+  string passwordToken = 3;
+  User user = 4;
+  Participant participant = 5;
+  repeated RaceEntry raceEntries = 6;
+  Race race = 7;
+  Team team = 8;
+  int64 raceID = 9;
+  int64 teamID = 10;
+  string raceName = 11;
+  int32 engineCapacity = 12;
+  string teamName = 13;
+  int64 participantID = 14;
+}
+
+message BikeContestResponse {
+  enum Type {
+    Unknown = 0;
+    Ok = 1;
+    AllParticipants = 2;
+    AllTeams = 3;
+    EntriesByRace = 4;
+    Error = 5;
+    GetParticipantsByTeam = 6;
+    NewParticipant = 7;
+    NewRace = 8;
+    NewTeam = 9;
+    GetParticipant = 10;
+    RaceByName = 11;
+    RacesByCapacity = 12;
+    RacesWithParticipants = 13;
+    GetTeam = 14;
+    UpdatedRaces = 15;
+  }
+  Type type = 1;
+
+  repeated Participant participants = 2;
+  repeated Team teams = 3;
+  repeated RaceEntry entries = 4;
+  string errorMessage = 5;
+  Participant participant = 6;
+  RaceDTO raceDTO = 7;
+  Team team = 8;
+  User user = 9;
+  Race race = 10;
+  repeated Race races = 11;
+  repeated RaceDTO racesDTO = 12;
+}

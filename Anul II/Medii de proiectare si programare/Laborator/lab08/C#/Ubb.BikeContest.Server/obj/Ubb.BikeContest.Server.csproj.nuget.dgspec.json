@@ -1,0 +1,335 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Server\\Ubb.BikeContest.Server.csproj": {}
+  },
+  "projects": {
+    "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Model\\Ubb.BikeContest.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Model\\Ubb.BikeContest.Model.csproj",
+        "projectName": "Ubb.BikeContest.Model",
+        "projectPath": "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Model\\Ubb.BikeContest.Model.csproj",
+        "packagesPath": "C:\\Users\\AcerV17\\.nuget\\packages\\",
+        "outputPath": "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\AcerV17\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Networking\\Ubb.BikeContest.Networking.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Networking\\Ubb.BikeContest.Networking.csproj",
+        "projectName": "Ubb.BikeContest.Networking",
+        "projectPath": "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Networking\\Ubb.BikeContest.Networking.csproj",
+        "packagesPath": "C:\\Users\\AcerV17\\.nuget\\packages\\",
+        "outputPath": "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Networking\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\AcerV17\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Model\\Ubb.BikeContest.Model.csproj": {
+                "projectPath": "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Model\\Ubb.BikeContest.Model.csproj"
+              },
+              "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Service\\Ubb.BikeContest.Services.csproj": {
+                "projectPath": "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Service\\Ubb.BikeContest.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Google.Protobuf": {
+              "target": "Package",
+              "version": "[3.23.1, )"
+            },
+            "System.Buffers": {
+              "target": "Package",
+              "version": "[4.5.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Repository\\Ubb.BikeContest.Persistence.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Repository\\Ubb.BikeContest.Persistence.csproj",
+        "projectName": "Ubb.BikeContest.Persistence",
+        "projectPath": "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Repository\\Ubb.BikeContest.Persistence.csproj",
+        "packagesPath": "C:\\Users\\AcerV17\\.nuget\\packages\\",
+        "outputPath": "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Repository\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\AcerV17\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Model\\Ubb.BikeContest.Model.csproj": {
+                "projectPath": "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Model\\Ubb.BikeContest.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Mono.Data.Sqlite": {
+              "target": "Package",
+              "version": "[1.0.61, )"
+            },
+            "SQLite": {
+              "target": "Package",
+              "version": "[3.13.0, )"
+            },
+            "log4net": {
+              "target": "Package",
+              "version": "[2.0.15, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Server\\Ubb.BikeContest.Server.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Server\\Ubb.BikeContest.Server.csproj",
+        "projectName": "Ubb.BikeContest.Server",
+        "projectPath": "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Server\\Ubb.BikeContest.Server.csproj",
+        "packagesPath": "C:\\Users\\AcerV17\\.nuget\\packages\\",
+        "outputPath": "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Server\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\AcerV17\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Model\\Ubb.BikeContest.Model.csproj": {
+                "projectPath": "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Model\\Ubb.BikeContest.Model.csproj"
+              },
+              "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Networking\\Ubb.BikeContest.Networking.csproj": {
+                "projectPath": "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Networking\\Ubb.BikeContest.Networking.csproj"
+              },
+              "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Service\\Ubb.BikeContest.Services.csproj": {
+                "projectPath": "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Service\\Ubb.BikeContest.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Service\\Ubb.BikeContest.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Service\\Ubb.BikeContest.Services.csproj",
+        "projectName": "Ubb.BikeContest.Services",
+        "projectPath": "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Service\\Ubb.BikeContest.Services.csproj",
+        "packagesPath": "C:\\Users\\AcerV17\\.nuget\\packages\\",
+        "outputPath": "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\AcerV17\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Model\\Ubb.BikeContest.Model.csproj": {
+                "projectPath": "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Model\\Ubb.BikeContest.Model.csproj"
+              },
+              "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Repository\\Ubb.BikeContest.Persistence.csproj": {
+                "projectPath": "E:\\Projects\\C#\\.NET\\bikeContest_Client\\Ubb.BikeContest.Repository\\Ubb.BikeContest.Persistence.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33414.496
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ubb.BikeContest.Persistence", "Ubb.BikeContest.Repository\Ubb.BikeContest.Persistence.csproj", "{B0498007-25FD-43E7-87A2-8A0320F3B5AE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ubb.BikeContest.Model", "Ubb.BikeContest.Model\Ubb.BikeContest.Model.csproj", "{89323EF3-A2B2-4218-ABA7-2D25A0A0308F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ubb.BikeContest.Services", "Ubb.BikeContest.Service\Ubb.BikeContest.Services.csproj", "{B47D083C-8362-461B-8EDA-5315BB425CFC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ubb.BikeContest.Client", "Ubb.BikeContest.UserInterface\Ubb.BikeContest.Client.csproj", "{380FB7A4-854F-4E1E-A35E-547ABEA68E3B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ubb.BikeContest.Networking", "Ubb.BikeContest.Networking\Ubb.BikeContest.Networking.csproj", "{D124CBD3-B51A-42C2-BA0E-82814983BDD0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ubb.BikeContest.Server", "Ubb.BikeContest.Server\Ubb.BikeContest.Server.csproj", "{559D35A8-F6DF-40C4-BD17-450FAEB42A83}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0498007-25FD-43E7-87A2-8A0320F3B5AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0498007-25FD-43E7-87A2-8A0320F3B5AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0498007-25FD-43E7-87A2-8A0320F3B5AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0498007-25FD-43E7-87A2-8A0320F3B5AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89323EF3-A2B2-4218-ABA7-2D25A0A0308F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89323EF3-A2B2-4218-ABA7-2D25A0A0308F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89323EF3-A2B2-4218-ABA7-2D25A0A0308F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89323EF3-A2B2-4218-ABA7-2D25A0A0308F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B47D083C-8362-461B-8EDA-5315BB425CFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B47D083C-8362-461B-8EDA-5315BB425CFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B47D083C-8362-461B-8EDA-5315BB425CFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B47D083C-8362-461B-8EDA-5315BB425CFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{380FB7A4-854F-4E1E-A35E-547ABEA68E3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{380FB7A4-854F-4E1E-A35E-547ABEA68E3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{380FB7A4-854F-4E1E-A35E-547ABEA68E3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{380FB7A4-854F-4E1E-A35E-547ABEA68E3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D124CBD3-B51A-42C2-BA0E-82814983BDD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D124CBD3-B51A-42C2-BA0E-82814983BDD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D124CBD3-B51A-42C2-BA0E-82814983BDD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D124CBD3-B51A-42C2-BA0E-82814983BDD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{559D35A8-F6DF-40C4-BD17-450FAEB42A83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{559D35A8-F6DF-40C4-BD17-450FAEB42A83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{559D35A8-F6DF-40C4-BD17-450FAEB42A83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{559D35A8-F6DF-40C4-BD17-450FAEB42A83}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F09D635F-9A7D-4E68-8419-32D86B88FBE7}
+	EndGlobalSection
+EndGlobal
