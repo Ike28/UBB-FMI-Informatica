@@ -5,7 +5,6 @@ import com.ubb.IMainObserver;
 import com.ubb.dto.RaceDTO;
 import com.ubb.exceptions.ContestDataException;
 import com.ubb.model.*;
-import com.ubb.protocol.response.Response;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -67,80 +66,165 @@ public class ProtobufServicesProxy implements IContestServices {
 
     @Override
     public Collection<Participant> getParticipantsByTeam(Long teamID) throws ContestDataException {
-        // TODO
-        return null;
+        BikeContestProtocol.BikeContestRequest request
+                = ProtocolBuilderUtils.createGetParticipantsByTeamRequest(teamID);
+        sendRequest(request);
+
+        BikeContestProtocol.BikeContestResponse response = readResponse();
+        if (response.getType() == BikeContestProtocol.BikeContestResponse.Type.Error) {
+            throw new ContestDataException(ProtocolBuilderUtils.getErrorMessage(response));
+        }
+        return ProtocolBuilderUtils.getParticipants(response);
     }
 
     @Override
     public Optional<Participant> getParticipantByData(Participant participant) throws ContestDataException {
-        // TODO
-        return Optional.empty();
+        BikeContestProtocol.BikeContestRequest request
+                = ProtocolBuilderUtils.createGetParticipantByDataRequest(participant);
+        sendRequest(request);
+
+        BikeContestProtocol.BikeContestResponse response = readResponse();
+        if (response.getType() == BikeContestProtocol.BikeContestResponse.Type.Error) {
+            throw new ContestDataException(ProtocolBuilderUtils.getErrorMessage(response));
+        }
+        return Optional.of(ProtocolBuilderUtils.getParticipant(response));
     }
 
     @Override
     public Optional<Race> getRaceByName(String name) throws ContestDataException {
-        // TODO
-        return Optional.empty();
+        BikeContestProtocol.BikeContestRequest request
+                = ProtocolBuilderUtils.createGetRaceByNameRequest(name);
+        sendRequest(request);
+
+        BikeContestProtocol.BikeContestResponse response = readResponse();
+        if (response.getType() == BikeContestProtocol.BikeContestResponse.Type.Error) {
+            throw new ContestDataException(ProtocolBuilderUtils.getErrorMessage(response));
+        }
+        return Optional.of(ProtocolBuilderUtils.getRace(response));
     }
 
     @Override
     public Collection<RaceEntry> getEntriesByRace(Long raceID) throws ContestDataException {
-        // TODO
-        return null;
+        BikeContestProtocol.BikeContestRequest request = ProtocolBuilderUtils.createGetEntriesByRaceRequest(raceID);
+        sendRequest(request);
+
+        BikeContestProtocol.BikeContestResponse response = readResponse();
+        if (response.getType() == BikeContestProtocol.BikeContestResponse.Type.Error) {
+            throw new ContestDataException(ProtocolBuilderUtils.getErrorMessage(response));
+        }
+        return ProtocolBuilderUtils.getRaceEntries(response);
     }
 
     @Override
     public Collection<Race> getRacesByEngineCapacity(Integer engineCapacity) throws ContestDataException {
-        // TODO
-        return null;
+        BikeContestProtocol.BikeContestRequest request
+                = ProtocolBuilderUtils.createGetRacesByEngineCapacityRequest(engineCapacity);
+        sendRequest(request);
+
+        BikeContestProtocol.BikeContestResponse response = readResponse();
+        if (response.getType() == BikeContestProtocol.BikeContestResponse.Type.Error) {
+            throw new ContestDataException(ProtocolBuilderUtils.getErrorMessage(response));
+        }
+        return ProtocolBuilderUtils.getRaces(response);
     }
 
     @Override
     public Collection<RaceDTO> getRacesWithParticipantCount() throws ContestDataException {
-        // TODO
-        return null;
+        BikeContestProtocol.BikeContestRequest request
+                = ProtocolBuilderUtils.createGetRacesWithParticipantCount();
+        sendRequest(request);
+
+        BikeContestProtocol.BikeContestResponse response = readResponse();
+        if (response.getType() == BikeContestProtocol.BikeContestResponse.Type.Error) {
+            throw new ContestDataException(ProtocolBuilderUtils.getErrorMessage(response));
+        }
+        return ProtocolBuilderUtils.getRaceDTOs(response);
     }
 
     @Override
     public void saveRaceEntries(List<RaceEntry> newEntities) throws ContestDataException {
-        // TODO
+        BikeContestProtocol.BikeContestRequest request
+                = ProtocolBuilderUtils.createNewRaceEntriesRequest(newEntities);
+        sendRequest(request);
 
+        BikeContestProtocol.BikeContestResponse response = readResponse();
+        if (response.getType() == BikeContestProtocol.BikeContestResponse.Type.Error) {
+            throw new ContestDataException(ProtocolBuilderUtils.getErrorMessage(response));
+        }
     }
 
     @Override
     public Collection<Race> getRacesWhereNotRegisteredAndEngineCapacity(Long participantID, Integer engineCapacity) throws ContestDataException {
-        // TODO
-        return null;
+        BikeContestProtocol.BikeContestRequest request
+                = ProtocolBuilderUtils.createGetUnregisteredRacesRequest(participantID, engineCapacity);
+        sendRequest(request);
+
+        BikeContestProtocol.BikeContestResponse response = readResponse();
+        if (response.getType() == BikeContestProtocol.BikeContestResponse.Type.Error) {
+            throw new ContestDataException(ProtocolBuilderUtils.getErrorMessage(response));
+        }
+        return ProtocolBuilderUtils.getRaces(response);
     }
 
     @Override
     public Optional<Team> getTeamByName(String teamName) throws ContestDataException {
-        // TODO
-        return Optional.empty();
+        BikeContestProtocol.BikeContestRequest request
+                = ProtocolBuilderUtils.createGetTeamByNameRequest(teamName);
+        sendRequest(request);
+
+        BikeContestProtocol.BikeContestResponse response = readResponse();
+        if (response.getType() == BikeContestProtocol.BikeContestResponse.Type.Error) {
+            throw new ContestDataException(ProtocolBuilderUtils.getErrorMessage(response));
+        }
+        return Optional.of(ProtocolBuilderUtils.getTeam(response));
     }
 
     @Override
     public void saveParticipant(Participant newEntity) throws ContestDataException {
-        // TODO
+        BikeContestProtocol.BikeContestRequest request
+                = ProtocolBuilderUtils.createNewParticipantRequest(newEntity);
+        sendRequest(request);
 
+        BikeContestProtocol.BikeContestResponse response = readResponse();
+        if (response.getType() == BikeContestProtocol.BikeContestResponse.Type.Error) {
+            throw new ContestDataException(ProtocolBuilderUtils.getErrorMessage(response));
+        }
     }
 
     @Override
     public void saveRace(Race newEntity) throws ContestDataException {
-        // TODO
+        BikeContestProtocol.BikeContestRequest request
+                = ProtocolBuilderUtils.createNewRaceRequest(newEntity);
+        sendRequest(request);
 
+        BikeContestProtocol.BikeContestResponse response = readResponse();
+        if (response.getType() == BikeContestProtocol.BikeContestResponse.Type.Error) {
+            throw new ContestDataException(ProtocolBuilderUtils.getErrorMessage(response));
+        }
     }
 
     @Override
     public Collection<Team> findAllTeams() throws ContestDataException {
-        // TODO
-        return null;
+        BikeContestProtocol.BikeContestRequest request = ProtocolBuilderUtils.createGetTeamsRequest();
+        sendRequest(request);
+
+        BikeContestProtocol.BikeContestResponse response = readResponse();
+        if (response.getType() == BikeContestProtocol.BikeContestResponse.Type.Error) {
+            throw new ContestDataException(ProtocolBuilderUtils.getErrorMessage(response));
+        }
+        return ProtocolBuilderUtils.getTeams(response);
     }
 
     @Override
     public Collection<Participant> findAllParticipants() throws ContestDataException {
-        // TODO
-        return null;
+        BikeContestProtocol.BikeContestRequest request = ProtocolBuilderUtils.createGetParticipantsRequest();
+        sendRequest(request);
+
+        BikeContestProtocol.BikeContestResponse response = readResponse();
+        if (response.getType() == BikeContestProtocol.BikeContestResponse.Type.Error) {
+            throw new ContestDataException(ProtocolBuilderUtils.getErrorMessage(response));
+        }
+        return ProtocolBuilderUtils.getParticipants(response);
     }
 
     private void sendRequest(BikeContestProtocol.BikeContestRequest request) throws ContestDataException {
@@ -172,8 +256,14 @@ public class ProtobufServicesProxy implements IContestServices {
                 || response.getType() == BikeContestProtocol.BikeContestResponse.Type.UpdatedRaces;
     }
 
-    private void handleUpdate(BikeContestProtocol.BikeContestResponse response) {
-        // TODO
+    private void handleUpdate(BikeContestProtocol.BikeContestResponse response) throws ContestDataException {
+        switch (response.getType()) {
+            case NewParticipant -> client.participantAdded(ProtocolBuilderUtils.getParticipant(response));
+
+            case NewRace -> client.raceAdded(ProtocolBuilderUtils.getRaceDto(response));
+
+            case UpdatedRaces -> client.raceEntriesAdded(ProtocolBuilderUtils.getRaceDTOs(response));
+        }
     }
 
     private void initialiseConnection() {
@@ -224,6 +314,8 @@ public class ProtobufServicesProxy implements IContestServices {
                     }
                 } catch (IOException ioException) {
                     System.out.println("Error while reading: " + ioException.getMessage());
+                } catch (ContestDataException contestDataException) {
+                    System.out.println(contestDataException.getMessage());
                 }
             }
         }
