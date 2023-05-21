@@ -18,6 +18,7 @@ public class Participant extends Identifiable<Long> implements Serializable {
 
     {
         teamID = null;
+        setId(0L);
     }
 
     public Participant() {

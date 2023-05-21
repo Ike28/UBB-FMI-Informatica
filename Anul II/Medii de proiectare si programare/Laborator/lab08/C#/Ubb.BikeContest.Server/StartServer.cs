@@ -2,6 +2,7 @@
 using System.Configuration;
 using Ubb.BikeContest.Networking;
 using Ubb.BikeContest.Repository;
+using Ubb.BikeContest.Server;
 using Ubb.BikeContest.Services.src.Service;
 
 namespace Ubb.BikeContest.Services
@@ -34,7 +35,7 @@ namespace Ubb.BikeContest.Services
 
             IContestServices server = new ContestServices(userService, participantService, raceService, teamService);
 
-            IServer scs = new ContestConcurrentServer("127.0.0.1", 55556, server);
+            IServer scs = new ProtocolBufferServer("127.0.0.1", 55556, server);
             scs.Start();
             Console.WriteLine("Server started ...");
             Console.ReadLine();

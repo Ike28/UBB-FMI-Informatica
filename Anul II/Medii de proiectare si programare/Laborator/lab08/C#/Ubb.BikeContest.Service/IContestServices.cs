@@ -14,9 +14,15 @@ namespace Ubb.BikeContest.Services
         List<RaceDto> GetRacesWithParticipantCount();
         List<Team> FindAllTeams();
         List<Participant> GetParticipantsByTeam(long id);
+        Participant GetParticipantByData(Participant participant);
         List<Participant> FindAllParticipants();
         void SaveRaceEntries(List<RaceEntry> newEntities);
         void SaveParticipant(Participant newEntity);
         List<Race> GetRacesWhereNotRegisteredAndEngineCapacity(long participantId, int engineCapacity);
+        List<RaceEntry> GetEntriesByRace(long raceId);
+        Race GetRaceByName(string name);
+        List<Race> GetRacesByEngineCapacity(int engineCapacity);
+        Team GetTeamByName(string name);
+        void SaveRace(Race race);
     }
 }

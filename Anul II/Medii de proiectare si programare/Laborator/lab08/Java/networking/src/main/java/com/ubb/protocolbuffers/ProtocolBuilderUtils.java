@@ -84,7 +84,7 @@ public class ProtocolBuilderUtils {
 
     public static BikeContestProtocol.BikeContestRequest createGetRacesWithParticipantCount() {
         return BikeContestProtocol.BikeContestRequest.newBuilder()
-                .setType(BikeContestProtocol.BikeContestRequest.Type.GetRacesByEngineCapacity).build();
+                .setType(BikeContestProtocol.BikeContestRequest.Type.GetRacesWithParticipantCount).build();
     }
 
     public static BikeContestProtocol.BikeContestRequest createGetTeamByNameRequest(final String teamName) {
@@ -239,6 +239,7 @@ public class ProtocolBuilderUtils {
 
         final User result = new User(user.getUsername(), user.getFullName());
         result.setId(user.getId());
+        result.setPasswordToken(user.getPasswordToken());
         return result;
     }
 
@@ -390,6 +391,7 @@ public class ProtocolBuilderUtils {
                 participant.getEngineCapacity()
         );
         result.setId(participant.getId());
+        result.setTeamID(participant.getTeamID());
 
         return result;
     }

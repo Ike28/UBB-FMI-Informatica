@@ -39,27 +39,74 @@ namespace Ubb.BikeContest.Networking.ProtocolBuffers
 
         public List<Participant> FindAllParticipants()
         {
-            throw new NotImplementedException();
+            BikeContestRequest request = ProtocolBuilderUtils.CreateGetParticipantsRequest();
+            SendRequest(request);
+
+            BikeContestResponse response = ReadResponse();
+            if (response.Type == BikeContestResponse.Types.Type.Error)
+            {
+                throw new Exception(ProtocolBuilderUtils.GetErrorMessage(response));
+            }
+
+            return ProtocolBuilderUtils.GetParticipants(response);
         }
 
         public List<Team> FindAllTeams()
         {
-            throw new NotImplementedException();
+            BikeContestRequest request = ProtocolBuilderUtils.CreateGetTeamsRequest();
+            SendRequest(request);
+
+            BikeContestResponse response = ReadResponse();
+            if (response.Type == BikeContestResponse.Types.Type.Error)
+            {
+                throw new Exception(ProtocolBuilderUtils.GetErrorMessage(response));
+            }
+
+            return ProtocolBuilderUtils.GetTeams(response);
         }
 
         public List<Participant> GetParticipantsByTeam(long id)
         {
-            throw new NotImplementedException();
+            BikeContestRequest request = ProtocolBuilderUtils.CreateGetParticipantsByTeamRequest(id);
+            SendRequest(request);
+
+            BikeContestResponse response = ReadResponse();
+            if (response.Type == BikeContestResponse.Types.Type.Error)
+            {
+                throw new Exception(ProtocolBuilderUtils.GetErrorMessage(response));
+            }
+
+            return ProtocolBuilderUtils.GetParticipants(response);
         }
 
         public List<Race> GetRacesWhereNotRegisteredAndEngineCapacity(long participantId, int engineCapacity)
         {
-            throw new NotImplementedException();
+            BikeContestRequest request 
+                = ProtocolBuilderUtils.CreateGetUnregisteredRacesRequest(participantId, engineCapacity);
+            SendRequest(request);
+
+            BikeContestResponse response = ReadResponse();
+            if (response.Type == BikeContestResponse.Types.Type.Error)
+            {
+                throw new Exception(ProtocolBuilderUtils.GetErrorMessage(response));
+            }
+
+            return ProtocolBuilderUtils.GetRaces(response);
         }
 
         public List<RaceDto> GetRacesWithParticipantCount()
         {
-            throw new NotImplementedException();
+            BikeContestRequest request
+                = ProtocolBuilderUtils.CreateGetRacesWithParticipantCountRequest();
+            SendRequest(request);
+
+            BikeContestResponse response = ReadResponse();
+            if (response.Type == BikeContestResponse.Types.Type.Error)
+            {
+                throw new Exception(ProtocolBuilderUtils.GetErrorMessage(response));
+            }
+
+            return ProtocolBuilderUtils.GetRaceDtos(response);
         }
 
         public User Login(string username, string passwordToken, IMainObserver client)
@@ -102,12 +149,28 @@ namespace Ubb.BikeContest.Networking.ProtocolBuffers
 
         public void SaveParticipant(Participant newEntity)
         {
-            throw new NotImplementedException();
+            BikeContestRequest request = ProtocolBuilderUtils.CreateNewParticipantRequest(newEntity);
+            SendRequest(request);
+
+            BikeContestResponse response = ReadResponse();
+
+            if (response.Type == BikeContestResponse.Types.Type.Error)
+            {
+                throw new Exception(ProtocolBuilderUtils.GetErrorMessage(response));
+            }
         }
 
         public void SaveRaceEntries(List<RaceEntry> newEntities)
         {
-            throw new NotImplementedException();
+            BikeContestRequest request = ProtocolBuilderUtils.CreateNewRaceEntriesRequest(newEntities);
+            SendRequest(request);
+
+            BikeContestResponse response = ReadResponse();
+
+            if (response.Type == BikeContestResponse.Types.Type.Error)
+            {
+                throw new Exception(ProtocolBuilderUtils.GetErrorMessage(response));
+            }
         }
 
         private void SendRequest(BikeContestRequest request)
@@ -190,12 +253,14 @@ namespace Ubb.BikeContest.Networking.ProtocolBuffers
                     switch (response.Type)
                     {
                         case BikeContestResponse.Types.Type.NewParticipant:
+                            _client.ParticipantAdded(ProtocolBuilderUtils.GetParticipant(response));
                             break;
                         case BikeContestResponse.Types.Type.NewRace:
                             break;
                         case BikeContestResponse.Types.Type.NewTeam:
                             break;
                         case BikeContestResponse.Types.Type.UpdatedRaces:
+                            _client.RaceEntriesAdded(ProtocolBuilderUtils.GetRaceDtos(response));
                             break;
                     }
                 }
@@ -233,6 +298,86 @@ namespace Ubb.BikeContest.Networking.ProtocolBuffers
                     Console.WriteLine(e.StackTrace);
                 }
             }
+        }
+
+        Participant IContestServices.GetParticipantByData(Participant participant)
+        {
+            BikeContestRequest request
+                = ProtocolBuilderUtils.CreateGetParticipantByDataRequest(participant);
+            SendRequest(request);
+
+            BikeContestResponse response = ReadResponse();
+            if (response.Type == BikeContestResponse.Types.Type.Error)
+            {
+                throw new Exception(ProtocolBuilderUtils.GetErrorMessage(response));
+            }
+
+            return ProtocolBuilderUtils.GetParticipant(response);
+        }
+
+        List<RaceEntry> IContestServices.GetEntriesByRace(long raceId)
+        {
+            BikeContestRequest request
+                = ProtocolBuilderUtils.CreateGetEntriesByRaceRequest(raceId);
+            SendRequest(request);
+
+            BikeContestResponse response = ReadResponse();
+            if (response.Type == BikeContestResponse.Types.Type.Error)
+            {
+                throw new Exception(ProtocolBuilderUtils.GetErrorMessage(response));
+            }
+
+            return ProtocolBuilderUtils.GetRaceEntries(response);
+        }
+
+        Race IContestServices.GetRaceByName(string name)
+        {
+            BikeContestRequest request
+                = ProtocolBuilderUtils.CreateGetRaceByNameRequest(name);
+            SendRequest(request);
+
+            BikeContestResponse response = ReadResponse();
+            if (response.Type == BikeContestResponse.Types.Type.Error)
+            {
+                throw new Exception(ProtocolBuilderUtils.GetErrorMessage(response));
+            }
+
+            return ProtocolBuilderUtils.GetRace(response);
+        }
+
+        List<Race> IContestServices.GetRacesByEngineCapacity(int engineCapacity)
+        {
+            BikeContestRequest request
+                = ProtocolBuilderUtils.CreateGetRacesByEngineCapacityRequest(engineCapacity);
+            SendRequest(request);
+
+            BikeContestResponse response = ReadResponse();
+            if (response.Type == BikeContestResponse.Types.Type.Error)
+            {
+                throw new Exception(ProtocolBuilderUtils.GetErrorMessage(response));
+            }
+
+            return ProtocolBuilderUtils.GetRaces(response);
+        }
+
+        Team IContestServices.GetTeamByName(string name)
+        {
+            BikeContestRequest request
+                = ProtocolBuilderUtils.CreateGetTeamByNameRequest(name);
+            SendRequest(request);
+
+            BikeContestResponse response = ReadResponse();
+            if (response.Type == BikeContestResponse.Types.Type.Error)
+            {
+                throw new Exception(ProtocolBuilderUtils.GetErrorMessage(response));
+            }
+
+            return ProtocolBuilderUtils.GetTeam(response);
+        }
+
+        void IContestServices.SaveRace(Race race)
+        {
+            throw new NotImplementedException();
         }
     }
 }

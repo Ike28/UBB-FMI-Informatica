@@ -264,5 +264,35 @@ namespace Ubb.BikeContest.Networking.Protocol
             UnregisteredRacesResponse racesResponse = (UnregisteredRacesResponse)response;
             return racesResponse.Races;
         }
+
+        Participant IContestServices.GetParticipantByData(Participant participant)
+        {
+            throw new NotImplementedException();
+        }
+
+        List<RaceEntry> IContestServices.GetEntriesByRace(long raceId)
+        {
+            throw new NotImplementedException();
+        }
+
+        Race IContestServices.GetRaceByName(string name)
+        {
+            throw new NotImplementedException();
+        }
+
+        List<Race> IContestServices.GetRacesByEngineCapacity(int engineCapacity)
+        {
+            throw new NotImplementedException();
+        }
+
+        Team IContestServices.GetTeamByName(string name)
+        {
+            throw new NotImplementedException();
+        }
+
+        void IContestServices.SaveRace(Race race)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Data;
+using System.Xml.Linq;
 using log4net;
 using Ubb.BikeContest.Model;
 
@@ -163,7 +164,11 @@ public class RaceDbRepository : IRaceRepository
 
         using (var command = connection.CreateCommand())
         {
-            command.CommandText = "SELECT * FROM races WHERE engineCc=@engineCapacity";
+            command.CommandText = "SELECT * FROM races WHERE engineCc=@engineCapacity"; var paramName = command.CreateParameter();
+            paramName.ParameterName = "@engineCapacity";
+            paramName.Value = engineCapacity;
+            command.Parameters.Add(paramName);
+
             using (var dataReader = command.ExecuteReader())
             {
                 while (dataReader.Read())

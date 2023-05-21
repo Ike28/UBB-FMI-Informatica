@@ -146,11 +146,6 @@ public class ProtobufServicesProxy implements IContestServices {
         BikeContestProtocol.BikeContestRequest request
                 = ProtocolBuilderUtils.createNewRaceEntriesRequest(newEntities);
         sendRequest(request);
-
-        BikeContestProtocol.BikeContestResponse response = readResponse();
-        if (response.getType() == BikeContestProtocol.BikeContestResponse.Type.Error) {
-            throw new ContestDataException(ProtocolBuilderUtils.getErrorMessage(response));
-        }
     }
 
     @Override
@@ -184,11 +179,6 @@ public class ProtobufServicesProxy implements IContestServices {
         BikeContestProtocol.BikeContestRequest request
                 = ProtocolBuilderUtils.createNewParticipantRequest(newEntity);
         sendRequest(request);
-
-        BikeContestProtocol.BikeContestResponse response = readResponse();
-        if (response.getType() == BikeContestProtocol.BikeContestResponse.Type.Error) {
-            throw new ContestDataException(ProtocolBuilderUtils.getErrorMessage(response));
-        }
     }
 
     @Override
@@ -196,11 +186,6 @@ public class ProtobufServicesProxy implements IContestServices {
         BikeContestProtocol.BikeContestRequest request
                 = ProtocolBuilderUtils.createNewRaceRequest(newEntity);
         sendRequest(request);
-
-        BikeContestProtocol.BikeContestResponse response = readResponse();
-        if (response.getType() == BikeContestProtocol.BikeContestResponse.Type.Error) {
-            throw new ContestDataException(ProtocolBuilderUtils.getErrorMessage(response));
-        }
     }
 
     @Override

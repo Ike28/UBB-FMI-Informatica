@@ -123,7 +123,13 @@ public class MainController extends AnchorPane implements IMainObserver {
         try {
             participantsTable.getItems().clear();
             Team currentTeam = teamBox.getValue();
-            Collection<Participant> participants = server.getParticipantsByTeam(currentTeam.getId());
+
+            Collection<Participant> participants;
+            if (currentTeam != null) {
+                participants = server.getParticipantsByTeam(currentTeam.getId());
+            } else {
+                participants = server.findAllParticipants();
+            }
             participantsTable.getItems().addAll(participants);
         } catch (ContestDataException contestDataException) {
             AlertController.showError(currentStage, contestDataException.getMessage());

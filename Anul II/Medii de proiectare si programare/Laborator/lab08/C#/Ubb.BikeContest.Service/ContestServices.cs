@@ -97,5 +97,35 @@ namespace Ubb.BikeContest.Services
                 client.ParticipantAdded(newEntity);
             }
         }
+
+        public Participant GetParticipantByData(Participant participant)
+        {
+            return participantService.GetParticipantByData(participant);
+        }
+
+        public List<RaceEntry> GetEntriesByRace(long raceId)
+        {
+            return raceService.GetEntriesByRace(raceId).ToList();
+        }
+
+        public Race GetRaceByName(string name)
+        {
+            return raceService.GetRaceByName(name);
+        }
+
+        public List<Race> GetRacesByEngineCapacity(int engineCapacity)
+        {
+            return raceService.GetRacesByEngineCapacity(engineCapacity).ToList();
+        }
+
+        public Team GetTeamByName(string name)
+        {
+            return teamService.GetTeamByName(name);
+        }
+
+        void IContestServices.SaveRace(Race race)
+        {
+            raceService.Save(race);
+        }
     }
 }
