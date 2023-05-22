@@ -1,0 +1,9 @@
+rootProject.name = 'bikeContest'
+include 'model'
+include 'persistence'
+include 'services'
+include 'clientFX'
+include 'networking'
+include 'server'
+include 'restServices'
+

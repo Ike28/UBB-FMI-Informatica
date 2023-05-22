@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.ubb.controller.LoginController">
+   <children>
+      <ImageView fitHeight="722.0" fitWidth="1259.0" layoutX="-269.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/login.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="105.0" fitWidth="283.0" layoutX="663.0" layoutY="318.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/mxgp_logo.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="usernameField" layoutX="663.0" layoutY="418.0" prefHeight="50.0" prefWidth="283.0" />
+      <PasswordField fx:id="passwordField" layoutX="663.0" layoutY="487.0" prefHeight="50.0" prefWidth="283.0" />
+      <Button fx:id="loginButton" layoutX="663.0" layoutY="556.0" mnemonicParsing="false" onAction="#onLoginButtonClicked" prefHeight="50.0" prefWidth="283.0" text="LOG IN" textFill="#c61111">
+         <font>
+            <Font name="Lato Black" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

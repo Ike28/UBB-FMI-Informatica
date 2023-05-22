@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ubb.controller.MainController">
+    <children>
+        <ImageView fitHeight="76.0" fitWidth="259.0" layoutX="52.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../img/mxgp_logo.png" />
+            </image>
+        </ImageView>
+        <TableView fx:id="raceTable" layoutX="52.0" layoutY="253.0" prefHeight="417.0" prefWidth="398.0">
+            <columns>
+                <TableColumn fx:id="raceName" prefWidth="230.0" resizable="false" text="Race" />
+                <TableColumn fx:id="raceEngine" prefWidth="81.0" resizable="false" text="Engine Class" />
+                <TableColumn fx:id="raceParticipantCount" prefWidth="86.0" resizable="false" text="Participants" />
+            </columns>
+        </TableView>
+        <TableView fx:id="participantsTable" layoutX="515.0" layoutY="253.0" prefHeight="417.0" prefWidth="398.0">
+            <columns>
+                <TableColumn fx:id="participantName" prefWidth="273.0" resizable="false" text="Full Name" />
+                <TableColumn fx:id="participantEngine" prefWidth="124.0" resizable="false" text="Engine Class" />
+            </columns>
+        </TableView>
+        <Label alignment="CENTER" layoutX="52.0" layoutY="201.0" prefHeight="36.0" prefWidth="181.0" text="RACES">
+            <font>
+                <Font name="Lato Light" size="31.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" layoutX="515.0" layoutY="201.0" prefHeight="40.0" prefWidth="277.0" text="PARTICIPANTS">
+            <font>
+                <Font name="Lato Light" size="31.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="teamBox" layoutX="666.0" layoutY="159.0" onAction="#onTeamBoxChanged" prefHeight="25.0" prefWidth="247.0" />
+        <Label alignment="CENTER_RIGHT" layoutX="515.0" layoutY="159.0" prefHeight="25.0" prefWidth="131.0" text="Team :">
+            <font>
+                <Font name="Lato Semibold" size="16.0" />
+            </font>
+        </Label>
+        <Button fx:id="newParticipantButton" layoutX="351.0" layoutY="32.0" mnemonicParsing="false" onAction="#onParticipantButtonClicked" prefHeight="40.0" prefWidth="139.0" text="NEW PARTICIPANT">
+            <font>
+                <Font name="Lato Semibold" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="newRaceButton" layoutX="676.0" layoutY="32.0" mnemonicParsing="false" onAction="#onRaceClicked" prefHeight="40.0" prefWidth="139.0" text="NEW RACE">
+            <font>
+                <Font name="Lato Semibold" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="newEntryButton" layoutX="515.0" layoutY="32.0" mnemonicParsing="false" onAction="#onNewEntryClicked" prefHeight="40.0" prefWidth="139.0" text="REGISTER TO RACE">
+            <font>
+                <Font name="Lato Semibold" size="12.0" />
+            </font>
+        </Button>
+        <Label layoutX="52.0" layoutY="115.0" prefHeight="33.0" prefWidth="109.0" text="Logged in as :">
+            <font>
+                <Font name="Lato Semibold" size="17.0" />
+            </font>
+        </Label>
+        <Label fx:id="usernameLabel" layoutX="168.0" layoutY="115.0" prefHeight="33.0" prefWidth="131.0" text="USERNAME">
+            <font>
+                <Font name="Lato Black" size="17.0" />
+            </font>
+        </Label>
+        <Button fx:id="logoutButton" layoutX="835.0" layoutY="32.0" mnemonicParsing="false" onAction="#onLogoutClicked" prefHeight="40.0" prefWidth="78.0" text="LOG OUT">
+            <font>
+                <Font name="Lato Semibold" size="12.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>
