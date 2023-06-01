@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group 'com.ubb'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project (':model')
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.17.2'
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.17.2'
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: '2.17.2'
+    implementation group:'org.xerial', name:'sqlite-jdbc', version:'3.40.1.0'
+    implementation 'org.hibernate:hibernate-core:5.6.1.Final'
+    implementation "jakarta.xml.bind:jakarta.xml.bind-api:2.3.2"
+    implementation "org.glassfish.jaxb:jaxb-runtime:2.3.2"
+
+    implementation 'org.springframework:spring-context:5.1.5.RELEASE'
+}
+
+test {
+    useJUnitPlatform()
+}
