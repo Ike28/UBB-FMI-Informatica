@@ -1,0 +1,15 @@
+table {
+    margin: 1rem;
+}
+
+table, th, td {
+    border: 0.1rem solid black;
+}
+
+td {
+    padding: 0.5rem;
+}
+
+button {
+    margin: 1rem;
+}

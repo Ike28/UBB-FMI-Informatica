@@ -1,0 +1,5 @@
+select {
+    min-width: 20rem;
+    margin: 1rem;
+    min-height: 10rem;
+}

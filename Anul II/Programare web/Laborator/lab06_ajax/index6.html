@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Problema 6</title>
+        <script src="js/jquery-min.js"></script>
+        <script src="js/script6.js"></script>
+        <link rel="stylesheet" href="css/style_utils.css">
+        <link rel="stylesheet" href="css/index6.css">
+    </head>
+    <body onload="filterRequest()">
+        <div>
+            <select id="crit">
+                <option value="producator">Producator</option>
+                <option value="procesor">Procesor</option>
+                <option value="memorie">Memorie</option>
+                <option value="capacitatehdd">Capacitate HDD</option>
+                <option value="placavideo">Placa Video</option>
+            </select>
+            <input id="keyword" name="keyword">
+            <button onclick="filterRequest()">Filtrare</button>
+        </div>
+        <div id="table-div">
+        </div>
+    </body>
+</html>

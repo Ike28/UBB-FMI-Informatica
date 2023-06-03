@@ -1,0 +1,16 @@
+table, td, th {
+    margin: 1rem;
+    border: 0.1rem solid black;
+}
+
+select {
+    margin: 1rem;
+}
+
+input {
+    margin: 1rem;
+}
+
+button {
+    margin: 1rem;
+}

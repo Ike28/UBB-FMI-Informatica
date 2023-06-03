@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Problema 1</title>
+        <script src="js/jquery-min.js"></script>
+        <script src="js/script1.js"></script>
+        <link rel="stylesheet" href="css/style_utils.css">
+        <link rel="stylesheet" href="css/index1.css">
+    </head>
+    <body>
+        <div id="main">
+            <select id="departure-list" onchange="showArrivals(this.value)" multiple="true">
+                <option value="Bucuresti">Bucuresti</option>
+                <option value="Iasi">Iasi</option>
+                <option value="Cluj-Napoca">Cluj-Napoca</option>
+                <option value="Suceava">Suceava</option>
+                <option value="Arad">Arad</option>
+            </select>
+            <div id="result">
+                <select multiple="true"></select>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Problema 3</title>
+        <script src="js/jquery-min.js"></script>
+        <script src="js/script3.js"></script>
+        <link rel="stylesheet" href="css/style_utils.css">
+        <link rel="stylesheet" href="css/index3.css">
+    </head>
+    <body onload="loadListData()">
+        <div id="list"></div>
+        <div id="form">
+            <form>
+                <label for="nume">Nume:</label><br>
+                <input id="nume" name="nume"><br>
+
+                <label for="prenume">Prenume:</label><br>
+                <input id="prenume" name="prenume"><br>
+
+                <label for="telefon">Telefon:</label><br>
+                <input id="telefon" name="telefon"><br>
+
+                <label for="email">E-Mail:</label><br>
+                <input id="email" name="email"><br><br>
+
+                <input type="submit" id="save-button" value="Save" onclick="saveEntry()" disabled>
+            </form>
+        </div>
+    </body>
+</html>
