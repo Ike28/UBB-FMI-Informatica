@@ -1,0 +1,13 @@
+	USE DiebmannImobiliare
+
+--solution : commited in loc de uncommited
+SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
+
+BEGIN TRAN
+
+SELECT * FROM Agenti
+WAITFOR DELAY '00:00:3'
+SELECT * FROM Agenti
+
+COMMIT TRAN
+
