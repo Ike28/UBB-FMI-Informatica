@@ -387,6 +387,56 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 - [x] ```$fructe=array("struguri", "mere", "pere");```
 <br>
 
+#### 73. Unde se poate folosi functia header in PHP?
+- [x] in primul scriptlet din fisierul PHP si doar cu conditia ca scriptul PHP sa nu fi trimis anterior spre browser orice forma de continut (cu exceptia unor eventuale antete)
+<br>
+
+#### 74. Care dintre urmatoarele informatii despre un URL accesat prin POST sunt adevarate:
+- [x] Reaccesarea URL-ului respectiv prin reload (refresh) la pagina presupune o confirmare din partea utilizatorului
+<br>
+
+#### 75. Care dintre urmatoarele sunt adevarate despre un server web:
+- [x] un server web poate fi configurat sa accepte cereri prin protocolul HTTP pe portul 443
+- [x] implicit un server web asteapta cereri prin protocolul HTTP pe portul 80 si cereri prin protocolul HTTPS pe portul 443
+<br>
+
+#### 76. Dandu-se doua containere, unul parinte si unul fiu, care dintre urmatoarele pozitionarii are/au sens:
+- [x] pozitionarea unui fiu "absolute" in cadrul unui parinte cu pozitionare "relative"
+<br>
+
+#### 77. Cum se introduc comentarii intr-un scriptlet PHP?
+- [x] ```//```
+- [x] ```/*...*/```
+- [x] ```#```
+<br>
+
+#### 78. Functia specificata ca si valoare pentru proprietatea onreadystatechange se apeleaza:
+- [x] Este posibil sa se apeleze si atunci cand obiectul nu isi schimba starea dar continua sa vina raspuns de la server
+- [x] Atunci cand obiectul AJAX isi schimba starea
+<br>
+
+#### 79. Conectarea la o baza de date intr-o aplicatie web Java se recomanda a fi facuta:
+- [x] La fiecare request in cadrul metodei doGet sau doPut
+<br>
+
+#### 80. Care dintre urmatoarele expresii jQuery se pot folosi interschimbabil?
+- [x] ```$(ready(function() {})) cu $(document).ready(function() {})```
+<br>
+
+#### 81. Care dintre urmatoarele reprezinta masuri pentru evitarea vulnerabilitatilor de tip XSS:
+- [x] Inlocuirea anumitor caractere din datele primite de la client cu entitatile HTML corespunzatoare
+<br>
+
+#### 82. Care dintre urmatoarele tag-uri este folosit pentru definirea de stiluri CSS interne?
+- [x] style
+<br>
+
+#### 83. Care dintre sintaxele CSS de mai jos este corecta/sunt corecte?
+- [x] ```body{color:#abc}```
+- [x] ```body{color:yellow}```
+<br>
+
+
 
 
 
