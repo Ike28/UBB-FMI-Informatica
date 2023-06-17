@@ -517,3 +517,29 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 - [x] o proprietate din cadrul unui stil inline suprascrie o proprietate dintr-o definitie de stil aplicata elementului unui selector bazat pe id
 <br>
 
+#### 102. Care dintre urmatoarele reprezinta proprietati membre ale unui obiect de tipul XMLHttpRequest:
+- [x] readyState, response, responseText, status
+<br>
+
+#### 103. Un client face o cerere iar serverul ii raspuinde cu "404 Not Found". Care dintre urmatoarele afirmatii sunt adevarate:
+- [x] Chiar daca nu a gasit fisierul cerut de client, serverul ii poate da totusi acestuia un anumit continut HTML
+<br>
+
+#### 104. O variabila x ce contine valoarea numerica 7 poate fi declarata in JavaScript astfel:
+- [x] ```var x = 7```
+- [x] ```x = new Number(7)```
+- [x] ```let x = 7```
+- [x] ```x = 7```
+<br>
+
+#### 105. In care element HTML se plaseaza codul JavaScript?
+- [x] ```<script>```
+<br>
+
+#### 106. Care dintre urmatoarele informatii despre plugin-urile jQuery sunt adevarate:
+- [x] Permit extinderea functionalitatii API-ului standard jQuery cu noi metode si functionalitati
+- [x] Unele plugin-uri jQuery permit incadrarea librariei de pe diversele CDN-uri (Content Delivery Network)
+<br>
+
+
+
