@@ -144,3 +144,24 @@
 - [x] pentru a construi un wrapper jQuery in jurul obiectului window
 - [x] a construi un wrapper jQuery in jurul obiectului pe care se apeleaza un eveniment in interiorul functiei de tratare a evenimentului
 <br>
+
+#### 30. Considerand urmatoarele elemente html:
+```html
+	<div class="info">John Doe</div>
+	<div class="info number" id="age">25></div>
+```
+Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
+- [x] ```.info.number```
+<br>
+
+#### 31. In ce conditii metoda send pe un obiect AJAX se apeleaza intotdeauna cu parametrul sirul vid?
+- [x] Daca requestul AJAX se face prin GET
+<br>
+
+#### 32. Cum se ascund toate div-urile din pagina folosind jQuery?
+- [x] ```$("div").css("visibility", "hidden")```
+<br>
+
+#### 33. Care dintre urmatoarele metode jQuery foloseste AJAX:
+- [x] ```$.ajax, $.get, load```
+<br>
