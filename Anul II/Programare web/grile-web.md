@@ -92,7 +92,7 @@
 
 #### 19. Ce se intelege prin scop global in JavaScript?
 - [x] obiectul window
-
+<br>
 
 #### 20. Aranjati in ordine, de la cea mai simpla si putin customizabila, la cea mai configurabila si parametrizabila urmatoarele functii care permit realizarea unui apel AJAX din jQuery:
-- [x] load, $.get, $.ajax
+- [x] ```load, $.get, $.ajax```
