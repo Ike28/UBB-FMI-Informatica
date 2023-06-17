@@ -601,7 +601,7 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 		<input type=”submit” value=”Submit”>
 	</form>
 ```
-- [x] "fname=Ion&email=ionpopescu@gmail.com"
+- [x] ```"fname=Ion&email=ionpopescu@gmail.com"```
 <br>
 
 #### 113. Unde se va putea deschide resursa ceruta de urmatoarea ancora?
@@ -641,10 +641,10 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 			background-color: red;
 		}
 	</style>
+	<style>
 		#id1 {
 			background-color: blue;
 		}
-	<style>
 	</style>
 ```
 - [x] culoare = blue, inaltime = 100px
