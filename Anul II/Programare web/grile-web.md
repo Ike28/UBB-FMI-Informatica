@@ -165,3 +165,231 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 #### 33. Care dintre urmatoarele metode jQuery foloseste AJAX:
 - [x] ```$.ajax, $.get, load```
 <br>
+
+
+#### 34. Care dintre urmatoarele afirmatii sunt adevarate:
+- [x] MySQL Old Extension (mysql_*) nu suporta "prepared statement"-uri, dar permite evitarea injectiilor SQL.
+<br>
+
+#### 35. In PHP return este folosit pentru:
+- [x] a termina scriptul curent care se executa si a reda controlul executiei unui eventual script care l-a inclus pe scriptul curent cu include sau require
+- [x] a termina executia unei functii
+<br>
+
+#### 36. Pe ce nivel al stivei TCP/IP se situeaza HTTP?
+- [x] Aplicatie
+<br>
+
+#### 37. Care sunt moduri valabile de a introduce CSS in HTML:
+- [x] inline
+- [x] interne
+- [x] externe
+<br>
+
+#### 38. In ce ordine au sens apelarile metodelor daca resursa nu exista in momentul actual:
+- [x] post, put, get, delete
+<br>
+
+#### 39. Care dintre tagurile de mai jos au display: block by default:
+- [x] ```<div>```
+- [x] ```<p>```
+- [x] ```<h1>```
+<br>
+
+#### 40. Care HTTP status code anunta o eroare:
+- [x] 4xx
+- [x] 5xx
+<br>
+
+#### 41. Care dintre metodele HTTP urmatoare sunt idempotente:
+- [x] GET
+- [x] HEAD
+- [x] DELETE
+- [x] PUT
+<br>
+
+#### 42. Care dintre metodele HTTP urmatoare sunt cacheable:
+- [x] GET
+- [x] HEAD
+<br>
+
+#### 43. Care sunt headere valide:
+- [x] Host
+- [x] User-agent
+- [x] Content-length
+- [x] From
+<br>
+
+#### 44. Care dintre urmatoarele sunt atribute ale unui cookie:
+- [x] Name
+- [x] Value
+- [x] Expires
+- [x] Max-age
+<br>
+
+#### 45. Ce poate semnifica un status code de tip 4xx:
+- [x] Bad request
+- [x] Unauthorized
+<br>
+
+#### 46. Care este diferenta dintre let si var:
+- [x] variabilele definite cu let pot avea scop de tip bloc, iar cele cu var nu
+- [x] variabilele definite cu var pot fi redeclarate in acelasi bloc, iar cele cu let nu
+<br>
+
+#### 47. Care este diferenta intre =, == si ===:
+- [x] = este folosit pentru a atribui o valoare unui operand, == pentru a compara valorile operanzilor, iar === pentru a compara si tipul si valoarea operanzilor
+<br>
+
+#### 48. Care sunt tipurile de scopuri in JavaScript:
+- [x] global scope
+- [x] function scope
+- [x] block scope
+<br>
+
+#### 49. Pentru ce este folosit keyword-ul this in JavaScript:
+- [x] refera obiectul window (global)
+- [x] cand este folosit intr-o metoda a unui obiect, refera obiectul curent
+- [x] intr-o functie obisnuita refera obiectul window
+- [x] intr-un eveniment refera obiectul pe care s-a apelat evenimentul
+<br>
+
+#### 50. Un apel AJAX este in starea 2 daca:
+- [x] s-a facut send dar inca nu a sosit raspunsul de la server
+<br>
+
+#### 51. Elementul ```<th>``` trebuie folosit in cadrul unui tabel pentru:
+- [x] definirea unei celule avand semnificatia de celula ce face parte din header-ul tabelului
+<br>
+
+
+#### 52. Cum se declara corect un array in JavaScript?
+- [x] var studenți = ["Mihai", "Cristina", "Paula", "Dan"]
+<br>
+
+#### 53. Pentru evitarea injectiilor SQL in PHP 7 se recomanda:
+- [x] Folosirea de "prepared statement"-uri
+<br>
+
+
+#### 54. Injectiile JavaScript se datoreaza:
+- [x] Validarii insuficiente server-side la nivelul scriptului ce prelucreaza datele din formular
+<br>
+
+
+#### 55. Unde se poate defini un stil CSS pentru o anumita clasa?
+- [x] in interiorul tag-ului ```<style>```, localizat in antetul paginii html
+- [x] intr-un fisier extern specificat cu ajutorul tag-ului ```<link>```
+<br>
+
+
+#### 56. Pentru a verifica succesul unui apel AJAX trebuie ca:
+- [x] readyState sa fie 4 si request.status 200
+<br>
+
+#### 57. Care dintre urmatoarele elemente au toate display-ul implicit block?
+- [x] ```div, p, ul, ol, h1```
+<br>
+
+#### 58. Unde se poate insera cod JavaScript in cadrul unui document HTML?
+- [x] atat in sectiunea ```<head>``` cat si ```<body>```
+<br>
+
+#### 59. Fie urmatoarea secventa de cod HTML/CSS. Pe ce fundal va fi afisat textul Cocosul canta?
+```html
+	<style type="text/css">
+		#id2 {
+			background-color: blue;
+		}
+
+		div #id1 .class2 {
+			background-color: green;
+		}
+		div .class1 #id2 {
+			background-color: yellow;
+		}
+
+		#id1 {
+			background-color: red;
+		}
+	</style>
+	<div>
+		<div class="class1" id="id1">
+			<div class="class2" id="id2">
+				Cocosul canta
+			</div>
+		</div>
+	</div>
+```
+- [x] Galben
+<br>
+
+
+#### 60. Care dintre urmatoarele functii PHP este folosita pentru a preveni vulnerabilitatile de tip Cross-Site Scripting (XSS)?
+- [x] htmlentities
+<br>
+
+#### 61. Cum se poate "fura" un cookie de sesiune al unui alt utilizator?
+- [x] Prin intermediul unui cod JavaScript injectat de catre atacator
+- [x] Prin lipsa invalidarii sesiunii (logout) si navigarea in continuarea pe un site malitios
+- [x] Prin interceptarea datelor la nivelul retelei de transport in lipsa folosirii unei conexiuni sigure
+<br>
+
+#### 62. Care dintre urmatoarele vulnerabilitati ar putea fi exploatata pentru a fura sesiunea unui utilizator autentificat?
+- [x] Cross-Site Request Forgery (CSRF)
+- [x] Cross-Site scripting (XSS)
+<br>
+
+#### 63. Ce se va afisa in consola browserului dupa executarea urmatorului cod JavaScript?
+- [x] 1 == true
+<br>
+
+#### 64. Raspunsul sosit printr-un apel AJAX poate fi:
+- [x] un fisier text
+- [x] un fisier JSON
+- [x] un fisier XML
+- [x] un fisier JavaScript ???
+<br>
+
+#### 65. Care dintre urmatoarele categorii de aplicatii se pot folosit de DOCTYPE pentru a "intelege" mai bine documentul HTML?
+- [x] Editoare si medii IDE (Integrated Development Environment)
+- [x] Motoare de cautare
+- [x] Browsere
+<br>
+
+#### 66. Care dintre informatiile de mai jos despre atributele readonly si disabled sunt adevarate?
+- [x] valoarea unui input readonly se trimite serverului la submit, pe cand cea a unui input disabled nu se trimite serverului
+<br>
+
+#### 67. Care dintre urmatoarele elemente au toate display-ul implicit inline?
+- [x] ```img, span, b, i, a```
+<br>
+
+#### 68. Care dintre urmatoarele informatii despre tagul ```<title>``` sunt adevarate?
+- [x] este afisat in bara de titlu sau de bookmarks (favorite)
+<br>
+
+#### 69. Care dintre urmatoarele antete sunt obligatorii pentru o cerere HTTP in cazul folosirii protocolului HTTP/1.1:
+- [x] Host
+<br>
+
+#### 70. Care dintre urmatoarele afirmatii sunt adevarate:
+- [x] o definitie de stil aplicata clasei "bate" ca prioritate definitia de stil aplicata pe "tag"
+- [x] o proprietate din cadrul unui stil inline suprascrie o proprietate dintr-o definitie de stil aplicata elementului folosind un selector bazat pe id
+<br>
+
+#### 71. Ce face functia ```session_start()``` in PHP?
+- [x] Daca este vorba de o sesiune noua, genereaza un cookie aleator de sesiune pe care il trimite folosind antetul HTTP clientului
+- [x] Daca este vorba de o sesiune veche, determina despre ce sesiune este vorba pe baza valorii cookie-ului de sesiune prin intermediul antetului HTTP Cookie si populeaza tabloul ```$_SESSION``` in mod corespunzator
+<br>
+
+#### 72. Care dintre urmatoarele declaratii este corecta pentru definirea tabloului $fructe in PHP?
+- [x] ```$fructe=array("struguri", "mere", "pere");```
+<br>
+
+
+
+
+
+
+
