@@ -96,3 +96,51 @@
 
 #### 20. Aranjati in ordine, de la cea mai simpla si putin customizabila, la cea mai configurabila si parametrizabila urmatoarele functii care permit realizarea unui apel AJAX din jQuery:
 - [x] ```load, $.get, $.ajax```
+<br>
+
+#### 21. Care este forma corecta de folosire a tag-ului img in cadrul unui document XHTML:
+- [x] ```<img src="poza.jpg"/>```
+<br>
+
+#### 22. Care dintre urmatoarele reprezinta masuri pentru evitarea injectiilor SQL:
+- [x] Verificari riguroase la nivelul backend-ului legate de validitatea datelor introduse precum si folosirea de biblioteci specializate pentru persistarea datelor (ORM-uri)
+- [x] Folosirea la nivelul backend-ului de mecanisme de tipul "prepared statement"
+<br>
+
+#### 23. Ce face urmatoarea secventa de cod:
+```js
+	var content=$('li').html();
+	$('li').append('<em> '+ content +'</em>');
+```
+- [x] introduce continutul primului list item dupa fiecare list item
+<br>
+
+#### 24. Care dintre urmatoarele afirmatii despre metoda HTTP POST sunt adevarate:
+- [x] este recomandat a fi folosita pentru a submite un formular care contine un input de tip password
+- [x] trebuie neaparat folosita pentru a submite un formular care contine un input de tip file
+<br>
+
+#### 25. Un formular care contine un input de tip file trebuie:
+- [x] sa aiba specificat atributul enctype setat la multipart/form-data
+- [x] submis prin metoda POST
+<br>
+
+#### 26. Fie doua variabile $a si $b in PHP ce contin siruri de caractere. Aceste doua siruri in PHP se pot concatena folosind:
+- [x] ```$s = $a . $b;```
+- [x] ```$s = "$a$b";```
+<br>
+
+#### 27. Pozitionarea relative este folosita pentru:
+- [x] a pozitiona/muta un element in diferite directii relativ la pozitia sa normala
+- [x] un container parinte care are elemente fiu pozitionate absolut
+<br>
+
+#### 28. Care dintre urmatoarele metode HTTP nu presupun trimiterea de continut dupa antete in cadrul unei cereri HTTP:
+- [x] GET
+- [x] HEAD
+<br>
+
+#### 29. In functie de context, in jQuery $(this) poate fi folosit pentru:
+- [x] pentru a construi un wrapper jQuery in jurul obiectului window
+- [x] a construi un wrapper jQuery in jurul obiectului pe care se apeleaza un eveniment in interiorul functiei de tratare a evenimentului
+<br>
