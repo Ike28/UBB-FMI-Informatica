@@ -547,5 +547,105 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 - [x] Unele plugin-uri jQuery permit incadrarea librariei de pe diversele CDN-uri (Content Delivery Network)
 <br>
 
+#### 107. Care dintre urmatoarele reprezinta un avantaj al metodei GET fata de POST?
+- [x] Permite salvarea raspunsului ca bookmark
+<br>
 
+#### 108. Cum se pot obtine parametrii in backend in conditiile in care urmatoarea ancora este apasata?
+```html
+<a href="www.siteulmeu.com?addFav=1">Adauga la favorite</a>
+```
+- [x] ```$_GET[“addFav”]```
+<br>
 
+#### 109. In care dintre urmatoarele limbaje este posibilia crearea unei animatii care sa apara pe ecranul utilizatorului?
+- [x] CSS
+- [x] JavaScript
+<br>
+
+#### 110. Ce trebuie adaugat urmatoruli cod HTML pentru a fi corect?
+```html
+	<table style="width:100%"> 
+		<tr> 
+			<th>Company</th> 
+			<th>Contract</th> 
+			<th>Country</th>
+		</tr> 
+		<tr>
+			<td>Alfreds</td>
+			<td>Maria</td>
+			<td>Germany</td>
+		</tr>
+	</table>
+```
+- [x] Nimic, tabelul se afiseaza
+<br>
+
+#### 111. Carui fisier i se trimit datele cand se da submit la urmatorul formular?
+```html
+	<form>
+		<input type=”text” id=”fname” name=”fname”><br>
+		<input type=”text” id=”lname” name=”lname”><br><br>
+		<input type=”submit” value=”Submit”>
+	</form>
+```
+- [x] Datele nu se trimit deloc
+<br>
+
+#### 112. Care este un query string posibil daca se da submit la urmatorul formular?
+```html
+	<form>
+		<input type=”text” id=”fname” name=”fname”><br>
+		<input type=”text” id=”lname”><br>
+		<input type=”email” id=”email” name=”email” validate><br>
+		<input type=”submit” value=”Submit”>
+	</form>
+```
+- [x] "fname=Ion&email=ionpopescu@gmail.com"
+<br>
+
+#### 113. Unde se va putea deschide resursa ceruta de urmatoarea ancora?
+```html
+<a href="www.google.com" target="nume1" />
+```
+- [x] Intr-un ```<iframe>``` cu numele "nume1" 
+- [x] Intr-un nou tab sau in acelasi tab in care s-a deschis la apasarea trecuta
+<br>
+
+#### 114. Cum este posibil sa existe 2 butoane de submit intr-un formular?
+- [x] Doua input-uri submit cu nume diferite
+<br>
+
+#### 115. Care spatiu va ocupa pe latime un div daca i se aplica urmatorul stil, iar fereastra browser-ului are o latime de 1920px?
+```css
+	div {
+		width: 100px;
+		height: 120px;
+		margin: 10px;
+		border: 1px solid #4CAF50;
+		padding: 10px;
+	}
+```
+- [x] 140px
+<br>
+
+#### 116. Care este motivul de utilizare al sprite-urilor?
+- [x] Reducerea numarului de request-uri
+<br>
+
+#### 117. Care va fi culoarea si inaltimea div-ului cu id-ul “id1” daca sunt definite urmatoarele stiluri?
+```html
+	<style>
+		#id1 {
+			height: 100px;
+			background-color: red;
+		}
+	</style>
+		#id1 {
+			background-color: blue;
+		}
+	<style>
+	</style>
+```
+- [x] culoare = blue, inaltime = 100px
+<br>
