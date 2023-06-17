@@ -40,7 +40,7 @@
 <br>
 
 #### 9. Cum se declara un array vid in PHP:
-- [x] ```$emptyArray = [];```
+- [x] ```$emptyArray = [];``` (recomandata)
 - [x] ```$emptyArray = array();```
 <br>
 
@@ -64,6 +64,12 @@
 #### 13. Care dintre urmatoarele tag-uri HTML sunt deprecated in HTML5:
 - [x] center
 - [x] font
+- [x] strike
+- [x] big/small
+- [x] acronym
+- [x] basefont
+- [x] applet
+- [x] frame, frameset
 <br>
 
 #### 14. Cum se insereaza corect un fisier extern JavaScript denumit test.js intr-un document HTML?
