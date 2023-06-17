@@ -436,10 +436,84 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 - [x] ```body{color:yellow}```
 <br>
 
+#### 84. O baza de date embedded in cadrul unei aplicatii web Java se recomanda a fi memorata:
+- [x] In folderul WEB-INF al aplicatiei web intrucat acesta nu este accesibil de catre un client web
+- [x] Oriunde alt undeva in cadrul sistemului de fisiere dar nu in cadrul directorului aplicatiei web intrucat de acolo baza de date ar putea fi accesata de catre clientii web
+<br>
 
+#### 85. In care element HTML se plaseaza codul JavaScript?
+- [x] ```<script>```
+<br>
 
+#### 86. In cate instante se instantiaza un servlet?
+- [x] Intr-o singura instanta
+<br>
 
+#### 87. Parametrii de configurare ai unei aplicatii web Java sunt preluati din fisierul de configurare ai aplicatiei web in cadrul metodei:
+- [x] ```init()```
+<br>
 
+#### 89. O sesiune intr-o aplicatie web Java se termina cu:
+- [x] ```session.invalidate()```
+<br>
 
+#### 90. Ce eveniment se genereaza la un click de mouse pe un element din cadrul documentului?
+- [x] onclick
+<br>
 
+#### 91. Care dintre urmatoarele expresii jQuery se pot folosi interschimbabil?
+- [x] ```$("#myelem")[0]``` si ```document.getElementById("myelem")```
+- [x] ```$("#myelem")``` si ```$(document.getElementById("myelem"))```
+- [x] ```$``` si ```jQuery```
+<br>
+
+#### 92. Care dintre urmatoarele reprezinta specificatii ale unor metode din API-ul jQuery?
+- [x] ca pot fi apelate atat in mod sincron cat si in mod asincron
+- [x] ca intorc referinta la obiectul pe care au fost apelate
+- [x] ca pot fi folosite atat ca functii Setter cat si ca functii Getter
+<br>
+
+#### 93. Cum se afiseaza un mesaj prin intermediul unei ferestre de dialog modale in JavaScript?
+- [x] ```alert("Mesaj")```
+<br>
+
+#### 94. Ce face urmatoarea secventa de cod:
+```js
+	$('ul:has(li)').addClass('patrat').addClass('deplasat').addClass('colorat');
+```
+- [x] selecteaza listele neordonate care au cel putin un element si le adauga clasele patrat, deplasat, colorat
+<br>
+
+#### 95. Un client face o cerere iar serverul ii raspunde cu '404 Not found'. Care dintre urmatoarele afirmatii sunt adevarate:
+- [x] Chiar daca nu a gasit fisierul cerut de client, serverul ii poate da totusi acestuia un anumit continut HTML
+<br>
+
+#### 96. Care dintre urmatoarele sunt prefixe acceptate pe unele browsere pentru proprietatile CSS experimentale?
+- [x] ```-webkit```
+- [x] ```-o-```
+- [x] ```-moz-```
+- [x] ```-ms-```
+<br>
+
+#### 97. Care dintre urmatoarele sunt scriptlet-uri valide in PHP?
+- [x] ```<? ?```, cu conditia setarii unei optiuni de configurare in php.ini
+- [x] ```<?php ?>```
+<br>
+
+#### 98. Care dintre urmatoarele cuvinte/caractere nu sunt rezervate in JavaScript si se pot folosi ca si nume de variabile?
+- [x] $, a, b
+<br>
+
+#### 99. Pentru a centra un element cu display-ul block in cadrul unui alt container se foloseste:
+- [x] ```margin: 0 auto```
+<br>
+
+#### 100. Care dintre urmatoarele metode HTTP nu presupun trimiterea de continut dupa antete in cadrul unui raspuns HTTP:
+- [x] HEAD
+<br>
+
+#### 101. Care dintre urmatoarele afirmatii sunt adevarate: (de verificat)
+- [x] o definitie de stil aplicata clasei "bate" ca prioritate definita de stil aplicata pe "tag"
+- [x] o proprietate din cadrul unui stil inline suprascrie o proprietate dintr-o definitie de stil aplicata elementului unui selector bazat pe id
+<br>
 
