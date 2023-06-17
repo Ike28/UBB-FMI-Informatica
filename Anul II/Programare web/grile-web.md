@@ -359,7 +359,6 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 
 #### 65. Care dintre urmatoarele categorii de aplicatii se pot folosit de DOCTYPE pentru a "intelege" mai bine documentul HTML?
 - [x] Editoare si medii IDE (Integrated Development Environment)
-- [x] Motoare de cautare
 - [x] Browsere
 <br>
 
