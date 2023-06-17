@@ -502,7 +502,7 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 <br>
 
 #### 97. Care dintre urmatoarele sunt scriptlet-uri valide in PHP?
-- [x] ```<? ?```, cu conditia setarii unei optiuni de configurare in php.ini
+- [x] ```<? ?>```, cu conditia setarii unei optiuni de configurare in php.ini
 - [x] ```<?php ?>```
 <br>
 
