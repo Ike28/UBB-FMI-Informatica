@@ -504,6 +504,7 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 #### 97. Care dintre urmatoarele sunt scriptlet-uri valide in PHP?
 - [x] ```<? ?>```, cu conditia setarii unei optiuni de configurare in php.ini
 - [x] ```<?php ?>```
+- [x] ```<?= ?>``` (echivalent ```<?php echo ... ?>```) (?)
 <br>
 
 #### 98. Care dintre urmatoarele cuvinte/caractere nu sunt rezervate in JavaScript si se pot folosi ca si nume de variabile?
