@@ -2,7 +2,7 @@
 
 #### 1. Un apel AJAX se poate face catre o resursa statica oferita de end-point-ul de pe server?
 - [ ] Doar daca in QUERY_STRING / body-ul POST-ului se trimit spre server si parametri
-- [x] __Da, intotdeauna__
+<br>✅ __Da, intotdeauna__
 - [ ] Nu, niciodata
 <br>
 
@@ -10,28 +10,28 @@
 - [ ] Nu, deoarece codul de culoare hexazecimal trebuie sa contina inca doua cifre pentru opacitate
 - [ ] Da, deoarece valorile sunt specificate in baza 16
 - [ ] Da, deoarece RR specifica cantitatea de rosu, AA cantitatea de verde si BB cantitatea de albastru
-- [x] __Nu, deoarece valorile nu sunt specificate in baza 16__
+<br>✅ __Nu, deoarece valorile nu sunt specificate in baza 16__
 <br>
 
 #### 3. Care dintre urmatoarele afirmatii referitoare la filtrele de vizibilitate sunt adevarate?
-- [x] __Selectorul ```:hidden``` se foloseste pentru a selecta toate elementele ascunse in pagina__
+<br>✅ __Selectorul ```:hidden``` se foloseste pentru a selecta toate elementele ascunse in pagina__
 - [ ] Selectorul ```:visible``` se foloseste pentru a selecta elementele care au ```display:none``` sau ```width/height: 0```
-- [x] __Selectorul ```:visible``` se foloseste pentru a selecta toate elementele care ocupa spatiu in pagina__
+<br>✅ __Selectorul ```:visible``` se foloseste pentru a selecta toate elementele care ocupa spatiu in pagina__
 - [ ] Selectorul ```:hidden``` se foloseste pentru a selecta toate elementele care ocupa spatiu in pagina
 - [ ] Selectorul ```:visible``` se foloseste pentru a selecta elementele care au ```visibility: hidden``` si ```opacity: 0```
 <br>
 
 #### 4. Ce indica un cod de raspuns de forma 3xx trimis prin intermediul protocolului HTTP de un server web?
-- [x] __mutarea documentului cerut la o alta adresa__
+<br>✅ __mutarea documentului cerut la o alta adresa__
 - [ ] o eroare efectuata de client
-- [x] __redirecteaza clientul spre alt URL__
+<br>✅ __redirecteaza clientul spre alt URL__
 - [ ] o eroare aparuta pe partea de server
 <br>
 
 #### 5. De pe client se doreste salvarea unor date despre o persoana (numele si varsta acesteia) folosind un apel AJAX realizat prin metoda HTTP GET. Care dintre urmatoarele apeluri realizeaza acest lucru:
-- [x] __```$.get("save.php", {nume: 'Ion', varsta:10})```__
-- [x] __```$.get("save.php?nume=Ion&varsta=10")```__
-- [x] __```$.get("save.php", 'nume=Ion&varsta=10')```__
+<br>✅ __```$.get("save.php", {nume: 'Ion', varsta:10})```__
+<br>✅ __```$.get("save.php?nume=Ion&varsta=10")```__
+<br>✅ __```$.get("save.php", 'nume=Ion&varsta=10')```__
 <br>
 
 #### 6. Ce face urmatoarea secventa de cod:
@@ -41,25 +41,25 @@
 - [ ] selecteaza toate listele si le adauga clasele patrat, deplasat, colorat
 - [ ] selecteaza primul element din fiecare lista si ii adauga clasele patrat, deplasat, colorat
 - [ ] selecteaza toate elementele din liste si le adauga clasele patrat, deplasat, colorat
-- [x] __selecteaza primul li si ii adauga clasele patrat, deplasat, colorat__
+<br>✅ __selecteaza primul li si ii adauga clasele patrat, deplasat, colorat__
 <br>
 
 #### 7. Un URL de pe back-end poate fi invocat (cerut) atat prin GET cat si prin POST:
 - [ ] Nu
-- [x] __Da__
+<br>✅ __Da__
 - [ ] Doar daca datele primite fie prin GET fie prin POST sunt aceleasi (parametrii trimisi sunt aceeasi)
 <br>
 
 #### 8. Un fisier PHP poate fi executat:
-- [x] __In linia de comanda folosind interpretorul php.exe pe Windows sau php pe Linux__
+<br>✅ __In linia de comanda folosind interpretorul php.exe pe Windows sau php pe Linux__
 - [ ] De catre browser
 - [ ] De catre interpretorul de comenzi al sistemului de operare pe care este instalata stiva AMP
 - [ ] De catre un modul din cadrul serverului web
 <br>
 
 #### 9. Cum se declara un array vid in PHP:
-- [x] __```$emptyArray = [];```__ (recomandata in versiunile mai noi)
-- [x] __```$emptyArray = array();```__
+<br>✅ __```$emptyArray = [];```__ (recomandata in versiunile mai noi)
+<br>✅ __```$emptyArray = array();```__
 - [ ] ```$emptyArray = null;```
 - [ ] ```$emptyArray = ();```
 <br>
@@ -68,28 +68,28 @@
 ```js
 	$(':not(p)').addClass('patrat').addClass('colorat');
 ```
-- [x] __selecteaza toate elementele cu exceptia paragrafelor si le adauga clasele patrat si colorat__
+<br>✅ __selecteaza toate elementele cu exceptia paragrafelor si le adauga clasele patrat si colorat__
 - [ ] selecteaza toate elementele care au clasa patrat si clasa colorat cu exceptia paragrafelor
 - [ ] selecteaza toate elementele cu exceptia paragrafelor care au clasa patrat si clasa colorat
 - [ ] selecteaza toate paragrafele care au clasa patrat si clasa colorat
 <br>
 
 #### 11. Pentru a defini o lista ordonata a caror itemi sunt precedati de litere din alfabetul grec in CSS, se foloseste:
-- [x] __list-style-type: lower-greek__
+<br>✅ __list-style-type: lower-greek__
 - [ ] list-type: lower-greek
 - [ ] list: lower-greek
 <br>
 
 #### 12. Pentru a redirectiona automat browser-ul spre un nou URL, server-ul poate:
-- [x] __raspunde clientului cu un nou cod de raspuns de forma 3xx impreuna cu un header Location__
-- [x] __redirectioneaza clientul folosind o secventa de cod in JavaScript de forma ```window.location = "http://url-nou"```__
+<br>✅ __raspunde clientului cu un nou cod de raspuns de forma 3xx impreuna cu un header Location__
+<br>✅ __redirectioneaza clientul folosind o secventa de cod in JavaScript de forma ```window.location = "http://url-nou"```__
 - [ ] include noul URL direct pe back-end folosind o directiva ```include```
-- [x] __trimite ca si continut HTML clientului un link de forma ```<a href="http://url-nou">``` si simuleaza din JavaScript un click de mouse pe acest link__
+<br>✅ __trimite ca si continut HTML clientului un link de forma ```<a href="http://url-nou">``` si simuleaza din JavaScript un click de mouse pe acest link__
 <br>
 
 #### 13. Care dintre urmatoarele tag-uri HTML sunt deprecated in HTML5:
-- [x] __center__
-- [x] __font__
+<br>✅ __center__
+<br>✅ __font__
 - [ ] b
 - [ ] body
 #### alte tag-uri deprecated: ```strike, big/small, acronym, basefont, applet, frame, frameset```
@@ -99,45 +99,45 @@
 - [ ] ```<script name="test.js"></script>```
 - [ ] ```<script src="test.js">```
 - [ ] ```<script href="test.js">```
-- [x] __```<script src="test.js"></script>```__
+<br>✅ __```<script src="test.js"></script>```__
 <br>
 
 #### 15. Pentru inserarea de diacritice intr-un document HTML se pot folosi:
-- [x] __Editoare capabile sa salveze fisierul UTF-8 si specificarea acestui set de caractere in sectiunea head a documentului HTML__
+<br>✅ __Editoare capabile sa salveze fisierul UTF-8 si specificarea acestui set de caractere in sectiunea head a documentului HTML__
 - [ ] Tastatura setata pe limba romana si specificarea atributului lang="ro-RO" la tagul HTML
-- [x] __Entitati HTML__
+<br>✅ __Entitati HTML__
 <br>
 
 #### 16. Care sunt asemanarile si diferentele dintre atributele id si name?
 - [ ] atributul name se foloseste pentru referirea unui element din CSS/JavaScript
-- [x] __doua elemente HTML pot avea acelasi nume, dar nu pot avea acelasi id__
-- [x] __orice tag accepta atributul id, nu toate tagurile accepta atributul name__
+<br>✅ __doua elemente HTML pot avea acelasi nume, dar nu pot avea acelasi id__
+<br>✅ __orice tag accepta atributul id, nu toate tagurile accepta atributul name__
 - [ ] orice tag accepta atributul name, nu toate tagurile accepta atributul id
 - [ ] doua elemente HTML pot avea acelasi id, dar nu pot avea acelasi nume
-- [x] __atributul id se foloseste pentru referirea unui element din CSS/JavaScript__
+<br>✅ __atributul id se foloseste pentru referirea unui element din CSS/JavaScript__
 <br>
 
 #### 17. Dandu-se doua variable $a si $b, cum se poate interschimba valoarea acestora in PHP?
-- [x] __```list($a, $b) = ($b, $a);```__
+<br>✅ __```list($a, $b) = ($b, $a);```__
 - [ ] ```array($a, $b) = ($b, $a);```
 - [ ] ```$a = $b; $b = $a;```
 - [ ] ```array($a, $b) = ($b, $a);```
 - [ ] ```list($a, $b) = ($b, $a);```
 - [ ] ```array($a, $b) = array($b, $a);```
 - [ ] ```array($a, $b) = list($b, $a);```
-- [x] __```list($a, $b) = array($b, $a);```__
+<br>✅ __```list($a, $b) = array($b, $a);```__
 - [ ] ```list($a, $b) = list($b, $a);```
 <br>
 
 #### 18. In JavaScript typeof 1/0 este NaN pentru ca:
 - [ ] type of 1/0 nu are rezultatul NaN, ci Infinity
-- [x] __type of 1 este Number si Number nu se poate imparti la 0, rezultatul fiind NaN__
+<br>✅ __type of 1 este Number si Number nu se poate imparti la 0, rezultatul fiind NaN__
 - [ ] 1/0 este egal cu Infinity si typeof Infinity este NaN
 - [ ] 1/0 este NaN si typeof NaN este NaN
 <br>
 
 #### 19. Ce se intelege prin scop global in JavaScript?
-- [x] __obiectul window__
+<br>✅ __obiectul window__
 - [ ] obiectul document
 - [ ] variabila this
 - [ ] scopul imediat exterior celui in care este declarata o functie
@@ -145,23 +145,23 @@
 
 #### 20. Aranjati in ordine, de la cea mai simpla si putin customizabila, la cea mai configurabila si parametrizabila urmatoarele functii care permit realizarea unui apel AJAX din jQuery:
 - [ ] ```$get, load, $.post```
-- [x] __```load, $.get, $.ajax```__
+<br>✅ __```load, $.get, $.ajax```__
 - [ ] ```$post, load, $.ajax```
 - [ ] ```$.ajax, load, $.get```
 <br>
 
 #### 21. Care este forma corecta de folosire a tag-ului img in cadrul unui document XHTML:
 - [ ] ```<img>poza.jpg</img>```
-- [x] __```<img src="poza.jpg"/>```__
+<br>✅ __```<img src="poza.jpg"/>```__
 - [ ] ```<img src="poza.jpg"></img>```
 - [ ] ```<img src="poza.jpg">```
 <br>
 
 #### 22. Care dintre urmatoarele reprezinta masuri pentru evitarea injectiilor SQL:
-- [x] __Verificari riguroase la nivelul backend-ului legate de validitatea datelor introduse precum si folosirea de biblioteci specializate pentru persistarea datelor (ORM-uri)__
+<br>✅ __Verificari riguroase la nivelul backend-ului legate de validitatea datelor introduse precum si folosirea de biblioteci specializate pentru persistarea datelor (ORM-uri)__
 - [ ] Dezactivarea in cadrul aplicatiei Web a posibilitatii rularii de cod SQL de catre browser
 - [ ] Verificari riguroase la nivelul browserului legate de validitatea datelor introduse
-- [x] __Folosirea la nivelul backend-ului de mecanisme de tipul "prepared statement"__
+<br>✅ __Folosirea la nivelul backend-ului de mecanisme de tipul "prepared statement"__
 <br>
 
 #### 23. Ce face urmatoarea secventa de cod:
@@ -172,13 +172,14 @@
 - [ ] introduce continutul primului list item inaintea fiecarui list item
 - [ ] continutul din toate li-urile vor fi scrise cu italic
 - [ ] introduce content dupa primul list item
-- [x] __introduce continutul primului list item dupa fiecare list item__
+<br>✅ __introduce continutul primului list item dupa fiecare list item__
 - [ ] continutul din primul li va fi scris cu italic
 <br>
 
 #### 24. Care dintre urmatoarele afirmatii despre metoda HTTP POST sunt adevarate:
-- [ ] trebuie neaparat folosita pentru a submite un formular care contine un input de tip video<br>✅ __este recomandat a fi folosita pentru a submite un formular care contine un input de tip password__
-- [x] __trebuie neaparat folosita pentru a submite un formular care contine un input de tip file__
+- [ ] trebuie neaparat folosita pentru a submite un formular care contine un input de tip video
+<br>✅ __este recomandat a fi folosita pentru a submite un formular care contine un input de tip password__
+<br>✅ __trebuie neaparat folosita pentru a submite un formular care contine un input de tip file__
 <br>
 
 #### 25. Un formular care contine un input de tip file trebuie:
@@ -271,77 +272,77 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 <br>
 
 #### 37. Care sunt moduri valabile de a introduce CSS in HTML:
-- [x] inline
-- [x] interne
-- [x] externe
+<br>✅ inline
+<br>✅ interne
+<br>✅ externe
 <br>
 
 #### 38. In ce ordine au sens apelarile metodelor daca resursa nu exista in momentul actual:
-- [x] post, put, get, delete
+<br>✅ post, put, get, delete
 <br>
 
 #### 39. Care dintre tagurile de mai jos au display: block by default:
-- [x] ```<div>```
-- [x] ```<p>```
-- [x] ```<h1>```
+<br>✅ ```<div>```
+<br>✅ ```<p>```
+<br>✅ ```<h1>```
 <br>
 
 #### 40. Care HTTP status code anunta o eroare:
-- [x] 4xx
-- [x] 5xx
+<br>✅ 4xx
+<br>✅ 5xx
 <br>
 
 #### 41. Care dintre metodele HTTP urmatoare sunt idempotente:
-- [x] GET
-- [x] HEAD
-- [x] DELETE
-- [x] PUT
+<br>✅ GET
+<br>✅ HEAD
+<br>✅ DELETE
+<br>✅ PUT
 <br>
 
 #### 42. Care dintre metodele HTTP urmatoare sunt cacheable:
-- [x] GET
-- [x] HEAD
+<br>✅ GET
+<br>✅ HEAD
 <br>
 
 #### 43. Care sunt headere valide:
-- [x] Host
-- [x] User-agent
-- [x] Content-length
-- [x] From
+<br>✅ Host
+<br>✅ User-agent
+<br>✅ Content-length
+<br>✅ From
 <br>
 
 #### 44. Care dintre urmatoarele sunt atribute ale unui cookie:
-- [x] Name
-- [x] Value
-- [x] Expires
-- [x] Max-age
+<br>✅ Name
+<br>✅ Value
+<br>✅ Expires
+<br>✅ Max-age
 <br>
 
 #### 45. Ce poate semnifica un status code de tip 4xx:
-- [x] Bad request
-- [x] Unauthorized
+<br>✅ Bad request
+<br>✅ Unauthorized
 <br>
 
 #### 46. Care este diferenta dintre let si var:
-- [x] variabilele definite cu let pot avea scop de tip bloc, iar cele cu var nu
-- [x] variabilele definite cu var pot fi redeclarate in acelasi bloc, iar cele cu let nu
+<br>✅ variabilele definite cu let pot avea scop de tip bloc, iar cele cu var nu
+<br>✅ variabilele definite cu var pot fi redeclarate in acelasi bloc, iar cele cu let nu
 <br>
 
 #### 47. Care este diferenta intre =, == si ===:
-- [x] = este folosit pentru a atribui o valoare unui operand, == pentru a compara valorile operanzilor, iar === pentru a compara si tipul si valoarea operanzilor
+<br>✅ = este folosit pentru a atribui o valoare unui operand, == pentru a compara valorile operanzilor, iar === pentru a compara si tipul si valoarea operanzilor
 <br>
 
 #### 48. Care sunt tipurile de scopuri in JavaScript:
-- [x] global scope
-- [x] function scope
-- [x] block scope
+<br>✅ global scope
+<br>✅ function scope
+<br>✅ block scope
 <br>
 
 #### 49. Pentru ce este folosit keyword-ul this in JavaScript:
-- [x] refera obiectul window (global)
-- [x] cand este folosit intr-o metoda a unui obiect, refera obiectul curent
-- [x] intr-o functie obisnuita refera obiectul window
-- [x] intr-un eveniment refera obiectul pe care s-a apelat evenimentul
+<br>✅ refera obiectul window (global)
+<br>✅ cand este folosit intr-o metoda a unui obiect, refera obiectul curent
+<br>✅ intr-o functie obisnuita refera obiectul window
+<br>✅ intr-un eveniment refera obiectul pe care s-a apelat evenimentul
 <br>
 
 #### 50. Un apel AJAX este in starea 2 daca:
