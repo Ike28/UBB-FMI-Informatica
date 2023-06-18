@@ -28,7 +28,7 @@
 ```js
 	$('li:first').addClass('patrat').addClass('deplasat').addClass('colorat');
 ```
-- [x] selecteaza primul element din fiecare lista si ii adauga clasele patrat, deplasat, colorat
+- [x] selecteaza primul li si ii adauga clasele patrat, deplasat, colorat
 <br>
 
 #### 7. Un URL de pe back-end poate fi invocat (cerut) atat prin GET cat si prin POST:
@@ -420,7 +420,7 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 <br>
 
 #### 80. Care dintre urmatoarele expresii jQuery se pot folosi interschimbabil?
-- [x] ```$(ready(function() {})) cu $(document).ready(function() {})```
+- [x] ```$(function() {})``` cu ```$(document).ready(function() {})```
 <br>
 
 #### 81. Care dintre urmatoarele reprezinta masuri pentru evitarea vulnerabilitatilor de tip XSS:
