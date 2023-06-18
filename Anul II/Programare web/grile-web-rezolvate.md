@@ -10,7 +10,7 @@
 - [ ] Nu, deoarece codul de culoare hexazecimal trebuie sa contina inca doua cifre pentru opacitate
 - [ ] Da, deoarece valorile sunt specificate in baza 16
 - [ ] Da, deoarece RR specifica cantitatea de rosu, AA cantitatea de verde si BB cantitatea de albastru
-- [x] ____Nu, deoarece valorile nu sunt specificate in baza 16____
+- [x] ___Nu, deoarece valorile nu sunt specificate in baza 16___
 <br>
 
 #### 3. Care dintre urmatoarele afirmatii referitoare la filtrele de vizibilitate sunt adevarate?
@@ -183,8 +183,8 @@
 <br>
 
 #### 25. Un formular care contine un input de tip file trebuie:
-- [ ] sa aiba specificat atributul enctype setat la multipart/form-data
-- [ ] submis prin metoda POST
+- [x] ___sa aiba specificat atributul enctype setat la multipart/form-data___
+- [x] ___submis prin metoda POST___
 - [ ] sa aiba specificat atributul accept care specifica tipul fisierelor ce se pot trimite la server
 - [ ] sa aiba specificat atributul content care sa indice spre continutul fisierului
 - [ ] submis prin metoda GET
@@ -192,30 +192,30 @@
 
 #### 26. Fie doua variabile $a si $b in PHP ce contin siruri de caractere. Aceste doua siruri in PHP se pot concatena folosind:
 - [ ] ```$s = $a + $b```
-- [ ] ```$s = $a . $b;```
-- [ ] ```$s = "$a$b";```
+- [x] ___```$s = $a . $b;```___
+- [x] ___```$s = "$a$b";```___
 - [ ] ```$s = '$a$b';```
 <br>
 
 #### 27. Pozitionarea relative este folosita pentru:
-- [ ] a pozitiona/muta un element in diferite directii relativ la pozitia sa normala
+- [x] ___a pozitiona/muta un element in diferite directii relativ la pozitia sa normala___
 - [ ] a pozitiona un element relativ la obiectul document
 - [ ] a pozitiona un element relativ la fereastra browserului (obiectul window)
-- [ ] un container parinte care are elemente fiu pozitionate absolut
+- [x] ___un container parinte care are elemente fiu pozitionate absolut___
 <br>
 
 #### 28. Care dintre urmatoarele metode HTTP nu presupun trimiterea de continut dupa antete in cadrul unei cereri HTTP:
-- [ ] GET
+- [x] ___GET___
 - [ ] POST
 - [ ] PUT
-- [ ] HEAD
+- [x] ___HEAD___
 <br>
 
 #### 29. In functie de context, in jQuery ```$(this)``` poate fi folosit pentru:
 - [ ] a returna obiectul JavaScript de baza in jurul caruia este construit obiectul jQuery curent
-- [ ] pentru a construi un wrapper jQuery in jurul documentului
-- [ ] pentru a construi un wrapper jQuery in jurul obiectului window
-- [ ] a construi un wrapper jQuery in jurul obiectului pe care se apeleaza un eveniment in interiorul functiei de tratare a evenimentului
+- [ ] a construi un wrapper jQuery in jurul documentului
+- [x] ___a construi un wrapper jQuery in jurul obiectului window___
+- [x] ___a construi un wrapper jQuery in jurul obiectului pe care se apeleaza un eveniment in interiorul functiei de tratare a evenimentului___
 <br>
 
 #### 30. Considerand urmatoarele elemente html:
@@ -224,14 +224,14 @@
 	<div class="info number" id="age">25></div>
 ```
 Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
-- [ ] ```.info.number```
+- [x] ___```.info.number```___
 - [ ] ```.info .number```
 - [ ] ```.info #age```
 - [ ] ```.info[id]```
 <br>
 
 #### 31. In ce conditii metoda ```send``` pe un obiect AJAX se apeleaza intotdeauna cu parametrul sirul vid?
-- [ ] Daca requestul AJAX se face prin GET
+- [x] ___Daca requestul AJAX se face prin GET___
 - [ ] Daca requestul AJAX se face prin HTTP
 - [ ] Metoda ```send``` nu se poate apela cu parametrul sirul vid
 <br>
@@ -239,114 +239,113 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 #### 32. Cum se ascund toate div-urile din pagina folosind jQuery?
 - [ ] ```$("div").hidden()```
 - [ ] ```$("div").visibility(false)```
-- [ ] ```$("div").css("visibility", "hidden")```
+- [x] ___```$("div").css("visibility", "hidden")```___
 - [ ] ```$("div").css("visibility", "hide")```
 <br>
 
 #### 33. Care dintre urmatoarele metode jQuery folosesc AJAX:
-- [ ] ```$.ajax, $.get, load```
+- [x] ___```$.ajax, $.get, load```___
 - [ ] ```$.post, $.request, load```
 - [ ] ```$.ajax, $.get, $.post, $.request```
 - [ ] ```$.get, load, unload```
 <br>
 
-
 #### 34. Care dintre urmatoarele afirmatii sunt adevarate:
-- [ ] MySQL Old Extension (mysql_*) nu suporta "prepared statement"-uri, dar permite evitarea injectiilor SQL
+- [x] ___MySQL Old Extension (mysql_*) nu suporta "prepared statement"-uri, dar permite evitarea injectiilor SQL___
 - [ ] MySQL Improved Extension (mysqli_*) asigura in plus fata de PDO independenta fata de sistemul de gestiune a bazelor de date folosit
 - [ ] MySQL Improved Extension (mysqli_*) asigura in plus fata de PDO posibilitatea folosirii de "prepared statement"-uri
 <br>
 
 #### 35. In PHP ```return``` este folosit pentru:
-- [ ] a termina scriptul curent care se executa si a reda controlul executiei unui eventual script care l-a inclus pe scriptul curent cu ```include``` sau ```require```
+- [x] ___a termina scriptul curent care se executa si a reda controlul executiei unui eventual script care l-a inclus pe scriptul curent cu ```include``` sau ```require```___
 - [ ] a termina executia logicii ce se executa pe server si a trimite raspunsul complet clientului
 - [ ] a trimite clientului un anumit raspuns in urma cererii facute de acesta
-- [ ] a termina executia unei functii
+- [x] ___a termina executia unei functii___
 <br>
 
 #### 36. Pe ce nivel al stivei TCP/IP se situeaza HTTP?
-- [ ] Aplicatie
+- [x] ___Aplicatie___
 - [ ] Internet
 - [ ] Legatura de date
 - [ ] Transport
 <br>
 
 #### 37. Care sunt moduri valabile de a introduce CSS in HTML:
-- [x] inline
-- [x] interne
-- [x] externe
+- [x] ___inline___
+- [x] ___interne___
+- [x] ___externe___
 <br>
 
 #### 38. In ce ordine au sens apelarile metodelor daca resursa nu exista in momentul actual:
-- [x] post, put, get, delete
+- [x] ___post, put, get, delete___
 <br>
 
 #### 39. Care dintre tagurile de mai jos au display: block by default:
-- [x] ```<div>```
-- [x] ```<p>```
-- [x] ```<h1>```
+- [x] ___```<div>```___
+- [x] ___```<p>```___
+- [x] ___```<h1>```___
 <br>
 
 #### 40. Care HTTP status code anunta o eroare:
-- [x] 4xx
-- [x] 5xx
+- [x] ___4xx___
+- [x] ___5xx___
 <br>
 
 #### 41. Care dintre metodele HTTP urmatoare sunt idempotente:
-- [x] GET
-- [x] HEAD
-- [x] DELETE
-- [x] PUT
+- [x] ___GET___
+- [x] ___HEAD___
+- [x] ___DELETE___
+- [x] ___PUT___
 <br>
 
 #### 42. Care dintre metodele HTTP urmatoare sunt cacheable:
-- [x] GET
-- [x] HEAD
+- [x] ___GET___
+- [x] ___HEAD___
 <br>
 
 #### 43. Care sunt headere valide:
-- [x] Host
-- [x] User-agent
-- [x] Content-length
-- [x] From
+- [x] ___Host___
+- [x] ___User-agent___
+- [x] ___Content-length___
+- [x] ___From___
 <br>
 
 #### 44. Care dintre urmatoarele sunt atribute ale unui cookie:
-- [x] Name
-- [x] Value
-- [x] Expires
-- [x] Max-age
+- [x] ___Name___
+- [x] ___Value___
+- [x] ___Expires___
+- [x] ___Max-age___
 <br>
 
 #### 45. Ce poate semnifica un status code de tip 4xx:
-- [x] Bad request
-- [x] Unauthorized
+- [x] ___Bad request___
+- [x] ___Unauthorized___
 <br>
 
 #### 46. Care este diferenta dintre let si var:
-- [x] variabilele definite cu let pot avea scop de tip bloc, iar cele cu var nu
-- [x] variabilele definite cu var pot fi redeclarate in acelasi bloc, iar cele cu let nu
+- [x] ___variabilele definite cu let pot avea scop de tip bloc, iar cele cu var nu___
+- [x] ___variabilele definite cu var pot fi redeclarate in acelasi bloc, iar cele cu let nu___
 <br>
 
 #### 47. Care este diferenta intre =, == si ===:
-- [x] = este folosit pentru a atribui o valoare unui operand, == pentru a compara valorile operanzilor, iar === pentru a compara si tipul si valoarea operanzilor
+- [x] ___= este folosit pentru a atribui o valoare unui operand, == pentru a compara valorile operanzilor, iar === pentru a compara si tipul si valoarea operanzilor___
 <br>
 
 #### 48. Care sunt tipurile de scopuri in JavaScript:
-- [x] global scope
-- [x] function scope
-- [x] block scope
+- [x] ___global scope___
+- [x] ___function scope___
+- [x] ___block scope___
 <br>
 
 #### 49. Pentru ce este folosit keyword-ul this in JavaScript:
-- [x] refera obiectul window (global)
-- [x] cand este folosit intr-o metoda a unui obiect, refera obiectul curent
-- [x] intr-o functie obisnuita refera obiectul window
-- [x] intr-un eveniment refera obiectul pe care s-a apelat evenimentul
+- [x] ___refera obiectul window (global)___
+- [x] ___cand este folosit intr-o metoda a unui obiect, refera obiectul curent___
+- [x] ___intr-o functie obisnuita refera obiectul window___
+- [x] ___intr-un eveniment refera obiectul pe care s-a apelat evenimentul___
 <br>
 
 #### 50. Un apel AJAX este in starea 2 daca:
-- [ ] s-a facut send dar inca nu a sosit raspunsul de la server
+- [x] ___s-a facut send dar inca nu a sosit raspunsul de la server___
 - [ ] s-a facut receive, dar nu s-a facut send
 - [ ] s-a facut si send si receive, chiar inainte de close
 - [ ] s-a facut open dar inca nu s-a facut send
@@ -354,7 +353,7 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 
 #### 51. Elementul ```<th>``` trebuie folosit in cadrul unui tabel pentru:
 - [ ] centrarea textului si bold-area continutului unei celule
-- [ ] definirea unei celule avand semnificatia de celula ce face parte din header-ul tabelului
+- [x] ___definirea unei celule avand semnificatia de celula ce face parte din header-ul tabelului___
 - [ ] definirea unui nou rand in tabel
 <br>
 
@@ -363,33 +362,30 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 - [ ] var studenti = ("Mihai, "Cristina", "Paula", "Dan")
 - [ ] var studenti = {"Mihai", "Cristina", "Paula", "Dan"}
 - [ ] var studenti = "Mihai", "Cristina", "Paula", "Dan"
-- [ ] var studenti = ["Mihai", "Cristina", "Paula", "Dan"]
+- [x] ___var studenti = ["Mihai", "Cristina", "Paula", "Dan"]___
 <br>
 
 #### 53. Pentru evitarea injectiilor SQL in PHP 7 se recomanda:
-- [ ] Folosirea de "prepared statement"-uri
+- [x] ___Folosirea de "prepared statement"-uri___
 - [ ] Evitarea acestora folosind functia ```mysql_real_escape_string```
 - [ ] Eliminarea ghilimelelor si apostroafelor din datele primite de la client
 <br>
-
 
 #### 54. Injectiile JavaScript se datoreaza:
 - [ ] Folosirii protocolului http in locul protocolului https
 - [ ] Validarii insuficiente chiar la nivelul codului JavaScript
 - [ ] Unor buguri prezente la nivelul browserului web
-- [ ] Validarii insuficiente server-side la nivelul scriptului ce prelucreaza datele din formular
+- [x] ___Validarii insuficiente server-side la nivelul scriptului ce prelucreaza datele din formular___
 <br>
-
 
 #### 55. Unde se poate defini un stil CSS pentru o anumita clasa?
-- [ ] in interiorul tag-ului ```<style>```, localizat in antetul paginii html
+- [x] ___in interiorul tag-ului ```<style>```, localizat in antetul paginii html___
 - [ ] inline, cu ajutorul atributului style aplicat pe un tag html
-- [ ] intr-un fisier extern specificat cu ajutorul tag-ului ```<link>```
+- [x] ___intr-un fisier extern specificat cu ajutorul tag-ului ```<link>```___
 <br>
 
-
 #### 56. Pentru a verifica succesul unui apel AJAX trebuie ca:
-- [ ] readyState sa fie 4 si request.status 200
+- [x] ___readyState sa fie 4 si request.status 200___
 - [ ] readyState sa fie 4 si request.status 100
 - [ ] readyState sa fie 1 si request.status 200
 - [ ] readyState sa fie 0 si request.status 100
@@ -399,13 +395,13 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 - [ ] ```ul, ol, p, img, div```
 - [ ] ```ul, ol, p, table, input```
 - [ ] ```input, div, p, form```
-- [ ] ```div, p, ul, ol, h1```
+- [x] ___```div, p, ul, ol, h1```___
 <br>
 
 #### 58. Unde se poate insera cod JavaScript in cadrul unui document HTML?
 - [ ] doar in sectiunea ```<body>```
 - [ ] doar in sectiunea ```<head>```
-- [ ] atat in sectiunea ```<head>``` cat si ```<body>```
+- [x] ___atat in sectiunea ```<head>``` cat si ```<body>```___
 <br>
 
 #### 59. Fie urmatoarea secventa de cod HTML/CSS. Pe ce fundal va fi afisat textul Cocosul canta?
