@@ -1,8 +1,8 @@
-## Grile Web
+## Grile Web - Solutii
 
 #### 1. Un apel AJAX se poate face catre o resursa statica oferita de end-point-ul de pe server?
 - [ ] Doar daca in QUERY_STRING / body-ul POST-ului se trimit spre server si parametri
-- [x] <span style="color:purple">Da, intotdeauna</span>
+- [x] __Da, intotdeauna__
 - [ ] Nu, niciodata
 <br>
 
@@ -172,14 +172,14 @@
 - [ ] introduce continutul primului list item inaintea fiecarui list item
 - [ ] continutul din toate li-urile vor fi scrise cu italic
 - [ ] introduce content dupa primul list item
-- [ ] introduce continutul primului list item dupa fiecare list item
+- [x] __introduce continutul primului list item dupa fiecare list item__
 - [ ] continutul din primul li va fi scris cu italic
 <br>
 
 #### 24. Care dintre urmatoarele afirmatii despre metoda HTTP POST sunt adevarate:
 - [ ] trebuie neaparat folosita pentru a submite un formular care contine un input de tip video
-- [ ] este recomandat a fi folosita pentru a submite un formular care contine un input de tip password
-- [ ] trebuie neaparat folosita pentru a submite un formular care contine un input de tip file
+- ✅ __este recomandat a fi folosita pentru a submite un formular care contine un input de tip password__
+- [x] __trebuie neaparat folosita pentru a submite un formular care contine un input de tip file__
 <br>
 
 #### 25. Un formular care contine un input de tip file trebuie:
