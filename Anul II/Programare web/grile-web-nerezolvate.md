@@ -1,4 +1,4 @@
-## Grile Web - Solutii
+## Grile Web
 
 #### 1. Un apel AJAX se poate face catre o resursa statica oferita de end-point-ul de pe server?
 - [ ] Doar daca in QUERY_STRING / body-ul POST-ului se trimit spre server si parametri
