@@ -14,7 +14,7 @@
 <br>
 
 #### 3. Care dintre urmatoarele afirmatii referitoare la filtrele de vizibilitate sunt adevarate?
-<br>✅ __Selectorul ```:hidden``` se foloseste pentru a selecta toate elementele ascunse in pagina__
+✅ __Selectorul ```:hidden``` se foloseste pentru a selecta toate elementele ascunse in pagina__
 - [ ] Selectorul ```:visible``` se foloseste pentru a selecta elementele care au ```display:none``` sau ```width/height: 0```
 <br>✅ __Selectorul ```:visible``` se foloseste pentru a selecta toate elementele care ocupa spatiu in pagina__
 - [ ] Selectorul ```:hidden``` se foloseste pentru a selecta toate elementele care ocupa spatiu in pagina
@@ -22,14 +22,14 @@
 <br>
 
 #### 4. Ce indica un cod de raspuns de forma 3xx trimis prin intermediul protocolului HTTP de un server web?
-<br>✅ __mutarea documentului cerut la o alta adresa__
+✅ __mutarea documentului cerut la o alta adresa__
 - [ ] o eroare efectuata de client
 <br>✅ __redirecteaza clientul spre alt URL__
 - [ ] o eroare aparuta pe partea de server
 <br>
 
 #### 5. De pe client se doreste salvarea unor date despre o persoana (numele si varsta acesteia) folosind un apel AJAX realizat prin metoda HTTP GET. Care dintre urmatoarele apeluri realizeaza acest lucru:
-<br>✅ __```$.get("save.php", {nume: 'Ion', varsta:10})```__
+✅ __```$.get("save.php", {nume: 'Ion', varsta:10})```__
 <br>✅ __```$.get("save.php?nume=Ion&varsta=10")```__
 <br>✅ __```$.get("save.php", 'nume=Ion&varsta=10')```__
 <br>
@@ -51,14 +51,14 @@
 <br>
 
 #### 8. Un fisier PHP poate fi executat:
-<br>✅ __In linia de comanda folosind interpretorul php.exe pe Windows sau php pe Linux__
+✅ __In linia de comanda folosind interpretorul php.exe pe Windows sau php pe Linux__
 - [ ] De catre browser
 - [ ] De catre interpretorul de comenzi al sistemului de operare pe care este instalata stiva AMP
 - [ ] De catre un modul din cadrul serverului web
 <br>
 
 #### 9. Cum se declara un array vid in PHP:
-<br>✅ __```$emptyArray = [];```__ (recomandata in versiunile mai noi)
+✅ __```$emptyArray = [];```__ (recomandata in versiunile mai noi)
 <br>✅ __```$emptyArray = array();```__
 - [ ] ```$emptyArray = null;```
 - [ ] ```$emptyArray = ();```
@@ -68,27 +68,27 @@
 ```js
 	$(':not(p)').addClass('patrat').addClass('colorat');
 ```
-<br>✅ __selecteaza toate elementele cu exceptia paragrafelor si le adauga clasele patrat si colorat__
+✅ __selecteaza toate elementele cu exceptia paragrafelor si le adauga clasele patrat si colorat__
 - [ ] selecteaza toate elementele care au clasa patrat si clasa colorat cu exceptia paragrafelor
 - [ ] selecteaza toate elementele cu exceptia paragrafelor care au clasa patrat si clasa colorat
 - [ ] selecteaza toate paragrafele care au clasa patrat si clasa colorat
 <br>
 
 #### 11. Pentru a defini o lista ordonata a caror itemi sunt precedati de litere din alfabetul grec in CSS, se foloseste:
-<br>✅ __list-style-type: lower-greek__
+✅ __list-style-type: lower-greek__
 - [ ] list-type: lower-greek
 - [ ] list: lower-greek
 <br>
 
 #### 12. Pentru a redirectiona automat browser-ul spre un nou URL, server-ul poate:
-<br>✅ __raspunde clientului cu un nou cod de raspuns de forma 3xx impreuna cu un header Location__
+✅ __raspunde clientului cu un nou cod de raspuns de forma 3xx impreuna cu un header Location__
 <br>✅ __redirectioneaza clientul folosind o secventa de cod in JavaScript de forma ```window.location = "http://url-nou"```__
 - [ ] include noul URL direct pe back-end folosind o directiva ```include```
 <br>✅ __trimite ca si continut HTML clientului un link de forma ```<a href="http://url-nou">``` si simuleaza din JavaScript un click de mouse pe acest link__
 <br>
 
 #### 13. Care dintre urmatoarele tag-uri HTML sunt deprecated in HTML5:
-<br>✅ __center__
+✅ __center__
 <br>✅ __font__
 - [ ] b
 - [ ] body
@@ -103,7 +103,7 @@
 <br>
 
 #### 15. Pentru inserarea de diacritice intr-un document HTML se pot folosi:
-<br>✅ __Editoare capabile sa salveze fisierul UTF-8 si specificarea acestui set de caractere in sectiunea head a documentului HTML__
+✅ __Editoare capabile sa salveze fisierul UTF-8 si specificarea acestui set de caractere in sectiunea head a documentului HTML__
 - [ ] Tastatura setata pe limba romana si specificarea atributului lang="ro-RO" la tagul HTML
 <br>✅ __Entitati HTML__
 <br>
@@ -118,7 +118,7 @@
 <br>
 
 #### 17. Dandu-se doua variable $a si $b, cum se poate interschimba valoarea acestora in PHP?
-<br>✅ __```list($a, $b) = ($b, $a);```__
+✅ __```list($a, $b) = ($b, $a);```__
 - [ ] ```array($a, $b) = ($b, $a);```
 - [ ] ```$a = $b; $b = $a;```
 - [ ] ```array($a, $b) = ($b, $a);```
@@ -137,7 +137,7 @@
 <br>
 
 #### 19. Ce se intelege prin scop global in JavaScript?
-<br>✅ __obiectul window__
+✅ __obiectul window__
 - [ ] obiectul document
 - [ ] variabila this
 - [ ] scopul imediat exterior celui in care este declarata o functie
@@ -158,7 +158,7 @@
 <br>
 
 #### 22. Care dintre urmatoarele reprezinta masuri pentru evitarea injectiilor SQL:
-<br>✅ __Verificari riguroase la nivelul backend-ului legate de validitatea datelor introduse precum si folosirea de biblioteci specializate pentru persistarea datelor (ORM-uri)__
+✅ __Verificari riguroase la nivelul backend-ului legate de validitatea datelor introduse precum si folosirea de biblioteci specializate pentru persistarea datelor (ORM-uri)__
 - [ ] Dezactivarea in cadrul aplicatiei Web a posibilitatii rularii de cod SQL de catre browser
 - [ ] Verificari riguroase la nivelul browserului legate de validitatea datelor introduse
 <br>✅ __Folosirea la nivelul backend-ului de mecanisme de tipul "prepared statement"__
