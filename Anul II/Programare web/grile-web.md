@@ -663,7 +663,7 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 <br>
 
 #### 121. Cum se declara in JavaScript o functie anonima care se si apeleaza?
-- [x] `(function(){ // fa ceva })()`{:.js}
+- [x] ```(function(){ // fa ceva })()```
 <br>
 
 #### 122. Care dintre urmatoarele reprezinta metode valide HTTP?
