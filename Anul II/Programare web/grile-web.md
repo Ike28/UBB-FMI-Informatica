@@ -673,7 +673,7 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 <br>
 
 #### 123. Cum se face cel mai usor o imagine responsive?
-- [x] ```<img src="picture.jpg" stlye="max-width: 100%; height: auto">```
+- [x] ```<img src="picture.jpg" style="max-width: 100%; height: auto">```
 <br>
 
 #### 124. Cum arata un raspuns de redirectare trimis de catre server?
