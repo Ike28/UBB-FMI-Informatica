@@ -1,4 +1,4 @@
-## Grile Web
+## Grile Web - Solutii
 
 #### 1. Un apel AJAX se poate face catre o resursa statica oferita de end-point-ul de pe server?
 - [ ] Doar daca in QUERY_STRING / body-ul POST-ului se trimit spre server si parametri
@@ -58,7 +58,7 @@
 <br>
 
 #### 9. Cum se declara un array vid in PHP:
-- [ ] ```$emptyArray = [];```
+- [ ] ```$emptyArray = [];``` (recomandata in versiunile mai noi)
 - [ ] ```$emptyArray = array();```
 - [ ] ```$emptyArray = null;```
 - [ ] ```$emptyArray = ();```
@@ -92,6 +92,7 @@
 - [ ] font
 - [ ] b
 - [ ] body
+#### alte tag-uri deprecated: ```strike, big/small, acronym, basefont, applet, frame, frameset```
 <br>
 
 #### 14. Cum se insereaza corect un fisier extern JavaScript denumit test.js intr-un document HTML?
@@ -152,7 +153,7 @@
 #### 21. Care este forma corecta de folosire a tag-ului img in cadrul unui document XHTML:
 - [ ] ```<img>poza.jpg</img>```
 - [ ] ```<img src="poza.jpg"/>```
-- [ ] ```<img src="poza.jpg"></img>
+- [ ] ```<img src="poza.jpg"></img>```
 - [ ] ```<img src="poza.jpg">```
 <br>
 
@@ -212,8 +213,8 @@
 
 #### 29. In functie de context, in jQuery ```$(this)``` poate fi folosit pentru:
 - [ ] a returna obiectul JavaScript de baza in jurul caruia este construit obiectul jQuery curent
-- [ ] pentru a construi un wrapper jQuery in jurul documentului
-- [ ] pentru a construi un wrapper jQuery in jurul obiectului window
+- [ ] a construi un wrapper jQuery in jurul documentului
+- [ ] a construi un wrapper jQuery in jurul obiectului window
 - [ ] a construi un wrapper jQuery in jurul obiectului pe care se apeleaza un eveniment in interiorul functiei de tratare a evenimentului
 <br>
 
@@ -249,7 +250,6 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 - [ ] ```$.get, load, unload```
 <br>
 
-
 #### 34. Care dintre urmatoarele afirmatii sunt adevarate:
 - [ ] MySQL Old Extension (mysql_*) nu suporta "prepared statement"-uri, dar permite evitarea injectiilor SQL
 - [ ] MySQL Improved Extension (mysqli_*) asigura in plus fata de PDO independenta fata de sistemul de gestiune a bazelor de date folosit
@@ -271,77 +271,103 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 <br>
 
 #### 37. Care sunt moduri valabile de a introduce CSS in HTML:
-- [x] inline
-- [x] interne
-- [x] externe
+- [ ] inline
+- [ ] outline
+- [ ] interne
+- [ ] externe
 <br>
 
 #### 38. In ce ordine au sens apelarile metodelor daca resursa nu exista in momentul actual:
-- [x] post, put, get, delete
+- [ ] get, post, put, delete
+- [ ] post, put, delete, get
+- [ ] post, put, get, delete
+- [ ] post, get, delete, put
+- [ ] get, delete, post, put
 <br>
 
 #### 39. Care dintre tagurile de mai jos au display: block by default:
-- [x] ```<div>```
-- [x] ```<p>```
-- [x] ```<h1>```
+- [ ] ```<div>```
+- [ ] ```<img>```
+- [ ] ```<input>```
+- [ ] ```<p>```
+- [ ] ```<h1>```
 <br>
 
 #### 40. Care HTTP status code anunta o eroare:
-- [x] 4xx
-- [x] 5xx
+- [ ] 1xx
+- [ ] 2xx
+- [ ] 3xx
+- [ ] 4xx
+- [ ] 5xx
 <br>
 
 #### 41. Care dintre metodele HTTP urmatoare sunt idempotente:
-- [x] GET
-- [x] HEAD
-- [x] DELETE
-- [x] PUT
+- [ ] GET
+- [ ] HEAD
+- [ ] DELETE
+- [ ] PUT
+- [ ] POST
 <br>
 
 #### 42. Care dintre metodele HTTP urmatoare sunt cacheable:
-- [x] GET
-- [x] HEAD
+- [ ] GET
+- [ ] HEAD
+- [ ] DELETE
+- [ ] PUT
 <br>
 
 #### 43. Care sunt headere valide:
-- [x] Host
-- [x] User-agent
-- [x] Content-length
-- [x] From
+- [ ] Host
+- [ ] User-agent
+- [ ] Content-size
+- [ ] Content-length
+- [ ] From
+- [ ] My-Cookie
 <br>
 
 #### 44. Care dintre urmatoarele sunt atribute ale unui cookie:
-- [x] Name
-- [x] Value
-- [x] Expires
-- [x] Max-age
+- [ ] Name
+- [ ] Value
+- [ ] Expires
+- [ ] Date
+- [ ] Max-age
 <br>
 
 #### 45. Ce poate semnifica un status code de tip 4xx:
-- [x] Bad request
-- [x] Unauthorized
+- [ ] Internal server error
+- [ ] Bad request
+- [ ] Unauthorized
+- [ ] Service unavailable
 <br>
 
-#### 46. Care este diferenta dintre let si var:
-- [x] variabilele definite cu let pot avea scop de tip bloc, iar cele cu var nu
-- [x] variabilele definite cu var pot fi redeclarate in acelasi bloc, iar cele cu let nu
+#### 46. Care este diferenta dintre ```let``` si ```var```:
+- [ ] variabilele definite cu ```let``` pot avea scop local intr-o functie, iar cele cu ```var``` nu
+- [ ] variabilele definite cu ```let``` pot avea scop de tip bloc, iar cele cu ```var``` nu
+- [ ] ```var``` are intotdeauna scop global
+- [ ] variabilele definite cu ```var``` pot fi redeclarate in acelasi bloc, iar cele cu ```let``` nu
 <br>
 
-#### 47. Care este diferenta intre =, == si ===:
-- [x] = este folosit pentru a atribui o valoare unui operand, == pentru a compara valorile operanzilor, iar === pentru a compara si tipul si valoarea operanzilor
+#### 47. Care este diferenta intre `=`, `==` si `===`:
+- [ ] `=` compara valorile celor doi operanzi, `==` compara si valoarea si tipul lor
+- [ ] `=` este folosit pentru a atribui o valoare unui operand, `==` pentru comparatii si `===` pentru a lega 2 variabile
+- [ ] `=` este folosit pentru a atribui o valoare unui operand, `==` pentru comparatii intre tipurile de date primitive, iar `===` pentru comparatii intre obiecte
+- [ ] `=` este folosit pentru a atribui o valoare unui operand, `==` pentru a compara valorile operanzilor, iar `===` pentru a compara si tipul si valoarea operanzilor
 <br>
 
 #### 48. Care sunt tipurile de scopuri in JavaScript:
-- [x] global scope
-- [x] function scope
-- [x] block scope
+- [ ] global scope
+- [ ] function scope
+- [ ] block scope
+- [ ] restricted scope
+- [ ] strict scope
 <br>
 
 #### 49. Pentru ce este folosit keyword-ul this in JavaScript:
-- [x] refera obiectul window (global)
-- [x] cand este folosit intr-o metoda a unui obiect, refera obiectul curent
-- [x] intr-o functie obisnuita refera obiectul window
-- [x] intr-un eveniment refera obiectul pe care s-a apelat evenimentul
+- [ ] refera obiectul global adica window
+- [ ] refera obiectul global adica document
+- [ ] cand este folosit intr-o metoda a unui obiect, refera obiectul curent
+- [ ] intr-o functie obisnuita refera obiectul window
+- [ ] intr-un eveniment refera obiectul pe care s-a apelat evenimentul
 <br>
 
 #### 50. Un apel AJAX este in starea 2 daca:
@@ -371,7 +397,6 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 - [ ] Eliminarea ghilimelelor si apostroafelor din datele primite de la client
 <br>
 
-
 #### 54. Injectiile JavaScript se datoreaza:
 - [ ] Folosirii protocolului http in locul protocolului https
 - [ ] Validarii insuficiente chiar la nivelul codului JavaScript
@@ -379,13 +404,11 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 - [ ] Validarii insuficiente server-side la nivelul scriptului ce prelucreaza datele din formular
 <br>
 
-
 #### 55. Unde se poate defini un stil CSS pentru o anumita clasa?
 - [ ] in interiorul tag-ului ```<style>```, localizat in antetul paginii html
 - [ ] inline, cu ajutorul atributului style aplicat pe un tag html
 - [ ] intr-un fisier extern specificat cu ajutorul tag-ului ```<link>```
 <br>
-
 
 #### 56. Pentru a verifica succesul unui apel AJAX trebuie ca:
 - [ ] readyState sa fie 4 si request.status 200
@@ -536,7 +559,7 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 - [ ] ```$fructe=array["struguri", "mere", "pere"];```
 <br>
 
-#### 73. Unde se poate folosi functia header in PHP?
+#### 73. Unde se poate folosi functia ```header``` in PHP?
 - [ ] in primul scriptlet din fisierul PHP si doar cu conditia ca scriptul PHP sa nu fi trimis anterior spre browser orice forma de continut (cu exceptia unor eventuale antete)
 - [ ] in cadrul unui scriptlet PHP plasat in sectiunea documentului HTML generat de fisierul PHP
 - [ ] in orice scriptlet din cadrul fisierului PHP
@@ -698,7 +721,7 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 - [ ] ```<?php></?>```
 - [ ] ```<? ?>```, cu conditia setarii unei optiuni de configurare in php.ini
 - [ ] ```<?php ?>```
-- [ ] ```<?= ?>```
+- [ ] ```<?= ?>``` (echivalent ```<?php echo ... ?>```)
 <br>
 
 #### 98. Care dintre urmatoarele cuvinte/caractere nu sunt rezervate in JavaScript si se pot folosi ca si nume de variabile?
@@ -827,14 +850,14 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 ```html
 	<a href="www.google.com" target="nume1" />
 ```
-- [ ] Intr-un ```<iframe>``` cu numele "nume1" 
+- [ ] Intr-un ```<iframe>``` cu numele "nume1"
 - [ ] Intr-un nou tab sau in acelasi tab in care s-a deschis la apasarea trecuta
 - [ ] Nu se va deschide
 <br>
 
 #### 112. Cum este posibil sa existe 2 butoane de submit intr-un formular?
 - [ ] Nu se poate
-- [ ] Doua input-uri submit cu nume diferite
+- [ ] Doua input-uri ```submit``` cu nume diferite
 - [ ] Doua butoane dintre care unul dintre ele are setat atributul ```formaction``` catre alt fisier decat cel al formularului
 <br>
 
