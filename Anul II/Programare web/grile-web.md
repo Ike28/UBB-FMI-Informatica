@@ -52,7 +52,7 @@
 <br>
 
 #### 11. Pentru a defini o lista ordonata a caror itemi sunt precedati de litere din alfabetul grec in CSS, se foloseste:
-- [x] list-type: lower-greek
+- [x] list-style-type: lower-greek
 <br>
 
 #### 12. Pentru a redirectiona automat browser-ul spre un nou URL, server-ul poate:
@@ -64,12 +64,7 @@
 #### 13. Care dintre urmatoarele tag-uri HTML sunt deprecated in HTML5:
 - [x] center
 - [x] font
-- [x] strike
-- [x] big/small
-- [x] acronym
-- [x] basefont
-- [x] applet
-- [x] frame, frameset
+##### alte tag-uri deprecated: ```strike, big/small, acronym, basefont, applet, frame, frameset```
 <br>
 
 #### 14. Cum se insereaza corect un fisier extern JavaScript denumit test.js intr-un document HTML?
@@ -648,4 +643,39 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 	</style>
 ```
 - [x] culoare = blue, inaltime = 100px
+<br>
+
+#### 118. Considerand urmatorul element jQuery:
+```js
+	var wrapper = $("#someId");
+```
+#### Cum se poate obtine obiectul "original" JavaScript din interiorul obiectului jQuery ```wrapper```?
+- [x] ```wrapper.get()```
+- [x] ```wrapper[0]```
+<br>
+
+#### 119. In care element HTML se pleaseaza codul JavaScript?
+- [x] ```<script>```
+<br>
+
+#### 120. Care dintre urmatoarele antete este returnat de care server atunci cand este creata o sesiune (de exemplu folosind functia ```session_start()``` in PHP)?
+- [x] Set-Cookie
+<br>
+
+#### 121. Cum se declara in JavaScript o functie anonima care se si apeleaza?
+- [x] ```(function(){ // fa ceva })()```
+<br>
+
+#### 122. Care dintre urmatoarele reprezinta metode valide HTTP?
+- [x] CONNECT
+- [x] PUT
+- [x] OPTIONS
+<br>
+
+#### 123. Cum se face cel mai usor o imagine responsive?
+- [x] ```<img src="picture.jpg" stlye="max-width: 100%; height: auto">```
+<br>
+
+#### 124. Cum arata un raspuns de redirectare trimis de catre server?
+- [x] status code-ul returnat incepe cu 3, iar url-ul la care se face redirectarea este trimis in header-ul Location
 <br>
