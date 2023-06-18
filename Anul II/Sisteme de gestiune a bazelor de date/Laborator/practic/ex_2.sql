@@ -1,0 +1,41 @@
+USE S32023
+GO
+
+UPDATE Destinatii SET nume_destinatie = 'Gran Canaria' WHERE cod_d = 1
+
+CREATE OR ALTER PROCEDURE NonRepeatableReads
+AS
+BEGIN
+	SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
+	BEGIN TRAN;
+	SELECT * FROM Destinatii;
+	WAITFOR DELAY '00:00:10';
+	SELECT * FROM Destinatii;
+	COMMIT TRAN;
+END;
+GO
+
+CREATE OR ALTER PROCEDURE PerformNonRepeatableReads
+AS
+BEGIN
+	BEGIN TRAN;
+	WAITFOR DELAY '00:00:05';
+	UPDATE Destinatii SET nume_destinatie = 'Gran Canaria Islands' WHERE cod_d = 1
+	COMMIT TRAN;
+END;
+GO
+
+CREATE OR ALTER PROCEDURE SolutionNonRepeatableReads
+AS
+BEGIN
+	SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;
+	BEGIN TRAN;
+	SELECT * FROM Destinatii;
+	WAITFOR DELAY '00:00:10';
+	SELECT * FROM Destinatii;
+	COMMIT TRAN;
+END;
+GO
+
+EXEC PerformNonRepeatableReads
+-- EXEC SolutionNonRepeatableReads
