@@ -272,21 +272,31 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 
 #### 37. Care sunt moduri valabile de a introduce CSS in HTML:
 - [x] ___inline___
+- [ ] outline
 - [x] ___interne___
 - [x] ___externe___
 <br>
 
 #### 38. In ce ordine au sens apelarile metodelor daca resursa nu exista in momentul actual:
+- [ ] get, post, put, delete
+- [ ] post, put, delete, get
 - [x] ___post, put, get, delete___
+- [ ] post, get, delete, put
+- [ ] get, delete, post, put
 <br>
 
 #### 39. Care dintre tagurile de mai jos au display: block by default:
 - [x] ___```<div>```___
+- [ ] ```<img>```
+- [ ] ```<input>```
 - [x] ___```<p>```___
 - [x] ___```<h1>```___
 <br>
 
 #### 40. Care HTTP status code anunta o eroare:
+- [ ] 1xx
+- [ ] 2xx
+- [ ] 3xx
 - [x] ___4xx___
 - [x] ___5xx___
 <br>
@@ -296,49 +306,65 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 - [x] ___HEAD___
 - [x] ___DELETE___
 - [x] ___PUT___
+- [ ] POST
 <br>
 
 #### 42. Care dintre metodele HTTP urmatoare sunt cacheable:
 - [x] ___GET___
 - [x] ___HEAD___
+- [ ] DELETE
+- [ ] PUT
 <br>
 
 #### 43. Care sunt headere valide:
 - [x] ___Host___
 - [x] ___User-agent___
+- [ ] Content-size
 - [x] ___Content-length___
 - [x] ___From___
+- [ ] My-Cookie
 <br>
 
 #### 44. Care dintre urmatoarele sunt atribute ale unui cookie:
 - [x] ___Name___
 - [x] ___Value___
 - [x] ___Expires___
+- [ ] Date
 - [x] ___Max-age___
 <br>
 
 #### 45. Ce poate semnifica un status code de tip 4xx:
+- [ ] Internal server error
 - [x] ___Bad request___
 - [x] ___Unauthorized___
+- [ ] Service unavailable
 <br>
 
-#### 46. Care este diferenta dintre let si var:
-- [x] ___variabilele definite cu let pot avea scop de tip bloc, iar cele cu var nu___
-- [x] ___variabilele definite cu var pot fi redeclarate in acelasi bloc, iar cele cu let nu___
+#### 46. Care este diferenta dintre ```let``` si ```var```:
+- [ ] variabilele definite cu ```let``` pot avea scop local intr-o functie, iar cele cu ```var``` nu
+- [x] ___variabilele definite cu ```let``` pot avea scop de tip bloc, iar cele cu ```var``` nu___
+- [ ] ```var``` are intotdeauna scop global
+- [x] ___variabilele definite cu ```var``` pot fi redeclarate in acelasi bloc, iar cele cu ```let``` nu___
 <br>
 
-#### 47. Care este diferenta intre =, == si ===:
-- [x] ___= este folosit pentru a atribui o valoare unui operand, == pentru a compara valorile operanzilor, iar === pentru a compara si tipul si valoarea operanzilor___
+#### 47. Care este diferenta intre `=`, `==` si `===`:
+- [ ] `=` compara valorile celor doi operanzi, `==` compara si valoarea si tipul lor
+- [ ] `=` este folosit pentru a atribui o valoare unui operand, `==` pentru comparatii si `===` pentru a lega 2 variabile
+- [ ] `=` este folosit pentru a atribui o valoare unui operand, `==` pentru comparatii intre tipurile de date primitive, iar `===` pentru comparatii intre obiecte
+- [x] ___`=` este folosit pentru a atribui o valoare unui operand, `==` pentru a compara valorile operanzilor, iar `===` pentru a compara si tipul si valoarea operanzilor___
 <br>
 
 #### 48. Care sunt tipurile de scopuri in JavaScript:
 - [x] ___global scope___
 - [x] ___function scope___
 - [x] ___block scope___
+- [ ] restricted scope
+- [ ] strict scope
 <br>
 
 #### 49. Pentru ce este folosit keyword-ul this in JavaScript:
-- [x] ___refera obiectul window (global)___
+- [x] ___refera obiectul global adica window___
+- [ ] refera obiectul global adica document
 - [x] ___cand este folosit intr-o metoda a unui obiect, refera obiectul curent___
 - [x] ___intr-o functie obisnuita refera obiectul window___
 - [x] ___intr-un eveniment refera obiectul pe care s-a apelat evenimentul___
@@ -432,27 +458,27 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 ```
 - [ ] Rosu
 - [ ] Verde
-- [ ] Galben
+- [x] ___Galben___
 - [ ] Albastru
 <br>
 
 
 #### 60. Care dintre urmatoarele functii PHP este folosita pentru a preveni vulnerabilitatile de tip Cross-Site Scripting (XSS)?
 - [ ] ```mysqli_real_escape_string```
-- [ ] ```htmlentities```
+- [x] ___```htmlentities```___
 - [ ] ```filter_xss```
 <br>
 
 #### 61. Cum se poate "fura" un cookie de sesiune al unui alt utilizator?
-- [ ] Prin intermediul unui cod JavaScript injectat de catre atacator
-- [ ] Prin lipsa invalidarii sesiunii (logout) si navigarea in continuarea pe un site malitios
-- [ ] Prin interceptarea datelor la nivelul retelei de transport in lipsa folosirii unei conexiuni sigure
+- [x] ___Prin intermediul unui cod JavaScript injectat de catre atacator___
+- [x] ___Prin lipsa invalidarii sesiunii (logout) si navigarea in continuarea pe un site malitios___
+- [x] ___Prin interceptarea datelor la nivelul retelei de transport in lipsa folosirii unei conexiuni sigure___
 <br>
 
 #### 62. Care dintre urmatoarele vulnerabilitati ar putea fi exploatata pentru a fura sesiunea unui utilizator autentificat?
-- [ ] Cross-Site Request Forgery (CSRF)
+- [x] ___Cross-Site Request Forgery (CSRF)___
 - [ ] SQL Injection
-- [ ] Cross-Site scripting (XSS)
+- [x] ___Cross-Site scripting (XSS)___
 <br>
 
 #### 63. Ce se va afisa in consola browserului dupa executarea urmatorului cod JavaScript?
@@ -467,33 +493,33 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 ```
 - [ ] nimic
 - [ ] 1 === 1.0
-- [ ] 1 == true
+- [x] ___1 == true___
 - [ ] 1 === '1'
 <br>
 
 #### 64. Raspunsul sosit printr-un apel AJAX poate fi:
-- [ ] un fisier text
-- [ ] un fisier JSON
-- [ ] un fisier XML
-- [ ] un fisier JavaScript
+- [x] ___un fisier text___
+- [x] ___un fisier JSON___
+- [x] ___un fisier XML___
+- [x] ___un fisier JavaScript___
 <br>
 
 #### 65. Care dintre urmatoarele categorii de aplicatii se pot folosit de DOCTYPE pentru a "intelege" mai bine documentul HTML?
 - [ ] Servere web
-- [ ] Editoare si medii IDE (Integrated Development Environment)
+- [x] ___Editoare si medii IDE (Integrated Development Environment)___
 - [ ] Motoare de cautare
-- [ ] Browsere
+- [x] ___Browsere___
 <br>
 
 #### 66. Care dintre informatiile de mai jos despre atributele readonly si disabled sunt adevarate?
-- [ ] valoarea unui input readonly se trimite serverului la submit, pe cand cea a unui input disabled nu se trimite serverului
+- [x] ___valoarea unui input readonly se trimite serverului la submit, pe cand cea a unui input disabled nu se trimite serverului___
 - [ ] valoarea unui input readonly poate fi modificata din JavaScript, pe cand cea a unui input disabled nu poate fi editata nici din JavaScript
 - [ ] atributele specifica acelasi lucru, faptul ca un input readonly sau disabled nu poate fi editat
 <br>
 
 #### 67. Care dintre urmatoarele elemente au toate display-ul implicit inline?
 - [ ] ```a, span, b, i, li```
-- [ ] ```img, span, b, i, a```
+- [x] ___```img, span, b, i, a```___
 - [ ] ```p, a, b, i, span```
 - [ ] ```b, i, li, span, img```
 <br>
@@ -501,130 +527,130 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 #### 68. Care dintre urmatoarele informatii despre tagul ```<title>``` sunt adevarate?
 - [ ] este folosit in mare masura de catre motoarele de cautare
 - [ ] este optional
-- [ ] este afisat in bara de titlu sau de bookmarks (favorite)
+- [x] ___este afisat in bara de titlu sau de bookmarks (favorite)___
 - [ ] nu exista tag-ul ```<title``` ci doar atributul ```title```
 <br>
 
 #### 69. Care dintre urmatoarele antete sunt obligatorii pentru o cerere HTTP in cazul folosirii protocolului HTTP/1.1:
 - [ ] Content-Type
-- [ ] Host
+- [x] ___Host___
 - [ ] User-Agent
 - [ ] Cookie
 <br>
 
 #### 70. Care dintre urmatoarele afirmatii sunt adevarate:
 - [ ] definitiile de stil interne au prioritate inaintea celor externe
-- [ ] o definitie de stil aplicata clasei "bate" ca prioritate definitia de stil aplicata pe "tag"
-- [ ] o proprietate din cadrul unui stil inline suprascrie o proprietate dintr-o definitie de stil aplicata elementului folosind un selector bazat pe id
+- [x] ___o definitie de stil aplicata clasei "bate" ca prioritate definitia de stil aplicata pe "tag"___
+- [x] ___o proprietate din cadrul unui stil inline suprascrie o proprietate dintr-o definitie de stil aplicata elementului folosind un selector bazat pe id___
 <br>
 
 #### 71. Ce face functia ```session_start()``` in PHP?
-- [ ] Daca este vorba de o sesiune noua, genereaza un cookie aleator de sesiune pe care il trimite folosind antetul HTTP clientului
+- [x] ___Daca este vorba de o sesiune noua, genereaza un cookie aleator de sesiune pe care il trimite folosind antetul HTTP clientului___
 - [ ] Initializeaza intotdeauna o noua sesiune
 - [ ] Porneste sesiunea existenta deja si trimite clientului cookie-ul de sesiune prin intermediul antetului HTTP Cookie
-- [ ] Daca este vorba de o sesiune veche, determina despre ce sesiune este vorba pe baza valorii cookie-ului de sesiune prin intermediul antetului HTTP Cookie si populeaza tabloul ```$_SESSION``` in mod corespunzator
+- [x] ___Daca este vorba de o sesiune veche, determina despre ce sesiune este vorba pe baza valorii cookie-ului de sesiune prin intermediul antetului HTTP Cookie si populeaza tabloul ```$_SESSION``` in mod corespunzator___
 <br>
 
 #### 72. Care dintre urmatoarele declaratii este corecta pentru definirea tabloului ```$fructe``` in PHP?
-- [ ] ```$fructe=array("struguri", "mere", "pere");```
+- [x] ___```$fructe=array("struguri", "mere", "pere");```___
 - [ ] ```$fructe=("struguri, "mere", "pere");```
 - [ ] ```$fructe="struguri", "mere", "pere";```
 - [ ] ```$fructe={"struguri", "mere", "pere"};```
 - [ ] ```$fructe=array["struguri", "mere", "pere"];```
 <br>
 
-#### 73. Unde se poate folosi functia header in PHP?
-- [ ] in primul scriptlet din fisierul PHP si doar cu conditia ca scriptul PHP sa nu fi trimis anterior spre browser orice forma de continut (cu exceptia unor eventuale antete)
+#### 73. Unde se poate folosi functia ```header``` in PHP?
+- [x] ___in primul scriptlet din fisierul PHP si doar cu conditia ca scriptul PHP sa nu fi trimis anterior spre browser orice forma de continut (cu exceptia unor eventuale antete)___
 - [ ] in cadrul unui scriptlet PHP plasat in sectiunea documentului HTML generat de fisierul PHP
 - [ ] in orice scriptlet din cadrul fisierului PHP
 <br>
 
 #### 74. Care dintre urmatoarele informatii despre un URL accesat prin POST sunt adevarate:
-- [ ] Reaccesarea URL-ului respectiv prin reload (refresh) la pagina presupune o confirmare din partea utilizatorului
+- [x] ___Reaccesarea URL-ului respectiv prin reload (refresh) la pagina presupune o confirmare din partea utilizatorului___
 - [ ] URL-ului respectiv i se poate face bookmark (poate fi adaugat la favorite)
 - [ ] URL-ul respectiv poate fi partajat (share) pe Facebook, Whatsapp, Skype, etc.
 <br>
 
 #### 75. Care dintre urmatoarele sunt adevarate despre un server web:
-- [ ] un server web poate fi configurat sa accepte cereri prin protocolul HTTP pe portul 443
+- [x] ___un server web poate fi configurat sa accepte cereri prin protocolul HTTP pe portul 443___
 - [ ] un server web poate fi configurat sa accepte cereri printr-un URL de forma ```file://...```
-- [ ] implicit un server web asteapta cereri prin protocolul HTTP pe portul 80 si cereri prin protocolul HTTPS pe portul 443
+- [x] ___implicit un server web asteapta cereri prin protocolul HTTP pe portul 80 si cereri prin protocolul HTTPS pe portul 443___
 <br>
 
 #### 76. Dandu-se doua containere, unul parinte si unul fiu, care dintre urmatoarele pozitionarii are/au sens:
-- [ ] pozitionarea unui fiu "absolute" in cadrul unui parinte cu pozitionare "relative"
+- [x] ___pozitionarea unui fiu "absolute" in cadrul unui parinte cu pozitionare "relative"___
 - [ ] pozitionarea unui fiu "relative" intr-un parinte cu pozitionare "virtual"
 - [ ] pozitionarea unui fiu "flex" intr-un parinte "relative"
 - [ ] pozitionarea unui fiu "fixed" intr-un parinte cu pozitionare "relative"
 <br>
 
 #### 77. Cum se introduc comentarii intr-un scriptlet PHP?
-- [ ] ```//```
+- [x] ___```//```___
 - [ ] ```<!-- -->```
-- [ ] ```/*...*/```
-- [ ] ```#```
+- [x] ___```/*...*/```___
+- [x] ___```#```___
 <br>
 
 #### 78. Functia specificata ca si valoare pentru proprietatea ```onreadystatechange``` se apeleaza:
-- [ ] Este posibil sa se apeleze si atunci cand obiectul nu isi schimba starea dar continua sa vina raspuns de la server
+- [x] ___Este posibil sa se apeleze si atunci cand obiectul nu isi schimba starea dar continua sa vina raspuns de la server___
 - [ ] Atunci cand serverul schimba codul de raspuns (response code-ul) care e trimis clientului
-- [ ] Atunci cand obiectul AJAX isi schimba starea
+- [x] ___Atunci cand obiectul AJAX isi schimba starea___
 <br>
 
 #### 79. Conectarea la o baza de date intr-o aplicatie web Java se recomanda a fi facuta:
 - [ ] La initializarea aplicatiei web / a contextului
-- [ ] La fiecare request in cadrul metodei ```doGet``` sau ```doPut```
+- [x] ___La fiecare request in cadrul metodei ```doGet``` sau ```doPut```___
 - [ ] La pornirea containerului, o singura conexiune pentru toate aplicatiile web (din motive de performanta)
 <br>
 
 #### 80. Care dintre urmatoarele expresii jQuery se pot folosi interschimbabil?
 - [ ] ```$(ready(function() {}))``` cu ```$(document).ready(function() {})```
-- [ ] ```$(function() {})``` cu ```$(document).ready(function() {})```
+- [x] ___```$(function() {})``` cu ```$(document).ready(function() {})```___
 - [ ] ```$(selector).each(function() {})``` cu ```$(selector.each).function() {}```
 <br>
 
 #### 81. Care dintre urmatoarele reprezinta masuri pentru evitarea vulnerabilitatilor de tip XSS:
 - [ ] Verificari riguroase la nivelul browserului legate de validitatea datelor introduse
 - [ ] Folosirea la nivelul browserului a unor biblioteci de functii JavaScript consacrate si testate anterior
-- [ ] Inlocuirea anumitor caractere din datele primite de la client cu entitatile HTML corespunzatoare
+- [x] ___Inlocuirea anumitor caractere din datele primite de la client cu entitatile HTML corespunzatoare___
 - [ ] Dezactivarea din cadrul aplicatiei web a posibilitatii rularii de cod JavaScript de catre browser
 <br>
 
 #### 82. Care dintre urmatoarele tag-uri este folosit pentru definirea de stiluri CSS interne?
 - [ ] script
 - [ ] css
-- [ ] style
+- [x] ___style___
 - [ ] class
 <br>
 
 #### 83. Care dintre sintaxele CSS de mai jos este corecta/sunt corecte?
 - [ ] ```body:color=red```
 - [ ] ```{body: color=red}```
-- [ ] ```body{color:#abc}```
+- [x] ___```body{color:#abc}```___
 - [ ] ```{body; color:blue}```
-- [ ] ```body{color:yellow}```
+- [x] ___```body{color:yellow}```___
 <br>
 
 #### 84. O baza de date embedded in cadrul unei aplicatii web Java se recomanda a fi memorata:
 - [ ] In cadrul folderului app/databases/, unde app reprezinta directorul (numele) aplicatiei web
-- [ ] In folderul WEB-INF al aplicatiei web intrucat acesta nu este accesibil de catre un client web
-- [ ] Oriunde alt undeva in cadrul sistemului de fisiere dar nu in cadrul directorului aplicatiei web intrucat de acolo baza de date ar putea fi accesata de catre clientii web
+- [x] ___In folderul WEB-INF al aplicatiei web intrucat acesta nu este accesibil de catre un client web___
+- [x] ___Oriunde alt undeva in cadrul sistemului de fisiere dar nu in cadrul directorului aplicatiei web intrucat de acolo baza de date ar putea fi accesata de catre clientii web___
 <br>
 
 #### 85. In care element HTML se plaseaza codul JavaScript?
 - [ ] ```<javascript>```
 - [ ] ```<js>```
-- [ ] ```<script>```
+- [x] ___```<script>```___
 <br>
 
 #### 86. In cate instante se instantiaza un servlet?
 - [ ] In nici una, un servlet este executat direct de catre container/application server
-- [ ] Intr-o singura instanta
+- [x] ___Intr-o singura instanta___
 - [ ] Se creeaza o instanta separata la fiecare cerere facuta de catre un client
 <br>
 
 #### 87. Parametrii de configurare ai unei aplicatii web Java sunt preluati din fisierul de configurare ai aplicatiei web in cadrul metodei:
-- [ ] ```init()```
+- [x] ___```init()```___
 - [ ] ```applicationCreated()```
 - [ ] ```contextInitialized()```
 <br>
@@ -632,35 +658,35 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 #### 89. O sesiune intr-o aplicatie web Java se termina cu:
 - [ ] ```session.destroy()```
 - [ ] ```session.close()```
-- [ ] ```session.invalidate()```
+- [x] ___```session.invalidate()```___
 <br>
 
 #### 90. Ce eveniment se genereaza la un click de mouse pe un element din cadrul documentului?
-- [ ] onclick
+- [x] ___onclick___
 - [ ] ondoubleclick
 - [ ] onmouseover
 - [ ] onmouseclick
 <br>
 
 #### 91. Care dintre urmatoarele expresii jQuery se pot folosi interschimbabil?
-- [ ] ```$("#myelem")[0]``` si ```document.getElementById("myelem")```
-- [ ] ```$("#myelem")``` si ```$(document.getElementById("myelem"))```
+- [x] ___```$("#myelem")[0]``` si ```document.getElementById("myelem")```___
+- [x] ___```$("#myelem")``` si ```$(document.getElementById("myelem"))```___
 - [ ] ```$(document.myelem)``` si ```$(document.getElementById("myelem"))```
-- [ ] ```$``` si ```jQuery```
+- [x] ___```$``` si ```jQuery```___
 - [ ] ```$(document).myelem``` si ```$("#myelem")[0]```
 <br>
 
 #### 92. Care dintre urmatoarele reprezinta specificatii ale unor metode din API-ul jQuery?
-- [ ] ca pot fi apelate atat in mod sincron cat si in mod asincron
-- [ ] ca intorc referinta la obiectul pe care au fost apelate
+- [x] ___ca pot fi apelate atat in mod sincron cat si in mod asincron___
+- [x] ___ca intorc referinta la obiectul pe care au fost apelate___
 - [ ] ca pot fi apelate atat pe obiectul din DOM cat si pe wrapperul jQuery continut in jurul lui
-- [ ] ca pot fi folosite atat ca functii Setter cat si ca functii Getter
+- [x] ___ca pot fi folosite atat ca functii Setter cat si ca functii Getter___
 <br>
 
 #### 93. Cum se afiseaza un mesaj prin intermediul unei ferestre de dialog modale in JavaScript?
 - [ ] ```modalMessage("Mesaj")```
 - [ ] ```alertBox("Mesaj")```
-- [ ] ```alert("Mesaj")```
+- [x] ___```alert("Mesaj")```___
 - [ ] ```modalBox("Mesaj")```
 <br>
 
@@ -669,45 +695,45 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 	$('ul:has(li)').addClass('patrat').addClass('deplasat').addClass('colorat');
 ```
 - [ ] selecteaza toate elementele din liste si le adauga clasele patrat, deplasat, colorat
-- [ ] selecteaza listele neordonate care au cel putin un element si le adauga clasele patrat, deplasat, colorat
+- [x] ___selecteaza listele neordonate care au cel putin un element si le adauga clasele patrat, deplasat, colorat___
 - [ ] selecteaza toate listele care au cel putin un element si le adauga clasele patrat, deplasat, colorat
 - [ ] selecteaza listele ordonate care au cel putin un element si le adauga clasele patrat, deplasat, colorat
 - [ ] selecteaza toate listele si le adauga clasele patrat, deplasat, colorat
 <br>
 
 #### 95. Un client face o cerere iar serverul ii raspunde cu '404 Not found'. Care dintre urmatoarele afirmatii sunt adevarate:
-- [ ] Chiar daca nu a gasit fisierul cerut de client, serverul ii poate da totusi acestuia un anumit continut HTML
+- [x] ___Chiar daca nu a gasit fisierul cerut de client, serverul ii poate da totusi acestuia un anumit continut HTML___
 - [ ] Daca nu a gasit fisierul cerut, serverul nu ii mai poate returna clientului nimic dupa codul de raspuns 404
 - [ ] Chiar daca serverul a raspuns cu "404 Not found", browserele raspund cu "200 OK" pentru a-i spune serverului ca au primit mesajul de eroare
 <br>
 
 #### 96. Care dintre urmatoarele sunt prefixe acceptate pe unele browsere pentru proprietatile CSS experimentale?
-- [ ] ```-webkit```
-- [ ] ```-o-```
-- [ ] ```-moz-```
+- [x] ___```-webkit```___
+- [x] ___```-o-```___
+- [x] ___```-moz-```___
 - [ ] ```-safari```
 - [ ] ```-chrome-```
-- [ ] ```-ms-```
+- [x] ___```-ms-```___
 <br>
 
 #### 97. Care dintre urmatoarele sunt scriptlet-uri valide in PHP?
 - [ ] ```<% %>```
 - [ ] ```<?php></?>```
-- [ ] ```<? ?>```, cu conditia setarii unei optiuni de configurare in php.ini
-- [ ] ```<?php ?>```
-- [ ] ```<?= ?>```
+- [x] ___```<? ?>```, cu conditia setarii unei optiuni de configurare in php.ini___
+- [x] ___```<?php ?>```___
+- [x] ___```<?= ?>```___ (echivalent ```<?php echo ... ?>```)
 <br>
 
 #### 98. Care dintre urmatoarele cuvinte/caractere nu sunt rezervate in JavaScript si se pot folosi ca si nume de variabile?
 - [ ] this, a, b
 - [ ] with, a, b
-- [ ] $, a, b
+- [x] ___$, a, b___
 - [ ] let, a, b
 <br>
 
 #### 99. Pentru a centra un element cu display-ul block in cadrul unui alt container se foloseste:
 - [ ] ```align: center```
-- [ ] ```margin: 0 auto```
+- [x] ___```margin: 0 auto```___
 - [ ] ```align: middle```
 - [ ] ```text-align: center```
 <br>
@@ -716,39 +742,39 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 - [ ] GET
 - [ ] PUT
 - [ ] POST
-- [ ] HEAD
+- [x] ___HEAD___
 <br>
 
 #### 101. Care dintre urmatoarele afirmatii sunt adevarate:
 - [ ] definitiile de stil interne au prioritate inaintea celor externe (conteaza ordinea lor de definire)
-- [ ] o definitie de stil aplicata clasei "bate" ca prioritate definita de stil aplicata pe "tag"
-- [ ] o proprietate din cadrul unui stil inline suprascrie o proprietate dintr-o definitie de stil aplicata elementului unui selector bazat pe id
+- [x] ___o definitie de stil aplicata clasei "bate" ca prioritate definita de stil aplicata pe "tag"___
+- [x] ___o proprietate din cadrul unui stil inline suprascrie o proprietate dintr-o definitie de stil aplicata elementului unui selector bazat pe id___
 <br>
 
 #### 102. Care dintre urmatoarele reprezinta proprietati membre ale unui obiect de tipul XMLHttpRequest:
-- [ ] readyState, response, responseText, status
+- [x] ___readyState, response, responseText, status___
 - [ ] state, request, response, status
 - [ ] readyState, request, response, status
 <br>
 
 #### 103. O variabila x ce contine valoarea numerica 7 poate fi declarata in JavaScript astfel:
-- [ ] ```var x = 7```
+- [x] ___```var x = 7```___
 - [ ] ```var x:= 7```
-- [ ] ```x = new Number(7)```
-- [ ] ```let x = 7```
-- [ ] ```x = 7```
+- [x] ___```x = new Number(7)```___
+- [x] ___```let x = 7```___
+- [x] ___```x = 7```___
 <br>
 
 #### 104. Care dintre urmatoarele informatii despre plugin-urile jQuery sunt adevarate:
 - [ ] Unele plugin-uri permit portarea codului jQuery pe diferite browsere
-- [ ] Permit extinderea functionalitatii API-ului standard jQuery cu noi metode si functionalitati
-- [ ] Unele plugin-uri jQuery permit incadrarea librariei de pe diversele CDN-uri (Content Delivery Network)
+- [x] ___Permit extinderea functionalitatii API-ului standard jQuery cu noi metode si functionalitati___
+- [x] ___Unele plugin-uri jQuery permit incadrarea librariei de pe diversele CDN-uri (Content Delivery Network)___
 - [ ] Unele plugin-uri permit rularea codului jQuery independent
 <br>
 
 #### 105. Care dintre urmatoarele reprezinta un avantaj al metodei GET fata de POST?
 - [ ] Este mai buna pentru date confidentiale
-- [ ] Permite salvarea raspunsului ca bookmark
+- [x] ___Permite salvarea raspunsului ca bookmark___
 - [ ] Nu are limita maxima de dimensiune
 - [ ] Nu are avantaje
 <br>
@@ -757,7 +783,7 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 ```html
 	<a href="www.siteulmeu.com?addFav=1">Adauga la favorite</a>
 ```
-- [ ] ```$_GET[“addFav”]```
+- [x] ___```$_GET[“addFav”]```___
 - [ ] ```$_SESSION["addFav"]```
 - [ ] ```$_POST["addFav"]```
 - [ ] Nu se trimit parametri
@@ -765,8 +791,8 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 
 #### 107. In care dintre urmatoarele limbaje este posibilia crearea unei animatii care sa apara pe ecranul utilizatorului?
 - [ ] HTML
-- [ ] CSS
-- [ ] JavaScript
+- [x] ___CSS___
+- [x] ___JavaScript___
 - [ ] PHP
 <br>
 
@@ -788,7 +814,7 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 ```
 - [ ] ```rowspan="2"``` in tagul ```<th>``` de la Country
 - [ ] ```colspan="2"``` in tagul ```<th>``` de la Country
-- [ ] Nimic, tabelul se afiseaza
+- [x] ___Nimic, tabelul se afiseaza___
 - [ ] ```rowspan="2"``` si ```colspan="2"``` in tagul ```<th>``` de la Country
 <br>
 
@@ -800,7 +826,7 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 		<input type=”submit” value=”Submit”>
 	</form>
 ```
-- [ ] Datele nu se trimit deloc
+- [x] ___Datele nu se trimit deloc___
 - [ ] Scriptului de pe backend care afiseaza formularul
 - [ ] Unui fisier setat intr-un fisier de configurare
 <br>
@@ -815,7 +841,7 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 	</form>
 ```
 - [ ] ```"fname=Ion&lname=Popescu&email=ionpopescu@gmail.com"```
-- [ ] ```"fname=Ion&email=ionpopescu@gmail.com"```
+- [x] ___```"fname=Ion&email=ionpopescu@gmail.com"```___
 - [ ] ```"fname=Ion&lname=Popescu&email=ionpopescu"```
 - [ ] ```"fname=Ion&email=ionpopescu"```
 <br>
@@ -824,14 +850,14 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 ```html
 	<a href="www.google.com" target="nume1" />
 ```
-- [ ] Intr-un ```<iframe>``` cu numele "nume1" 
-- [ ] Intr-un nou tab sau in acelasi tab in care s-a deschis la apasarea trecuta
+- [x] ___Intr-un ```<iframe>``` cu numele "nume1"___
+- [x] ___Intr-un nou tab sau in acelasi tab in care s-a deschis la apasarea trecuta___
 - [ ] Nu se va deschide
 <br>
 
 #### 112. Cum este posibil sa existe 2 butoane de submit intr-un formular?
 - [ ] Nu se poate
-- [ ] Doua input-uri submit cu nume diferite
+- [x] ___Doua input-uri ```submit``` cu nume diferite___
 - [ ] Doua butoane dintre care unul dintre ele are setat atributul ```formaction``` catre alt fisier decat cel al formularului
 <br>
 
@@ -848,11 +874,11 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 - [ ] 142px
 - [ ] 122px
 - [ ] 100px
-- [ ] 140px
+- [x] ___140px___
 <br>
 
 #### 114. Care este motivul de utilizare al sprite-urilor?
-- [ ] Reducerea numarului de request-uri
+- [x] ___Reducerea numarului de request-uri___
 - [ ] Simplitate
 - [ ] Realizarea de animatii
 <br>
@@ -872,7 +898,7 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 	</style>
 ```
 - [ ] culoare = red, inaltime = 100px
-- [ ] culoare = blue, inaltime = 100px
+- [x] ___culoare = blue, inaltime = 100px___
 - [ ] culoare = blue, inaltime nedefinita
 <br>
 
@@ -881,14 +907,14 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 	var wrapper = $("#someId");
 ```
 #### Cum se poate obtine obiectul "original" JavaScript din interiorul obiectului jQuery ```wrapper```?
-- [ ] ```wrapper.get()```
-- [ ] ```wrapper[0]```
+- [x] ___```wrapper.get()```___
+- [x] ___```wrapper[0]```___
 - [ ] ```wrapper.query('#someId')```
 <br>
 
 #### 117. Care dintre urmatoarele antete este returnat de care server atunci cand este creata o sesiune (de exemplu folosind functia ```session_start()``` in PHP)?
 - [ ] Create-Session
-- [ ] Set-Cookie
+- [x] ___Set-Cookie___
 - [ ] Send-Cookie
 - [ ] Cookie
 - [ ] Set-Session
@@ -896,22 +922,22 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 <br>
 
 #### 118. Cum se declara in JavaScript o functie anonima care se si apeleaza?
-- [ ] ```(function(){ // fa ceva })()```
+- [x] ___```(function(){ // fa ceva })()```___
 - [ ] ```(function())({ // fa ceva})```
 - [ ] ```function(){ // fa ceva }()```
 <br>
 
 #### 119. Care dintre urmatoarele reprezinta metode valide HTTP?
-- [ ] CONNECT
+- [x] ___CONNECT___
 - [ ] REMOVE
-- [ ] PUT
-- [ ] OPTIONS
+- [x] ___PUT___
+- [x] ___OPTIONS___
 - [ ] UPDATE
 <br>
 
 #### 120. Cum se face cel mai usor o imagine responsive?
 - [ ] ```<img src="picture.jpg" style="width: auto; height: responsive">```
-- [ ] ```<img src="picture.jpg" style="max-width: 100%; height: auto">```
+- [x] ___```<img src="picture.jpg" style="max-width: 100%; height: auto">```___
 - [ ] ```<img src="picture.jpg" style="max-height: 100%"; width: auto">```
 - [ ] ```<img src="picture.jpg" style="width: responsive; height: auto">```
 <br>
@@ -920,6 +946,6 @@ Ce selector CSS ar selecta doar cel de-al doilea div (cel cu continutul "25")?
 - [ ] status code-ul returnat incepe cu 3, iar URL-ul la care se face redirectarea este trimis in body-ul raspunsului
 - [ ] status code-ul returnat incepe cu 3, iar URL-ul la care se face redirectarea este trimis in header-ul Redirect
 - [ ] status code-ul returnat incepe cu 4, iar URL-ul la care se face redirectarea este trimis in header-ul Redirect
-- [ ] status code-ul returnat incepe cu 3, iar URL-ul la care se face redirectarea este trimis in header-ul Location
+- [x] ___status code-ul returnat incepe cu 3, iar URL-ul la care se face redirectarea este trimis in header-ul Location___
 - [ ] status code-ul returnat incepe cu 4, iar URL-ul la care se face redirectarea este trimis in body-ul raspunsului
 <br>
