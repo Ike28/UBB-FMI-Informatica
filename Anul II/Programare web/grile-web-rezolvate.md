@@ -177,8 +177,7 @@
 <br>
 
 #### 24. Care dintre urmatoarele afirmatii despre metoda HTTP POST sunt adevarate:
-- [ ] trebuie neaparat folosita pentru a submite un formular care contine un input de tip video<br>
-✅ __este recomandat a fi folosita pentru a submite un formular care contine un input de tip password__
+- [ ] trebuie neaparat folosita pentru a submite un formular care contine un input de tip video<br>✅ __este recomandat a fi folosita pentru a submite un formular care contine un input de tip password__
 - [x] __trebuie neaparat folosita pentru a submite un formular care contine un input de tip file__
 <br>
 
