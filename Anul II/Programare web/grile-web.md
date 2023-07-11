@@ -119,7 +119,7 @@
 <br>
 
 #### 17. Dandu-se doua variable $a si $b, cum se poate interschimba valoarea acestora in PHP?
-- [x] ___```list($a, $b) = ($b, $a);```___
+- [x] ___```list($a, $b) = [$b, $a];```___
 - [ ] ```array($a, $b) = ($b, $a);```
 - [ ] ```$a = $b; $b = $a;```
 - [ ] ```array($a, $b) = ($b, $a);```
