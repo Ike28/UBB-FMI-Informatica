@@ -1,0 +1,2 @@
+class AutomataNotDeterministicException(Exception):
+    pass

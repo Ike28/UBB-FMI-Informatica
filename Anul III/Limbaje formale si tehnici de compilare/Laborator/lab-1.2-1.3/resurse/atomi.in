@@ -1,0 +1,3 @@
+operatori:+|-|*|/|^|=|<>|MOD|AND|OR|XOR|NOT|$|&|+=|-=|*=|/=|^=|=&|<|>|<=|>=
+separatori:(|)|;|:|,|'
+cuvinte_rezervate:DIM|CONST|AS|INTEGER|STRING|BOOLEAN|DOUBLE|LONG|PAIR|STR|IF|THEN|END IF|END|FOR|TO|NEXT|PRINT|INPUT|GOTO|TYPE|END TYPE|SWAP|WHILE|WEND

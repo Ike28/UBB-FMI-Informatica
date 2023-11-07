@@ -1,0 +1,5 @@
+states={'A','B','C'},
+input_alfabet={'a','b'},
+transition={'A'['a':'B';'b':'C'],'B'['a':'B';'b':'C'],'C'['b':'C']},
+initial_state='A',
+terminal_states={'A','B','C'}

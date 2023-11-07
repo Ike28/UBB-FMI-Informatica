@@ -1,0 +1,5 @@
+states={'q0','q1','q2','d'},
+input_alfabet={'0','1'},
+transition={'q0'['0':'d';'1':'q1'],'q1'['0':'q2';'1':'q1'],'q2'['0':'q2';'1':'q1'],'d'['0':'d';'1':'d']},
+initial_state='q0',
+terminal_states={'q2'}
