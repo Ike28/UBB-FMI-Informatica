@@ -1,5 +1,8 @@
 ## Grile Web - Solutii
 > link prescurtat 👀: [bit.ly/grileweb](https://bit.ly/grileweb)
+
+<br>
+
 > Folositi pagina in light mode ☀️ pentru o experienta mai buna
 
 #### 1. Un apel AJAX se poate face catre o resursa statica oferita de end-point-ul de pe server?
