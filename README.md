@@ -27,7 +27,7 @@
 - [x] [*  🪢 Limbaje formale și tehnici de compilare](github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20III/Limbaje%20formale%20si%20tehnici%20de%20compilare)
 - [ ] *  🧬 Programare paralelă și distribuită
 - [ ] *  📱 Programare pentru dispozitive mobile
-- [ ] *  ⛅ Arhitectura aplicațiilor cloud
+- [x] [*  ⛅ Arhitectura aplicațiilor cloud](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20III/Arhitectura%20aplicatiilor%20cloud)
 - [ ] *  🦾 Automatizarea proceselor de business
 - [ ] *  🤝 Proiect colectiv
 
