@@ -378,7 +378,7 @@
 
 #### 54. How are messages retrieved from queues in comparison to pub/sub systems?
 - [ ] The clients pull messages from both types of services
-- [ ] ___The client has to pull messages from queues while pub/sub pushed the messages to the client___
+- [x] ___The client has to pull messages from queues while pub/sub pushed the messages to the client___
 - [ ] The client has to pull messages from pub/sub while queues push the messages to the client
 - [ ] Both types of services push the messages to the clients
 <br>
