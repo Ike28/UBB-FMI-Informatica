@@ -24,7 +24,7 @@
 - [x] [*  📀 Sisteme de gestiune a bazelor de date](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20II/Sisteme%20de%20gestiune%20a%20bazelor%20de%20date)
 
 ### Anul III
-- [ ] *  🪢 Limbaje formale și tehnici de compilare
+- [x] [*  🪢 Limbaje formale și tehnici de compilare](github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20III/Limbaje%20formale%20si%20tehnici%20de%20compilare)
 - [ ] *  🧬 Programare paralelă și distribuită
 - [ ] *  📱 Programare pentru dispozitive mobile
 - [ ] *  ⛅ Arhitectura aplicațiilor cloud
