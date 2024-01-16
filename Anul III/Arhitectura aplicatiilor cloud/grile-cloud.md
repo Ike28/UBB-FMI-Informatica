@@ -1,5 +1,6 @@
 ## Grile Cloud Applications Architecture - Solutii
 > link prescurtat 👀: [bit.ly/grilecaa](https://bit.ly/grilecaa)
+> Folositi pagina in light mode ☀️ pentru o experienta mai buna
 
 #### 1. Related to users access and permissions for infrastructure security, confidentiality enforces:
 - [x] ___encryption___
