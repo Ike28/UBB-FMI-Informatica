@@ -175,3 +175,214 @@
 - [x] ___graph, columnar, document, key-value___
 - [ ] key-value, document, columnar, graph
 <br>
+
+#### 26. The role of the hypervisor is to:
+- [x] ___translate and limit instructions___
+- [ ] manage users
+- [x] ___create and manage guest machines___
+- [ ] encrypt disk
+<br>
+
+#### 27. In a cloud environment, horizontal scaling means that:
+- [x] ___it can scale infinitely___
+- [ ] it is compatible with any application architecture
+- [x] ___it requires load balancers___
+- [ ] it modifies existing VMs
+<br>
+
+#### 28. Which of the following is not an Integration Service for cloud?
+- [ ] API Gateways
+- [ ] publish/subscribe services
+- [x] ___shared memory___
+- [ ] workflow services
+- [ ] queues
+<br>
+
+#### 29. When choosing cloud services, the price plan can be:
+- [x] ___Tiered___
+- [ ] Transaction-based
+- [x] ___Fixed___
+- [x] ___Dynamic___
+<br>
+
+#### 30. What characterizes resource-oriented APIs?
+- [x] ___Fits better for public APIs___
+- [x] ___The behaviour of the system is primarily driven by the data___
+- [x] ___Usually leads to a concise set of operations___
+- [ ] Usually leads to strong coupling
+<br>
+
+#### 31. Which of the following components are not managed by the cloud provider in a Infrastructure as a Service model?
+- [x] ___Application___
+- [x] ___Operating System___
+- [ ] Storage
+- [x] ___Data___
+- [ ] Networking
+<br>
+
+#### 32. What is the shared responsibility model?
+- [ ] A framework for finding out the optimal security approach
+- [ ] A model describing the responsibility within a development team
+- [x] ___A model describing the responsibility of the cloud provider and the customer with regards to security___
+- [ ] A requirement for the ISO 27001 standard
+<br>
+
+#### 33. Why is loose coupling beneficial?
+- [x] ___Facilitates better maintainability and extensibility___
+- [ ] Usually makes the system more scalable
+- [ ] Improves network performance
+- [ ] We should prefer strong coupling instead
+<br>
+
+#### 34. The 12 Factor App is a(n):
+- [x] ___Metodology for building scalable and maintainable software___
+- [ ] Authentication application
+- [ ] Framework for building microservices
+<br>
+
+#### 35. Which of the following are protocols used by the internet?
+- [x] ___OSPF___
+- [x] ___BGP___
+- [x] ___IP___
+- [x] ___RIP___
+<br>
+
+#### 36. What are CDNs good for?
+- [x] ___optimize costs___
+- [x] ___improve security___
+- [ ] reduce resources
+- [x] ___improve load times___
+<br>
+
+#### 37. Which of the following characteristics is improved by designing and building applications in cloud environments?
+- [x] ___Scalability___
+- [x] ___Security, Cost Efficiency, Availability, Productivity___
+- [ ] Control
+- [x] ___Availability___
+<br>
+
+#### 38. Infrastructure security is concerned with:
+- [ ] application user
+- [x] ___cloud user___
+- [ ] operating system user
+- [ ] database user
+<br>
+
+#### 39. From the kubernetes terminology, we can say that a pod:
+- [ ] can span multiple nodes
+- [ ] is managed by the operating system
+- [x] ___runs on one or more containers___
+- [x] ___is the smallest deployment unit___
+<br>
+
+#### 40. Which are some common concerns when working with queues?
+- [ ] The message is lost if there are no consumers
+- [x] ___Messages might be out of order___
+- [x] ___The same message might get delivered multiple times___
+- [ ] The consumers might get overloaded
+<br>
+
+#### 41. Cloud network security can be enforced by:
+- [ ] domain name servers
+- [x] ___firewalls___
+- [x] ___network access control lists___
+- [ ] gateways 
+<br>
+
+#### 42. Which are some of the concerns when adopting a serverless architecture?
+- [ ] Your system might not be able to handle big workloads
+- [x] ___You might not have enough control___
+- [ ] It will likely be more expensive than IaaS
+- [x] ___Your system might overload other dependencies___
+<br>
+
+#### 43. Which of the following represent possible types of consistency in cloud database models?
+- [x] ___turntable consistency___
+- [ ] no consistency
+- [x] ___strong consistency___
+- [x] ___eventual consistency___
+<br>
+
+#### 44. Which are the 2 main API styles?
+- [ ] Graph
+- [x] ___Procedure Oriented___
+- [ ] REST
+- [x] ___Entity Oriented___
+<br>
+
+#### 45. In a cloud environment, vertical scalability means that:
+- [x] ___it doesn't require additional components___
+- [ ] it is compatible only with stateless applications
+- [ ] it doesn't require restarting the service
+- [x] ___it might be the only approach for certain components (RDBMS)___
+<br>
+
+#### 46. Which is the correct order for disaster recovery strategies from cheapest to most expensive?
+- [ ] warm standby, hot site, pilot light, backup and restore
+- [ ] backup and restore, warm standby, hot site, pilot light
+- [x] ___backup and restore, pilot light, warm standby, hot site___
+- [ ] warm standby, hot site, backup and restore, pilot light
+<br>
+
+#### 47. Which is true for a graph database model?
+- [x] ___nodes contain properties (key-value pairs)___
+- [ ] relationships can't contain properties
+- [x] ___contains nodes and relationships___
+- [ ] relationships are not directed
+<br>
+
+#### 48. The CAP theorem refers to:
+- [ ] Capacity, Availability, Performance
+- [x] ___Consistency, Availability, Partition Tolerance___
+- [ ] Credibility, Accessibility, Partition Tolerance
+- [ ] Credibility, Accessibility, Performance
+<br>
+
+#### 49. What makes a system highly available?
+- [x] ___data___
+- [x] ___network___
+- [x] ___hardware___
+- [x] ___software___
+<br>
+
+#### 50. Which of the following approaches has the ideal coupling?
+- [ ] Separated services communicating through REST interfaces
+- [ ] Separated services communicating through RPC
+- [ ] Services deployed together as a monolith
+- [x] ___Separated services communicating through a message queue___
+<br>
+
+#### 51. A key-value database offers:
+- [ ] ultra low but not consistent latency
+- [x] ___ultra low and consistent latency___
+- [ ] high but not consistent throughput
+- [x] ___high and consistent throughput___
+<br>
+
+#### 52. Which three options of the following are valid OAuth 2.0 flows?
+- [ ] Owner Claim
+- [ ] Pass-through Hash
+- [x] ___Authorization Code with PKCE___
+- [x] ___Authorization Code___
+- [x] ___Resource Owner Password Credentials___
+<br>
+
+#### 53. FaaS stands for:
+- [x] ___Functions as a Service___
+- [ ] Frontend as a Service
+- [ ] Functionality as a Service
+<br>
+
+#### 54. How are messages retrieved from queues in comparison to pub/sub systems?
+- [ ] The clients pull messages from both types of services
+- [ ] ___The client has to pull messages from queues while pub/sub pushed the messages to the client___
+- [ ] The client has to pull messages from pub/sub while queues push the messages to the client
+- [ ] Both types of services push the messages to the clients
+<br>
+
+#### 55. Some of the load balancers features are:
+- [x] ___caching___
+- [x] ___routing based on path___
+- [x] ___health checks___
+- [x] ___port mapping___
+<br>
