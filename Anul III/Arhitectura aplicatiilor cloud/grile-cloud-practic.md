@@ -1,5 +1,5 @@
 ## Grile practic Cloud Applications Architecture - Solutii
-> link prescurtat 👀: [bit.ly/grileaws](about:blank)
+> link prescurtat 👀: [bit.ly/grileaws](https://bit.ly/grileaws)
 
 > Folositi pagina in light mode ☀️ pentru o experienta mai buna
 
@@ -23,7 +23,7 @@
 - [ ] Application Load Balancer
 <br>
 
-#### 4. CloudFront is a(n) ___```CDN```___ and is composed of ___```a network of edge locations```___
+#### 4. CloudFront is a(n) ___```    CDN    ```___ and is composed of ___```    a network of edge locations    ```___
 <br>
 
 #### 5. An AWS Region is:
@@ -45,13 +45,13 @@
 - [ ] None of the above
 <br>
 
-#### 8. VPCs allow you to control the traffic between ___```(sub)networks```___ and use ___```private IPs```___
+#### 8. VPCs allow you to control the traffic between ___```    (sub)networks    ```___ and use ___```    private IPs    ```___
 <br>
 
-#### 9. An EC2 instance runs in a specific ___```VPC subnet```___ based on which ___```both public and private```___ IP addresses are assigned to the instance
+#### 9. An EC2 instance runs in a specific ___```    VPC subnet    ```___ based on which ___```    both public and private    ```___ IP addresses are assigned to the instance
 <br>
 
-#### 10. Security groups act at the ___```instance```___ level, not the ___```subnet```___ level
+#### 10. Security groups act at the ___```    instance    ```___ level, not the ___```    subnet    ```___ level
 <br>
 
 #### 11. You are designing a three-tier web application and want to restrict access to the database tier (remember PostgreSQL instance) to accept traffic from the application servers only (Spring Java app). However, these application servers are in an Auto Scaling group and may vary in quantity. How should you configure the database servers to meet the requirements?
@@ -73,7 +73,10 @@
 - [x] ___Origin Access Identity___
 <br>
 
-#### 14. From wher does Docker pull the image `hello-world` when running `docker run hello-world`?
+#### 14. From wher does Docker pull the image `hello-world` when running 
+```cobol
+      docker run hello-world
+```
 - [x] ___Docker tries to find it locally. If it doesn't find it, Docker checks the Docker Hub___
 - [ ] From the registry specified in the Dockerfile from the current directory
 - [ ] Always pulls it from the Docker Hub
