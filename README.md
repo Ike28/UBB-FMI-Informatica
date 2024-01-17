@@ -25,7 +25,7 @@
 
 ### Anul III
 - [x] [*  🪢 Limbaje formale și tehnici de compilare](github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20III/Limbaje%20formale%20si%20tehnici%20de%20compilare)
-- [ ] *  🧬 Programare paralelă și distribuită
+- [x] [*  🧬 Programare paralelă și distribuită](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20III/Programare%20paralela%20si%20distribuita)
 - [ ] *  📱 Programare pentru dispozitive mobile
 - [x] [*  ⛅ Arhitectura aplicațiilor cloud](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20III/Arhitectura%20aplicatiilor%20cloud)
 - [ ] *  🦾 Automatizarea proceselor de business
@@ -36,4 +36,4 @@
 - [ ] *  🕰️ Istoria informaticii
 - [ ] *  🧠 Gestiunea proiectelor soft
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Ike28&layout=compact&langs_count=12&exclude_repo=object_measurement,DImob_RealEstate,PingChat,BattleshipsGame,GAD_Flutter_day1,GAD_Flutter_day2,tic_tac_toe,number_guesser,movies_web_scraper,teaching-assistant-web,unsplash_photo_recommendations&custom_title=Languages&card_width=400)](https://github.com/anuraghazra/github-readme-stats)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Ike28&layout=compact&langs_count=14&exclude_repo=object_measurement,DImob_RealEstate,PingChat,BattleshipsGame,GAD_Flutter_day1,GAD_Flutter_day2,tic_tac_toe,number_guesser,movies_web_scraper,teaching-assistant-web,unsplash_photo_recommendations&custom_title=Languages&card_width=400)](https://github.com/anuraghazra/github-readme-stats)
