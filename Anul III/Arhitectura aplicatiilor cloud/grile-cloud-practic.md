@@ -80,3 +80,106 @@
 - [ ] Docker tries to pull it from AWS ECR
 <br>
 
+#### 15. The AWS service for load balancing supports the following types of load balancers:
+- [x] ___Application Load Balancer which operates at OSI layer 7 (HTTP/WebSocket)___
+- [ ] ___Network Load Balancer which operates at OSI layer 4 (TCP/UDP)___
+<br>
+
+#### 16. Simple Storage Service (S3) helps us:
+- [ ] Host web applications
+- [ ] Create bootable virtual disks that can be attached to EC2 instances
+- [x] ___Store and serve an infinite amount of objects such as images, documents and videos___ 
+<br>
+
+#### 17. RDS is a:
+- [ ] managed container service
+- [x] ___managed relational database service___
+- [ ] serverless database
+<br>
+
+#### 18. Documents are stored in S3 in a:
+- [ ] Server
+- [x] ___Bucket___
+- [ ] Storage account
+<br>
+
+#### 19. An EC2 instance can be configured as follows:
+- [x] ___Based on an instance type which offers certain resources (vCPU, RAM, networking etc.)___
+- [ ] Each resources must always be specified independently based on the estimated workload
+- [ ] There is no need to configure anything. The instance will scale based on the workload
+<br>
+
+#### 20. Software can be automatically installed during the provisioning of the EC2 instance through ___```    User Data    ```___ which is composed of ___```   a series of shell commands   ```___
+<br>
+
+#### 21. Simple Storage Service (S3) works through:
+- [x] ___HTTP___
+- [ ] SMTP
+- [ ] FTP
+<br>
+
+#### 22. An EC2 instance is deployed in a specific Availability Zone (AZ)
+- [x] ___True___
+- [ ] False
+<br>
+
+#### 23. Docker is a:
+- [ ] framework
+- [ ] programming language
+- [x] ___Container engine___
+<br>
+
+#### 24. Your application tier is running an Auto-Scaling Group and you need to change the instance type. In which of the following areas can this be achieved?
+- [x] ___Auto-scaling launch template configuration___
+- [ ] Auto-scaling policy configuration
+- [ ] Auto-scaling AMI
+- [ ] Auto-tags configuration
+<br>
+
+#### 25. Objects stored in S3 can be made public by configuration of the ___```    Access Control List (ACL)    ```___
+<br>
+
+#### 26. What is the role of a service within ECS?
+- [ ] It orchestrates the underlying EC2 instances
+- [ ] There is no "service" concept, only tasks and task definitions
+- [ ] It load balances traffic
+- [x] ___It ensures that the configured number of containers/tasks is running at all times___
+<br>
+
+#### 27. How does ECS ensure the cluster has enough computing capacity when running on EC2?
+- [ ] ECS only works with Fargate, not with EC2
+- [ ] You have to manually scale the cluster
+- [x] ___It leverages an ASG___
+- [ ] It has its own instance orchestrator
+<br>
+
+#### 28. ECS is a service for running
+- [x] ___containers in a managed way___
+- [ ] RDBMS
+- [ ] virtual machines
+<br>
+
+#### 29. How does ECS know how to run a container/task?
+- [ ] Based on the images you mention during the cluster creation
+- [ ] ECS will run all images from the configured ECR repository
+- [ ] Based on the provided Dockerfile
+- [x] ___Based on the configured task definition___
+<br>
+
+#### 30. Your system uses an Application Load Balancer (ALB). For audit purposes, you must store the IP address of the clients. What is the simplest approach?
+- [ ] The ALB already preserves the client's IP address
+- [ ] Replace the ALB with a Network Load Balancer
+- [ ] ___Get the client's IP address from the `x-forwarded-for` header___
+<br>
+
+#### 31. Why are there multiple Availability Zones in one region?
+- [ ] Becayse cross-region application is not supported since AWS regions are independent cloud deployments
+- [x] ___To enable highly available architectures and redundant storage___
+- [ ] Because one AZ would not support all IP addresses for a VPC
+<br>
+
+#### 32. RDS can:
+- [x] ___backup the database automatically___
+- [x] ___upgrade the RDBMS automatically___
+- [x] ___encrypt the data___
+<br>
