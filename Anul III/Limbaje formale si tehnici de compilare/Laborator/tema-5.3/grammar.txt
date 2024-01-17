@@ -1,0 +1,40 @@
+<program> <antet> <program_principal>
+<antet> <incluziune> <directiva>
+<incluziune> #include "iostream"
+<directiva> using namespace <namespace_name> ;
+<namespace_name> std
+<program_principal> int main ( ) { <corp_program> }
+<corp_program> <decl_variabile> <bloc_instructiuni> <returnare>
+<decl_variabile> int <variabile> ;
+<decl_variabile> float <variabile> ;
+<decl_variabile> struct { <decl_variabile> } <variabile> ;
+<variabile> ID
+<variabile> ID , <variabile>
+<bloc_instructiuni> <instructiune>
+<bloc_instructiuni> <instructiune> <bloc_instructiuni>
+<instructiune> ID <assign> <expr> ;
+<instructiune> cin >> ID ;
+<instructiune> cout << ID ;
+<instructiune> cout << ID << endl ;
+<instructiune> if ( <conditie> ) { <bloc_instructiuni> } else { <bloc_instructiuni> }
+<instructiune> while ( <conditie> ) { <bloc_instructiuni> }
+<expr> ID
+<expr> CONST
+<expr> ID <operator> <expr>
+<expr> CONST <operator> <expr>
+<conditie> ID <bool_operator> ID
+<conditie> ID <bool_operator> CONST 
+<conditie> CONST <bool_operator> CONST
+<conditie> CONST <bool_operator> ID
+<returnare> return <expr> ;
+<assign> =
+<operator> *
+<operator> +
+<operator> -
+<operator> /
+<bool_operator> >
+<bool_operator> <
+<bool_operator> ==
+<bool_operator> >=
+<bool_operator> =<
+<bool_operator> !=
