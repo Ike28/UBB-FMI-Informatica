@@ -1,5 +1,4 @@
 ## Grile practic Cloud Applications Architecture
-> Folositi pagina in light mode ☀️ pentru o experienta mai buna
 
 #### 1. Due to regulatory requirements, your team must inspect all packets that flow into your system. What load balancer can help you achieve this?
 - [ ] Network Load Balancer
