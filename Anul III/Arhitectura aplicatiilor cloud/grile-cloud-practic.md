@@ -197,10 +197,6 @@
 <br>
 
 #### 34. Every instance in a subnet in a VPC can have assigned a different set of ___```    security groups    ```___
-- [ ] 
-- [ ] 
-- [ ] 
-- [ ] 
 <br>
 
 #### 35. If you need just one EC2 instance, would an Auto-Scaling Group (ASG) provide any benefit?
