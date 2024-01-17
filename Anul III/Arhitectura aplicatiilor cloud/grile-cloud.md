@@ -1,4 +1,4 @@
-## Grile Cloud Applications Architecture - Solutii
+## Grile colocviu Cloud Applications Architecture - Solutii
 > link prescurtat 👀: [bit.ly/grilecaa](https://bit.ly/grilecaa)
 
 > Folositi pagina in light mode ☀️ pentru o experienta mai buna
@@ -389,3 +389,25 @@
 - [x] ___health checks___
 - [x] ___port mapping___
 <br>
+
+#### 56. Which two options are valid approaches for reducing the cold start issues for serverless compute?
+- [x] ___Call the function on a schedule___
+- [ ] Use Docker
+- [ ] Limit the concurrency of the function
+- [x] ___Reduce the package size___
+<br>
+
+#### 57. Which of the following are HTTP idempotent methods?
+- [x] ___PUT___
+- [ ] POST
+- [x] ___HEAD___
+- [x] ___GET___
+- [x] ___DELETE___
+<br>
+
+#### 58. Which are some common triggers for serverless functions?
+- [x] ___File uploads to serverless storage___
+- [x] ___HTTP___
+- [ ] Emails
+- [x] ___Queue messages___
+<br><br>
