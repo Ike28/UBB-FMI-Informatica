@@ -84,8 +84,9 @@
 <br>
 
 #### 15. The AWS service for load balancing supports the following types of load balancers:
-- [x] ___Application Load Balancer which operates at OSI layer 7 (HTTP/WebSocket)___
-- [ ] ___Network Load Balancer which operates at OSI layer 4 (TCP/UDP)___
+- Application Load Balancer which operates at ___```    OSI layer 7 (HTTP/WebSocket)    ```___
+- Network Load Balancer which operates at ___```    OSI layer 4 (TCP/UDP)    ```___
+- Gateway Load Balancer which operates at ___```    OSI layer 3 (Network)    ```___
 <br>
 
 #### 16. Simple Storage Service (S3) helps us:
@@ -129,7 +130,8 @@
 #### 23. Docker is a:
 - [ ] framework
 - [ ] programming language
-- [x] ___Container engine___
+- [x] ___container engine___
+- [ ] virtualization program
 <br>
 
 #### 24. Your application tier is running an Auto-Scaling Group and you need to change the instance type. In which of the following areas can this be achieved?
@@ -139,7 +141,7 @@
 - [ ] Auto-tags configuration
 <br>
 
-#### 25. Objects stored in S3 can be made public by configuration of the ___```    Access Control List (ACL)    ```___
+#### 25. Objects stored in S3 can be made public by configuration of the ___```    bucket policy    ```___ ___```    at any time    ```___
 <br>
 
 #### 26. What is the role of a service within ECS?
@@ -186,3 +188,54 @@
 - [x] ___upgrade the RDBMS automatically___
 - [x] ___encrypt the data___
 <br>
+
+#### 33. What is the purpose of the _Dockerfile_ for Docker?
+- [ ] It contains the input data for a program that runs within a container
+- [x] ___It contains all the commands and steps for assembling a Docker image___
+- [ ] It contains the output after running a container
+- [ ] Docker doesn't use the Dockerfile
+<br>
+
+#### 34. Every instance in a subnet in a VPC can have assigned a different set of ___```    security groups    ```___
+- [ ] 
+- [ ] 
+- [ ] 
+- [ ] 
+<br>
+
+#### 35. If you need just one EC2 instance, would an Auto-Scaling Group (ASG) provide any benefit?
+- [x] ___Yes, the ASG will ensure there is always one instance running___
+- [ ] No, it will just incur unnecessary costs
+- [ ] Yes, it will scale the resources (CPU & RAM) of the instance as needed
+- [ ] You cannot run an EC2 instance without an ASG
+<br>
+
+#### 36. You can choose the AZ in which an EC2 will run by:
+- [ ] EC2 instances are AZ-agnostic
+- [ ] Choosing the AZ during the instance configuration
+- [x] ___Selecting a subnet for that specific AZ___
+- [ ] You can choose the AZ only when using ASGs
+<br>
+
+#### 37. The most cost-effective and scalable way to host a static web application on AWS is:
+- [x] ___Simple Storage Service (S3)___
+- [ ] Elastic Compute Cloud (EC2)
+- [ ] Elastic Container Service (ECS)
+<br>
+
+#### 38. What is the difference between a Docker image and a Docker container?
+- [x] ___Containers are running instances of the images___
+- [ ] There is no such thing as a Docker image
+- [ ] An image groups multiple containers that can communicate between them
+- [ ] They are the same
+<br>
+
+#### 39. An EC2 instance can be secured by using ___```    security groups    ```___ which ___```    control the inbound and outbound traffic    ```___
+<br>
+
+#### 40. CloudFront can serve the following:
+- [x] ___Content stored on S3___
+- [x] ___HTTP traffic from the Applications hosted on other providers___
+- [x] ___HTTP traffic from API Gateway___
+<br>
+
