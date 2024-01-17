@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.example</OriginalElement>
+  <nodes>
+    <node x="-66.0" y="-4.0">org.example.Main.MyThread</node>
+    <node x="329.4392523364486" y="166.75700934579442">org.example.Utils</node>
+    <node x="60.25" y="134.0">org.example.Main</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.example.Main.MyThread" target="org.example.Main" relationship="INNER_CLASS">
+      <point x="-37.0" y="38.5" />
+      <point x="-29.0" y="114.0" />
+      <point x="87.58333333333334" y="114.0" />
+      <point x="-54.66666666666666" y="-71.5" />
+    </edge>
+    <edge source="org.example.Main" target="org.example.Utils" relationship="TO_ONE">
+      <point x="15.0" y="-71.5" />
+      <point x="157.25" y="216.25700934579442" />
+      <point x="384.6892523364486" y="216.25700934579442" />
+      <point x="-85.75" y="49.5" />
+    </edge>
+    <edge source="org.example.Main" target="org.example.Main.MyThread" relationship="CREATE">
+      <point x="-82.0" y="0.0" />
+      <point x="-44.0" y="205.5" />
+      <point x="-52.0" y="38.5" />
+    </edge>
+    <edge source="org.example.Main" target="org.example.Utils" relationship="CREATE">
+      <point x="0.0" y="-71.5" />
+      <point x="142.25" y="75.95327102803738" />
+      <point x="369.6892523364486" y="75.95327102803738" />
+      <point x="-100.75" y="49.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0288461538461537" showDependencies="true" x="248.9345794392524" y="175.01869158878506" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

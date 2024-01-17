@@ -1,0 +1,24 @@
+﻿1577.3739; p = 5
+1467.65; p = 4
+1598.97; p = 8
+1427.74; p = 9
+1435.673; p = 20
+1399.776; p = 16
+1401.764; p = 17
+
+Acest program MPI implementează o convoluție pe o matrice 2D folosind comunicare între procese pentru împărțirea și combinarea datelor. 
+Acesta împarte matricea de intrare în bucăți, trimite fiecare bucată unui proces, aplică convoluția local, iar apoi colectează rezultatele în procesul
+principal. Programul măsoară timpul de citire/scriere (T1) și timpul de calcul (T2) pentru a evalua eficiența MPI în contextul dat. Varianta MPI este evaluată 
+în raport cu performanța variantei non-MPI, unde matricea este prelucrată pe un singur nod cu diferite numere de thread-uri.
+
+Prin MPI, matricea este distribuită între procese, fiecare proces tratând o parte a datelor. Deși paralelismul aduce beneficii, există costuri 
+asociate cu comunicarea între procese, ceea ce poate afecta performanța. Comparativ cu varianta non-MPI, unde operațiile sunt executate pe un singur nod cu mai multe 
+thread-uri, programul MPI poate să înregistreze timpi mai mari datorită overhead-ului adăugat de comunicarea între noduri.
+
+Timpii de execuție obținuți cu MPI pot varia în funcție de configurarea hardware, dimensiunea problemei și alți factori. În general, introducerea MPI aduce beneficii semnificative 
+în cazul problemelor care pot fi eficient paralelizate și distribuite între nodurile unui cluster. Totuși, acest beneficiu poate fi temperat de costurile asociate cu comunicarea între 
+procese.
+
+În contextul acestui program MPI, care efectuează o convoluție pe o matrice 2D, adăugarea MPI poate duce la creșterea timpilor de execuție față de varianta non-MPI, mai ales pentru
+dimensiuni mici ale matricei sau pentru configurații hardware cu latențe mai mari de comunicare între noduri. În schimb, pe dimensiuni mari ale matricei și cu un cluster bine configurat, 
+beneficiile paralelismului oferite de MPI ar putea să compenseze costurile comunicării și să ducă la timpuri de execuție mai mici.
