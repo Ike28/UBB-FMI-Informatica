@@ -28,7 +28,7 @@
 - [x] [*  🧬 Programare paralelă și distribuită](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20III/Programare%20paralela%20si%20distribuita)
 - [ ] *  📱 Programare pentru dispozitive mobile
 - [x] [*  ⛅ Arhitectura aplicațiilor cloud](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20III/Arhitectura%20aplicatiilor%20cloud)
-- [ ] *  🦾 Automatizarea proceselor de business
+- [ ] [*  🦾 Automatizarea proceselor de business](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20III/Automatizarea%20proceselor%20de%20business)
 - [ ] *  🤝 Proiect colectiv
 - [ ] *  ⚗️ Verificarea și validarea sistemelor soft
 - [ ] *  ⚖️ Calcul numeric
