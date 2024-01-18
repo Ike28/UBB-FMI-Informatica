@@ -36,4 +36,4 @@
 - [ ] *  🕰️ Istoria informaticii
 - [ ] *  🧠 Gestiunea proiectelor soft
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Ike28&layout=compact&langs_count=14&exclude_repo=object_measurement,DImob_RealEstate,PingChat,BattleshipsGame,GAD_Flutter_day1,GAD_Flutter_day2,tic_tac_toe,number_guesser,movies_web_scraper,teaching-assistant-web,unsplash_photo_recommendations&custom_title=Languages&card_width=400)](https://github.com/anuraghazra/github-readme-stats)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Ike28&size_weight=0.5&count_weight=0.5&layout=compact&langs_count=20&show_icons=true&exclude_repo=object_measurement,DImob_RealEstate,PingChat,BattleshipsGame,GAD_Flutter_day1,GAD_Flutter_day2,tic_tac_toe,number_guesser,movies_web_scraper,teaching-assistant-web,unsplash_photo_recommendations&custom_title=Languages&card_width=400)](https://github.com/anuraghazra/github-readme-stats)
