@@ -1,0 +1,45 @@
+
+-- (a) In nici un pachet de optionale nu exista doua cursuri propuse de acelasi profesor
+context PachetOptionale
+    inv optionalUnicPerProfesor: self.cursuriContinute->isUnique(co : CursOptional | co.titular )
+
+-- (b) Un curs se normeaza numai daca numarul de studenti care si l-au ales in optiunile initiale
+-- este mai mare sau egal cu 20
+context CursOptional
+    inv nrMinStudentiPtNormare: self.normat = true implies self.studentiInscrisi->size() >= 20
+       
+-- (c) Un curs normat nu poate avea mai mai mult de 80 de cursanti (studenti pentru care cursul se regaseste printre
+-- optiunile finale)       
+context CursOptional
+    inv nrMaxCursanti: self.cursanti->size() <= 80
+   
+-- (d) Un student nu poate avea decat cursuri normate printre optiunile sale finale
+context Student
+    inv optiuniFinaleNormate: self.optiuniFinale->forAll(co : CursOptional | co.normat = true)
+    //alternativa echivalenta: self.optiuniFinale->select(co:CursOptional | co.normat = false)->isEmpty()
+    
+-- (e) Un student trebuie sa aiba printre optiunile sale (atat initiale, cat si finale) un singur curs optional
+-- din fiecare pachet
+context Student
+    inv optionalUnicPerPachet:
+        // numaru de optiuni e identic cu numarul de pachete
+        self.optiuniInitiale->size() = PachetOptionale.allInstances()->size() and
+        //pachetele asociate optiunilor sunt diferite
+        self.optiuniInitiale->forAll(co1,co2 : CursOptional | co1 <> co2 implies co1.pachet <> co2.pachet)
+   
+-- invariant analog pentru "optiuniFinale"  
+
+
+-- (f) Pre/post-conditii asociate operatiei adaugaOptionalPropus din clasa Profesor
+context Profesor::adaugaOptionalPropus(co:CursOptional)
+    pre : self.optionalePropuse->collect(pachet)->excludes(co.pachet)
+    post: self.optionalePropuse->includes(co) and
+          self.optionalePropuse->size() = self.optionalePropuse@pre->size() + 1    
+        
+-- (g) Operatie de interogare / observator (query operation) in clasa Student (operatie noua, nespecificata
+-- initial in model), care returneaza optiunile initiale ale studentului care au ramas valide dupa
+-- normare        
+context Student
+    def getOptiuniInitialeValide:
+        let getOptiuniInitialeValide():Set(CursOptional) = self.optiuniInitiale->select(normat = true)
+            
