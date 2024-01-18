@@ -174,7 +174,7 @@
 #### 30. Your system uses an Application Load Balancer (ALB). For audit purposes, you must store the IP address of the clients. What is the simplest approach?
 - [ ] The ALB already preserves the client's IP address
 - [ ] Replace the ALB with a Network Load Balancer
-- [ ] ___Get the client's IP address from the `x-forwarded-for` header___
+- [x] ___Get the client's IP address from the `x-forwarded-for` header___
 <br>
 
 #### 31. Why are there multiple Availability Zones in one region?
@@ -235,3 +235,9 @@
 - [x] ___HTTP traffic from API Gateway___
 <br>
 
+#### 41. Your team is sharing an AWS VPC with another team, so you configured a dedicated subnet with the CIDR 172.31.1.0/28. Your application is running on EC2 instances managed by an ASG. As the demand for your app increases, you notice that new EC2 instances are not created, even though the ASG is correctly configured. What is the most probable cause?
+- [ ] You've set a budget limit that is preventing additional costs
+- [ ] The load balancer has reached the maximum number of targets
+- [ ] AWS ran out of capacity for that specific region
+- [x] ___There are no more IP addresses available in the subnet___
+<br>
