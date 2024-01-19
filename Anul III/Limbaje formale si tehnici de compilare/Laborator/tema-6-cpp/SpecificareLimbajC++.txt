@@ -1,0 +1,37 @@
+<program>	-> 	"#include" "<" " iostream" ">"
+				"using" "namespace" "std" ";"
+				"int" "main" "(" ")" "{"
+					<program_principal>
+					"return" CONST ";"
+				"}"
+
+<program_principal> -> 	<lista_declarari>
+						<lista_instructiuni>
+					   
+<lista_declarari> 	-> 	Epsilon
+<lista_declarari> 	-> 	<declarare> ";" 
+						<lista_declarari>
+						
+<declarare> -> 	int ID
+					   
+<lista_instructiuni>	-> 	Epsilon
+<lista_instructiuni>	-> 	<instructiune> ";"
+							<lista_instructiuni>
+
+<instructiune>	-> 	<afisare>
+<instructiune>	-> 	<atribuire>
+<instructiune>	-> 	<citire>
+
+<afisare>	-> 	"cout" "<<" <evaluabil_atomic>
+
+<atribuire>	-> 	ID "=" <evaluabil>
+
+<evaluabil> -> 	<evaluabil_atomic>
+<evaluabil> -> 	<evaluabil_atomic> <operator_binar> <evaluabil_atomic>
+
+<evaluabil_atomic> -> 	ID
+<evaluabil_atomic> -> 	CONST
+
+<operator_binar> 	-> 	"+" | "-" | "*" | "/" 
+
+<citire>	-> 	"cin" ">>" ID
