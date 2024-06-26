@@ -179,12 +179,12 @@ protocol bazat pe un algoritm de criptare simetric
 
 #### 27. Care dintre urmatoarele afirma�i despre procesul de schimb de chei sunt adevarate in
 contextul folosirii de algoritmi de criptare simetrici, respec�v asimetrici:
-- [x] ___In ambele situa�i, schimbul de chei trebuie sa se desfasoare pe un alt canal /
-printr-un mecanism de comunicare alterna�v___
+- [ ] In ambele situa�i, schimbul de chei trebuie sa se desfasoare pe un alt canal /
+printr-un mecanism de comunicare alterna�v
 - [ ] Schimbul de chei pe un alt canal / mecanism diferit de comunicare alterna�v
 trebui sa se realizeze doar in cazul algoritmilor de criptare asimetrici
-- [ ] Schimbul de chei pe un alt canal / mecanism diferit de comunicare alterna�v
-trebui sa se realizeze doar in cazul algoritmilor de criptare simetrici
+- [x] __Schimbul de chei pe un alt canal / mecanism diferit de comunicare alterna�v
+trebui sa se realizeze doar in cazul algoritmilor de criptare simetrici__
 - [ ] In ambele situa�i, schimbul de chei se poate realiza pe acelasi canal / prin acelasi
 mecanism prin care are loc si comunicarea 
 <br>
@@ -283,19 +283,19 @@ formular___
 <br>
 
 #### 41. Pe un canal de comunicare securizat (spre exemplu ssh), ce trebuie sa cunoască serverul
-pentru a putea auten�fica cu succes un client:
+pentru a putea autentifica cu succes un client:
 - [x] ___Cheia publica a clientului___
-- [ ] Doar clientul poate auten�fica serverul folosind mecanisme bazate pe chei sau
-cer�ficate, serverul auten�fica clientul exclusiv pe baza unui nume de u�lizator si
+- [ ] Doar clientul poate autentifica serverul folosind mecanisme bazate pe chei sau
+certificate, serverul autentifica clientul exclusiv pe baza unui nume de utilizator si
 a unei parole
 - [ ] Cheia privata a clientului
 <br>
 
-#### 42. Într-o infrastructură de �p PKI, care dintre următoarele pot fi menţinute pe un calculator
+#### 42. Într-o infrastructură de tip PKI, care dintre următoarele pot fi menţinute pe un calculator
 neconectat la reţea:
-- [x] ___cheia privata a autorităţii de cer�ficare___
-- [ ] cer�ficatele digitale ale partenerilor ce comunică, cer�ficate emise de autoritatea
-de cer�ficare
+- [x] ___cheia privata a autorităţii de certificare___
+- [ ] certificatele digitale ale partenerilor ce comunică, certificate emise de autoritatea
+de certificare
 - [ ] cheile private ale partenerilor ce comunică
 <br>
 
@@ -310,14 +310,14 @@ de cer�ficare
 <br>
 
 #### 44. Care este pericolul interceptării de către un terț (Man in the Middle) a unei chei publice din
-cadrul unui cer�ficat digital semnat de către o autoritate de cer�ficare și transmis pe un canal
+cadrul unui certificat digital semnat de către o autoritate de certificare și transmis pe un canal
 nesigur?
-- [x] ___Atacatorul poate înlocui cheia publică din cer�ficat cu propria cheie publică,
+- [x] ___Atacatorul poate înlocui cheia publică din certificat cu propria cheie publică,
 corespunzătoare unei chei private pe care acesta o deține___
-- [ ] Atacatorul poate înlocui cheia privată din cer�ficat cu propria cheie privată,
+- [ ] Atacatorul poate înlocui cheia privată din certificat cu propria cheie privată,
 corespunzătoare unei chei publice pe care acesta o deține
-- [ ] Nu există niciun pericol, des�natarul la care ajunge cer�ficatul îl poate valida pe
-baza semnăturii depuse de autoritatea de cer�ficare
+- [ ] Nu există niciun pericol, destinatarul la care ajunge certificatul îl poate valida pe
+baza semnăturii depuse de autoritatea de certificare
 <br>
 
 #### 45. O semnătura digitală are următoarele proprietăți:
@@ -335,31 +335,31 @@ dovedită cu ajutorul cheii publice a autorității de marcă temporală___
 <br>
 
 #### 47. Ce se trimite unei autorități de marcă temporală pentru a dovedi că un anumit document
-există la un anumit moment de �mp?
+există la un anumit moment de timp?
 - [x] ___Un hash al documentului și o semnătură.___
-- [ ] documentul, semnătura și momentul de �mp
+- [ ] documentul, semnătura și momentul de timp
 - [ ] documentul semnat
 <br>
 
-#### 48. Pentru a crește gradul de reușită a unui atac de �p phishing, atacatorul trebuie să:
-- [x] ___Cloneze perfect site-ul targetat (spre exemplu site-ul unei ins�tuții bancare)___
-- [ ] Să își adauge propria autoritate de cer�ficare rădăcină (ROOT CA) pe
-calculatoarele vic�melor
-- [ ] Să forțeze ca vic�mele să acceseze site-ul clonat prin HTTP, nu HTTPS pentru a
+#### 48. Pentru a crește gradul de reușită a unui atac de tip phishing, atacatorul trebuie să:
+- [x] ___Cloneze perfect site-ul targetat (spre exemplu site-ul unei instituții bancare)___
+- [ ] Să își adauge propria autoritate de certificare rădăcină (ROOT CA) pe
+calculatoarele victimelor
+- [ ] Să forțeze ca victimele să acceseze site-ul clonat prin HTTP, nu HTTPS pentru a
 putea intercepta traficul
 <br>
 
 #### 49. Un certificat eliberat pentru serverul web cs.ubbcluj.ro poate fi folosit și pentru serverul de mail cs.ubbcluj.ro?
-- [x] ___nu, serverul de mail are nevoie de un cer�ficat diferit___
-- [ ] doar în situația în care în cer�ficat nu este trecut portul serviciului pentru care
+- [x] ___nu, serverul de mail are nevoie de un certificat diferit___
+- [ ] doar în situația în care în certificat nu este trecut portul serviciului pentru care
 este eliberat
 - [ ] da, nu este nicio problema numele serverului fiind același
 
 <br>
 
-#### 50. Care este pericolul compromiterii unui cer�ficat digital emis unui site Web în scopul
-auten�ficării acestuia de către clienți (compromitere în sensul aducerii acestui cer�ficat la
-cunoș�nță publică)?
+#### 50. Care este pericolul compromiterii unui certificat digital emis unui site Web în scopul
+autentificării acestuia de către clienți (compromitere în sensul aducerii acestui certificat la
+cunoștință publică)?
 - [x] ___Se poate extrage cheia privată din acel certificat.___
 - [ ] Se poate extrage cheia publică din acel cer�ficat, dar acest fapt nu reprezintă un
 pericol
@@ -398,7 +398,7 @@ semnătură electronică:
 #### 4. Cheia publica este folosita pentru:
 - [ ] Semnarea documentelor
 - [x] ___Criptarea mesajelor___
-- [x] ___Decriptarea mesajelor___
+- [ ] Decriptarea mesajelor
 - [x] ___Verificarea semnaturilor digitale___
 <br>
 
@@ -409,9 +409,9 @@ semnătură electronică:
 <br>
 
 #### 6. Care dintre urmatoarele afirmatii despre procesul de schimb de chei sunt adevarate in contextul folosirii de algoritmi de criptare simetrici, respectiv asimetrici:
-- [x] ___In ambele situatii, schimbul de chei se poate realiza pe acelasi canal / prin acelasi mecanism prin care are loc si comunicarea___
+- [ ] In ambele situatii, schimbul de chei se poate realiza pe acelasi canal / prin acelasi mecanism prin care are loc si comunicarea
 - [ ] Schimbul de chei pe un alt canal / mecanism diferit de comunicare alternativ trebuie sa se realizeze doar in cazul algoritmilor de criptare asimetrici
-- [ ] Schimbul de chei pe un alt canal / mecanism diferit de comunicare alternativ trebuie sa se realizeze doar in cazul algoritmilor de criptare simetrici
+- [x] __Schimbul de chei pe un alt canal / mecanism diferit de comunicare alternativ trebuie sa se realizeze doar in cazul algoritmilor de criptare simetrici__
 - [ ] In ambele situatii, schimbul de chei trebuie sa se desfasoare pe un alt canal / printr-un mecanism de comunicare alternativ
 <br>
 
@@ -541,3 +541,74 @@ semnătură electronică:
 - [x] ___server-side___
 - [ ] client-side
 <br>
+
+#### 26. Ce reprezintă termenul PKI (Public Key Infrastructure)?
+- [ ] Un set de hardware și software pentru criptare simetrică.
+- [x] ___Un set de hardware, software, persoane, politici și proceduri necesare pentru gestionarea certificatelor publice.___
+- [ ] O infrastructură pentru gestionarea cheilor publice și private.
+- [ ] Un sistem pentru autentificare biometrică.
+<br>
+
+#### 27. Care dintre următoarele elemente sunt componente ale unui certificat digital?
+- [x] __Cheia publică.__
+- [x] ___Numele proprietarului certificatului.___
+- [ ] Algoritmul de criptare utilizat.
+- [x] __Semnătura digitală a autorității de certificare.__
+<br>
+
+#### 28. Ce tipuri de certificate pot fi emise într-o infrastructură PKI?
+- [x] ___Certificat de utilizator.___
+- [x] ___Certificat de server.___
+- [x] ___Certificat auto-emis.___
+- [x] ___Certificat de punte.___
+<br>
+
+#### 29. Ce este Protocolul de Determinare On-line a Stării Certificatelor (OCSP)?
+- [ ] Un protocol pentru criptarea datelor la nivelul partițiilor sistemului de operare.
+- [x] ___Un protocol simplu de tip cerere/răspuns destinat determinării stării de revocare a certificatelor.___
+- [ ] Un protocol pentru semnătura digitală a mesajelor e-mail.
+- [x] __Un protocol care oferă informații în timp real despre statutul certificatului.__
+<br>
+
+#### 30. Care este scopul principal al unui smart card în contextul semnăturilor electronice?
+- [ ] Pentru stocarea cheilor de criptare simetrică.
+- [x] ___Pentru a semna electronic documente și pentru a proteja cheia privată a utilizatorului.___
+- [ ] Pentru a oferi o metodă de autentificare biometrică.
+- [x] __Pentru stocarea certificatelor digitale și a cheilor private..__
+<br>
+
+#### 31. Cine sunt considerate figuri importante în dezvoltarea criptografiei?
+- [x] __Horst Feistel.__
+- [x] ___Claude Shannon.___
+- [x] __Ronald Rivest.__
+- [x] __Whitfield Diffie.__
+<br>
+
+#### 32. Ce se întâmplă dacă certificatul digital al Decanatului nu este importat ca Trusted Root Certificate Authority pe sistemul de operare Windows?
+- [ ] Certificatul profesorului va fi automat recunoscut ca valid de sistemul de operare.
+- [x] ___Sistemul de operare va considera certificatul profesorului ca fiind invalid.___
+- [ ] Certificatul Decanatului va fi utilizat pentru semnături digitale fără alte acțiuni suplimentare.
+- [x] __Este posibil să apară un mesaj de eroare indicând că certificatul nu este de încredere.__
+<br>
+
+#### 33. Ce pași sunt necesari pentru a importa certificatul Decanatului în lista de Trusted Root Certificate Authorities în Windows?
+- [x] __Deschideți fișierul CA.crt cu un dublu click.__
+- [x] ___Selectați opțiunea Install Certificate.___
+- [x] __Alegeți Current User și plasați certificatul în Trusted Root Certificate Authorities.__
+- [ ] Reporniți calculatorul după import.
+<br>
+
+#### 34. Care dintre următoarele sunt adevărate despre procesul de semnare a unui document în Linux folosind OpenSSL?
+- [x] __Se folosește comanda openssl dgst -sha1 -sign pentru a semna documentul. __
+- [x] ___Fișierul semnat se va numi note.txt.sha1.___
+- [x] __Validarea semnăturii se face folosind cheia publică a autorității de certificare.__
+- [ ] Cheia privată a profesorului nu este necesară pentru semnare.
+<br>
+
+#### 35. Care sunt motivele pentru care este necesară revocarea unui certificat digital?
+- [x] __Compromiterea perechii de chei private.__
+- [x] ___Pierderea perechii de chei private___
+- [x] __Plecarea persoanei din organizație.__
+- [ ] Modificarea semnăturii digitale.
+<br>
+
