@@ -1,6 +1,8 @@
 >Sharing knowledge is the most fundamental act of friendship. Because it is a way you can give something without losing something.
 ##### - Richard Stallman
 
+Archive of practical work and resources for UBB-Computer-Science Romanian curricula.
+
 ### Anul I
 - [x] [*  🧮 Logică computațională](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20I/Logica%20computationala)
 - [x] [*  🐍 Fundamentele programării](https://github.com/Ike28/UBB-FMI-Informatica/tree/main/Anul%20I/Fundamentele%20programarii)
