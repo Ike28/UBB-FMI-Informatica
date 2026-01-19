@@ -49,3 +49,23 @@ __Content creators will edit their footage directly on their devices (client-sid
 > * __Application Load Balancer__, to make the platform more efficient and provide a safety net in case of instance failure or downtime, redirecting traffic to available ones so that the service can remain available and not affect user experience.
 
 > In the future, the afore-mentioned architecture can be adjusted/tuned for cost and speed efficiency, should the platform grow for greater needs.
+
+
+#### 3. Your organization runs a business-critical human resource management system (HMRS) on its infrastructure on-premises. Since the platform has been growning exponentially, the stakeholders decided to migrate it to AWS. You are the architect in charge. You are responsible for choosing the right services and designing the new system on AWS.
+
+__The HRMS enables managers and HR personnel to publish job openings and manage employees. The system stores multiple types of documents, including CVs, contracts, and pictures. Other functional requirements include:__
+
+- __job applications go through a review process__
+- __applicants are notified via email when there is a change in the application process__
+- __the system exposes an API allowing third-party job boards to fetch your job openings__
+- __the system runs a complex algorithm that leverages ML to filter and match job applicants to the optimal roles.__
+
+__The HRMS is composed of several backend modules written in Java and Node.js. They store data in a MySQL database. The frontend is built with React.__
+
+__Your team has been struggling lately to run the system locally due to its distributed nature and increasing dependencies. Use this migration to improve this aspect, too.__
+
+__This is your organization's core product, so the design's primary focus must be the availability of the system and reducing operational/maintenance overhead. Of course, the cost must be optimized whenever possible.__
+
+_Describe your solution below. Mention which AWS services you would choose, how they communicate with each other, and, equally important, why you have chosen a particular service. Be as explicit as possible._
+
+_Optionally, you can upload images to illustrate your design (feel free to use any drawing or diagram tool you wish; images don't have to be pretty)._

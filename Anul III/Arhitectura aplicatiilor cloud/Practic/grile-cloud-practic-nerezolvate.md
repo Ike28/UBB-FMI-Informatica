@@ -1,5 +1,8 @@
 ## Grile practic Cloud Applications Architecture
 
+> On Moodle, if a question is multiple choice, then there _must_ be at least two correct answers.
+> On Moodle, the open fields are actually combo-boxes, you have to choose one out of four to five answers.
+
 #### 1. Due to regulatory requirements, your team must inspect all packets that flow into your system. What load balancer can help you achieve this?
 - [ ] Network Load Balancer
 - [ ] Gateway Load Balancer
@@ -231,4 +234,64 @@
 - [ ] HTTP traffic from the Applications hosted on other providers
 - [ ] HTTP traffic from API Gateway
 <br>
+
+#### 41. Your team is sharing an AWS VPC with another team, so you configured a dedicated subnet with the CIDR 172.31.1.0/28. Your application is running on EC2 instances managed by an ASG. As the demand for your app increases, you notice that new EC2 instances are not created, even though the ASG is correctly configured. What is the most probable cause?
+- [ ] You've set a budget limit that is preventing additional costs
+- [ ] The load balancer has reached the maximum number of targets
+- [ ] AWS ran out of capacity for that specific region
+- [ ] There are no more IP addresses available in the subnet
+<br>
+
+#### 42. Which statement accurately describes a difference between using an AWS-managed database service and running a database yourself on an Amazon EC2 instance?
+- [ ] AWS manages database patches for a database on a managed database service.
+- [ ] Configuring backups for a database on a managed database service is not required.
+- [ ] Configuring backups for a database on an EC2 instance is not required.
+- [ ] AWS manages operating system (OS) patches for a database on an EC2 instance.
+<br>
+
+### 43. An organization is evaluating Amazon EC2 for hosting its applications. Which characteristics make Amazon EC2 an appropriate choice compared to other compute services?
+- [ ] AWS management of operating system (OS) security
+- [ ] Ability to run serverless applications
+- [ ] Complete control of computing resources
+- [ ] AWS management of operating system (OS) patches
+- [ ] Ability to run any type of workload
+<br>
+
+### 44. Which kind of data is suitable for caching?
+- [ ] Specialized data that is accessed by the same subset of users
+- [ ] Web content dynamically generated
+- [ ] Data that can be quickly be retrieved by simple queries
+- [ ] Frequently accessed static data
+<br>
+
+### 45. What does caching mean?
+- [ ] A global network for content distribution
+- [ ] A way to store database usernames
+- [ ] An in-memory database
+- [ ] A high-speed data storage layer
+<br>
+
+### 46. Which component lacks direct connectivity to the internet?
+- [ ] EC2 instance inside a public subnet
+- [ ] Interface of Elastic IP address
+- [ ] NAT gateway inside a public subnet
+- [ ] EC2 instance inside a private subnet
+<br>
+
+### 47. When using AWS VPCs, you can control the configuration of ```        ``` and ```        ```
+<br>
+
+### 48. In the AWS Identity and Access Management (IAM) policy evaluation process, which best describes the order of steps that are taken when determining whether a principal is allowed or denied access to a specific resource?
+- [ ] Check explicit allow, check explicit deny, check for absence of rules
+- [ ] Check for absence of rules, check explicit allow, check explicit deny
+- [ ] Check explicit deny, check explicit allow, apply implicit deny if there are no explicit rules.
+- [ ] Check explicit allow, check deny
+<br>
+
+### 49. A team is reviewing an application using the AWS Well-Architected Framework. They identify that the application has no monitoring, alarms, or automated recovery mechanisms. Failures are detected only after users complain. Which Well-Architected pillar is MOST directly impacted by this design?
+- [ ] Security
+- [ ] Cost Optimization
+- [ ] Operational Excellence
+- [ ] Reliability
+
 

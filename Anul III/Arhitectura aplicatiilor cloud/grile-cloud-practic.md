@@ -241,3 +241,53 @@
 - [ ] AWS ran out of capacity for that specific region
 - [x] ___There are no more IP addresses available in the subnet___
 <br>
+
+#### 42. Which statement accurately describes a difference between using an AWS-managed database service and running a database yourself on an Amazon EC2 instance?
+- [x] ___AWS manages database patches for a database on a managed database service.___
+- [ ] Configuring backups for a database on a managed database service is not required.
+- [ ] Configuring backups for a database on an EC2 instance is not required.
+- [ ] AWS manages operating system (OS) patches for a database on an EC2 instance.
+<br>
+
+### 43. An organization is evaluating Amazon EC2 for hosting its applications. Which characteristics make Amazon EC2 an appropriate choice compared to other compute services?
+- [ ] AWS management of operating system (OS) security
+- [ ] Ability to run serverless applications
+- [x] ___Complete control of computing resources___
+- [ ] AWS management of operating system (OS) patches
+- [x] ___Ability to run any type of workload___
+<br>
+
+### 44. Which kind of data is suitable for caching?
+- [ ] Specialized data that is accessed by the same subset of users
+- [ ] Web content dynamically generated
+- [ ] Data that can be quickly be retrieved by simple queries
+- [x] ___Frequently accessed static data___
+<br>
+
+### 45. What does caching mean?
+- [ ] A global network for content distribution
+- [ ] A way to store database usernames
+- [ ] An in-memory database
+- [x] ___A high-speed data storage layer___
+<br>
+
+### 46. Which component lacks direct connectivity to the internet?
+- [ ] EC2 instance inside a public subnet
+- [ ] Interface of Elastic IP address
+- [ ] NAT gateway inside a public subnet
+- [x] ___EC2 instance inside a private subnet___
+<br>
+
+### 47. When using AWS VPCs, you can control the configuration of ___```    route tables    ```___ and ___```    network gateways (Internet, NAT, etc.)    ```
+
+### 48. In the AWS Identity and Access Management (IAM) policy evaluation process, which best describes the order of steps that are taken when determining whether a principal is allowed or denied access to a specific resource?
+- [ ] Check explicit allow, check explicit deny, check for absence of rules
+- [ ] Check for absence of rules, check explicit allow, check explicit deny
+- [x] ___Check explicit deny, check explicit allow, apply implicit deny if there are no explicit rules.___
+- [ ] Check explicit allow, check deny
+
+### 49. A team is reviewing an application using the AWS Well-Architected Framework. They identify that the application has no monitoring, alarms, or automated recovery mechanisms. Failures are detected only after users complain. Which Well-Architected pillar is MOST directly impacted by this design?
+- [ ] Security
+- [ ] Cost Optimization
+- [x] ___Operational Excellence___
+- [ ] Reliability

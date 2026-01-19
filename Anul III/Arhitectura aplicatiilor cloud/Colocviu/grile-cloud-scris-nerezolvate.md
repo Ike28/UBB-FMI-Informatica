@@ -1,5 +1,7 @@
 ## Grile Cloud Applications Architecture 
 
+> On Moodle, if a question is multiple choice, then there _must_ be at least two correct answers.
+
 #### 1. Related to users access and permissions for infrastructure security, confidentiality enforces:
 - [ ] encryption
 - [ ] usage of password vaults
@@ -385,4 +387,40 @@
 - [ ] routing based on path
 - [ ] health checks
 - [ ] port mapping
+<br>
+
+#### 56. Which two options are valid approaches for reducing the cold start issues for serverless compute?
+- [ ] Call the function on a schedule
+- [ ] Use Docker
+- [ ] Limit the concurrency of the function
+- [ ] Reduce the package size
+<br>
+
+#### 57. Which of the following are HTTP idempotent methods?
+- [ ] PUT
+- [ ] POST
+- [ ] HEAD
+- [ ] GET
+- [ ] DELETE
+<br>
+
+#### 58. Which are some common triggers for serverless functions?
+- [ ] File uploads to serverless storage
+- [ ] HTTP
+- [ ] Emails
+- [ ] Queue messages
+<br>
+
+#### 59. Which two of the following represent standard REST constraints?
+- [ ] Limited to JSON
+- [ ] Cache-ability
+- [ ] Horizontal scaling
+- [ ] Uniform interfaces
+<br>
+
+#### 60. What are Docker volumes good for?
+- [ ] a way to persist data separate of the container’s lifecycle
+- [ ] ainers are ephemeral and isolated
+- [ ] allow us to control network isolation separately
+- [ ] enable communication between multiple containers
 <br>

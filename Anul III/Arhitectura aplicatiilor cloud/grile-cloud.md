@@ -174,8 +174,8 @@
 
 #### 25. Which is the correct order complexity wise in decreasing order for NoSQL database models?
 - [ ] document, columnar, key-value, graph
-- [ ] graph, document, columnar, key-value
-- [x] ___graph, columnar, document, key-value___
+- [X] ___graph, document, columnar, key-value___
+- [ ] graph, columnar, document, key-value
 - [ ] key-value, document, columnar, graph
 <br>
 
@@ -410,4 +410,18 @@
 - [x] ___HTTP___
 - [ ] Emails
 - [x] ___Queue messages___
-<br><br>
+<br>
+
+#### 59. Which two of the following represent standard REST constraints?
+- [ ] Limited to JSON
+- [X] ___Cache-ability___
+- [ ] Horizontal scaling
+- [x] ___Uniform interfaces___
+<br>
+
+#### 60. What are Docker volumes good for?
+- [X] ___a way to persist data separate of the container’s lifecycle___
+- [X] ___needed since containers are ephemeral and isolated___
+- [ ] allow us to control network isolation separately
+- [ ] enable communication between multiple containers
+<br>
